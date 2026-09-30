@@ -1,0 +1,20 @@
+# AI Agent configuration & memory
+.agents/
+
+# Operating System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Node modules
+node_modules/
+package-lock.json
+
+# Raw/backup files
+ChatGPT Image*
+pexels-shvets-production-8899515.jpg
+pexels-shvets-production-8899545.jpg
+pexels-shvetsa-4587350.jpg
+logo-filled.png
+logo-cropped.png
+logo-solid-white.png
