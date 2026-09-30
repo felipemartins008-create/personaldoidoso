@@ -13,6 +13,17 @@
   <meta property="og:description" content="Recupere a autonomia, a firmeza nos passos e a força para o dia a dia sem sair de casa. Atendimento exclusivo em residências e condomínios em Jundiaí.">
   <meta property="og:image" content="foto-personal.jpg">
 
+  <!-- Indexação & SEO Local (Jundiaí - SP) -->
+  <link rel="canonical" href="https://personaldoidoso.com.br/">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="geo.region" content="BR-SP">
+  <meta name="geo.placename" content="Jundiaí">
+  <meta name="geo.position" content="-23.1857;-46.8978">
+  <meta name="ICBM" content="-23.1857, -46.8978">
+
+  <!-- Preload da Imagem Principal (Acelera o LCP e nota de velocidade do Google) -->
+  <link rel="preload" as="image" href="foto-personal.jpg" fetchpriority="high">
+
   <!-- Favicon Oficial com a Logo -->
   <link rel="icon" type="image/svg+xml" href="logo.svg">
 
@@ -20,6 +31,87 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Schema.org Dados Estruturados (Google Rich Snippets & SEO Local) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://personaldoidoso.com.br/#business",
+        "name": "Personal do Idoso - Jundiaí",
+        "description": "Treinamento físico funcional e personalizado em domicílio para idosos em Jundiaí - SP. Prevenção de quedas, ganho de força e equilíbrio no conforto do lar.",
+        "url": "https://personaldoidoso.com.br/",
+        "telephone": "+55-11-96134-3758",
+        "priceRange": "$$",
+        "image": "https://personaldoidoso.com.br/foto-personal.jpg",
+        "logo": "https://personaldoidoso.com.br/logo.svg",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Jundiaí",
+          "addressRegion": "SP",
+          "addressCountry": "BR"
+        },
+        "areaServed": [
+          "Jundiaí",
+          "Malota",
+          "Chácara Urbana",
+          "Anhangabaú",
+          "Jardim Samambaia",
+          "Eloy Chaves",
+          "Medeiros",
+          "Jardim do Lago",
+          "Vianelo",
+          "Vila Arens"
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "64"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://personaldoidoso.com.br/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Preciso ter aparelhos ou espaço grande em casa?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Não. Qualquer sala, varanda ou quarto com espaço livre é suficiente. Levamos todos os equipamentos necessários até você: faixas elásticas terapêuticas, esteiras de solo, pesos leves adequados e apoios de equilíbrio."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Tenho problemas de coluna, artrose ou recomendação médica. Posso fazer?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim! Os treinos respeitam rigorosamente a liberação e prescrição do seu médico, fortalecendo a musculatura protetora das articulações sem movimentos de impacto ou cargas perigosas."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Quais regiões e bairros de Jundiaí são atendidos?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Atendemos residências e condomínios em toda a cidade de Jundiaí e adjacências, como Malota, Chácara Urbana, Anhangabaú, Samambaia, Eloy Chaves, Medeiros, Jardim do Lago, Vianelo e Vila Arens."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Como funciona a primeira visita de avaliação?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "É uma visita presencial para conversarmos sobre seus objetivos, avaliarmos seu equilíbrio, postura e mobilidade, e estruturarmos o plano ideal de frequência e intensidade."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -153,6 +245,18 @@
       }
     }
   </style>
+
+  <!-- GOOGLE TAG (gtag.js) & GOOGLE ADS CONVERSION SCRIPT -->
+  <!-- Quando criar a conta no Google Ads, descomente abaixo e insira seu ID (ex: AW-123456789) -->
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-CONVERSION_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-CONVERSION_ID');
+  </script>
+  -->
 </head>
 <body class="bg-slate-50 text-slate-900 font-sans selection:bg-emerald-100 selection:text-emerald-900 overflow-x-hidden">
 
@@ -191,6 +295,9 @@
       <a href="https://wa.me/5511961343758?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20visita%20de%20avalia%C3%A7%C3%A3o."
          target="_blank"
          rel="noopener noreferrer"
+         onclick="return gtag_report_conversion(this.href);"
+         data-tracking="whatsapp-cta"
+         data-cta-location="header"
          class="btn-shimmer inline-flex items-center gap-2 sm:gap-2.5 bg-emerald-600 hover:bg-emerald-700 text-white text-sm xs:text-base sm:text-lg font-black py-3 px-4 sm:py-3.5 sm:px-7 rounded-xl shadow-md hover:shadow-glow-emerald transition-all duration-200 active:scale-95 focus-ring flex-shrink-0">
         <!-- Ícone Oficial do WhatsApp -->
         <svg class="w-5 h-5 sm:w-6 sm:h-6 fill-current flex-shrink-0" viewBox="0 0 24 24" aria-hidden="true">
@@ -269,6 +376,9 @@
             <a href="https://wa.me/5511961343758?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20visita%20de%20avalia%C3%A7%C3%A3o."
                target="_blank"
                rel="noopener noreferrer"
+               onclick="return gtag_report_conversion(this.href);"
+               data-tracking="whatsapp-cta"
+               data-cta-location="hero-primary"
                class="btn-shimmer w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-emerald-600 hover:bg-emerald-700 text-white text-lg sm:text-2xl font-black py-4 px-6 sm:px-9 rounded-2xl shadow-xl hover:shadow-glow-emerald transition-all duration-200 transform active:scale-95 sm:hover:-translate-y-0.5 sm:active:translate-y-0 focus-ring">
               <svg class="w-6 h-6 sm:w-7 sm:h-7 fill-current flex-shrink-0" viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
@@ -456,6 +566,9 @@
         <a href="https://wa.me/5511961343758?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20visita%20de%20avalia%C3%A7%C3%A3o."
            target="_blank"
            rel="noopener noreferrer"
+           onclick="return gtag_report_conversion(this.href);"
+           data-tracking="whatsapp-cta"
+           data-cta-location="methodology"
            class="btn-shimmer w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-emerald-600 hover:bg-emerald-700 text-white font-black text-lg sm:text-2xl py-4 px-8 sm:px-10 rounded-2xl shadow-lg hover:shadow-glow-emerald transition-all duration-200 active:scale-95 focus-ring">
           <span>Quero Conhecer o Atendimento em Casa</span>
           <svg class="w-6 h-6 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -586,6 +699,9 @@
             <a href="https://wa.me/5511961343758?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20visita%20de%20avalia%C3%A7%C3%A3o."
                target="_blank"
                rel="noopener noreferrer"
+               onclick="return gtag_report_conversion(this.href);"
+               data-tracking="whatsapp-cta"
+               data-cta-location="steps-process"
                class="btn-shimmer w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-slate-900 hover:bg-slate-800 text-white font-black text-lg sm:text-2xl py-4 px-8 sm:px-10 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-200 focus-ring">
               <span>Agendar Minha Avaliação Inicial</span>
               <svg class="w-6 h-6 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -880,6 +996,9 @@
         <a href="https://wa.me/5511961343758?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20visita%20de%20avalia%C3%A7%C3%A3o."
            target="_blank"
            rel="noopener noreferrer"
+           onclick="return gtag_report_conversion(this.href);"
+           data-tracking="whatsapp-cta"
+           data-cta-location="final-section"
            class="btn-shimmer w-full sm:w-auto inline-flex items-center justify-center gap-3.5 bg-emerald-600 hover:bg-emerald-500 text-white text-lg sm:text-2xl font-black py-4 px-8 sm:px-10 rounded-2xl shadow-2xl hover:shadow-glow-emerald transition-all duration-200 transform active:scale-95 sm:hover:-translate-y-0.5 sm:active:translate-y-0 focus-ring">
           <svg class="w-6 h-6 sm:w-7 sm:h-7 fill-current flex-shrink-0" viewBox="0 0 24 24" aria-hidden="true">
             <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
@@ -907,14 +1026,60 @@
         <span class="font-black text-white text-xl sm:text-2xl tracking-tight">Personal do Idoso</span>
       </div>
 
-      <p class="text-slate-300 text-sm sm:text-base font-medium">
-        &copy; Personal do Idoso &mdash; Jundiaí/SP. Todos os direitos reservados. Profissional de Educação Física Credenciado.
+      <p class="text-slate-300 text-sm sm:text-base font-bold">
+        &copy; Personal do Idoso &mdash; Jundiaí/SP. Todos os direitos reservados.
+      </p>
+      <p class="text-xs sm:text-sm text-emerald-400 font-bold mt-1">
+        Profissional de Educação Física Credenciado &bull; CREF Ativo
       </p>
       <p class="text-xs sm:text-sm text-slate-400 font-medium mt-2 max-w-lg mx-auto">
-        Atendimento domiciliar especializado para terceira idade em residências e condomínios de Jundiaí/SP.
+        Atendimento domiciliar especializado para terceira idade em residências e condomínios de Jundiaí/SP e região.
       </p>
+
+      <!-- Aviso Legal e Isenção de Responsabilidade de Saúde (Conformidade Google Ads) -->
+      <div class="mt-6 pt-6 border-t border-slate-800/90 text-xs text-slate-400 max-w-2xl mx-auto leading-relaxed">
+        <p class="font-bold text-slate-300 mb-1">Aviso Legal &amp; Isenção de Responsabilidade em Saúde:</p>
+        <p>
+          Os exercícios físicos e orientações apresentados neste site têm finalidade educativa e informativa. Os resultados de ganho de força, equilíbrio e autonomia variam conforme as particularidades biológicas, histórico clínico e regularidade de cada indivíduo. A prática de atividades físicas deve ser precedida por avaliação com profissional de Educação Física habilitado e consentimento do seu médico.
+        </p>
+      </div>
+
+      <!-- Links de Conformidade LGPD & Políticas -->
+      <div class="flex flex-wrap items-center justify-center gap-4 text-xs sm:text-sm text-slate-400 mt-5">
+        <button type="button" onclick="openLegalModal('privacidade')" class="hover:text-emerald-400 underline transition-colors cursor-pointer focus-ring">Política de Privacidade (LGPD)</button>
+        <span aria-hidden="true">&bull;</span>
+        <button type="button" onclick="openLegalModal('termos')" class="hover:text-emerald-400 underline transition-colors cursor-pointer focus-ring">Termos de Uso</button>
+      </div>
     </div>
   </footer>
+
+  <!-- MODAL DE POLÍTICA DE PRIVACIDADE E TERMOS (LGPD & POLÍTICAS GOOGLE ADS) -->
+  <div id="legalModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-950/80 backdrop-blur-sm p-4 overflow-y-auto" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="relative bg-white rounded-3xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl border border-slate-200 text-slate-800 max-h-[85vh] flex flex-col my-auto">
+      
+      <!-- Cabeçalho do Modal -->
+      <div class="flex items-center justify-between border-b border-slate-200 pb-4 mb-4 flex-shrink-0">
+        <h3 id="modalTitle" class="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">Política de Privacidade</h3>
+        <button type="button" onclick="closeLegalModal()" class="w-10 h-10 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center transition-colors focus-ring" aria-label="Fechar modal">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Corpo do Modal -->
+      <div id="modalBody" class="overflow-y-auto pr-2 text-slate-700 text-sm sm:text-base leading-relaxed space-y-4">
+        <!-- Preenchido via JavaScript -->
+      </div>
+
+      <!-- Rodapé do Modal -->
+      <div class="border-t border-slate-200 pt-4 mt-4 flex justify-end flex-shrink-0">
+        <button type="button" onclick="closeLegalModal()" class="bg-slate-900 hover:bg-slate-800 text-white font-bold py-2.5 px-6 rounded-xl transition-colors focus-ring">
+          Entendido
+        </button>
+      </div>
+    </div>
+  </div>
 
   <!-- 9. BOTÃO FLUTUANTE FIXO (WHATSAPP COM PULSE SUAVE) -->
   <aside aria-label="Contato direto via WhatsApp">
@@ -926,6 +1091,9 @@
       <a href="https://wa.me/5511961343758?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20visita%20de%20avalia%C3%A7%C3%A3o."
          target="_blank"
          rel="noopener noreferrer"
+         onclick="return gtag_report_conversion(this.href);"
+         data-tracking="whatsapp-cta"
+         data-cta-location="floating-button"
          class="relative group flex items-center gap-2.5 sm:gap-3 bg-emerald-600 hover:bg-emerald-500 text-white p-4 sm:p-4.5 rounded-full shadow-2xl hover:shadow-glow-emerald transition-all duration-300 transform active:scale-95 sm:hover:scale-110 focus-ring"
          aria-label="Abrir WhatsApp para agendar visita de avaliação">
         
@@ -942,10 +1110,80 @@
     </div>
   </aside>
 
-  <!-- SCRIPTS LEVES: FAQ ACCORDION + SCROLL REVEAL OBSERVER -->
+  <!-- SCRIPTS: RASTREAMENTO GOOGLE ADS + MODAL LGPD + FAQ ACCORDION + SCROLL REVEAL -->
   <script>
+    // 1. RASTREAMENTO DE CONVERSÃO GOOGLE ADS (CLIQUE WHATSAPP)
+    // Para ativar a medição de conversão em tempo real no Google Ads:
+    // Descomente e insira sua tag no topo do <head>, ou substitua AW-CONVERSION_ID/CONVERSION_LABEL aqui.
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) !== 'undefined' && url) {
+          window.open(url, '_blank', 'noopener,noreferrer');
+        }
+      };
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', 'conversion', {
+          'send_to': 'AW-CONVERSION_ID/CONVERSION_LABEL',
+          'event_callback': callback
+        });
+        return false;
+      }
+      // Se a tag ainda não estiver conectada ao Ads, prossegue diretamente
+      return true;
+    }
+
+    // 2. MODAL DE POLÍTICA DE PRIVACIDADE E TERMOS DE USO (LGPD & POLÍTICAS GOOGLE ADS)
+    function openLegalModal(type) {
+      const modal = document.getElementById('legalModal');
+      const title = document.getElementById('modalTitle');
+      const body = document.getElementById('modalBody');
+      if (!modal || !title || !body) return;
+
+      if (type === 'privacidade') {
+        title.innerText = 'Política de Privacidade (LGPD)';
+        body.innerHTML = `
+          <p class="font-bold text-slate-900">Em conformidade com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018):</p>
+          <p><strong>1. Coleta e Uso de Informações:</strong> Respeitamos integralmente a sua privacidade e de seus familiares. Esta página não utiliza formulários invasivos para coleta de dados bancários ou documentos sensíveis. Todo contato é iniciado de forma voluntária pelo próprio usuário através do botão oficial do WhatsApp.</p>
+          <p><strong>2. Finalidade dos Dados:</strong> Os dados compartilhados via conversa no WhatsApp (tais como nome, localidade em Jundiaí e necessidades físicas) destinam-se exclusivamente ao agendamento da visita diagnóstica e planejamento dos treinos personalizados.</p>
+          <p><strong>3. Ferramentas de Análise e Métricas:</strong> Utilizamos cookies e tags de desempenho (como Google Tag e Google Analytics) com a única finalidade de analisar o tráfego geral de forma anônima e verificar a eficiência dos anúncios.</p>
+          <p><strong>4. Não Compartilhamento com Terceiros:</strong> Os dados fornecidos jamais serão vendidos, alugados ou compartilhados com terceiros para quaisquer finalidades publicitárias não autorizadas.</p>
+          <p><strong>5. Contato e Exclusão:</strong> Para solicitar qualquer esclarecimento ou exclusão de dados de contato, basta enviar uma mensagem direta ao WhatsApp oficial: (11) 96134-3758.</p>
+        `;
+      } else {
+        title.innerText = 'Termos de Uso e Responsabilidade';
+        body.innerHTML = `
+          <p class="font-bold text-slate-900">Termos Gerais de Uso e Prática de Atividades Físicas:</p>
+          <p><strong>1. Objetivo do Serviço:</strong> O Personal do Idoso oferece treinamento físico funcional personalizado, com foco em mobilidade, fortalecimento muscular, equilíbrio e autonomia, realizado em domicílio ou condomínios na cidade de Jundiaí/SP.</p>
+          <p><strong>2. Avaliação e Liberação Médica:</strong> A prática de qualquer rotina de exercícios físicos exige liberação médica prévia, bem como a realização de anamnese diagnóstica antes do início do treinamento.</p>
+          <p><strong>3. Resultados Individuais:</strong> Os depoimentos e casos de sucesso citados refletem experiências reais de alunos atendidos, mas não constituem garantia de resultado idêntico. A evolução física depende de fatores individuais como saúde preexistente, regularidade e adesão às orientações.</p>
+          <p><strong>4. Direitos Autorais:</strong> Todos os textos, marcas e elementos visuais são de propriedade do Personal do Idoso.</p>
+        `;
+      }
+
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.classList.add('overflow-hidden');
+    }
+
+    function closeLegalModal() {
+      const modal = document.getElementById('legalModal');
+      if (!modal) return;
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.body.classList.remove('overflow-hidden');
+    }
+
+    // Fechar Modal com tecla ESC ou clique fora do conteúdo
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeLegalModal();
+    });
+    document.addEventListener('click', function (e) {
+      const modal = document.getElementById('legalModal');
+      if (modal && e.target === modal) closeLegalModal();
+    });
+
     document.addEventListener('DOMContentLoaded', function () {
-      // 1. Accordion Interativo para o FAQ
+      // 3. Accordion Interativo para o FAQ
       const faqItems = document.querySelectorAll('.faq-item');
       faqItems.forEach(function (item) {
         const toggle = item.querySelector('.faq-toggle');
@@ -954,7 +1192,7 @@
         toggle.addEventListener('click', function () {
           const isActive = item.classList.contains('active');
           
-          // Opcional: fecha os outros para manter foco limpo
+          // Fecha os outros para manter foco limpo
           faqItems.forEach(function (otherItem) {
             if (otherItem !== item) {
               otherItem.classList.remove('active');
@@ -973,7 +1211,7 @@
         });
       });
 
-      // 2. Intersection Observer para Revelação Suave ao Rolar
+      // 4. Intersection Observer para Revelação Suave ao Rolar
       const revealItems = document.querySelectorAll('.reveal-item');
       if ('IntersectionObserver' in window) {
         const observer = new IntersectionObserver(function (entries, obs) {
