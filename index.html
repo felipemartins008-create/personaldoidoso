@@ -68,7 +68,8 @@
     body {
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
-      font-size: 17px;
+      font-size: 19px;
+      line-height: 1.65;
     }
     .focus-ring {
       outline: 2px solid transparent;
@@ -141,10 +142,11 @@
       transform: rotate(180deg);
     }
 
-    /* Otimização de toque em telas móveis */
+    /* Otimização de texto grande e toque confortável para Idosos em telas móveis */
     @media (max-width: 640px) {
       body {
-        font-size: 16px;
+        font-size: 18px;
+        line-height: 1.6;
       }
       a, button {
         touch-action: manipulation;
@@ -152,22 +154,22 @@
     }
   </style>
 </head>
-<body class="bg-slate-50 text-slate-800 font-sans selection:bg-emerald-100 selection:text-emerald-900 overflow-x-hidden">
+<body class="bg-slate-50 text-slate-900 font-sans selection:bg-emerald-100 selection:text-emerald-900 overflow-x-hidden">
 
-  <!-- 1. TOP BAR / BARRA SUPERIOR -->
-  <aside class="bg-slate-900 text-slate-300 py-2 sm:py-2.5 px-3 sm:px-4 text-center text-xs sm:text-base font-medium tracking-wide border-b border-slate-800">
-    <div class="max-w-7xl mx-auto flex items-center justify-center gap-1.5 sm:gap-2">
-      <span class="inline-block animate-pulse">📍</span>
-      <span>Atendimento exclusivo em residências e condomínios em <strong>Jundiaí e região</strong></span>
+  <!-- 1. TOP BAR / BARRA SUPERIOR (Texto Nítido e Legível) -->
+  <aside class="bg-slate-900 text-slate-200 py-2.5 sm:py-3 px-3 sm:px-4 text-center text-sm sm:text-base md:text-lg font-semibold tracking-normal border-b border-slate-800">
+    <div class="max-w-7xl mx-auto flex items-center justify-center gap-2">
+      <span class="inline-block animate-pulse text-base sm:text-lg">📍</span>
+      <span>Atendimento exclusivo em residências e condomínios em <strong class="text-white underline decoration-emerald-400 decoration-2 underline-offset-2">Jundiaí e região</strong></span>
     </div>
   </aside>
 
   <!-- 2. HEADER / BARRA DE NAVEGAÇÃO -->
-  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-sm transition-all duration-200">
-    <div class="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 py-2.5 sm:py-4 flex items-center justify-between">
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm transition-all duration-200">
+    <div class="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 py-3 sm:py-4 flex items-center justify-between">
       
-      <!-- Logotipo Oficial: Otimizado para Mobile sem alterar Desktop -->
-      <a href="#" class="flex items-center gap-2.5 xs:gap-3.5 sm:gap-5 group focus-ring rounded-2xl p-1" aria-label="Personal do Idoso - Início">
+      <!-- Logotipo Oficial: Otimizado para Alta Legibilidade -->
+      <a href="#" class="flex items-center gap-3 sm:gap-5 group focus-ring rounded-2xl p-1" aria-label="Personal do Idoso - Início">
         <!-- Ícone da Marca: 56px no mobile, 80px no desktop -->
         <div class="w-14 h-14 sm:w-20 sm:h-20 rounded-xl sm:rounded-2xl bg-gradient-to-br from-slate-900 to-slate-950 border-2 border-slate-700/80 flex items-center justify-center p-2 sm:p-3 shadow-md sm:shadow-xl group-hover:scale-105 group-hover:border-emerald-500/70 group-hover:shadow-glow-emerald transition-all duration-300 flex-shrink-0">
           <img src="logo.svg" alt="Emblema Oficial Personal do Idoso" class="w-full h-full object-contain filter drop-shadow-md" />
@@ -175,23 +177,23 @@
         
         <!-- Tipografia da Marca -->
         <div class="flex flex-col">
-          <span class="font-black text-slate-900 text-lg xs:text-xl sm:text-2xl lg:text-3xl tracking-tight leading-none group-hover:text-emerald-700 transition-colors">
+          <span class="font-black text-slate-950 text-xl xs:text-2xl sm:text-3xl tracking-tight leading-none group-hover:text-emerald-700 transition-colors">
             Personal do Idoso
           </span>
-          <span class="text-[11px] xs:text-xs sm:text-sm lg:text-base font-bold text-emerald-700 tracking-wide flex items-center gap-1.5 mt-1 sm:mt-1.5">
-            <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          <span class="text-xs xs:text-sm sm:text-base font-extrabold text-emerald-800 tracking-normal flex items-center gap-1.5 mt-1 sm:mt-1.5">
+            <span class="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span>
             Saúde &amp; Longevidade em Casa
           </span>
         </div>
       </a>
 
-      <!-- Botão CTA Superior: Compacto no mobile, amplo no desktop com Shimmer suave -->
+      <!-- Botão CTA Superior: Amplo, Alto Contraste e Fácil de Clicar -->
       <a href="https://wa.me/5511961343758?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20visita%20de%20avalia%C3%A7%C3%A3o."
          target="_blank"
          rel="noopener noreferrer"
-         class="btn-shimmer inline-flex items-center gap-1.5 sm:gap-2.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs xs:text-sm sm:text-lg font-bold py-2.5 px-3.5 xs:px-4 sm:py-3.5 sm:px-7 rounded-xl shadow-md hover:shadow-glow-emerald transition-all duration-200 active:scale-95 focus-ring flex-shrink-0">
+         class="btn-shimmer inline-flex items-center gap-2 sm:gap-2.5 bg-emerald-600 hover:bg-emerald-700 text-white text-sm xs:text-base sm:text-lg font-black py-3 px-4 sm:py-3.5 sm:px-7 rounded-xl shadow-md hover:shadow-glow-emerald transition-all duration-200 active:scale-95 focus-ring flex-shrink-0">
         <!-- Ícone Oficial do WhatsApp -->
-        <svg class="w-4 h-4 sm:w-6 sm:h-6 fill-current flex-shrink-0" viewBox="0 0 24 24" aria-hidden="true">
+        <svg class="w-5 h-5 sm:w-6 sm:h-6 fill-current flex-shrink-0" viewBox="0 0 24 24" aria-hidden="true">
           <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
         </svg>
         <span>Agendar<span class="hidden xs:inline"> Visita</span></span>
@@ -205,111 +207,111 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 lg:gap-16 items-center">
         
-        <!-- Coluna Esquerda: Conteúdo & Copy -->
+        <!-- Coluna Esquerda: Conteúdo & Copy em Tamanho Amplo -->
         <div class="md:col-span-7 flex flex-col items-start text-left">
           
-          <!-- Badges Superiores: Tipo de Atendimento + Selo de Avaliação 4.9/5 -->
-          <div class="flex flex-wrap items-center gap-2.5 sm:gap-3 mb-4 sm:mb-6">
-            <div class="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-slate-900 border border-slate-700/80 text-slate-100 text-xs sm:text-sm font-semibold shadow-md">
-              <div class="w-4 h-4 sm:w-5 sm:h-5 flex items-center justify-center flex-shrink-0">
+          <!-- Badges Superiores Grandes com Alto Contraste -->
+          <div class="flex flex-wrap items-center gap-3 mb-5 sm:mb-6">
+            <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-slate-900 border border-slate-700 text-slate-100 text-sm sm:text-base font-bold shadow-md">
+              <div class="w-5 h-5 flex items-center justify-center flex-shrink-0">
                 <img src="logo.svg" alt="" class="w-full h-full object-contain filter drop-shadow" />
               </div>
               <span>Atendimento em Domicílio</span>
             </div>
 
-            <!-- Prova Social Imediata CRO -->
-            <div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-50 border border-emerald-200/90 text-emerald-800 text-xs sm:text-sm font-bold shadow-xs">
-              <span class="text-amber-500 tracking-tight text-xs sm:text-sm">★★★★★</span>
+            <!-- Prova Social Imediata CRO Legível -->
+            <div class="inline-flex items-center gap-2 px-3.5 py-2 rounded-full bg-emerald-50 border border-emerald-300 text-emerald-900 text-sm sm:text-base font-black shadow-xs">
+              <span class="text-amber-500 text-sm sm:text-base">★★★★★</span>
               <span>4.9/5</span>
               <span class="text-slate-400 font-normal">|</span>
-              <span class="text-slate-600 font-semibold text-[11px] sm:text-xs">Jundiaí e Região</span>
+              <span class="text-slate-700 font-bold text-xs sm:text-sm">Jundiaí e Região</span>
             </div>
           </div>
 
-          <!-- Título H1: Otimizado para quebra e legibilidade em telas pequenas -->
-          <h1 class="text-[26px] xs:text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-tight sm:leading-[1.18] mb-4 sm:mb-6">
+          <!-- Título H1: Grande, com alto contraste e excelente peso de leitura -->
+          <h1 class="text-[28px] xs:text-3xl sm:text-4xl lg:text-5xl font-black text-slate-950 tracking-tight leading-snug sm:leading-[1.18] mb-4 sm:mb-6">
             Recupere a autonomia, a firmeza nos passos e a força para o dia a dia.
           </h1>
 
-          <!-- Subtítulo -->
-          <p class="text-base sm:text-xl text-slate-600 leading-relaxed mb-4 sm:mb-8 max-w-2xl font-normal">
-            Atendimento profissional no conforto do seu lar em <strong class="text-slate-800 font-semibold">Jundiaí</strong>. Treinamento de força e equilíbrio planejado com base científica para prevenir quedas e devolver a vitalidade sem sair de casa.
+          <!-- Subtítulo Grande e Nítido -->
+          <p class="text-lg sm:text-xl md:text-2xl text-slate-700 leading-relaxed mb-6 sm:mb-8 max-w-2xl font-normal">
+            Atendimento profissional no conforto do seu lar em <strong class="text-slate-950 font-bold underline decoration-emerald-500 decoration-2 underline-offset-2">Jundiaí</strong>. Treinamento de força e equilíbrio planejado com base científica para prevenir quedas e devolver a vitalidade sem sair de casa.
           </p>
 
           <!-- FOTO DO PERSONAL NO MOBILE (Aparece junto na primeira seção, compacta, centralizada e com margens elegantes) -->
-          <div class="block md:hidden w-full mt-6 mb-8 text-center">
-            <div class="relative mx-auto w-52 xs:w-60">
+          <div class="block md:hidden w-full mt-4 mb-8 text-center">
+            <div class="relative mx-auto w-56 xs:w-64">
               
               <!-- Foto do Personal Compacta com Borda Premium e Sombra Suave -->
               <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-slate-900 ring-1 ring-slate-900/10">
                 <img src="foto-personal.jpg" 
                      alt="Personal Trainer Especialista em Idosos" 
-                     class="w-full h-[220px] xs:h-[240px] object-cover object-center" 
+                     class="w-full h-[225px] xs:h-[250px] object-cover object-center" 
                      loading="eager" />
               </div>
 
-              <!-- Badge Compacto Sobreposto com a Logo e Altura Harmoniosa -->
-              <div class="absolute -bottom-4 left-2 right-2 bg-slate-900/95 backdrop-blur-md border border-slate-700/90 rounded-xl py-1.5 px-3 shadow-xl flex items-center justify-center gap-2.5">
-                <div class="w-6 h-6 rounded-lg bg-slate-800 border border-slate-700 flex items-center justify-center p-1 flex-shrink-0">
+              <!-- Badge Sobreposto com Letras Grandes e Bem Visíveis -->
+              <div class="absolute -bottom-4 left-2 right-2 bg-slate-900/95 backdrop-blur-md border border-slate-700/90 rounded-xl py-2 px-3 shadow-xl flex items-center justify-center gap-3">
+                <div class="w-7 h-7 rounded-lg bg-slate-800 border border-slate-700 flex items-center justify-center p-1 flex-shrink-0">
                   <img src="logo.svg" alt="" class="w-full h-full object-contain filter drop-shadow" />
                 </div>
                 <div class="text-left">
-                  <p class="font-extrabold text-white text-xs leading-tight">Profissional Certificado</p>
-                  <p class="text-[10px] font-bold text-emerald-400">Especialista 60+</p>
+                  <p class="font-black text-white text-sm sm:text-base leading-tight">Profissional Certificado</p>
+                  <p class="text-xs sm:text-sm font-bold text-emerald-400">Especialista 60+</p>
                 </div>
               </div>
 
             </div>
           </div>
 
-          <!-- Botão CTA Principal com Efeito Shimmer, Espaçamento Confortável e Touch Target Amplo -->
+          <!-- Botão CTA Principal Grande com Efeito Shimmer e Alto Contraste -->
           <div class="w-full sm:w-auto mt-2 mb-8 sm:mb-10">
             <a href="https://wa.me/5511961343758?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20visita%20de%20avalia%C3%A7%C3%A3o."
                target="_blank"
                rel="noopener noreferrer"
-               class="btn-shimmer w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-emerald-600 hover:bg-emerald-700 text-white text-base sm:text-xl font-bold py-3.5 sm:py-4 px-6 sm:px-8 rounded-2xl shadow-xl hover:shadow-glow-emerald transition-all duration-200 transform active:scale-95 sm:hover:-translate-y-0.5 sm:active:translate-y-0 focus-ring">
-              <svg class="w-5 h-5 sm:w-6 sm:h-6 fill-current flex-shrink-0" viewBox="0 0 24 24" aria-hidden="true">
+               class="btn-shimmer w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-emerald-600 hover:bg-emerald-700 text-white text-lg sm:text-2xl font-black py-4 px-6 sm:px-9 rounded-2xl shadow-xl hover:shadow-glow-emerald transition-all duration-200 transform active:scale-95 sm:hover:-translate-y-0.5 sm:active:translate-y-0 focus-ring">
+              <svg class="w-6 h-6 sm:w-7 sm:h-7 fill-current flex-shrink-0" viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
               </svg>
               <span>Agendar Minha Visita de Avaliação</span>
             </a>
-            <p class="text-xs sm:text-sm text-slate-500 mt-2.5 text-center sm:text-left flex items-center justify-center sm:justify-start gap-1.5">
-              <svg class="w-4 h-4 text-emerald-600 inline flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <p class="text-sm sm:text-base text-slate-700 font-semibold mt-3 text-center sm:text-left flex items-center justify-center sm:justify-start gap-2">
+              <svg class="w-5 h-5 text-emerald-600 inline flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
               </svg>
               <span>Resposta rápida pelo WhatsApp oficial &bull; Sem compromisso</span>
             </p>
           </div>
 
-          <!-- 3 Métricas / Pilares em Linha (Cards Limpos no Mobile) -->
-          <div class="w-full pt-6 sm:pt-8 border-t border-slate-200/90 grid grid-cols-1 sm:grid-cols-3 gap-3.5 sm:gap-6">
-            <div class="flex items-center sm:items-start gap-3 p-3 sm:p-0 bg-white/70 sm:bg-transparent rounded-xl sm:rounded-none border border-slate-200/60 sm:border-0 shadow-sm sm:shadow-none">
-              <div class="w-10 h-10 rounded-xl bg-slate-900 text-white flex items-center justify-center flex-shrink-0 text-xl font-bold border border-slate-800 shadow-sm">
+          <!-- 3 Métricas / Pilares em Linha (Textos Grandes e Nítidos) -->
+          <div class="w-full pt-6 sm:pt-8 border-t border-slate-200 grid grid-cols-1 sm:grid-cols-3 gap-3.5 sm:gap-6">
+            <div class="flex items-center sm:items-start gap-3.5 p-3.5 sm:p-0 bg-white/80 sm:bg-transparent rounded-xl sm:rounded-none border border-slate-200 sm:border-0 shadow-sm sm:shadow-none">
+              <div class="w-12 h-12 rounded-xl bg-slate-900 text-white flex items-center justify-center flex-shrink-0 text-2xl font-bold border border-slate-800 shadow-sm">
                 🏡
               </div>
               <div>
-                <h2 class="font-bold text-slate-900 text-sm sm:text-base">100% no Lar</h2>
-                <p class="text-xs sm:text-sm text-slate-600">Levamos todo o material até sua casa</p>
+                <h2 class="font-black text-slate-950 text-base sm:text-lg">100% no Lar</h2>
+                <p class="text-sm sm:text-base text-slate-700 font-medium">Levamos todo o material até sua casa</p>
               </div>
             </div>
 
-            <div class="flex items-center sm:items-start gap-3 p-3 sm:p-0 bg-white/70 sm:bg-transparent rounded-xl sm:rounded-none border border-slate-200/60 sm:border-0 shadow-sm sm:shadow-none">
-              <div class="w-10 h-10 rounded-xl bg-slate-900 text-white flex items-center justify-center flex-shrink-0 text-xl font-bold border border-slate-800 shadow-sm">
+            <div class="flex items-center sm:items-start gap-3.5 p-3.5 sm:p-0 bg-white/80 sm:bg-transparent rounded-xl sm:rounded-none border border-slate-200 sm:border-0 shadow-sm sm:shadow-none">
+              <div class="w-12 h-12 rounded-xl bg-slate-900 text-white flex items-center justify-center flex-shrink-0 text-2xl font-bold border border-slate-800 shadow-sm">
                 📋
               </div>
               <div>
-                <h2 class="font-bold text-slate-900 text-sm sm:text-base">Avaliação Completa</h2>
-                <p class="text-xs sm:text-sm text-slate-600">Postura, equilíbrio e força física</p>
+                <h2 class="font-black text-slate-950 text-base sm:text-lg">Avaliação Completa</h2>
+                <p class="text-sm sm:text-base text-slate-700 font-medium">Postura, equilíbrio e força física</p>
               </div>
             </div>
 
-            <div class="flex items-center sm:items-start gap-3 p-3 sm:p-0 bg-white/70 sm:bg-transparent rounded-xl sm:rounded-none border border-slate-200/60 sm:border-0 shadow-sm sm:shadow-none">
-              <div class="w-10 h-10 rounded-xl bg-slate-900 text-white flex items-center justify-center flex-shrink-0 text-xl font-bold border border-slate-800 shadow-sm">
+            <div class="flex items-center sm:items-start gap-3.5 p-3.5 sm:p-0 bg-white/80 sm:bg-transparent rounded-xl sm:rounded-none border border-slate-200 sm:border-0 shadow-sm sm:shadow-none">
+              <div class="w-12 h-12 rounded-xl bg-slate-900 text-white flex items-center justify-center flex-shrink-0 text-2xl font-bold border border-slate-800 shadow-sm">
                 🛡️
               </div>
               <div>
-                <h2 class="font-bold text-slate-900 text-sm sm:text-base">Segurança Total</h2>
-                <p class="text-xs sm:text-sm text-slate-600">Zero riscos articulares e supervisão</p>
+                <h2 class="font-black text-slate-950 text-base sm:text-lg">Segurança Total</h2>
+                <p class="text-sm sm:text-base text-slate-700 font-medium">Zero riscos articulares e supervisão</p>
               </div>
             </div>
           </div>
@@ -331,17 +333,17 @@
                    loading="eager" />
             </div>
 
-            <!-- Card Flutuante Sobreposto com a Logo em Destaque -->
-            <div class="absolute -bottom-5 left-3 right-3 sm:left-6 sm:right-6 sm:-bottom-6 bg-slate-900/95 backdrop-blur-md border border-slate-700/90 rounded-xl sm:rounded-2xl p-3 sm:p-5 shadow-2xl flex items-center gap-3 sm:gap-4">
+            <!-- Card Flutuante Sobreposto com a Logo em Destaque e Textos Maiores -->
+            <div class="absolute -bottom-5 left-3 right-3 sm:left-6 sm:right-6 sm:-bottom-6 bg-slate-900/95 backdrop-blur-md border border-slate-700/90 rounded-xl sm:rounded-2xl p-4 sm:p-5 shadow-2xl flex items-center gap-3.5 sm:gap-4">
               <!-- Logo Container com Excelente Proporção -->
-              <div class="w-12 h-12 sm:w-16 sm:h-16 rounded-lg sm:rounded-xl bg-slate-800 border border-slate-600 flex items-center justify-center p-2 sm:p-2.5 flex-shrink-0 shadow-lg">
+              <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-lg sm:rounded-xl bg-slate-800 border border-slate-600 flex items-center justify-center p-2 sm:p-2.5 flex-shrink-0 shadow-lg">
                 <img src="logo.svg" alt="Logo Oficial" class="w-full h-full object-contain filter drop-shadow" />
               </div>
               <div>
-                <p class="font-black text-white text-sm sm:text-lg leading-tight">
+                <p class="font-black text-white text-base sm:text-xl leading-tight">
                   Profissional Certificado
                 </p>
-                <p class="text-[11px] sm:text-sm font-bold text-emerald-400 mt-0.5">
+                <p class="text-xs sm:text-base font-bold text-emerald-400 mt-1">
                   Especialista em Fisiologia &amp; Saúde 60+
                 </p>
               </div>
@@ -354,109 +356,109 @@
     </div>
   </section>
 
-  <!-- 4. SEÇÃO: OBJETIVOS E BENEFÍCIOS FUNCIONAIS -->
+  <!-- 4. SEÇÃO: OBJETIVOS E BENEFÍCIOS FUNCIONAIS (Textos Grandes & Nítidos) -->
   <section class="py-14 sm:py-20 bg-white border-y border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <!-- Cabeçalho da Seção -->
       <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
-        <span class="inline-flex items-center gap-1.5 sm:gap-2 text-emerald-700 font-bold text-xs sm:text-sm tracking-wider uppercase bg-emerald-50 px-3.5 py-1 sm:px-4 sm:py-1.5 rounded-full border border-emerald-200 mb-2.5 sm:mb-3">
-          <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-emerald-600"></span>
+        <span class="inline-flex items-center gap-2 text-emerald-800 font-bold text-sm sm:text-base tracking-wide uppercase bg-emerald-50 px-4 py-1.5 sm:px-5 sm:py-2 rounded-full border border-emerald-300 mb-3">
+          <span class="w-2 h-2 rounded-full bg-emerald-600"></span>
           Por que treinar em casa?
         </span>
-        <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
+        <h2 class="text-2xl sm:text-4xl lg:text-5xl font-black text-slate-950 tracking-tight leading-tight">
           Como o treinamento domiciliar transforma a sua rotina
         </h2>
-        <p class="mt-3 sm:mt-4 text-base sm:text-lg text-slate-600">
+        <p class="mt-4 text-lg sm:text-xl md:text-2xl text-slate-700 leading-relaxed font-normal">
           Metodologia desenvolvida especialmente para respeitar os limites anatômicos e promover ganhos reais de disposição e independência.
         </p>
       </div>
 
-      <!-- Grid de 4 Cards com Ícones & Bordas Suaves -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-8">
+      <!-- Grid de 4 Cards com Ícones & Textos Maiores -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
         
         <!-- Card 1 -->
-        <div class="reveal-item group bg-slate-50 border border-slate-200/90 rounded-2xl p-5 sm:p-7 shadow-card-sleek hover:shadow-card-hover hover:border-emerald-400 transition-all duration-200 flex flex-col justify-between">
+        <div class="reveal-item group bg-slate-50 border border-slate-200 rounded-2xl p-6 sm:p-7 shadow-card-sleek hover:shadow-card-hover hover:border-emerald-400 transition-all duration-200 flex flex-col justify-between">
           <div>
-            <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-white border border-slate-200 flex items-center justify-center text-2xl sm:text-3xl mb-4 sm:mb-5 shadow-sm group-hover:border-emerald-300 group-hover:scale-105 transition-all">
+            <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-white border border-slate-200 flex items-center justify-center text-3xl sm:text-4xl mb-5 shadow-sm group-hover:border-emerald-300 group-hover:scale-105 transition-all">
               🚶‍♂️
             </div>
-            <h3 class="text-lg sm:text-xl font-bold text-slate-900 mb-2 sm:mb-3 group-hover:text-emerald-800 transition-colors">
+            <h3 class="text-xl sm:text-2xl font-black text-slate-950 mb-3 group-hover:text-emerald-800 transition-colors">
               Equilíbrio &amp; Firmeza
             </h3>
-            <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+            <p class="text-slate-700 text-base sm:text-lg leading-relaxed font-normal">
               Exercícios proprioceptivos que devolvem a segurança ao caminhar, subir escadas e eliminam o medo de quedas acidentais.
             </p>
           </div>
-          <div class="mt-5 sm:mt-6 pt-3 sm:pt-4 border-t border-slate-200/60 flex items-center text-[11px] sm:text-xs font-bold text-emerald-700 uppercase tracking-wide">
+          <div class="mt-6 pt-4 border-t border-slate-200 flex items-center text-xs sm:text-sm font-black text-emerald-800 uppercase tracking-wide">
             ✓ Prevenção de acidentes
           </div>
         </div>
 
         <!-- Card 2 -->
-        <div class="reveal-item group bg-slate-50 border border-slate-200/90 rounded-2xl p-5 sm:p-7 shadow-card-sleek hover:shadow-card-hover hover:border-emerald-400 transition-all duration-200 flex flex-col justify-between">
+        <div class="reveal-item group bg-slate-50 border border-slate-200 rounded-2xl p-6 sm:p-7 shadow-card-sleek hover:shadow-card-hover hover:border-emerald-400 transition-all duration-200 flex flex-col justify-between">
           <div>
-            <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-white border border-slate-200 flex items-center justify-center text-2xl sm:text-3xl mb-4 sm:mb-5 shadow-sm group-hover:border-emerald-300 group-hover:scale-105 transition-all">
+            <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-white border border-slate-200 flex items-center justify-center text-3xl sm:text-4xl mb-5 shadow-sm group-hover:border-emerald-300 group-hover:scale-105 transition-all">
               💪
             </div>
-            <h3 class="text-lg sm:text-xl font-bold text-slate-900 mb-2 sm:mb-3 group-hover:text-emerald-800 transition-colors">
+            <h3 class="text-xl sm:text-2xl font-black text-slate-950 mb-3 group-hover:text-emerald-800 transition-colors">
               Ganho de Força Funcional
             </h3>
-            <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+            <p class="text-slate-700 text-base sm:text-lg leading-relaxed font-normal">
               Combate direto à perda muscular (sarcopenia) para levantar do sofá sem apoio de braços e carregar compras com facilidade.
             </p>
           </div>
-          <div class="mt-5 sm:mt-6 pt-3 sm:pt-4 border-t border-slate-200/60 flex items-center text-[11px] sm:text-xs font-bold text-emerald-700 uppercase tracking-wide">
+          <div class="mt-6 pt-4 border-t border-slate-200 flex items-center text-xs sm:text-sm font-black text-emerald-800 uppercase tracking-wide">
             ✓ Autonomia nas tarefas
           </div>
         </div>
 
         <!-- Card 3 -->
-        <div class="reveal-item group bg-slate-50 border border-slate-200/90 rounded-2xl p-5 sm:p-7 shadow-card-sleek hover:shadow-card-hover hover:border-emerald-400 transition-all duration-200 flex flex-col justify-between">
+        <div class="reveal-item group bg-slate-50 border border-slate-200 rounded-2xl p-6 sm:p-7 shadow-card-sleek hover:shadow-card-hover hover:border-emerald-400 transition-all duration-200 flex flex-col justify-between">
           <div>
-            <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-white border border-slate-200 flex items-center justify-center text-2xl sm:text-3xl mb-4 sm:mb-5 shadow-sm group-hover:border-emerald-300 group-hover:scale-105 transition-all">
+            <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-white border border-slate-200 flex items-center justify-center text-3xl sm:text-4xl mb-5 shadow-sm group-hover:border-emerald-300 group-hover:scale-105 transition-all">
               🩺
             </div>
-            <h3 class="text-lg sm:text-xl font-bold text-slate-900 mb-2 sm:mb-3 group-hover:text-emerald-800 transition-colors">
+            <h3 class="text-xl sm:text-2xl font-black text-slate-950 mb-3 group-hover:text-emerald-800 transition-colors">
               Cuidado Clínico e Seguro
             </h3>
-            <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+            <p class="text-slate-700 text-base sm:text-lg leading-relaxed font-normal">
               Protocolos adaptados para quem convive com osteopenia, osteoporose, artrose ou recomendações médicas pós-cirúrgicas.
             </p>
           </div>
-          <div class="mt-5 sm:mt-6 pt-3 sm:pt-4 border-t border-slate-200/60 flex items-center text-[11px] sm:text-xs font-bold text-emerald-700 uppercase tracking-wide">
+          <div class="mt-6 pt-4 border-t border-slate-200 flex items-center text-xs sm:text-sm font-black text-emerald-800 uppercase tracking-wide">
             ✓ Alinhamento médico
           </div>
         </div>
 
         <!-- Card 4 -->
-        <div class="reveal-item group bg-slate-50 border border-slate-200/90 rounded-2xl p-5 sm:p-7 shadow-card-sleek hover:shadow-card-hover hover:border-emerald-400 transition-all duration-200 flex flex-col justify-between">
+        <div class="reveal-item group bg-slate-50 border border-slate-200 rounded-2xl p-6 sm:p-7 shadow-card-sleek hover:shadow-card-hover hover:border-emerald-400 transition-all duration-200 flex flex-col justify-between">
           <div>
-            <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-white border border-slate-200 flex items-center justify-center text-2xl sm:text-3xl mb-4 sm:mb-5 shadow-sm group-hover:border-emerald-300 group-hover:scale-105 transition-all">
+            <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-white border border-slate-200 flex items-center justify-center text-3xl sm:text-4xl mb-5 shadow-sm group-hover:border-emerald-300 group-hover:scale-105 transition-all">
               🏡
             </div>
-            <h3 class="text-lg sm:text-xl font-bold text-slate-900 mb-2 sm:mb-3 group-hover:text-emerald-800 transition-colors">
+            <h3 class="text-xl sm:text-2xl font-black text-slate-950 mb-3 group-hover:text-emerald-800 transition-colors">
               Conforto e Conveniência
             </h3>
-            <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+            <p class="text-slate-700 text-base sm:text-lg leading-relaxed font-normal">
               Zero deslocamento no trânsito, sem academias cheias ou barulhentas. Treino no seu ritmo, na privacidade do seu espaço.
             </p>
           </div>
-          <div class="mt-5 sm:mt-6 pt-3 sm:pt-4 border-t border-slate-200/60 flex items-center text-[11px] sm:text-xs font-bold text-emerald-700 uppercase tracking-wide">
+          <div class="mt-6 pt-4 border-t border-slate-200 flex items-center text-xs sm:text-sm font-black text-emerald-800 uppercase tracking-wide">
             ✓ Comodidade total
           </div>
         </div>
 
       </div>
 
-      <!-- Banner de CTA Intermediário com Shimmer -->
-      <div class="reveal-item mt-10 sm:mt-14 text-center">
+      <!-- Banner de CTA Intermediário com Shimmer e Texto Grande -->
+      <div class="reveal-item mt-12 sm:mt-16 text-center">
         <a href="https://wa.me/5511961343758?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20visita%20de%20avalia%C3%A7%C3%A3o."
            target="_blank"
            rel="noopener noreferrer"
-           class="btn-shimmer w-full sm:w-auto inline-flex items-center justify-center gap-2.5 sm:gap-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-base sm:text-lg py-3.5 px-6 sm:px-8 rounded-xl shadow-md hover:shadow-glow-emerald transition-all duration-200 active:scale-95 focus-ring">
+           class="btn-shimmer w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-emerald-600 hover:bg-emerald-700 text-white font-black text-lg sm:text-2xl py-4 px-8 sm:px-10 rounded-2xl shadow-lg hover:shadow-glow-emerald transition-all duration-200 active:scale-95 focus-ring">
           <span>Quero Conhecer o Atendimento em Casa</span>
-          <svg class="w-5 h-5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg class="w-6 h-6 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
           </svg>
         </a>
@@ -480,18 +482,18 @@
             <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-200">
               <img src="foto-idoso-treino.jpg" 
                    alt="Aluna sênior realizando treino funcional de equilíbrio e força com halteres no lar" 
-                   class="w-full h-[340px] xs:h-[400px] sm:h-[530px] object-cover object-center transform hover:scale-102 transition-transform duration-500" 
+                   class="w-full h-[360px] xs:h-[420px] sm:h-[540px] object-cover object-center transform hover:scale-102 transition-transform duration-500" 
                    loading="lazy" />
             </div>
 
-            <!-- Card Informativo com o Emblema da Marca -->
-            <div class="absolute -bottom-5 left-3 right-3 sm:left-6 sm:right-6 sm:-bottom-6 bg-slate-900/95 backdrop-blur-md text-white p-3.5 sm:p-5 rounded-xl sm:rounded-2xl shadow-xl border border-slate-800 flex items-center gap-3 sm:gap-4">
-              <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center p-2 flex-shrink-0">
+            <!-- Card Informativo com Letras Maiores e mais Nítidas -->
+            <div class="absolute -bottom-5 left-3 right-3 sm:left-6 sm:right-6 sm:-bottom-6 bg-slate-900/95 backdrop-blur-md text-white p-4 sm:p-5 rounded-xl sm:rounded-2xl shadow-xl border border-slate-800 flex items-center gap-3.5 sm:gap-4">
+              <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-lg sm:rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center p-2 flex-shrink-0">
                 <img src="logo.svg" alt="" class="w-full h-full object-contain filter drop-shadow" />
               </div>
               <div>
-                <p class="font-bold text-white text-sm sm:text-base leading-tight">Exercícios adaptados ao seu ritmo</p>
-                <p class="text-xs text-slate-300 mt-0.5">Respeitando cada limitação, sem dor ou exaustão.</p>
+                <p class="font-black text-white text-base sm:text-lg leading-tight">Exercícios adaptados ao seu ritmo</p>
+                <p class="text-xs sm:text-sm text-emerald-300 font-semibold mt-1">Respeitando cada limitação, sem dor ou exaustão.</p>
               </div>
             </div>
 
@@ -502,76 +504,76 @@
         <div class="lg:col-span-7 order-1 lg:order-2 flex flex-col justify-center">
           
           <div class="mb-6 sm:mb-8">
-            <span class="inline-flex items-center gap-1.5 sm:gap-2 text-emerald-700 font-bold text-xs sm:text-sm tracking-wider uppercase bg-emerald-50 px-3.5 py-1 sm:px-4 sm:py-1.5 rounded-full border border-emerald-200 mb-2.5 sm:mb-3">
-              <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-emerald-600"></span>
+            <span class="inline-flex items-center gap-2 text-emerald-800 font-bold text-sm sm:text-base tracking-wide uppercase bg-emerald-50 px-4 py-1.5 sm:px-5 sm:py-2 rounded-full border border-emerald-300 mb-3">
+              <span class="w-2 h-2 rounded-full bg-emerald-600"></span>
               Processo Claro e Transparente
             </span>
-            <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
+            <h2 class="text-2xl sm:text-4xl lg:text-5xl font-black text-slate-950 tracking-tight leading-tight">
               O Passo a Passo para Sua Independência
             </h2>
-            <p class="mt-2.5 sm:mt-3 text-base sm:text-lg text-slate-600">
+            <p class="mt-3 text-lg sm:text-xl md:text-2xl text-slate-700 leading-relaxed font-normal">
               Você não precisa se preocupar com nada. Cuidamos de cada detalhe desde o primeiro contato.
             </p>
           </div>
 
-          <!-- Lista dos 4 Passos -->
-          <div class="space-y-3.5 sm:space-y-5">
+          <!-- Lista dos 4 Passos com Letras Maiores e Confortáveis -->
+          <div class="space-y-4 sm:space-y-5">
             
             <!-- Passo 1 -->
-            <div class="reveal-item flex items-start gap-3.5 sm:gap-4 p-4 sm:p-5 rounded-xl sm:rounded-2xl bg-white border border-slate-200/90 shadow-card-sleek hover:border-emerald-300 transition-all">
-              <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl bg-slate-900 text-white font-extrabold text-base sm:text-lg flex items-center justify-center flex-shrink-0 shadow-sm border border-slate-800">
+            <div class="reveal-item flex items-start gap-4 p-5 rounded-2xl bg-white border border-slate-200 shadow-card-sleek hover:border-emerald-300 transition-all">
+              <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-slate-900 text-white font-black text-lg sm:text-xl flex items-center justify-center flex-shrink-0 shadow-sm border border-slate-800">
                 1
               </div>
               <div>
-                <h3 class="font-bold text-slate-900 text-base sm:text-lg">
+                <h3 class="font-black text-slate-950 text-lg sm:text-2xl">
                   Contato Inicial Descomplicado
                 </h3>
-                <p class="text-slate-600 text-sm sm:text-base mt-1">
+                <p class="text-slate-700 text-base sm:text-lg leading-relaxed mt-1 font-normal">
                   Uma conversa rápida e gentil pelo WhatsApp para entender sua rotina, necessidades e disponibilidade de horários.
                 </p>
               </div>
             </div>
 
             <!-- Passo 2 -->
-            <div class="reveal-item flex items-start gap-3.5 sm:gap-4 p-4 sm:p-5 rounded-xl sm:rounded-2xl bg-white border border-slate-200/90 shadow-card-sleek hover:border-emerald-300 transition-all">
-              <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl bg-slate-900 text-white font-extrabold text-base sm:text-lg flex items-center justify-center flex-shrink-0 shadow-sm border border-slate-800">
+            <div class="reveal-item flex items-start gap-4 p-5 rounded-2xl bg-white border border-slate-200 shadow-card-sleek hover:border-emerald-300 transition-all">
+              <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-slate-900 text-white font-black text-lg sm:text-xl flex items-center justify-center flex-shrink-0 shadow-sm border border-slate-800">
                 2
               </div>
               <div>
-                <h3 class="font-bold text-slate-900 text-base sm:text-lg">
+                <h3 class="font-black text-slate-950 text-lg sm:text-2xl">
                   Avaliação Diagnóstica no Lar
                 </h3>
-                <p class="text-slate-600 text-sm sm:text-base mt-1">
+                <p class="text-slate-700 text-base sm:text-lg leading-relaxed mt-1 font-normal">
                   Visita presencial com análise cuidadosa da marcha, mobilidade articular, testes de equilíbrio e revisão de histórico médico.
                 </p>
               </div>
             </div>
 
             <!-- Passo 3 -->
-            <div class="reveal-item flex items-start gap-3.5 sm:gap-4 p-4 sm:p-5 rounded-xl sm:rounded-2xl bg-white border border-slate-200/90 shadow-card-sleek hover:border-emerald-300 transition-all">
-              <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl bg-slate-900 text-white font-extrabold text-base sm:text-lg flex items-center justify-center flex-shrink-0 shadow-sm border border-slate-800">
+            <div class="reveal-item flex items-start gap-4 p-5 rounded-2xl bg-white border border-slate-200 shadow-card-sleek hover:border-emerald-300 transition-all">
+              <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-slate-900 text-white font-black text-lg sm:text-xl flex items-center justify-center flex-shrink-0 shadow-sm border border-slate-800">
                 3
               </div>
               <div>
-                <h3 class="font-bold text-slate-900 text-base sm:text-lg">
+                <h3 class="font-black text-slate-950 text-lg sm:text-2xl">
                   Prescrição Individualizada
                 </h3>
-                <p class="text-slate-600 text-sm sm:text-base mt-1">
+                <p class="text-slate-700 text-base sm:text-lg leading-relaxed mt-1 font-normal">
                   Planejamento seguro de exercícios adaptados à sua residência, com foco em fortalecer as pernas, tronco e postura.
                 </p>
               </div>
             </div>
 
             <!-- Passo 4 -->
-            <div class="reveal-item flex items-start gap-3.5 sm:gap-4 p-4 sm:p-5 rounded-xl sm:rounded-2xl bg-white border border-slate-200/90 shadow-card-sleek hover:border-emerald-300 transition-all">
-              <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl bg-slate-900 text-white font-extrabold text-base sm:text-lg flex items-center justify-center flex-shrink-0 shadow-sm border border-slate-800">
+            <div class="reveal-item flex items-start gap-4 p-5 rounded-2xl bg-white border border-slate-200 shadow-card-sleek hover:border-emerald-300 transition-all">
+              <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-slate-900 text-white font-black text-lg sm:text-xl flex items-center justify-center flex-shrink-0 shadow-sm border border-slate-800">
                 4
               </div>
               <div>
-                <h3 class="font-bold text-slate-900 text-base sm:text-lg">
+                <h3 class="font-black text-slate-950 text-lg sm:text-2xl">
                   Acompanhamento Contínuo
                 </h3>
-                <p class="text-slate-600 text-sm sm:text-base mt-1">
+                <p class="text-slate-700 text-base sm:text-lg leading-relaxed mt-1 font-normal">
                   Evolução gradativa com todos os elásticos, esteiras, halteres especiais e apoios levados pessoalmente pelo treinador.
                 </p>
               </div>
@@ -579,14 +581,14 @@
 
           </div>
 
-          <!-- Botão sob os passos com Shimmer -->
-          <div class="reveal-item mt-6 sm:mt-8">
+          <!-- Botão sob os passos com Shimmer e Texto Grande -->
+          <div class="reveal-item mt-8 sm:mt-10">
             <a href="https://wa.me/5511961343758?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20visita%20de%20avalia%C3%A7%C3%A3o."
                target="_blank"
                rel="noopener noreferrer"
-               class="btn-shimmer w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-slate-900 hover:bg-slate-800 text-white font-bold text-base sm:text-lg py-3.5 sm:py-4 px-6 sm:px-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-200 focus-ring">
+               class="btn-shimmer w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-slate-900 hover:bg-slate-800 text-white font-black text-lg sm:text-2xl py-4 px-8 sm:px-10 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-200 focus-ring">
               <span>Agendar Minha Avaliação Inicial</span>
-              <svg class="w-5 h-5 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg class="w-6 h-6 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" />
               </svg>
             </a>
@@ -598,89 +600,89 @@
     </div>
   </section>
 
-  <!-- 5.5 SEÇÃO DE PROVA SOCIAL & DEPOIMENTOS REAIS -->
+  <!-- 5.5 SEÇÃO DE PROVA SOCIAL & DEPOIMENTOS REAIS (Textos Claros & Nítidos) -->
   <section class="py-14 sm:py-20 bg-white border-y border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <!-- Cabeçalho -->
       <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
-        <span class="inline-flex items-center gap-1.5 sm:gap-2 text-emerald-700 font-bold text-xs sm:text-sm tracking-wider uppercase bg-emerald-50 px-3.5 py-1 sm:px-4 sm:py-1.5 rounded-full border border-emerald-200 mb-2.5 sm:mb-3">
-          <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-emerald-600"></span>
+        <span class="inline-flex items-center gap-2 text-emerald-800 font-bold text-sm sm:text-base tracking-wide uppercase bg-emerald-50 px-4 py-1.5 sm:px-5 sm:py-2 rounded-full border border-emerald-300 mb-3">
+          <span class="w-2 h-2 rounded-full bg-emerald-600"></span>
           Resultados Reais no Lar
         </span>
-        <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
+        <h2 class="text-2xl sm:text-4xl lg:text-5xl font-black text-slate-950 tracking-tight leading-tight">
           O que dizem os alunos e suas famílias em Jundiaí
         </h2>
-        <p class="mt-3 sm:mt-4 text-base sm:text-lg text-slate-600">
+        <p class="mt-4 text-lg sm:text-xl md:text-2xl text-slate-700 leading-relaxed font-normal">
           A transformação na qualidade de vida contada por quem viveu a recuperação da força e da autonomia.
         </p>
       </div>
 
-      <!-- Grid de 3 Depoimentos -->
+      <!-- Grid de 3 Depoimentos com Letras Grandes -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
         
         <!-- Depoimento 1: Aluna Idosa -->
-        <div class="reveal-item bg-slate-50 border border-slate-200/90 rounded-2xl p-6 sm:p-7 shadow-card-sleek flex flex-col justify-between hover:shadow-card-hover hover:border-emerald-300 transition-all">
+        <div class="reveal-item bg-slate-50 border border-slate-200 rounded-2xl p-6 sm:p-8 shadow-card-sleek flex flex-col justify-between hover:shadow-card-hover hover:border-emerald-300 transition-all">
           <div>
             <div class="flex items-center justify-between mb-4">
-              <div class="flex text-amber-400 text-sm tracking-tight">★★★★★</div>
-              <span class="text-[11px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-200/60">Equilíbrio e Firmeza</span>
+              <div class="flex text-amber-500 text-base tracking-tight">★★★★★</div>
+              <span class="text-xs sm:text-sm font-black text-emerald-800 bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-200">Equilíbrio e Firmeza</span>
             </div>
-            <p class="text-slate-700 text-sm sm:text-base leading-relaxed italic">
+            <p class="text-slate-800 text-base sm:text-lg leading-relaxed italic font-medium">
               &ldquo;Eu tinha muito medo de tropeçar no tapete e cair na escada. Em dois meses de treino no meu apartamento, sinto as pernas firmes de novo e voltei a passear no shopping e brincar com meus netos sem receio.&rdquo;
             </p>
           </div>
-          <div class="mt-6 pt-4 border-t border-slate-200/70 flex items-center gap-3">
-            <div class="w-10 h-10 rounded-full bg-slate-900 text-white font-bold text-sm flex items-center justify-center flex-shrink-0">
+          <div class="mt-6 pt-4 border-t border-slate-200 flex items-center gap-3.5">
+            <div class="w-12 h-12 rounded-full bg-slate-900 text-white font-black text-base flex items-center justify-center flex-shrink-0">
               MH
             </div>
             <div>
-              <p class="font-bold text-slate-900 text-sm">D. Maria Helena, 72 anos</p>
-              <p class="text-xs text-slate-500">Residencial Samambaia &bull; Jundiaí</p>
+              <p class="font-black text-slate-950 text-base sm:text-lg">D. Maria Helena, 72 anos</p>
+              <p class="text-sm sm:text-base text-slate-700 font-semibold">Residencial Samambaia &bull; Jundiaí</p>
             </div>
           </div>
         </div>
 
         <!-- Depoimento 2: Filho Cuidando da Mãe -->
-        <div class="reveal-item bg-slate-50 border border-slate-200/90 rounded-2xl p-6 sm:p-7 shadow-card-sleek flex flex-col justify-between hover:shadow-card-hover hover:border-emerald-300 transition-all">
+        <div class="reveal-item bg-slate-50 border border-slate-200 rounded-2xl p-6 sm:p-8 shadow-card-sleek flex flex-col justify-between hover:shadow-card-hover hover:border-emerald-300 transition-all">
           <div>
             <div class="flex items-center justify-between mb-4">
-              <div class="flex text-amber-400 text-sm tracking-tight">★★★★★</div>
-              <span class="text-[11px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-200/60">Família Tranquila</span>
+              <div class="flex text-amber-500 text-base tracking-tight">★★★★★</div>
+              <span class="text-xs sm:text-sm font-black text-emerald-800 bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-200">Família Tranquila</span>
             </div>
-            <p class="text-slate-700 text-sm sm:text-base leading-relaxed italic">
+            <p class="text-slate-800 text-base sm:text-lg leading-relaxed italic font-medium">
               &ldquo;Minha mãe detestava a ideia de academia convencional. O atendimento em domicílio foi a salvação: o professor traz tudo, é pontual, respeitoso e a postura dela melhorou muito. Recomendo de olhos fechados.&rdquo;
             </p>
           </div>
-          <div class="mt-6 pt-4 border-t border-slate-200/70 flex items-center gap-3">
-            <div class="w-10 h-10 rounded-full bg-emerald-700 text-white font-bold text-sm flex items-center justify-center flex-shrink-0">
+          <div class="mt-6 pt-4 border-t border-slate-200 flex items-center gap-3.5">
+            <div class="w-12 h-12 rounded-full bg-emerald-700 text-white font-black text-base flex items-center justify-center flex-shrink-0">
               CE
             </div>
             <div>
-              <p class="font-bold text-slate-900 text-sm">Carlos Eduardo (Filho da D. Neuza, 79)</p>
-              <p class="text-xs text-slate-500">Bairro da Malota &bull; Jundiaí</p>
+              <p class="font-black text-slate-950 text-base sm:text-lg">Carlos Eduardo (Filho da D. Neuza, 79)</p>
+              <p class="text-sm sm:text-base text-slate-700 font-semibold">Bairro da Malota &bull; Jundiaí</p>
             </div>
           </div>
         </div>
 
         <!-- Depoimento 3: Aluno / Médico Aposentado -->
-        <div class="reveal-item bg-slate-50 border border-slate-200/90 rounded-2xl p-6 sm:p-7 shadow-card-sleek flex flex-col justify-between hover:shadow-card-hover hover:border-emerald-300 transition-all">
+        <div class="reveal-item bg-slate-50 border border-slate-200 rounded-2xl p-6 sm:p-8 shadow-card-sleek flex flex-col justify-between hover:shadow-card-hover hover:border-emerald-300 transition-all">
           <div>
             <div class="flex items-center justify-between mb-4">
-              <div class="flex text-amber-400 text-sm tracking-tight">★★★★★</div>
-              <span class="text-[11px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-200/60">Base Científica</span>
+              <div class="flex text-amber-500 text-base tracking-tight">★★★★★</div>
+              <span class="text-xs sm:text-sm font-black text-emerald-800 bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-200">Base Científica</span>
             </div>
-            <p class="text-slate-700 text-sm sm:text-base leading-relaxed italic">
+            <p class="text-slate-800 text-base sm:text-lg leading-relaxed italic font-medium">
               &ldquo;Como médico aposentado, sei da importância vital de combater a sarcopenia. O método é rigorosamente técnico, respeita limitações articulares e traz o que a ciência prescreve de melhor para a longevidade ativa.&rdquo;
             </p>
           </div>
-          <div class="mt-6 pt-4 border-t border-slate-200/70 flex items-center gap-3">
-            <div class="w-10 h-10 rounded-full bg-slate-800 text-white font-bold text-sm flex items-center justify-center flex-shrink-0">
+          <div class="mt-6 pt-4 border-t border-slate-200 flex items-center gap-3.5">
+            <div class="w-12 h-12 rounded-full bg-slate-800 text-white font-black text-base flex items-center justify-center flex-shrink-0">
               RS
             </div>
             <div>
-              <p class="font-bold text-slate-900 text-sm">Dr. Roberto S., 68 anos</p>
-              <p class="text-xs text-slate-500">Chácara Urbana &bull; Jundiaí</p>
+              <p class="font-black text-slate-950 text-base sm:text-lg">Dr. Roberto S., 68 anos</p>
+              <p class="text-sm sm:text-base text-slate-700 font-semibold">Chácara Urbana &bull; Jundiaí</p>
             </div>
           </div>
         </div>
@@ -690,121 +692,120 @@
     </div>
   </section>
 
-  <!-- 6. SEÇÃO DE PERGUNTAS FREQUENTES (FAQ) -->
-  <!-- 6. SEÇÃO DE PERGUNTAS FREQUENTES (FAQ) ACCORDION -->
+  <!-- 6. SEÇÃO DE PERGUNTAS FREQUENTES (FAQ) ACCORDION COM TEXTO GRANDE -->
   <section class="py-14 sm:py-20 bg-white border-t border-slate-200">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <!-- Cabeçalho FAQ -->
       <div class="reveal-item text-center mb-10 sm:mb-14">
-        <span class="inline-flex items-center gap-1.5 sm:gap-2 text-emerald-700 font-bold text-xs sm:text-sm tracking-wider uppercase bg-emerald-50 px-3.5 py-1 sm:px-4 sm:py-1.5 rounded-full border border-emerald-200 mb-2.5 sm:mb-3">
-          <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-emerald-600"></span>
+        <span class="inline-flex items-center gap-2 text-emerald-800 font-bold text-sm sm:text-base tracking-wide uppercase bg-emerald-50 px-4 py-1.5 sm:px-5 sm:py-2 rounded-full border border-emerald-300 mb-3">
+          <span class="w-2 h-2 rounded-full bg-emerald-600"></span>
           Tire Suas Dúvidas
         </span>
-        <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+        <h2 class="text-2xl sm:text-4xl lg:text-5xl font-black text-slate-950 tracking-tight">
           Perguntas Frequentes
         </h2>
-        <p class="mt-2.5 sm:mt-3 text-base sm:text-lg text-slate-600">
+        <p class="mt-3 text-lg sm:text-xl text-slate-700 font-normal">
           Entenda como funciona o atendimento e tire todas as suas dúvidas antes de começar.
         </p>
       </div>
 
-      <!-- 4 Blocos de Perguntas e Respostas em Formato Accordion Interativo -->
-      <div class="space-y-3 sm:space-y-4" id="faq-accordion">
+      <!-- 4 Blocos de Perguntas e Respostas em Formato Accordion Interativo com Letras Grandes -->
+      <div class="space-y-4" id="faq-accordion">
         
         <!-- Pergunta 1 (Inicia aberta por padrão) -->
-        <div class="faq-item reveal-item bg-slate-50 border border-slate-200/90 rounded-xl sm:rounded-2xl shadow-card-sleek transition-all duration-200 hover:border-emerald-300 overflow-hidden active">
-          <button type="button" class="faq-toggle w-full p-4 sm:p-6 text-left flex items-center justify-between gap-3 focus:outline-none" aria-expanded="true">
-            <span class="text-base sm:text-lg font-bold text-slate-900 flex items-center gap-2.5 sm:gap-3">
-              <span class="text-emerald-600 text-base sm:text-lg font-extrabold flex-shrink-0">Q.</span>
+        <div class="faq-item reveal-item bg-slate-50 border border-slate-200 rounded-2xl shadow-card-sleek transition-all duration-200 hover:border-emerald-300 overflow-hidden active">
+          <button type="button" class="faq-toggle w-full p-5 sm:p-7 text-left flex items-center justify-between gap-4 focus:outline-none" aria-expanded="true">
+            <span class="text-lg sm:text-2xl font-black text-slate-950 flex items-center gap-3">
+              <span class="text-emerald-700 text-xl sm:text-2xl font-black flex-shrink-0">Q.</span>
               <span>Preciso ter aparelhos ou espaço grande em casa?</span>
             </span>
-            <span class="faq-chevron w-8 h-8 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-600 flex-shrink-0 shadow-xs">
-              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <span class="faq-chevron w-9 h-9 rounded-full bg-white border border-slate-300 flex items-center justify-center text-slate-800 flex-shrink-0 shadow-xs">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
               </svg>
             </span>
           </button>
           <div class="faq-body">
-            <div class="faq-inner px-4 pb-4 sm:px-6 sm:pb-6 text-slate-600 text-sm sm:text-base leading-relaxed pl-4 sm:pl-10">
+            <div class="faq-inner px-5 pb-5 sm:px-7 sm:pb-7 text-slate-700 text-base sm:text-xl leading-relaxed pl-5 sm:pl-12">
               <p>
-                <strong>Não.</strong> Qualquer sala, varanda ou quarto com espaço livre é suficiente. Levamos todos os equipamentos necessários até você: faixas elásticas terapêuticas, esteiras de solo, pesos leves adequados e apoios de equilíbrio.
+                <strong class="text-slate-950 font-bold">Não.</strong> Qualquer sala, varanda ou quarto com espaço livre é suficiente. Levamos todos os equipamentos necessários até você: faixas elásticas terapêuticas, esteiras de solo, pesos leves adequados e apoios de equilíbrio.
               </p>
             </div>
           </div>
         </div>
 
         <!-- Pergunta 2 -->
-        <div class="faq-item reveal-item bg-slate-50 border border-slate-200/90 rounded-xl sm:rounded-2xl shadow-card-sleek transition-all duration-200 hover:border-emerald-300 overflow-hidden">
-          <button type="button" class="faq-toggle w-full p-4 sm:p-6 text-left flex items-center justify-between gap-3 focus:outline-none" aria-expanded="false">
-            <span class="text-base sm:text-xl font-bold text-slate-900 flex items-center gap-2.5 sm:gap-3">
-              <span class="text-emerald-600 text-base sm:text-lg font-extrabold flex-shrink-0">Q.</span>
+        <div class="faq-item reveal-item bg-slate-50 border border-slate-200 rounded-2xl shadow-card-sleek transition-all duration-200 hover:border-emerald-300 overflow-hidden">
+          <button type="button" class="faq-toggle w-full p-5 sm:p-7 text-left flex items-center justify-between gap-4 focus:outline-none" aria-expanded="false">
+            <span class="text-lg sm:text-2xl font-black text-slate-950 flex items-center gap-3">
+              <span class="text-emerald-700 text-xl sm:text-2xl font-black flex-shrink-0">Q.</span>
               <span>Tenho problemas de coluna, artrose ou recomendação médica. Posso fazer?</span>
             </span>
-            <span class="faq-chevron w-8 h-8 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-600 flex-shrink-0 shadow-xs">
-              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <span class="faq-chevron w-9 h-9 rounded-full bg-white border border-slate-300 flex items-center justify-center text-slate-800 flex-shrink-0 shadow-xs">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
               </svg>
             </span>
           </button>
           <div class="faq-body">
-            <div class="faq-inner px-4 pb-4 sm:px-6 sm:pb-6 text-slate-600 text-sm sm:text-base leading-relaxed pl-4 sm:pl-10">
+            <div class="faq-inner px-5 pb-5 sm:px-7 sm:pb-7 text-slate-700 text-base sm:text-xl leading-relaxed pl-5 sm:pl-12">
               <p>
-                <strong>Sim!</strong> Os treinos respeitam rigorosamente a liberação e prescrição do seu médico, fortalecendo a musculatura protetora das articulações sem movimentos de impacto ou cargas perigosas.
+                <strong class="text-slate-950 font-bold">Sim!</strong> Os treinos respeitam rigorosamente a liberação e prescrição do seu médico, fortalecendo a musculatura protetora das articulações sem movimentos de impacto ou cargas perigosas.
               </p>
             </div>
           </div>
         </div>
 
-        <!-- Pergunta 3: Com Chips de Bairros Interativos -->
-        <div class="faq-item reveal-item bg-slate-50 border border-slate-200/90 rounded-xl sm:rounded-2xl shadow-card-sleek transition-all duration-200 hover:border-emerald-300 overflow-hidden">
-          <button type="button" class="faq-toggle w-full p-4 sm:p-6 text-left flex items-center justify-between gap-3 focus:outline-none" aria-expanded="false">
-            <span class="text-base sm:text-xl font-bold text-slate-900 flex items-center gap-2.5 sm:gap-3">
-              <span class="text-emerald-600 text-base sm:text-lg font-extrabold flex-shrink-0">Q.</span>
+        <!-- Pergunta 3: Com Chips de Bairros Interativos e Grandes -->
+        <div class="faq-item reveal-item bg-slate-50 border border-slate-200 rounded-2xl shadow-card-sleek transition-all duration-200 hover:border-emerald-300 overflow-hidden">
+          <button type="button" class="faq-toggle w-full p-5 sm:p-7 text-left flex items-center justify-between gap-4 focus:outline-none" aria-expanded="false">
+            <span class="text-lg sm:text-2xl font-black text-slate-950 flex items-center gap-3">
+              <span class="text-emerald-700 text-xl sm:text-2xl font-black flex-shrink-0">Q.</span>
               <span>Quais regiões e bairros de Jundiaí são atendidos?</span>
             </span>
-            <span class="faq-chevron w-8 h-8 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-600 flex-shrink-0 shadow-xs">
-              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <span class="faq-chevron w-9 h-9 rounded-full bg-white border border-slate-300 flex items-center justify-center text-slate-800 flex-shrink-0 shadow-xs">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
               </svg>
             </span>
           </button>
           <div class="faq-body">
-            <div class="faq-inner px-4 pb-4 sm:px-6 sm:pb-6 text-slate-600 text-sm sm:text-base leading-relaxed pl-4 sm:pl-10">
-              <p class="mb-3">
+            <div class="faq-inner px-5 pb-5 sm:px-7 sm:pb-7 text-slate-700 text-base sm:text-xl leading-relaxed pl-5 sm:pl-12">
+              <p class="mb-4">
                 Atendemos residências e condomínios em toda a cidade de Jundiaí e adjacências. Clique no seu bairro abaixo para consultar os horários disponíveis:
               </p>
               
-              <!-- Chips Interativos dos Bairros com Links Diretos para WhatsApp -->
-              <div class="flex flex-wrap gap-1.5 sm:gap-2 pt-1">
-                <a href="https://wa.me/5511961343758?text=Ol%C3%A1!%20Moro%20na%20Malota%20em%20Jundia%C3%AD%20e%20gostaria%20de%20consultar%20hor%C3%A1rios%20para%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-3 py-1 rounded-lg bg-white border border-slate-200 text-slate-700 hover:border-emerald-500 hover:bg-emerald-50 hover:text-emerald-800 text-xs sm:text-sm font-semibold shadow-xs transition-colors">
+              <!-- Chips Interativos dos Bairros com Links Diretos para WhatsApp e Letras Maiores -->
+              <div class="flex flex-wrap gap-2 pt-1">
+                <a href="https://wa.me/5511961343758?text=Ol%C3%A1!%20Moro%20na%20Malota%20em%20Jundia%C3%AD%20e%20gostaria%20de%20consultar%20hor%C3%A1rios%20para%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-white border border-slate-300 text-slate-900 hover:border-emerald-600 hover:bg-emerald-50 hover:text-emerald-900 text-sm sm:text-base font-black shadow-xs transition-colors">
                   📍 Malota
                 </a>
-                <a href="https://wa.me/5511961343758?text=Ol%C3%A1!%20Moro%20na%20Ch%C3%A1cara%20Urbana%20em%20Jundia%C3%AD%20e%20gostaria%20de%20consultar%20hor%C3%A1rios%20para%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-3 py-1 rounded-lg bg-white border border-slate-200 text-slate-700 hover:border-emerald-500 hover:bg-emerald-50 hover:text-emerald-800 text-xs sm:text-sm font-semibold shadow-xs transition-colors">
+                <a href="https://wa.me/5511961343758?text=Ol%C3%A1!%20Moro%20na%20Ch%C3%A1cara%20Urbana%20em%20Jundia%C3%AD%20e%20gostaria%20de%20consultar%20hor%C3%A1rios%20para%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-white border border-slate-300 text-slate-900 hover:border-emerald-600 hover:bg-emerald-50 hover:text-emerald-900 text-sm sm:text-base font-black shadow-xs transition-colors">
                   📍 Chácara Urbana
                 </a>
-                <a href="https://wa.me/5511961343758?text=Ol%C3%A1!%20Moro%20no%20Anhangaba%C3%BA%20em%20Jundia%C3%AD%20e%20gostaria%20de%20consultar%20hor%C3%A1rios%20para%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-3 py-1 rounded-lg bg-white border border-slate-200 text-slate-700 hover:border-emerald-500 hover:bg-emerald-50 hover:text-emerald-800 text-xs sm:text-sm font-semibold shadow-xs transition-colors">
+                <a href="https://wa.me/5511961343758?text=Ol%C3%A1!%20Moro%20no%20Anhangaba%C3%BA%20em%20Jundia%C3%AD%20e%20gostaria%20de%20consultar%20hor%C3%A1rios%20para%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-white border border-slate-300 text-slate-900 hover:border-emerald-600 hover:bg-emerald-50 hover:text-emerald-900 text-sm sm:text-base font-black shadow-xs transition-colors">
                   📍 Anhangabaú
                 </a>
-                <a href="https://wa.me/5511961343758?text=Ol%C3%A1!%20Moro%20no%20Jardim%20Samambaia%20em%20Jundia%C3%AD%20e%20gostaria%20de%20consultar%20hor%C3%A1rios%20para%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-3 py-1 rounded-lg bg-white border border-slate-200 text-slate-700 hover:border-emerald-500 hover:bg-emerald-50 hover:text-emerald-800 text-xs sm:text-sm font-semibold shadow-xs transition-colors">
+                <a href="https://wa.me/5511961343758?text=Ol%C3%A1!%20Moro%20no%20Jardim%20Samambaia%20em%20Jundia%C3%AD%20e%20gostaria%20de%20consultar%20hor%C3%A1rios%20para%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-white border border-slate-300 text-slate-900 hover:border-emerald-600 hover:bg-emerald-50 hover:text-emerald-900 text-sm sm:text-base font-black shadow-xs transition-colors">
                   📍 Samambaia
                 </a>
-                <a href="https://wa.me/5511961343758?text=Ol%C3%A1!%20Moro%20no%20Eloy%20Chaves%20em%20Jundia%C3%AD%20e%20gostaria%20de%20consultar%20hor%C3%A1rios%20para%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-3 py-1 rounded-lg bg-white border border-slate-200 text-slate-700 hover:border-emerald-500 hover:bg-emerald-50 hover:text-emerald-800 text-xs sm:text-sm font-semibold shadow-xs transition-colors">
+                <a href="https://wa.me/5511961343758?text=Ol%C3%A1!%20Moro%20no%20Eloy%20Chaves%20em%20Jundia%C3%AD%20e%20gostaria%20de%20consultar%20hor%C3%A1rios%20para%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-white border border-slate-300 text-slate-900 hover:border-emerald-600 hover:bg-emerald-50 hover:text-emerald-900 text-sm sm:text-base font-black shadow-xs transition-colors">
                   📍 Eloy Chaves
                 </a>
-                <a href="https://wa.me/5511961343758?text=Ol%C3%A1!%20Moro%20no%20Medeiros%20em%20Jundia%C3%AD%20e%20gostaria%20de%20consultar%20hor%C3%A1rios%20para%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-3 py-1 rounded-lg bg-white border border-slate-200 text-slate-700 hover:border-emerald-500 hover:bg-emerald-50 hover:text-emerald-800 text-xs sm:text-sm font-semibold shadow-xs transition-colors">
+                <a href="https://wa.me/5511961343758?text=Ol%C3%A1!%20Moro%20no%20Medeiros%20em%20Jundia%C3%AD%20e%20gostaria%20de%20consultar%20hor%C3%A1rios%20para%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-white border border-slate-300 text-slate-900 hover:border-emerald-600 hover:bg-emerald-50 hover:text-emerald-900 text-sm sm:text-base font-black shadow-xs transition-colors">
                   📍 Medeiros
                 </a>
-                <a href="https://wa.me/5511961343758?text=Ol%C3%A1!%20Moro%20no%20Jardim%20do%20Lago%20em%20Jundia%C3%AD%20e%20gostaria%20de%20consultar%20hor%C3%A1rios%20para%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-3 py-1 rounded-lg bg-white border border-slate-200 text-slate-700 hover:border-emerald-500 hover:bg-emerald-50 hover:text-emerald-800 text-xs sm:text-sm font-semibold shadow-xs transition-colors">
+                <a href="https://wa.me/5511961343758?text=Ol%C3%A1!%20Moro%20no%20Jardim%20do%20Lago%20em%20Jundia%C3%AD%20e%20gostaria%20de%20consultar%20hor%C3%A1rios%20para%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-white border border-slate-300 text-slate-900 hover:border-emerald-600 hover:bg-emerald-50 hover:text-emerald-900 text-sm sm:text-base font-black shadow-xs transition-colors">
                   📍 Jardim do Lago
                 </a>
-                <a href="https://wa.me/5511961343758?text=Ol%C3%A1!%20Moro%20no%20Vianelo%20em%20Jundia%C3%AD%20e%20gostaria%20de%20consultar%20hor%C3%A1rios%20para%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-3 py-1 rounded-lg bg-white border border-slate-200 text-slate-700 hover:border-emerald-500 hover:bg-emerald-50 hover:text-emerald-800 text-xs sm:text-sm font-semibold shadow-xs transition-colors">
+                <a href="https://wa.me/5511961343758?text=Ol%C3%A1!%20Moro%20no%20Vianelo%20em%20Jundia%C3%AD%20e%20gostaria%20de%20consultar%20hor%C3%A1rios%20para%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-white border border-slate-300 text-slate-900 hover:border-emerald-600 hover:bg-emerald-50 hover:text-emerald-900 text-sm sm:text-base font-black shadow-xs transition-colors">
                   📍 Vianelo
                 </a>
-                <a href="https://wa.me/5511961343758?text=Ol%C3%A1!%20Moro%20na%20Vila%20Arens%20em%20Jundia%C3%AD%20e%20gostaria%20de%20consultar%20hor%C3%A1rios%20para%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-3 py-1 rounded-lg bg-white border border-slate-200 text-slate-700 hover:border-emerald-500 hover:bg-emerald-50 hover:text-emerald-800 text-xs sm:text-sm font-semibold shadow-xs transition-colors">
+                <a href="https://wa.me/5511961343758?text=Ol%C3%A1!%20Moro%20na%20Vila%20Arens%20em%20Jundia%C3%AD%20e%20gostaria%20de%20consultar%20hor%C3%A1rios%20para%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-white border border-slate-300 text-slate-900 hover:border-emerald-600 hover:bg-emerald-50 hover:text-emerald-900 text-sm sm:text-base font-black shadow-xs transition-colors">
                   📍 Vila Arens
                 </a>
-                <a href="https://wa.me/5511961343758?text=Ol%C3%A1!%20Moro%20no%20Jardim%20Cica%20em%20Jundia%C3%AD%20e%20gostaria%20de%20consultar%20hor%C3%A1rios%20para%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-3 py-1 rounded-lg bg-white border border-slate-200 text-slate-700 hover:border-emerald-500 hover:bg-emerald-50 hover:text-emerald-800 text-xs sm:text-sm font-semibold shadow-xs transition-colors">
+                <a href="https://wa.me/5511961343758?text=Ol%C3%A1!%20Moro%20no%20Jardim%20Cica%20em%20Jundia%C3%AD%20e%20gostaria%20de%20consultar%20hor%C3%A1rios%20para%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-white border border-slate-300 text-slate-900 hover:border-emerald-600 hover:bg-emerald-50 hover:text-emerald-900 text-sm sm:text-base font-black shadow-xs transition-colors">
                   📍 Jardim Cica
                 </a>
               </div>
@@ -813,20 +814,20 @@
         </div>
 
         <!-- Pergunta 4 -->
-        <div class="faq-item reveal-item bg-slate-50 border border-slate-200/90 rounded-xl sm:rounded-2xl shadow-card-sleek transition-all duration-200 hover:border-emerald-300 overflow-hidden">
-          <button type="button" class="faq-toggle w-full p-4 sm:p-6 text-left flex items-center justify-between gap-3 focus:outline-none" aria-expanded="false">
-            <span class="text-base sm:text-xl font-bold text-slate-900 flex items-center gap-2.5 sm:gap-3">
-              <span class="text-emerald-600 text-base sm:text-lg font-extrabold flex-shrink-0">Q.</span>
+        <div class="faq-item reveal-item bg-slate-50 border border-slate-200 rounded-2xl shadow-card-sleek transition-all duration-200 hover:border-emerald-300 overflow-hidden">
+          <button type="button" class="faq-toggle w-full p-5 sm:p-7 text-left flex items-center justify-between gap-4 focus:outline-none" aria-expanded="false">
+            <span class="text-lg sm:text-2xl font-black text-slate-950 flex items-center gap-3">
+              <span class="text-emerald-700 text-xl sm:text-2xl font-black flex-shrink-0">Q.</span>
               <span>Como funciona a primeira visita de avaliação?</span>
             </span>
-            <span class="faq-chevron w-8 h-8 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-600 flex-shrink-0 shadow-xs">
-              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <span class="faq-chevron w-9 h-9 rounded-full bg-white border border-slate-300 flex items-center justify-center text-slate-800 flex-shrink-0 shadow-xs">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
               </svg>
             </span>
           </button>
           <div class="faq-body">
-            <div class="faq-inner px-4 pb-4 sm:px-6 sm:pb-6 text-slate-600 text-sm sm:text-base leading-relaxed pl-4 sm:pl-10">
+            <div class="faq-inner px-5 pb-5 sm:px-7 sm:pb-7 text-slate-700 text-base sm:text-xl leading-relaxed pl-5 sm:pl-12">
               <p>
                 É uma visita presencial para conversarmos sobre seus objetivos, avaliarmos seu equilíbrio, postura e mobilidade, e estruturarmos o plano ideal de frequência e intensidade.
               </p>
@@ -837,12 +838,12 @@
       </div>
 
       <!-- Chamada de Suporte Adicional -->
-      <div class="reveal-item text-center mt-8 sm:mt-10 p-5 sm:p-6 bg-slate-50 border border-dashed border-slate-300 rounded-xl sm:rounded-2xl">
-        <p class="text-slate-700 font-medium text-sm sm:text-base">Ficou com alguma dúvida específica sobre o seu caso?</p>
+      <div class="reveal-item text-center mt-10 sm:mt-12 p-6 sm:p-8 bg-slate-50 border-2 border-dashed border-slate-300 rounded-2xl">
+        <p class="text-slate-900 font-bold text-base sm:text-xl">Ficou com alguma dúvida específica sobre o seu caso?</p>
         <a href="https://wa.me/5511961343758?text=Ol%C3%A1!%20Gostaria%20de%20tirar%20uma%20d%C3%BAvida%20sobre%20o%20treinamento%20em%20casa." 
            target="_blank" 
            rel="noopener noreferrer"
-           class="inline-block mt-2 font-bold text-emerald-700 hover:text-emerald-800 underline text-sm sm:text-base">
+           class="inline-block mt-3 font-black text-emerald-700 hover:text-emerald-800 underline text-base sm:text-xl">
           Fale diretamente com o profissional pelo WhatsApp &rarr;
         </a>
       </div>
@@ -850,66 +851,66 @@
     </div>
   </section>
 
-  <!-- 7. SEÇÃO CTA FINAL COM IDENTIDADE CARBON & EMERALD -->
-  <section class="py-14 sm:py-20 md:py-24 bg-slate-900 text-white relative overflow-hidden">
+  <!-- 7. SEÇÃO CTA FINAL COM IDENTIDADE CARBON & EMERALD (Textos Enormes e Confortáveis) -->
+  <section class="py-16 sm:py-24 md:py-28 bg-slate-900 text-white relative overflow-hidden">
     <!-- Efeito de iluminação suave -->
     <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[340px] sm:w-[700px] h-[200px] sm:h-[350px] bg-emerald-600/15 blur-[80px] sm:blur-[120px] rounded-full pointer-events-none"></div>
 
     <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       
-      <div class="reveal-item inline-flex items-center gap-2 text-emerald-400 font-bold text-xs sm:text-sm tracking-wider uppercase bg-slate-800/90 border border-slate-700 px-4 py-1.5 sm:px-5 sm:py-2 rounded-full mb-4 sm:mb-6">
-        <div class="w-4 h-4 sm:w-5 sm:h-5 flex items-center justify-center">
+      <div class="reveal-item inline-flex items-center gap-2.5 text-emerald-400 font-bold text-sm sm:text-base tracking-wide uppercase bg-slate-800/90 border border-slate-700 px-5 py-2 rounded-full mb-6">
+        <div class="w-5 h-5 flex items-center justify-center">
           <img src="logo.svg" alt="" class="w-full h-full object-contain filter drop-shadow" />
         </div>
         <span>Comece Hoje a Sua Mudança</span>
       </div>
 
-      <!-- Título H2 -->
-      <h2 class="reveal-item text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight text-white mb-4 sm:mb-6">
+      <!-- Título H2 Enorme -->
+      <h2 class="reveal-item text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight text-white mb-6">
         Dê o primeiro passo para mais equilíbrio, força e segurança no seu dia a dia.
       </h2>
 
-      <!-- Subtítulo -->
-      <p class="reveal-item text-base sm:text-xl text-slate-300 max-w-2xl mx-auto mb-8 sm:mb-10 leading-relaxed font-normal">
+      <!-- Subtítulo Grande e Claro -->
+      <p class="reveal-item text-lg sm:text-2xl text-slate-200 max-w-2xl mx-auto mb-10 leading-relaxed font-normal">
         Agende uma conversa e receba uma visita de avaliação em sua casa em Jundiaí. Sua saúde e independência física não podem esperar.
       </p>
 
-      <!-- Botão CTA Verde Oficial com Efeito Shimmer -->
+      <!-- Botão CTA Verde Oficial Grande com Efeito Shimmer -->
       <div class="reveal-item flex flex-col sm:flex-row items-center justify-center gap-4">
         <a href="https://wa.me/5511961343758?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20visita%20de%20avalia%C3%A7%C3%A3o."
            target="_blank"
            rel="noopener noreferrer"
-           class="btn-shimmer w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-emerald-600 hover:bg-emerald-500 text-white text-base sm:text-xl font-bold py-3.5 sm:py-4 px-6 sm:px-9 rounded-2xl shadow-xl hover:shadow-glow-emerald transition-all duration-200 transform active:scale-95 sm:hover:-translate-y-0.5 sm:active:translate-y-0 focus-ring">
-          <svg class="w-5 h-5 sm:w-6 sm:h-6 fill-current flex-shrink-0" viewBox="0 0 24 24" aria-hidden="true">
+           class="btn-shimmer w-full sm:w-auto inline-flex items-center justify-center gap-3.5 bg-emerald-600 hover:bg-emerald-500 text-white text-lg sm:text-2xl font-black py-4 px-8 sm:px-10 rounded-2xl shadow-2xl hover:shadow-glow-emerald transition-all duration-200 transform active:scale-95 sm:hover:-translate-y-0.5 sm:active:translate-y-0 focus-ring">
+          <svg class="w-6 h-6 sm:w-7 sm:h-7 fill-current flex-shrink-0" viewBox="0 0 24 24" aria-hidden="true">
             <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
           </svg>
           <span>Agendar Minha Avaliação pelo WhatsApp</span>
         </a>
       </div>
 
-      <p class="reveal-item text-xs sm:text-sm text-slate-400 mt-4">
+      <p class="reveal-item text-sm sm:text-base text-slate-300 font-medium mt-5">
         🔒 Seus dados são protegidos. Atendimento ético e sigiloso.
       </p>
 
     </div>
   </section>
 
-  <!-- 8. RODAPÉ (FOOTER) COM A MARCA INTEGRADA -->
-  <footer class="bg-slate-950 text-slate-400 py-10 sm:py-12 border-t border-slate-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-xs sm:text-base leading-relaxed">
+  <!-- 8. RODAPÉ (FOOTER) COM A MARCA INTEGRADA E ALTO CONTRASTE -->
+  <footer class="bg-slate-950 text-slate-300 py-12 sm:py-16 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm sm:text-base leading-relaxed">
       
       <!-- Logo e Nome no Rodapé -->
-      <div class="flex items-center justify-center gap-2.5 sm:gap-3.5 mb-3 sm:mb-4">
-        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center p-2 shadow-sm">
+      <div class="flex items-center justify-center gap-3 mb-4">
+        <div class="w-12 h-12 rounded-xl bg-slate-900 border border-slate-700 flex items-center justify-center p-2.5 shadow-sm">
           <img src="logo.svg" alt="Logo Personal do Idoso" class="w-full h-full object-contain filter drop-shadow" />
         </div>
-        <span class="font-black text-white text-lg sm:text-2xl tracking-tight">Personal do Idoso</span>
+        <span class="font-black text-white text-xl sm:text-2xl tracking-tight">Personal do Idoso</span>
       </div>
 
-      <p class="text-slate-400 text-xs sm:text-base">
+      <p class="text-slate-300 text-sm sm:text-base font-medium">
         &copy; Personal do Idoso &mdash; Jundiaí/SP. Todos os direitos reservados. Profissional de Educação Física Credenciado.
       </p>
-      <p class="text-[11px] sm:text-xs text-slate-500 mt-2 max-w-lg mx-auto">
+      <p class="text-xs sm:text-sm text-slate-400 font-medium mt-2 max-w-lg mx-auto">
         Atendimento domiciliar especializado para terceira idade em residências e condomínios de Jundiaí/SP.
       </p>
     </div>
@@ -925,16 +926,16 @@
       <a href="https://wa.me/5511961343758?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20visita%20de%20avalia%C3%A7%C3%A3o."
          target="_blank"
          rel="noopener noreferrer"
-         class="relative group flex items-center gap-2.5 sm:gap-3 bg-emerald-600 hover:bg-emerald-500 text-white p-3.5 sm:p-4 rounded-full shadow-2xl hover:shadow-glow-emerald transition-all duration-300 transform active:scale-95 sm:hover:scale-110 focus-ring"
+         class="relative group flex items-center gap-2.5 sm:gap-3 bg-emerald-600 hover:bg-emerald-500 text-white p-4 sm:p-4.5 rounded-full shadow-2xl hover:shadow-glow-emerald transition-all duration-300 transform active:scale-95 sm:hover:scale-110 focus-ring"
          aria-label="Abrir WhatsApp para agendar visita de avaliação">
         
         <!-- Label flutuante expansível no desktop -->
-        <span class="hidden md:inline-block pl-2 font-bold text-sm tracking-wide group-hover:block transition-all">
+        <span class="hidden md:inline-block pl-2 font-black text-base tracking-wide group-hover:block transition-all">
           Agendar no WhatsApp
         </span>
 
         <!-- Ícone Oficial do WhatsApp -->
-        <svg class="w-6 h-6 sm:w-7 sm:h-7 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+        <svg class="w-7 h-7 sm:w-8 sm:h-8 fill-current" viewBox="0 0 24 24" aria-hidden="true">
           <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
         </svg>
       </a>
