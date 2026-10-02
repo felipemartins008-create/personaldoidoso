@@ -10,7 +10,7 @@
   <!-- Open Graph / WhatsApp Preview -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Personal Felipe Martins | Treinamento Personalizado em Jundiaí">
-  <meta property="og:description" content="Atendimento exclusivo em condomínios e residências de Jundiaí. Descubra o método ideal para o seu objetivo corporal em 30 segundos.">
+  <meta property="og:description" content="Atendimento exclusivo em condomínios e residências de Jundiaí. Faça o teste em 30 segundos e receba uma estratégia feita para você.">
   <meta property="og:image" content="assets/img/felipe-portrait.jpg">
   <meta property="og:url" content="https://personalfelipemartins.vercel.app/">
 
@@ -62,11 +62,6 @@
               700: '#047857',
               800: '#065f46',
             },
-            gold: {
-              400: '#fbbf24',
-              500: '#f59e0b',
-              600: '#d97706',
-            },
             carbon: {
               800: '#1e293b',
               900: '#0f172a',
@@ -75,7 +70,6 @@
           },
           boxShadow: {
             'glow-emerald': '0 10px 28px -5px rgba(16, 185, 129, 0.45)',
-            'glow-amber': '0 10px 28px -5px rgba(245, 158, 11, 0.4)',
             'card-glass': '0 12px 35px -8px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.08)',
           }
         }
@@ -183,9 +177,6 @@
 
       <!-- Direct Header CTA -->
       <div class="flex items-center gap-3">
-        <a href="#quiz-section" class="hidden sm:inline-flex items-center text-xs font-semibold px-3 py-1.5 rounded-lg bg-slate-800 text-slate-300 hover:text-white border border-slate-700 transition-colors">
-          Fazer Teste (30s)
-        </a>
         <a id="nav-whatsapp-btn"
            href="https://wa.me/5511961343758?text=Ol%C3%A1%20Felipe!%20Gostaria%20de%20consultar%20hor%C3%A1rios%20para%20personal%20trainer%20em%20Jundia%C3%AD."
            onclick="return gtag_report_conversion(this.href);"
@@ -195,31 +186,31 @@
             <path d="M17.472 14.382c-.301-.15-1.78-.878-2.056-.979-.275-.1-.475-.15-.675.15-.2.301-.775.979-.95 1.179-.175.2-.351.226-.651.076-.301-.15-1.27-.468-2.42-1.492-.894-.797-1.498-1.782-1.674-2.083-.175-.301-.019-.464.132-.614.136-.135.301-.351.451-.527.151-.175.2-.301.301-.501.101-.2.051-.376-.025-.526-.076-.151-.676-1.63-.926-2.233-.243-.587-.49-.508-.675-.517-.175-.01-.375-.01-.576-.01s-.526.076-.802.376c-.276.301-1.053 1.028-1.053 2.507s1.079 2.908 1.229 3.109c.151.2 2.124 3.243 5.145 4.549.719.311 1.281.497 1.719.636.723.23 1.38.197 1.9.12.58-.087 1.78-.727 2.03-1.429.251-.702.251-1.303.176-1.429-.076-.126-.276-.201-.577-.352z"/>
             <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.982-1.408A9.957 9.957 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18.2c-1.644 0-3.17-.487-4.455-1.328l-.32-.208-2.964.837.838-2.888-.228-.344A8.17 8.17 0 013.8 12c0-4.522 3.678-8.2 8.2-8.2s8.2 3.678 8.2 8.2-3.678 8.2-8.2 8.2z"/>
           </svg>
-          <span>WhatsApp</span>
+          <span>Falar no WhatsApp</span>
         </a>
       </div>
     </div>
   </header>
 
-  <!-- 3. HERO SECTION COM O QUIZ DINÂMICO -->
-  <section id="quiz-section" class="relative pt-10 pb-16 lg:pt-16 lg:pb-24 overflow-hidden border-b border-slate-800">
+  <!-- 3. HERO SECTION / QUIZ FULLSCREEN GATE -->
+  <section id="quiz-section" class="relative min-h-[calc(100vh-80px)] flex flex-col justify-center py-10 sm:py-16 overflow-hidden border-b border-slate-800">
     <!-- Ambient Gradient Background -->
     <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[700px] h-[500px] bg-emerald-500/10 blur-[130px] rounded-full pointer-events-none"></div>
     <div class="absolute top-1/2 right-0 w-[400px] h-[400px] bg-amber-500/5 blur-[120px] rounded-full pointer-events-none"></div>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
       
       <!-- Headline & Subheadline Principal -->
-      <div class="text-center max-w-3xl mx-auto mb-10">
-        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900 border border-emerald-500/30 text-emerald-400 text-xs sm:text-sm font-semibold mb-5 shadow-sm">
+      <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900 border border-emerald-500/30 text-emerald-400 text-xs sm:text-sm font-semibold mb-4 shadow-sm">
           <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
           Treinamento Personalizado de Alto Padrão em Jundiaí
         </div>
-        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-[1.15]">
+        <h1 class="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-[1.2]">
           Acelere seus resultados com um treino <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-300">desenhado 100% para você.</span>
         </h1>
-        <p class="mt-4 text-base sm:text-lg text-slate-300 leading-relaxed">
-          Responda a <strong class="text-white">3 perguntas rápidas (30 segundos)</strong> para descobrir a melhor estratégia para o seu corpo e receber um direcionamento exclusivo no WhatsApp.
+        <p class="mt-3 text-sm sm:text-base text-slate-300 max-w-xl mx-auto leading-relaxed">
+          Responda a <strong class="text-white">3 perguntas rápidas (30 segundos)</strong> para desbloquear a estratégia exata e casos reais do seu perfil.
         </p>
       </div>
 
@@ -243,7 +234,7 @@
           <!-- ETAPA 1: SEXO -->
           <div id="quiz-step-1" class="quiz-step">
             <h3 class="text-lg sm:text-xl font-bold text-white mb-2">1. Qual é o seu sexo?</h3>
-            <p class="text-xs sm:text-sm text-slate-400 mb-6">A fisiologia e a resposta hormonal ao treino mudam de acordo com o sexo.</p>
+            <p class="text-xs sm:text-sm text-slate-400 mb-6">A resposta hormonal e a composição de treino mudam de acordo com o sexo.</p>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <label class="quiz-option cursor-pointer p-4 rounded-2xl bg-slate-800/60 border border-slate-700/80 flex items-center gap-4 group">
@@ -390,6 +381,13 @@
             </div>
           </div>
 
+          <!-- ESTADO DE CARREGAMENTO / PERSONALIZAÇÃO INTERATIVO -->
+          <div id="quiz-loading" class="quiz-step hidden text-center py-8">
+            <div class="inline-block w-12 h-12 border-4 border-emerald-500 border-t-transparent rounded-full animate-spin mb-4"></div>
+            <h3 class="text-lg sm:text-xl font-bold text-white mb-2">Desenhando seu protocolo exclusivo...</h3>
+            <p class="text-xs sm:text-sm text-slate-400 max-w-sm mx-auto">Filtrando fotos de evolução, diferenciais e desbloqueando a comunicação personalizada para seu perfil.</p>
+          </div>
+
           <!-- RESULTADO / DIAGNÓSTICO DO QUIZ -->
           <div id="quiz-result" class="quiz-step hidden text-center py-2">
             
@@ -398,11 +396,11 @@
             </div>
 
             <span class="inline-block px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-bold uppercase tracking-wider mb-2 border border-emerald-500/30">
-              Estratégia Recomendada
+              Estratégia Desbloqueada
             </span>
 
             <h3 id="result-headline" class="text-xl sm:text-2xl font-black text-white mb-2">
-              Plano Personalizado Definido com Sucesso!
+              Plano Personalizado Pronto!
             </h3>
 
             <p id="result-summary" class="text-sm text-slate-300 max-w-lg mx-auto mb-6 leading-relaxed">
@@ -426,14 +424,14 @@
               <span class="flex items-center gap-1">🔒 Seus dados estão seguros</span>
               <span>•</span>
               <button type="button" onclick="resetQuiz()" class="text-emerald-400 hover:underline">
-                Refazer teste
+                Alterar respostas
               </button>
             </div>
 
             <!-- Scroll indicator to dynamic section -->
             <div class="mt-6 pt-4 border-t border-slate-800">
               <a href="#dynamic-section" class="text-xs text-slate-400 hover:text-white inline-flex items-center gap-1">
-                <span>Ver detalhes do método e fotos reais abaixo</span> ↓
+                <span>Ver detalhes da sua metodologia e fotos de alunos abaixo</span> ↓
               </a>
             </div>
 
@@ -446,495 +444,502 @@
     </div>
   </section>
 
-  <!-- 4. SEÇÃO DINÂMICA ADAPTÁVEL (MUDA CONFORME O QUIZ) -->
-  <section id="dynamic-section" class="py-16 sm:py-20 bg-slate-900/60 border-b border-slate-800 relative">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <!-- Headline Dinâmica -->
-      <div class="text-center max-w-3xl mx-auto mb-12">
-        <span id="dyn-badge" class="inline-block px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-bold tracking-wide uppercase border border-emerald-500/30 mb-3">
-          Metodologia Exclusiva
-        </span>
-        <h2 id="dyn-title" class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight">
-          Resultados Reais Com Treinamento Individualizado
-        </h2>
-        <p id="dyn-description" class="mt-3 text-base text-slate-300">
-          Veja a evolução de alunos que alcançaram seus objetivos com acompanhamento rigoroso e seguro.
-        </p>
-      </div>
+  <!-- ========================================================
+       PÁGINA COMPLETA PERSONALIZADA (INICIALMENTE OCULTA ATÉ O QUIZ)
+       ======================================================== -->
+  <main id="full-personalized-page" class="hidden opacity-0 transition-opacity duration-700">
 
-      <!-- GALERIA DE PROVAS SOCIAIS / EVOLUÇÃO (DINÂMICA) -->
-      <div id="dyn-gallery" class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-14">
+    <!-- 4. SEÇÃO DINÂMICA ADAPTÁVEL (MUDA CONFORME O QUIZ) -->
+    <section id="dynamic-section" class="py-16 sm:py-20 bg-slate-900/60 border-b border-slate-800 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <!-- Card 1: Será preenchido via JS -->
-        <div id="dyn-card-1" class="bg-slate-950 border border-slate-800 rounded-3xl overflow-hidden shadow-card-glass flex flex-col group">
-          <div class="relative overflow-hidden aspect-[4/3] bg-slate-900">
-            <img id="dyn-img-1" src="assets/img/emagrecimento-mulher-1.jpg" alt="Evolução de aluna" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
-            <div id="dyn-tag-1" class="absolute top-4 left-4 px-3 py-1 rounded-lg bg-black/75 backdrop-blur-md text-emerald-400 text-xs font-bold border border-emerald-500/30">
-              Evolução Real
-            </div>
-          </div>
-          <div class="p-6 flex-1 flex flex-col justify-between">
-            <div>
-              <h3 id="dyn-card-title-1" class="text-lg font-bold text-white mb-2">Eliminação de Gordura com Preservação Muscular</h3>
-              <p id="dyn-card-desc-1" class="text-sm text-slate-300 leading-relaxed">
-                Redução expressiva de medidas corporais através de treinos inteligentes, garantindo tônus muscular sem passar fome ou fazer cardio exaustivo.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 2: Será preenchido via JS -->
-        <div id="dyn-card-2" class="bg-slate-950 border border-slate-800 rounded-3xl overflow-hidden shadow-card-glass flex flex-col group">
-          <div class="relative overflow-hidden aspect-[4/3] bg-slate-900">
-            <img id="dyn-img-2" src="assets/img/emagrecimento-homem-1.png" alt="Evolução de aluno" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
-            <div id="dyn-tag-2" class="absolute top-4 left-4 px-3 py-1 rounded-lg bg-black/75 backdrop-blur-md text-emerald-400 text-xs font-bold border border-emerald-500/30">
-              Superação & Força
-            </div>
-          </div>
-          <div class="p-6 flex-1 flex flex-col justify-between">
-            <div>
-              <h3 id="dyn-card-title-2" class="text-lg font-bold text-white mb-2">Transformação Corporal Extrema</h3>
-              <p id="dyn-card-desc-2" class="text-sm text-slate-300 leading-relaxed">
-                De 164kg para 108kg com fortalecimento integral das articulações, ganho de mobilidade e aumento radical de disposição no dia a dia.
-              </p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- 3 PILARES DO MÉTODO PARA ESSE OBJETIVO -->
-      <div class="max-w-5xl mx-auto bg-slate-950/70 border border-slate-800/80 rounded-3xl p-6 sm:p-10 mb-10">
-        <h3 id="dyn-pillars-title" class="text-lg sm:text-xl font-bold text-white mb-6 text-center">
-          Os 3 Pilares do Meu Acompanhamento
-        </h3>
-        <div id="dyn-pillars-container" class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          
-          <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800">
-            <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center font-bold text-lg mb-3">1</div>
-            <h4 id="pillar-h-1" class="text-base font-bold text-white mb-1">Biomecânica & Postura</h4>
-            <p id="pillar-p-1" class="text-xs text-slate-300 leading-relaxed">Execução correta em cada repetição para proteger sua coluna e joelhos contra qualquer risco de lesão.</p>
-          </div>
-
-          <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800">
-            <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center font-bold text-lg mb-3">2</div>
-            <h4 id="pillar-h-2" class="text-base font-bold text-white mb-1">Periodização Sob Medida</h4>
-            <p id="pillar-p-2" class="text-xs text-slate-300 leading-relaxed">Volume e intensidade calibrados rigorosamente de acordo com seu tempo disponível e nível físico atual.</p>
-          </div>
-
-          <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800">
-            <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center font-bold text-lg mb-3">3</div>
-            <h4 id="pillar-h-3" class="text-base font-bold text-white mb-1">Supervisão Presencial</h4>
-            <p id="pillar-p-3" class="text-xs text-slate-300 leading-relaxed">Você nunca mais treina em dúvida. Correção em tempo real e motivação constante em cada sessão.</p>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- CTA Dinâmico Intermediário -->
-      <div class="text-center">
-        <a id="dyn-whatsapp-cta"
-           href="https://wa.me/5511961343758?text=Ol%C3%A1%20Felipe!%20Gostaria%20de%20conversar%20sobre%20meus%20objetivos%20de%20treino%20em%20Jundia%C3%AD."
-           onclick="return gtag_report_conversion(this.href);"
-           target="_blank"
-           class="btn-shimmer inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-base shadow-glow-emerald transition-all transform hover:-translate-y-1">
-          <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-            <path d="M17.472 14.382c-.301-.15-1.78-.878-2.056-.979-.275-.1-.475-.15-.675.15-.2.301-.775.979-.95 1.179-.175.2-.351.226-.651.076-.301-.15-1.27-.468-2.42-1.492-.894-.797-1.498-1.782-1.674-2.083-.175-.301-.019-.464.132-.614.136-.135.301-.351.451-.527.151-.175.2-.301.301-.501.101-.2.051-.376-.025-.526-.076-.151-.676-1.63-.926-2.233-.243-.587-.49-.508-.675-.517-.175-.01-.375-.01-.576-.01s-.526.076-.802.376c-.276.301-1.053 1.028-1.053 2.507s1.079 2.908 1.229 3.109c.151.2 2.124 3.243 5.145 4.549.719.311 1.281.497 1.719.636.723.23 1.38.197 1.9.12.58-.087 1.78-.727 2.03-1.429.251-.702.251-1.303.176-1.429-.076-.126-.276-.201-.577-.352z"/>
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.982-1.408A9.957 9.957 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18.2c-1.644 0-3.17-.487-4.455-1.328l-.32-.208-2.964.837.838-2.888-.228-.344A8.17 8.17 0 013.8 12c0-4.522 3.678-8.2 8.2-8.2s8.2 3.678 8.2 8.2-3.678 8.2-8.2 8.2z"/>
-          </svg>
-          <span id="dyn-cta-text">Falar com o Felipe Martins no WhatsApp</span>
-        </a>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- 5. QUEM É O SEU PERSONAL (AUTORIDADE, CREDENCIAMENTO & CONFIANÇA) -->
-  <section class="py-16 sm:py-24 border-b border-slate-800 relative">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        
-        <!-- Fotos do Felipe (Composição Visual de Alto Padrão) -->
-        <div class="lg:col-span-5 relative">
-          <div class="relative z-10 rounded-3xl overflow-hidden border border-slate-700/80 shadow-card-glass aspect-[4/5] bg-slate-900">
-            <img src="assets/img/felipe-portrait.jpg" alt="Personal Trainer Felipe Martins" class="w-full h-full object-cover object-top">
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80"></div>
-            
-            <div class="absolute bottom-6 left-6 right-6">
-              <span class="inline-block px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-bold uppercase tracking-wider mb-2 border border-emerald-500/30">
-                Atendimento Presencial
-              </span>
-              <div class="text-xl font-black text-white">Felipe Martins</div>
-              <div class="text-xs text-slate-300">Profissional Credenciado no CREF</div>
-            </div>
-          </div>
-
-          <!-- Card Flutuante de Credibilidade -->
-          <div class="absolute -bottom-6 -right-4 sm:-right-6 z-20 bg-slate-900/95 border border-emerald-500/40 rounded-2xl p-4 shadow-xl backdrop-blur-md max-w-[240px]">
-            <div class="flex items-center gap-3">
-              <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-lg">
-                ⭐
-              </div>
-              <div>
-                <div class="text-xs font-bold text-white">Segurança Total</div>
-                <div class="text-[11px] text-slate-400">Biomecânica aplicada sem risco de lesão</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Conteúdo Textual de Autoridade -->
-        <div class="lg:col-span-7">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-emerald-500/30 text-emerald-400 text-xs font-semibold mb-4">
-            Acompanhamento Direto Comigo
-          </div>
-          
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight">
-            Mais do que passar exercícios: eu entrego um plano seguro para sua evolução.
+        <!-- Headline Dinâmica -->
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <span id="dyn-badge" class="inline-block px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-bold tracking-wide uppercase border border-emerald-500/30 mb-3">
+            Metodologia Exclusiva
+          </span>
+          <h2 id="dyn-title" class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight">
+            Resultados Reais Com Treinamento Individualizado
           </h2>
-
-          <p class="mt-4 text-slate-300 text-base leading-relaxed">
-            Sou <strong class="text-white">Felipe Martins</strong>, profissional de Educação Física <strong class="text-emerald-400">credenciado no CREF</strong>, especialista em treinamento personalizado, emagrecimento eficiente, hipertrofia e fortalecimento para longevidade.
+          <p id="dyn-description" class="mt-3 text-base text-slate-300">
+            Veja a evolução de alunos que alcançaram seus objetivos com acompanhamento rigoroso e seguro.
           </p>
+        </div>
 
-          <p class="mt-3 text-slate-300 text-base leading-relaxed">
-            Minha missão em Jundiaí é proporcionar aos meus alunos um acompanhamento exclusivo e altamente técnico, seja na comodidade do condomínio onde moram ou em suas casas, eliminando a frustração de academias lotadas e rotinas genéricas.
-          </p>
+        <!-- GALERIA DE PROVAS SOCIAIS / EVOLUÇÃO (DINÂMICA) -->
+        <div id="dyn-gallery" class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-14">
+          
+          <!-- Card 1: Preenchido dinamicamente via JS -->
+          <div id="dyn-card-1" class="bg-slate-950 border border-slate-800 rounded-3xl overflow-hidden shadow-card-glass flex flex-col group">
+            <div class="relative overflow-hidden aspect-[4/3] bg-slate-900">
+              <img id="dyn-img-1" src="assets/img/emagrecimento-mulher-1.jpg" alt="Evolução de aluna" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+              <div id="dyn-tag-1" class="absolute top-4 left-4 px-3 py-1 rounded-lg bg-black/75 backdrop-blur-md text-emerald-400 text-xs font-bold border border-emerald-500/30">
+                Evolução Real
+              </div>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 id="dyn-card-title-1" class="text-lg font-bold text-white mb-2">Eliminação de Gordura com Preservação Muscular</h3>
+                <p id="dyn-card-desc-1" class="text-sm text-slate-300 leading-relaxed">
+                  Redução expressiva de medidas corporais através de treinos inteligentes, garantindo tônus muscular sem passar fome ou fazer cardio exaustivo.
+                </p>
+              </div>
+            </div>
+          </div>
 
-          <!-- Badges de Competência -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
+          <!-- Card 2: Preenchido dinamicamente via JS -->
+          <div id="dyn-card-2" class="bg-slate-950 border border-slate-800 rounded-3xl overflow-hidden shadow-card-glass flex flex-col group">
+            <div class="relative overflow-hidden aspect-[4/3] bg-slate-900">
+              <img id="dyn-img-2" src="assets/img/emagrecimento-homem-1.png" alt="Evolução de aluno" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+              <div id="dyn-tag-2" class="absolute top-4 left-4 px-3 py-1 rounded-lg bg-black/75 backdrop-blur-md text-emerald-400 text-xs font-bold border border-emerald-500/30">
+                Superação & Força
+              </div>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 id="dyn-card-title-2" class="text-lg font-bold text-white mb-2">Transformação Corporal Extrema</h3>
+                <p id="dyn-card-desc-2" class="text-sm text-slate-300 leading-relaxed">
+                  De 164kg para 108kg com fortalecimento integral das articulações, ganho de mobilidade e aumento radical de disposição no dia a dia.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- 3 PILARES DO MÉTODO PARA ESSE OBJETIVO -->
+        <div class="max-w-5xl mx-auto bg-slate-950/70 border border-slate-800/80 rounded-3xl p-6 sm:p-10 mb-10">
+          <h3 id="dyn-pillars-title" class="text-lg sm:text-xl font-bold text-white mb-6 text-center">
+            Os 3 Pilares do Meu Acompanhamento
+          </h3>
+          <div id="dyn-pillars-container" class="grid grid-cols-1 md:grid-cols-3 gap-6">
             
-            <div class="flex items-start gap-3 p-4 rounded-2xl bg-slate-900/60 border border-slate-800">
-              <div class="text-emerald-400 text-xl mt-0.5">✓</div>
-              <div>
-                <div class="text-sm font-bold text-white">Credenciado no CREF</div>
-                <div class="text-xs text-slate-400">Atuação legal, ética e com respaldo técnico constante.</div>
-              </div>
+            <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800">
+              <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center font-bold text-lg mb-3">1</div>
+              <h4 id="pillar-h-1" class="text-base font-bold text-white mb-1">Biomecânica & Postura</h4>
+              <p id="pillar-p-1" class="text-xs text-slate-300 leading-relaxed">Execução correta em cada repetição para proteger sua coluna e joelhos contra qualquer risco de lesão.</p>
             </div>
 
-            <div class="flex items-start gap-3 p-4 rounded-2xl bg-slate-900/60 border border-slate-800">
-              <div class="text-emerald-400 text-xl mt-0.5">✓</div>
-              <div>
-                <div class="text-sm font-bold text-white">Especialista no seu Objetivo</div>
-                <div class="text-xs text-slate-400">Treinos com base científica para emagrecimento, hipertrofia ou postura.</div>
-              </div>
+            <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800">
+              <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center font-bold text-lg mb-3">2</div>
+              <h4 id="pillar-h-2" class="text-base font-bold text-white mb-1">Periodização Sob Medida</h4>
+              <p id="pillar-p-2" class="text-xs text-slate-300 leading-relaxed">Volume e intensidade calibrados rigorosamente de acordo com seu tempo disponível e nível físico atual.</p>
             </div>
 
-            <div class="flex items-start gap-3 p-4 rounded-2xl bg-slate-900/60 border border-slate-800">
-              <div class="text-emerald-400 text-xl mt-0.5">✓</div>
-              <div>
-                <div class="text-sm font-bold text-white">Atendimento Individual</div>
-                <div class="text-xs text-slate-400">Minha atenção é 100% voltada à sua postura e respiração.</div>
-              </div>
-            </div>
-
-            <div class="flex items-start gap-3 p-4 rounded-2xl bg-slate-900/60 border border-slate-800">
-              <div class="text-emerald-400 text-xl mt-0.5">✓</div>
-              <div>
-                <div class="text-sm font-bold text-white">Zero Lesões</div>
-                <div class="text-xs text-slate-400">Ajuste de cargas progressivo e respeito absoluto aos seus limites.</div>
-              </div>
+            <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800">
+              <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center font-bold text-lg mb-3">3</div>
+              <h4 id="pillar-h-3" class="text-base font-bold text-white mb-1">Supervisão Presencial</h4>
+              <p id="pillar-p-3" class="text-xs text-slate-300 leading-relaxed">Você nunca mais treina em dúvida. Correção em tempo real e motivação constante em cada sessão.</p>
             </div>
 
           </div>
+        </div>
 
-          <!-- Fotos de Ação / Bastidores -->
-          <div class="grid grid-cols-2 gap-4 mt-8">
-            <div class="rounded-2xl overflow-hidden aspect-[16/10] border border-slate-800 bg-slate-900">
-              <img src="assets/img/felipe-treino-jardim.png" alt="Treino ao ar livre com aluna" class="w-full h-full object-cover">
-            </div>
-            <div class="rounded-2xl overflow-hidden aspect-[16/10] border border-slate-800 bg-slate-900">
-              <img src="assets/img/felipe-aluna-academia.png" alt="Acompanhamento presencial em academia" class="w-full h-full object-cover">
-            </div>
-          </div>
-
+        <!-- CTA Dinâmico Intermediário -->
+        <div class="text-center">
+          <a id="dyn-whatsapp-cta"
+             href="https://wa.me/5511961343758?text=Ol%C3%A1%20Felipe!%20Gostaria%20de%20conversar%20sobre%20meus%20objetivos%20de%20treino%20em%20Jundia%C3%AD."
+             onclick="return gtag_report_conversion(this.href);"
+             target="_blank"
+             class="btn-shimmer inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-base shadow-glow-emerald transition-all transform hover:-translate-y-1">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.301-.15-1.78-.878-2.056-.979-.275-.1-.475-.15-.675.15-.2.301-.775.979-.95 1.179-.175.2-.351.226-.651.076-.301-.15-1.27-.468-2.42-1.492-.894-.797-1.498-1.782-1.674-2.083-.175-.301-.019-.464.132-.614.136-.135.301-.351.451-.527.151-.175.2-.301.301-.501.101-.2.051-.376-.025-.526-.076-.151-.676-1.63-.926-2.233-.243-.587-.49-.508-.675-.517-.175-.01-.375-.01-.576-.01s-.526.076-.802.376c-.276.301-1.053 1.028-1.053 2.507s1.079 2.908 1.229 3.109c.151.2 2.124 3.243 5.145 4.549.719.311 1.281.497 1.719.636.723.23 1.38.197 1.9.12.58-.087 1.78-.727 2.03-1.429.251-.702.251-1.303.176-1.429-.076-.126-.276-.201-.577-.352z"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.982-1.408A9.957 9.957 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18.2c-1.644 0-3.17-.487-4.455-1.328l-.32-.208-2.964.837.838-2.888-.228-.344A8.17 8.17 0 013.8 12c0-4.522 3.678-8.2 8.2-8.2s8.2 3.678 8.2 8.2-3.678 8.2-8.2 8.2z"/>
+            </svg>
+            <span id="dyn-cta-text">Falar com o Felipe Martins no WhatsApp</span>
+          </a>
         </div>
 
       </div>
+    </section>
 
-    </div>
-  </section>
-
-  <!-- 6. ONDE ATENDO EM JUNDIAÍ (BAIRROS DE ALTO PADRÃO & CONDOMÍNIOS) -->
-  <section class="py-16 sm:py-20 bg-slate-900/40 border-b border-slate-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      
-      <span class="inline-block px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-bold uppercase tracking-wider mb-3 border border-emerald-500/30">
-        Regiões Atendidas
-      </span>
-      <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight">
-        Atendimento nos Condomínios e Bairros Mais Nobres de Jundiaí
-      </h2>
-      <p class="mt-3 text-slate-300 max-w-2xl mx-auto text-sm sm:text-base">
-        Comodidade absoluta para você treinar na academia do seu prédio ou no conforto da sua residência, com pontualidade e discrição.
-      </p>
-
-      <!-- Grid de Bairros Nobres -->
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3.5 max-w-5xl mx-auto mt-10">
+    <!-- 5. QUEM É O SEU PERSONAL (AUTORIDADE, CREDENCIAMENTO & CONFIANÇA) -->
+    <section class="py-16 sm:py-24 border-b border-slate-800 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="p-4 rounded-2xl bg-slate-950 border border-slate-800/80 hover:border-emerald-500/50 transition-colors flex items-center gap-2.5 text-left">
-          <span class="text-emerald-400 text-base">📍</span>
-          <div>
-            <div class="text-sm font-bold text-white">Malota</div>
-            <div class="text-[11px] text-slate-400">Residencial & Condomínios</div>
-          </div>
-        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Fotos do Felipe (Composição Visual de Alto Padrão) -->
+          <div class="lg:col-span-5 relative">
+            <div class="relative z-10 rounded-3xl overflow-hidden border border-slate-700/80 shadow-card-glass aspect-[4/5] bg-slate-900">
+              <img src="assets/img/felipe-portrait.jpg" alt="Personal Trainer Felipe Martins" class="w-full h-full object-cover object-top">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80"></div>
+              
+              <div class="absolute bottom-6 left-6 right-6">
+                <span class="inline-block px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-bold uppercase tracking-wider mb-2 border border-emerald-500/30">
+                  Atendimento Presencial
+                </span>
+                <div class="text-xl font-black text-white">Felipe Martins</div>
+                <div class="text-xs text-slate-300">Profissional Credenciado no CREF</div>
+              </div>
+            </div>
 
-        <div class="p-4 rounded-2xl bg-slate-950 border border-slate-800/80 hover:border-emerald-500/50 transition-colors flex items-center gap-2.5 text-left">
-          <span class="text-emerald-400 text-base">📍</span>
-          <div>
-            <div class="text-sm font-bold text-white">Reserva da Serra</div>
-            <div class="text-[11px] text-slate-400">Condomínio Fechado</div>
+            <!-- Card Flutuante de Credibilidade -->
+            <div class="absolute -bottom-6 -right-4 sm:-right-6 z-20 bg-slate-900/95 border border-emerald-500/40 rounded-2xl p-4 shadow-xl backdrop-blur-md max-w-[240px]">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-lg">
+                  ⭐
+                </div>
+                <div>
+                  <div class="text-xs font-bold text-white">Segurança Total</div>
+                  <div class="text-[11px] text-slate-400">Biomecânica aplicada sem risco de lesão</div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <div class="p-4 rounded-2xl bg-slate-950 border border-slate-800/80 hover:border-emerald-500/50 transition-colors flex items-center gap-2.5 text-left">
-          <span class="text-emerald-400 text-base">📍</span>
-          <div>
-            <div class="text-sm font-bold text-white">Quinta das Macaúbas</div>
-            <div class="text-[11px] text-slate-400">Alto Padrão</div>
-          </div>
-        </div>
+          <!-- Conteúdo Textual de Autoridade -->
+          <div class="lg:col-span-7">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-emerald-500/30 text-emerald-400 text-xs font-semibold mb-4">
+              Acompanhamento Direto Comigo
+            </div>
+            
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight">
+              Mais do que passar exercícios: eu entrego um plano seguro para sua evolução.
+            </h2>
 
-        <div class="p-4 rounded-2xl bg-slate-950 border border-slate-800/80 hover:border-emerald-500/50 transition-colors flex items-center gap-2.5 text-left">
-          <span class="text-emerald-400 text-base">📍</span>
-          <div>
-            <div class="text-sm font-bold text-white">Alphaville Jundiaí</div>
-            <div class="text-[11px] text-slate-400">Residencial Exclusivo</div>
-          </div>
-        </div>
+            <p class="mt-4 text-slate-300 text-base leading-relaxed">
+              Sou <strong class="text-white">Felipe Martins</strong>, profissional de Educação Física <strong class="text-emerald-400">credenciado no CREF</strong>, especialista em treinamento personalizado, emagrecimento eficiente, hipertrofia e fortalecimento para longevidade.
+            </p>
 
-        <div class="p-4 rounded-2xl bg-slate-950 border border-slate-800/80 hover:border-emerald-500/50 transition-colors flex items-center gap-2.5 text-left">
-          <span class="text-emerald-400 text-base">📍</span>
-          <div>
-            <div class="text-sm font-bold text-white">Jardim Samambaia</div>
-            <div class="text-[11px] text-slate-400">Região Nobre</div>
-          </div>
-        </div>
+            <p class="mt-3 text-slate-300 text-base leading-relaxed">
+              Minha missão em Jundiaí é proporcionar aos meus alunos um acompanhamento exclusivo e altamente técnico, seja na comodidade do condomínio onde moram ou em suas casas, eliminando a frustração de academias lotadas e rotinas genéricas.
+            </p>
 
-        <div class="p-4 rounded-2xl bg-slate-950 border border-slate-800/80 hover:border-emerald-500/50 transition-colors flex items-center gap-2.5 text-left">
-          <span class="text-emerald-400 text-base">📍</span>
-          <div>
-            <div class="text-sm font-bold text-white">Eloy Chaves</div>
-            <div class="text-[11px] text-slate-400">Reserva do Japy e outros</div>
-          </div>
-        </div>
+            <!-- Badges de Competência -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
+              
+              <div class="flex items-start gap-3 p-4 rounded-2xl bg-slate-900/60 border border-slate-800">
+                <div class="text-emerald-400 text-xl mt-0.5">✓</div>
+                <div>
+                  <div class="text-sm font-bold text-white">Credenciado no CREF</div>
+                  <div class="text-xs text-slate-400">Atuação legal, ética e com respaldo técnico constante.</div>
+                </div>
+              </div>
 
-        <div class="p-4 rounded-2xl bg-slate-950 border border-slate-800/80 hover:border-emerald-500/50 transition-colors flex items-center gap-2.5 text-left">
-          <span class="text-emerald-400 text-base">📍</span>
-          <div>
-            <div class="text-sm font-bold text-white">Anhangabaú</div>
-            <div class="text-[11px] text-slate-400">Condomínios e Casas</div>
-          </div>
-        </div>
+              <div class="flex items-start gap-3 p-4 rounded-2xl bg-slate-900/60 border border-slate-800">
+                <div class="text-emerald-400 text-xl mt-0.5">✓</div>
+                <div>
+                  <div class="text-sm font-bold text-white">Especialista no seu Objetivo</div>
+                  <div class="text-xs text-slate-400">Treinos com base científica para emagrecimento, hipertrofia ou postura.</div>
+                </div>
+              </div>
 
-        <div class="p-4 rounded-2xl bg-slate-950 border border-slate-800/80 hover:border-emerald-500/50 transition-colors flex items-center gap-2.5 text-left">
-          <span class="text-emerald-400 text-base">📍</span>
-          <div>
-            <div class="text-sm font-bold text-white">Vila Arens & Medeiros</div>
-            <div class="text-[11px] text-slate-400">E demais regiões de Jundiaí</div>
+              <div class="flex items-start gap-3 p-4 rounded-2xl bg-slate-900/60 border border-slate-800">
+                <div class="text-emerald-400 text-xl mt-0.5">✓</div>
+                <div>
+                  <div class="text-sm font-bold text-white">Atendimento Individual</div>
+                  <div class="text-xs text-slate-400">Minha atenção é 100% voltada à sua postura e respiração.</div>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3 p-4 rounded-2xl bg-slate-900/60 border border-slate-800">
+                <div class="text-emerald-400 text-xl mt-0.5">✓</div>
+                <div>
+                  <div class="text-sm font-bold text-white">Zero Lesões</div>
+                  <div class="text-xs text-slate-400">Ajuste de cargas progressivo e respeito absoluto aos seus limites.</div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Fotos de Ação / Bastidores -->
+            <div class="grid grid-cols-2 gap-4 mt-8">
+              <div class="rounded-2xl overflow-hidden aspect-[16/10] border border-slate-800 bg-slate-900">
+                <img src="assets/img/felipe-treino-jardim.png" alt="Treino ao ar livre com aluna" class="w-full h-full object-cover">
+              </div>
+              <div class="rounded-2xl overflow-hidden aspect-[16/10] border border-slate-800 bg-slate-900">
+                <img src="assets/img/felipe-aluna-academia.png" alt="Acompanhamento presencial em academia" class="w-full h-full object-cover">
+              </div>
+            </div>
+
           </div>
+
         </div>
 
       </div>
+    </section>
 
-      <div class="mt-8">
-        <a href="https://wa.me/5511961343758?text=Ol%C3%A1%20Felipe!%20Moro%20em%20Jundia%C3%AD%20e%20gostaria%20de%20consultar%20se%20voc%C3%AA%20atende%20no%20meu%20condom%C3%ADnio."
-           onclick="return gtag_report_conversion(this.href);"
-           target="_blank"
-           class="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-emerald-400 hover:text-emerald-300 underline underline-offset-4">
-          <span>Consulte a disponibilidade de horários para a sua região via WhatsApp</span> →
-        </a>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- 7. COMO FUNCIONA O ACOMPANHAMENTO (4 PASSOS) -->
-  <section class="py-16 sm:py-24 border-b border-slate-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      
-      <span class="inline-block px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-bold uppercase tracking-wider mb-3 border border-emerald-500/30">
-        Passo a Passo
-      </span>
-      <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-        Como Começar a Treinar Comigo
-      </h2>
-      <p class="mt-3 text-slate-300 max-w-xl mx-auto text-sm sm:text-base">
-        Um processo simples, rápido e transparente para você dar o primeiro passo hoje mesmo.
-      </p>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mt-12 text-left">
+    <!-- 6. ONDE ATENDO EM JUNDIAÍ (BAIRROS DE ALTO PADRÃO & CONDOMÍNIOS) -->
+    <section class="py-16 sm:py-20 bg-slate-900/40 border-b border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         
-        <div class="p-6 rounded-3xl bg-slate-900 border border-slate-800 relative flex flex-col justify-between">
-          <div>
-            <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-400 font-black text-xl flex items-center justify-center mb-4">
-              01
-            </div>
-            <h3 class="text-base font-bold text-white mb-2">Conversa no WhatsApp</h3>
-            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
-              Você me conta seus horários disponíveis, seu condomínio e seus objetivos. Eu tiro todas as suas dúvidas sobre valores e pacotes.
-            </p>
-          </div>
-        </div>
-
-        <div class="p-6 rounded-3xl bg-slate-900 border border-slate-800 relative flex flex-col justify-between">
-          <div>
-            <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-400 font-black text-xl flex items-center justify-center mb-4">
-              02
-            </div>
-            <h3 class="text-base font-bold text-white mb-2">Avaliação Inicial</h3>
-            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
-              Realizamos um diagnóstico do seu condicionamento físico, postura, histórico de saúde e eventuais dores prévias.
-            </p>
-          </div>
-        </div>
-
-        <div class="p-6 rounded-3xl bg-slate-900 border border-slate-800 relative flex flex-col justify-between">
-          <div>
-            <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-400 font-black text-xl flex items-center justify-center mb-4">
-              03
-            </div>
-            <h3 class="text-base font-bold text-white mb-2">Prescrição do Treino</h3>
-            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
-              Elaboro um planejamento de treinos sob medida para você, equilibrando intensidade, queima e fortalecimento.
-            </p>
-          </div>
-        </div>
-
-        <div class="p-6 rounded-3xl bg-slate-900 border border-slate-800 relative flex flex-col justify-between">
-          <div>
-            <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-400 font-black text-xl flex items-center justify-center mb-4">
-              04
-            </div>
-            <h3 class="text-base font-bold text-white mb-2">Treinos & Resultados</h3>
-            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
-              Sessões 100% acompanhadas presencialmente, com acompanhamento de métricas e evolução visível mês a mês.
-            </p>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- 8. FAQ - PERGUNTAS FREQUENTES -->
-  <section class="py-16 sm:py-20 bg-slate-900/30 border-b border-slate-800">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="text-center mb-12">
-        <span class="inline-block px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-bold uppercase tracking-wider mb-2 border border-emerald-500/30">
-          Tire Suas Dúvidas
+        <span class="inline-block px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-bold uppercase tracking-wider mb-3 border border-emerald-500/30">
+          Regiões Atendidas
         </span>
-        <h2 class="text-3xl font-extrabold text-white tracking-tight">
-          Perguntas Frequentes
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight">
+          Atendimento nos Condomínios e Bairros Mais Nobres de Jundiaí
         </h2>
-      </div>
+        <p class="mt-3 text-slate-300 max-w-2xl mx-auto text-sm sm:text-base">
+          Comodidade absoluta para você treinar na academia do seu prédio ou no conforto da sua residência, com pontualidade e discrição.
+        </p>
 
-      <div class="space-y-4">
+        <!-- Grid de Bairros Nobres -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3.5 max-w-5xl mx-auto mt-10">
+          
+          <div class="p-4 rounded-2xl bg-slate-950 border border-slate-800/80 hover:border-emerald-500/50 transition-colors flex items-center gap-2.5 text-left">
+            <span class="text-emerald-400 text-base">📍</span>
+            <div>
+              <div class="text-sm font-bold text-white">Malota</div>
+              <div class="text-[11px] text-slate-400">Residencial & Condomínios</div>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-slate-950 border border-slate-800/80 hover:border-emerald-500/50 transition-colors flex items-center gap-2.5 text-left">
+            <span class="text-emerald-400 text-base">📍</span>
+            <div>
+              <div class="text-sm font-bold text-white">Reserva da Serra</div>
+              <div class="text-[11px] text-slate-400">Condomínio Fechado</div>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-slate-950 border border-slate-800/80 hover:border-emerald-500/50 transition-colors flex items-center gap-2.5 text-left">
+            <span class="text-emerald-400 text-base">📍</span>
+            <div>
+              <div class="text-sm font-bold text-white">Quinta das Macaúbas</div>
+              <div class="text-[11px] text-slate-400">Alto Padrão</div>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-slate-950 border border-slate-800/80 hover:border-emerald-500/50 transition-colors flex items-center gap-2.5 text-left">
+            <span class="text-emerald-400 text-base">📍</span>
+            <div>
+              <div class="text-sm font-bold text-white">Alphaville Jundiaí</div>
+              <div class="text-[11px] text-slate-400">Residencial Exclusivo</div>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-slate-950 border border-slate-800/80 hover:border-emerald-500/50 transition-colors flex items-center gap-2.5 text-left">
+            <span class="text-emerald-400 text-base">📍</span>
+            <div>
+              <div class="text-sm font-bold text-white">Jardim Samambaia</div>
+              <div class="text-[11px] text-slate-400">Região Nobre</div>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-slate-950 border border-slate-800/80 hover:border-emerald-500/50 transition-colors flex items-center gap-2.5 text-left">
+            <span class="text-emerald-400 text-base">📍</span>
+            <div>
+              <div class="text-sm font-bold text-white">Eloy Chaves</div>
+              <div class="text-[11px] text-slate-400">Reserva do Japy e outros</div>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-slate-950 border border-slate-800/80 hover:border-emerald-500/50 transition-colors flex items-center gap-2.5 text-left">
+            <span class="text-emerald-400 text-base">📍</span>
+            <div>
+              <div class="text-sm font-bold text-white">Anhangabaú</div>
+              <div class="text-[11px] text-slate-400">Condomínios e Casas</div>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-slate-950 border border-slate-800/80 hover:border-emerald-500/50 transition-colors flex items-center gap-2.5 text-left">
+            <span class="text-emerald-400 text-base">📍</span>
+            <div>
+              <div class="text-sm font-bold text-white">Vila Arens & Medeiros</div>
+              <div class="text-[11px] text-slate-400">E demais regiões de Jundiaí</div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="mt-8">
+          <a href="https://wa.me/5511961343758?text=Ol%C3%A1%20Felipe!%20Moro%20em%20Jundia%C3%AD%20e%20gostaria%20de%20consultar%20se%20voc%C3%AA%20atende%20no%20meu%20condom%C3%ADnio."
+             onclick="return gtag_report_conversion(this.href);"
+             target="_blank"
+             class="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-emerald-400 hover:text-emerald-300 underline underline-offset-4">
+            <span>Consulte a disponibilidade de horários para a sua região via WhatsApp</span> →
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 7. COMO FUNCIONA O ACOMPANHAMENTO (4 PASSOS) -->
+    <section class="py-16 sm:py-24 border-b border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         
-        <details class="group bg-slate-950 border border-slate-800 rounded-2xl p-5 [&_summary::-webkit-details-marker]:hidden cursor-pointer">
-          <summary class="flex items-center justify-between font-bold text-white text-base sm:text-lg">
-            <span>Como funcionam os valores e planos?</span>
-            <span class="text-emerald-400 group-open:rotate-180 transition-transform">▼</span>
-          </summary>
-          <p class="mt-3 text-slate-300 text-sm leading-relaxed border-t border-slate-800/80 pt-3">
-            Os valores são personalizados conforme a frequência semanal desejada (ex: 2x, 3x ou 5x na semana) e o local de atendimento em Jundiaí. Pelo WhatsApp eu apresento todas as opções de planos mensais e trimestrais sem nenhum compromisso.
-          </p>
-        </details>
+        <span class="inline-block px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-bold uppercase tracking-wider mb-3 border border-emerald-500/30">
+          Passo a Passo
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+          Como Começar a Treinar Comigo
+        </h2>
+        <p class="mt-3 text-slate-300 max-w-xl mx-auto text-sm sm:text-base">
+          Um processo simples, rápido e transparente para você dar o primeiro passo hoje mesmo.
+        </p>
 
-        <details class="group bg-slate-950 border border-slate-800 rounded-2xl p-5 [&_summary::-webkit-details-marker]:hidden cursor-pointer">
-          <summary class="flex items-center justify-between font-bold text-white text-base sm:text-lg">
-            <span>Sou totalmente iniciante ou sedentário há anos. Vou conseguir acompanhar?</span>
-            <span class="text-emerald-400 group-open:rotate-180 transition-transform">▼</span>
-          </summary>
-          <p class="mt-3 text-slate-300 text-sm leading-relaxed border-t border-slate-800/80 pt-3">
-            Com certeza! É exatamente para isso que serve o acompanhamento individual. Nós começamos com cargas e movimentos perfeitamente adaptados ao seu ritmo, sem exageros e sem dor incapacitante no dia seguinte.
-          </p>
-        </details>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mt-12 text-left">
+          
+          <div class="p-6 rounded-3xl bg-slate-900 border border-slate-800 relative flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-400 font-black text-xl flex items-center justify-center mb-4">
+                01
+              </div>
+              <h3 class="text-base font-bold text-white mb-2">Conversa no WhatsApp</h3>
+              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                Você me conta seus horários disponíveis, seu condomínio e seus objetivos. Eu tiro todas as suas dúvidas sobre valores e pacotes.
+              </p>
+            </div>
+          </div>
 
-        <details class="group bg-slate-950 border border-slate-800 rounded-2xl p-5 [&_summary::-webkit-details-marker]:hidden cursor-pointer">
-          <summary class="flex items-center justify-between font-bold text-white text-base sm:text-lg">
-            <span>O treino pode ser feito na academia do meu condomínio?</span>
-            <span class="text-emerald-400 group-open:rotate-180 transition-transform">▼</span>
-          </summary>
-          <p class="mt-3 text-slate-300 text-sm leading-relaxed border-t border-slate-800/80 pt-3">
-            Sim! A maior parte dos meus atendimentos é realizada diretamente na academia do condomínio do aluno. Caso sua academia tenha poucos aparelhos, eu complemento com elásticos, pesos e implementos próprios para um treino completo.
-          </p>
-        </details>
+          <div class="p-6 rounded-3xl bg-slate-900 border border-slate-800 relative flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-400 font-black text-xl flex items-center justify-center mb-4">
+                02
+              </div>
+              <h3 class="text-base font-bold text-white mb-2">Avaliação Inicial</h3>
+              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                Realizamos um diagnóstico do seu condicionamento físico, postura, histórico de saúde e eventuais dores prévias.
+              </p>
+            </div>
+          </div>
 
-        <details class="group bg-slate-950 border border-slate-800 rounded-2xl p-5 [&_summary::-webkit-details-marker]:hidden cursor-pointer">
-          <summary class="flex items-center justify-between font-bold text-white text-base sm:text-lg">
-            <span>Tenho dor nas costas, joelho ou hérnia de disco. Posso treinar?</span>
-            <span class="text-emerald-400 group-open:rotate-180 transition-transform">▼</span>
-          </summary>
-          <p class="mt-3 text-slate-300 text-sm leading-relaxed border-t border-slate-800/80 pt-3">
-            Sim, e deve! O fortalecimento muscular guiado com biomecânica correta é o tratamento não-medicamentoso mais eficaz para descomprimir a coluna e estabilizar as articulações. Todos os exercícios respeitam suas limitações.
-          </p>
-        </details>
+          <div class="p-6 rounded-3xl bg-slate-900 border border-slate-800 relative flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-400 font-black text-xl flex items-center justify-center mb-4">
+                03
+              </div>
+              <h3 class="text-base font-bold text-white mb-2">Prescrição do Treino</h3>
+              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                Elaboro um planejamento de treinos sob medida para você, equilibrando intensidade, queima e fortalecimento.
+              </p>
+            </div>
+          </div>
+
+          <div class="p-6 rounded-3xl bg-slate-900 border border-slate-800 relative flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-400 font-black text-xl flex items-center justify-center mb-4">
+                04
+              </div>
+              <h3 class="text-base font-bold text-white mb-2">Treinos & Resultados</h3>
+              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                Sessões 100% acompanhadas presencialmente, com acompanhamento de métricas e evolução visível mês a mês.
+              </p>
+            </div>
+          </div>
+
+        </div>
 
       </div>
+    </section>
 
-    </div>
-  </section>
+    <!-- 8. FAQ - PERGUNTAS FREQUENTES -->
+    <section class="py-16 sm:py-20 bg-slate-900/30 border-b border-slate-800">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center mb-12">
+          <span class="inline-block px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-bold uppercase tracking-wider mb-2 border border-emerald-500/30">
+            Tire Suas Dúvidas
+          </span>
+          <h2 class="text-3xl font-extrabold text-white tracking-tight">
+            Perguntas Frequentes
+          </h2>
+        </div>
 
-  <!-- 9. CTA FINAL DE ALTO IMPACTO -->
-  <section class="py-16 sm:py-24 relative overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-emerald-950/20 to-slate-950 pointer-events-none"></div>
+        <div class="space-y-4">
+          
+          <details class="group bg-slate-950 border border-slate-800 rounded-2xl p-5 [&_summary::-webkit-details-marker]:hidden cursor-pointer">
+            <summary class="flex items-center justify-between font-bold text-white text-base sm:text-lg">
+              <span>Como funcionam os valores e planos?</span>
+              <span class="text-emerald-400 group-open:rotate-180 transition-transform">▼</span>
+            </summary>
+            <p class="mt-3 text-slate-300 text-sm leading-relaxed border-t border-slate-800/80 pt-3">
+              Os valores são personalizados conforme a frequência semanal desejada (ex: 2x, 3x ou 5x na semana) e o local de atendimento em Jundiaí. Pelo WhatsApp eu apresento todas as opções de planos mensais e trimestrais sem nenhum compromisso.
+            </p>
+          </details>
 
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-      
-      <div class="w-16 h-16 mx-auto mb-6 rounded-3xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-3xl border border-emerald-500/40">
-        ⚡
+          <details class="group bg-slate-950 border border-slate-800 rounded-2xl p-5 [&_summary::-webkit-details-marker]:hidden cursor-pointer">
+            <summary class="flex items-center justify-between font-bold text-white text-base sm:text-lg">
+              <span>Sou totalmente iniciante ou sedentário há anos. Vou conseguir acompanhar?</span>
+              <span class="text-emerald-400 group-open:rotate-180 transition-transform">▼</span>
+            </summary>
+            <p class="mt-3 text-slate-300 text-sm leading-relaxed border-t border-slate-800/80 pt-3">
+              Com certeza! É exatamente para isso que serve o acompanhamento individual. Nós começamos com cargas e movimentos perfeitamente adaptados ao seu ritmo, sem exageros e sem dor incapacitante no dia seguinte.
+            </p>
+          </details>
+
+          <details class="group bg-slate-950 border border-slate-800 rounded-2xl p-5 [&_summary::-webkit-details-marker]:hidden cursor-pointer">
+            <summary class="flex items-center justify-between font-bold text-white text-base sm:text-lg">
+              <span>O treino pode ser feito na academia do meu condomínio?</span>
+              <span class="text-emerald-400 group-open:rotate-180 transition-transform">▼</span>
+            </summary>
+            <p class="mt-3 text-slate-300 text-sm leading-relaxed border-t border-slate-800/80 pt-3">
+              Sim! A maior parte dos meus atendimentos é realizada diretamente na academia do condomínio do aluno. Caso sua academia tenha poucos aparelhos, eu complemento com elásticos, pesos e implementos próprios para um treino completo.
+            </p>
+          </details>
+
+          <details class="group bg-slate-950 border border-slate-800 rounded-2xl p-5 [&_summary::-webkit-details-marker]:hidden cursor-pointer">
+            <summary class="flex items-center justify-between font-bold text-white text-base sm:text-lg">
+              <span>Tenho dor nas costas, joelho ou hérnia de disco. Posso treinar?</span>
+              <span class="text-emerald-400 group-open:rotate-180 transition-transform">▼</span>
+            </summary>
+            <p class="mt-3 text-slate-300 text-sm leading-relaxed border-t border-slate-800/80 pt-3">
+              Sim, e deve! O fortalecimento muscular guiado com biomecânica correta é o tratamento não-medicamentoso mais eficaz para descomprimir a coluna e estabilizar as articulações. Todos os exercícios respeitam suas limitações.
+            </p>
+          </details>
+
+        </div>
+
       </div>
+    </section>
 
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
-        Pronto para transformar seu corpo com quem entende do assunto?
-      </h2>
+    <!-- 9. CTA FINAL DE ALTO IMPACTO -->
+    <section class="py-16 sm:py-24 relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-b from-transparent via-emerald-950/20 to-slate-950 pointer-events-none"></div>
 
-      <p class="mt-4 text-base sm:text-lg text-slate-300 max-w-xl mx-auto">
-        Agende uma conversa rápida no WhatsApp para alinharmos seus horários e tirar qualquer dúvida sobre o acompanhamento em Jundiaí.
-      </p>
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+        
+        <div class="w-16 h-16 mx-auto mb-6 rounded-3xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-3xl border border-emerald-500/40">
+          ⚡
+        </div>
 
-      <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a id="final-whatsapp-btn"
-           href="https://wa.me/5511961343758?text=Ol%C3%A1%20Felipe!%20Gostaria%20de%20agendar%20uma%20conversa%20sobre%20personal%20trainer%20em%20Jundia%C3%AD."
-           onclick="return gtag_report_conversion(this.href);"
-           target="_blank"
-           class="btn-shimmer w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-base sm:text-lg shadow-glow-emerald transition-all transform hover:-translate-y-1">
-          <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
-            <path d="M17.472 14.382c-.301-.15-1.78-.878-2.056-.979-.275-.1-.475-.15-.675.15-.2.301-.775.979-.95 1.179-.175.2-.351.226-.651.076-.301-.15-1.27-.468-2.42-1.492-.894-.797-1.498-1.782-1.674-2.083-.175-.301-.019-.464.132-.614.136-.135.301-.351.451-.527.151-.175.2-.301.301-.501.101-.2.051-.376-.025-.526-.076-.151-.676-1.63-.926-2.233-.243-.587-.49-.508-.675-.517-.175-.01-.375-.01-.576-.01s-.526.076-.802.376c-.276.301-1.053 1.028-1.053 2.507s1.079 2.908 1.229 3.109c.151.2 2.124 3.243 5.145 4.549.719.311 1.281.497 1.719.636.723.23 1.38.197 1.9.12.58-.087 1.78-.727 2.03-1.429.251-.702.251-1.303.176-1.429-.076-.126-.276-.201-.577-.352z"/>
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.982-1.408A9.957 9.957 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18.2c-1.644 0-3.17-.487-4.455-1.328l-.32-.208-2.964.837.838-2.888-.228-.344A8.17 8.17 0 013.8 12c0-4.522 3.678-8.2 8.2-8.2s8.2 3.678 8.2 8.2-3.678 8.2-8.2 8.2z"/>
-          </svg>
-          <span>Falar Agora no WhatsApp</span>
-        </a>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
+          Pronto para transformar seu corpo com quem entende do assunto?
+        </h2>
+
+        <p class="mt-4 text-base sm:text-lg text-slate-300 max-w-xl mx-auto">
+          Agende uma conversa rápida no WhatsApp para alinharmos seus horários e tirar qualquer dúvida sobre o acompanhamento em Jundiaí.
+        </p>
+
+        <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a id="final-whatsapp-btn"
+             href="https://wa.me/5511961343758?text=Ol%C3%A1%20Felipe!%20Gostaria%20de%20agendar%20uma%20conversa%20sobre%20personal%20trainer%20em%20Jundia%C3%AD."
+             onclick="return gtag_report_conversion(this.href);"
+             target="_blank"
+             class="btn-shimmer w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-base sm:text-lg shadow-glow-emerald transition-all transform hover:-translate-y-1">
+            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.301-.15-1.78-.878-2.056-.979-.275-.1-.475-.15-.675.15-.2.301-.775.979-.95 1.179-.175.2-.351.226-.651.076-.301-.15-1.27-.468-2.42-1.492-.894-.797-1.498-1.782-1.674-2.083-.175-.301-.019-.464.132-.614.136-.135.301-.351.451-.527.151-.175.2-.301.301-.501.101-.2.051-.376-.025-.526-.076-.151-.676-1.63-.926-2.233-.243-.587-.49-.508-.675-.517-.175-.01-.375-.01-.576-.01s-.526.076-.802.376c-.276.301-1.053 1.028-1.053 2.507s1.079 2.908 1.229 3.109c.151.2 2.124 3.243 5.145 4.549.719.311 1.281.497 1.719.636.723.23 1.38.197 1.9.12.58-.087 1.78-.727 2.03-1.429.251-.702.251-1.303.176-1.429-.076-.126-.276-.201-.577-.352z"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.982-1.408A9.957 9.957 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18.2c-1.644 0-3.17-.487-4.455-1.328l-.32-.208-2.964.837.838-2.888-.228-.344A8.17 8.17 0 013.8 12c0-4.522 3.678-8.2 8.2-8.2s8.2 3.678 8.2 8.2-3.678 8.2-8.2 8.2z"/>
+            </svg>
+            <span>Falar Agora no WhatsApp</span>
+          </a>
+        </div>
+
       </div>
+    </section>
 
-    </div>
-  </section>
-
-  <!-- 10. RODAPÉ -->
-  <footer class="bg-slate-950 border-t border-slate-900 py-10 text-center text-xs text-slate-500">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
-      <div class="flex items-center justify-center gap-2">
-        <img src="assets/img/logo.png" alt="Logo" class="h-8 w-auto">
-        <span class="font-bold text-white text-sm">Personal Felipe Martins</span>
+    <!-- 10. RODAPÉ -->
+    <footer class="bg-slate-950 border-t border-slate-900 py-10 text-center text-xs text-slate-500">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+        <div class="flex items-center justify-center gap-2">
+          <img src="assets/img/logo.png" alt="Logo" class="h-8 w-auto">
+          <span class="font-bold text-white text-sm">Personal Felipe Martins</span>
+        </div>
+        <p>Profissional de Educação Física Credenciado no CREF • Atendimento em Condomínios e Domiciliar em Jundiaí - SP</p>
+        <div class="flex items-center justify-center gap-6 text-slate-400">
+          <a href="/idoso" class="hover:text-emerald-400 transition-colors">Página Especial Terceira Idade</a>
+          <span>•</span>
+          <button type="button" onclick="resetQuiz()" class="hover:text-emerald-400 transition-colors">Refazer Teste</button>
+        </div>
+        <p class="text-[11px] text-slate-600">© 2026 Personal Felipe Martins. Todos os direitos reservados.</p>
       </div>
-      <p>Profissional de Educação Física Credenciado no CREF • Atendimento em Condomínios e Domiciliar em Jundiaí - SP</p>
-      <div class="flex items-center justify-center gap-6 text-slate-400">
-        <a href="/idoso" class="hover:text-emerald-400 transition-colors">Página Especial Terceira Idade</a>
-        <span>•</span>
-        <a href="#quiz-section" class="hover:text-emerald-400 transition-colors">Voltar ao Topo</a>
-      </div>
-      <p class="text-[11px] text-slate-600">© 2026 Personal Felipe Martins. Todos os direitos reservados.</p>
-    </div>
-  </footer>
+    </footer>
 
-  <!-- 11. BOTÃO FLUTUANTE DO WHATSAPP (SEMPRE VISÍVEL NO MOBILE) -->
-  <div class="fixed bottom-5 right-5 z-50">
+  </main>
+
+  <!-- 11. BOTÃO FLUTUANTE DO WHATSAPP (OCULTO ATÉ O QUIZ SER RESPONDIDO) -->
+  <div id="floating-whatsapp-container" class="fixed bottom-5 right-5 z-50 hidden transition-all duration-500">
     <a id="floating-whatsapp-btn"
        href="https://wa.me/5511961343758?text=Ol%C3%A1%20Felipe!%20Vi%20seu%20site%20e%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20personal%20trainer%20em%20Jundia%C3%AD."
        onclick="return gtag_report_conversion(this.href);"
@@ -958,7 +963,7 @@
   <script>
     // ESTADO DO QUIZ
     const quizState = {
-      sex: 'Mulher', // default
+      sex: 'Mulher',
       goal: 'Emagrecimento',
       location: 'Academia do Condomínio'
     };
@@ -1181,7 +1186,8 @@
       } else if (step === 3) {
         quizState.location = value;
         highlightActiveOption(3);
-        setTimeout(() => finishQuiz(), 250);
+        // Exibe o carregamento/personalização e depois revela a página
+        setTimeout(() => showLoadingAndReveal(), 220);
       }
     }
 
@@ -1198,14 +1204,23 @@
       });
     }
 
-    // FINALIZAÇÃO DO QUIZ & PERSONALIZAÇÃO DA PÁGINA
+    // EFEITO DE TRANSIÇÃO E REVELAÇÃO DA PÁGINA PERSONALIZADA
+    function showLoadingAndReveal() {
+      document.querySelectorAll('.quiz-step').forEach(el => el.classList.add('hidden'));
+      const loadingDiv = document.getElementById('quiz-loading');
+      if (loadingDiv) loadingDiv.classList.remove('hidden');
+
+      setTimeout(() => {
+        finishQuiz();
+      }, 750);
+    }
+
+    // FINALIZAÇÃO DO QUIZ & REVELAÇÃO DA PÁGINA
     function finishQuiz() {
-      // Ocultar passos anteriores e mostrar resultado
       document.querySelectorAll('.quiz-step').forEach(el => el.classList.add('hidden'));
       const resultDiv = document.getElementById('quiz-result');
-      resultDiv.classList.remove('hidden');
+      if (resultDiv) resultDiv.classList.remove('hidden');
 
-      // Atualiza textos do resultado
       const goalNames = {
         Emagrecimento: 'Emagrecimento & Definição',
         Hipertrofia: 'Ganho de Massa Muscular (Hipertrofia)',
@@ -1231,14 +1246,25 @@
       document.getElementById('nav-whatsapp-btn').href = waUrl;
       document.getElementById('final-whatsapp-btn').href = waUrl;
 
-      // Atualizar a Seção Dinâmica com fotos e textos do perfil
+      // Atualiza a Seção Dinâmica com fotos e textos do perfil
       updateDynamicSection(quizState.goal, quizState.sex);
 
-      // Smooth scroll para a seção dinâmica após 800ms
+      // DESBLOQUEIA A PÁGINA INTEIRA BONITONA AGORA!
+      const fullPage = document.getElementById('full-personalized-page');
+      if (fullPage) {
+        fullPage.classList.remove('hidden');
+        setTimeout(() => {
+          fullPage.classList.remove('opacity-0');
+        }, 30);
+      }
+      const floatingContainer = document.getElementById('floating-whatsapp-container');
+      if (floatingContainer) floatingContainer.classList.remove('hidden');
+
+      // Scroll suave para a seção dinâmica revelada
       setTimeout(() => {
         const dynSec = document.getElementById('dynamic-section');
         if (dynSec) dynSec.scrollIntoView({ behavior: 'smooth' });
-      }, 700);
+      }, 400);
     }
 
     // ATUALIZA CONTEÚDO VISUAL DA SEÇÃO DINÂMICA
@@ -1273,14 +1299,22 @@
       document.getElementById('pillar-p-3').innerText = data.pillar3.p;
     }
 
-    // REINICIAR O QUIZ
+    // REINICIAR O QUIZ (E OCULTAR A PÁGINA NOVAMENTE)
     function resetQuiz() {
+      // Oculta a página personalizada
+      const fullPage = document.getElementById('full-personalized-page');
+      if (fullPage) {
+        fullPage.classList.add('opacity-0');
+        setTimeout(() => fullPage.classList.add('hidden'), 300);
+      }
+      const floatingContainer = document.getElementById('floating-whatsapp-container');
+      if (floatingContainer) floatingContainer.classList.add('hidden');
+
       goToStep(1);
       const form = document.getElementById('quiz-form');
       if (form) form.reset();
       document.querySelectorAll('.quiz-option').forEach(c => c.classList.remove('active'));
-      const quizSec = document.getElementById('quiz-section');
-      if (quizSec) quizSec.scrollIntoView({ behavior: 'smooth' });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     // GOOGLE ADS CONVERSION TRACKING
@@ -1299,11 +1333,6 @@
       }
       return true;
     }
-
-    // Inicialização da Seção Dinâmica no carregamento (Default)
-    window.addEventListener('DOMContentLoaded', () => {
-      updateDynamicSection('Emagrecimento', 'Mulher');
-    });
   </script>
 
 </body>
