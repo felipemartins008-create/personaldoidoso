@@ -1,8 +1,8 @@
 {
   "cleanUrls": true,
   "rewrites": [
-    { "source": "/idoso", "destination": "/index.html" },
-    { "source": "/idosos", "destination": "/index.html" },
+    { "source": "/idoso", "destination": "/idoso.html" },
+    { "source": "/idosos", "destination": "/idoso.html" },
     { "source": "/geral", "destination": "/geral.html" },
     { "source": "/adulto", "destination": "/geral.html" },
     { "source": "/adultos", "destination": "/geral.html" }
