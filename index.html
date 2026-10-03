@@ -226,23 +226,23 @@
   </header>
 
   <!-- 3. HERO SECTION / QUIZ FULLSCREEN GATE -->
-  <section id="quiz-section" class="relative min-h-[calc(100svh-4rem)] sm:min-h-0 flex flex-col justify-between py-2 sm:py-12 lg:py-14 overflow-hidden border-b border-slate-800">
+  <section id="quiz-section" class="relative min-h-[calc(100svh-4rem)] sm:min-h-0 flex flex-col justify-center py-2 sm:py-12 lg:py-14 overflow-hidden border-b border-slate-800">
     <!-- Ambient Gradient Background -->
     <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[700px] h-[500px] bg-emerald-500/10 blur-[130px] rounded-full pointer-events-none"></div>
     <div class="absolute top-1/2 right-0 w-[400px] h-[400px] bg-amber-500/5 blur-[120px] rounded-full pointer-events-none"></div>
 
-    <div class="max-w-6xl mx-auto px-3.5 sm:px-6 lg:px-8 relative z-10 w-full flex-1 flex flex-col justify-between">
+    <div class="max-w-6xl mx-auto px-3.5 sm:px-6 lg:px-8 relative z-10 w-full flex flex-col justify-center gap-2.5 sm:gap-6 my-auto">
       
-      <!-- MOBILE (OPÇÃO A): CARD EXECUTIVO SPLIT DE ALTA AUTORIDADE -->
-      <div class="block lg:hidden mb-2 sm:mb-4">
-        <div class="p-2.5 sm:p-3.5 rounded-2xl bg-gradient-to-r from-slate-900/95 via-slate-900/90 to-slate-950/95 border border-slate-700/80 shadow-[0_10px_30px_-5px_rgba(0,0,0,0.6),0_0_25px_-5px_rgba(16,185,129,0.12)] backdrop-blur-xl">
-          <div class="flex items-center gap-3">
+      <!-- MOBILE (OPÇÃO A AMPLIADA): CARD EXECUTIVO SPLIT DE ALTA AUTORIDADE -->
+      <div class="block lg:hidden">
+        <div class="p-3 sm:p-4 rounded-2xl bg-gradient-to-r from-slate-900/95 via-slate-900/90 to-slate-950/95 border border-slate-700/80 shadow-[0_10px_30px_-5px_rgba(0,0,0,0.6),0_0_25px_-5px_rgba(16,185,129,0.12)] backdrop-blur-xl">
+          <div class="flex items-center gap-3.5">
             
-            <!-- Foto Nítida Vertical (Formato 3:4 com foco calibrado no especialista) -->
-            <div class="relative w-20 sm:w-28 aspect-[3/4] rounded-xl overflow-hidden border border-emerald-500/40 shadow-lg shrink-0 group">
+            <!-- Foto Nítida Vertical (Formato 3:4 com foco calibrado no especialista - Ampliada para alta visibilidade) -->
+            <div class="relative w-28 sm:w-32 aspect-[3/4] rounded-xl overflow-hidden border border-emerald-500/40 shadow-lg shrink-0 group">
               <img src="assets/img/felipe-prescricao-escritorio.jpg" alt="Personal Trainer Felipe Martins prescrevendo treino no escritório" class="w-full h-full object-cover object-[center_32%]">
               <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
-              <div class="absolute bottom-1 left-1 right-1 text-center">
+              <div class="absolute bottom-1.5 left-1 right-1 text-center">
                 <span class="inline-block px-1.5 py-0.5 rounded bg-emerald-500 text-[8px] sm:text-[9px] font-black text-slate-950 uppercase tracking-wider shadow-sm">
                   CREF ATIVO
                 </span>
@@ -252,7 +252,7 @@
             <!-- Informações de Autoridade & Método -->
             <div class="min-w-0 flex-1">
               <!-- Status / Região -->
-              <div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-[9px] sm:text-[10px] font-extrabold text-emerald-400 mb-0.5">
+              <div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-[9px] sm:text-[10px] font-extrabold text-emerald-400 mb-1">
                 <span class="relative flex h-1.5 w-1.5">
                   <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                   <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-400"></span>
@@ -261,13 +261,13 @@
               </div>
 
               <!-- Nome e Titulação -->
-              <div class="text-sm sm:text-lg font-black text-white tracking-tight leading-tight flex items-center gap-1">
+              <div class="text-base sm:text-lg font-black text-white tracking-tight leading-tight flex items-center gap-1">
                 <span>Felipe Martins</span>
                 <span class="text-emerald-400 text-xs font-bold">✓</span>
               </div>
 
               <!-- Diferencial Técnico -->
-              <p class="text-[10px] sm:text-xs text-slate-300 font-medium leading-snug mt-0.5">
+              <p class="text-xs text-slate-300 font-medium leading-relaxed mt-1">
                 Prescrição individualizada no escritório para atender no seu condomínio, residência ou academia.
               </p>
             </div>
@@ -277,7 +277,7 @@
       </div>
 
       <!-- Grid Split no Desktop (2 Colunas) -->
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center flex-1">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
         
         <!-- COLUNA DA ESQUERDA (DESKTOP): FOTO EXECUTIVA & AUTORIDADE CIENTÍFICA -->
         <div class="hidden lg:flex lg:col-span-5 flex-col gap-4">
@@ -327,7 +327,7 @@
         </div>
 
         <!-- COLUNA DA DIREITA: HEADLINE & QUIZ (7 COLUNAS NO DESKTOP / 100% NO MOBILE) -->
-        <div class="lg:col-span-7 w-full flex-1 flex flex-col justify-between">
+        <div class="lg:col-span-7 w-full">
           
           <!-- Headline Principal (Otimizada para Mobile) -->
           <div class="text-center lg:text-left mb-2 sm:mb-6">
@@ -357,10 +357,10 @@
           </div>
 
           <!-- QUIZ CARD CONTAINER COM OBSIDIAN GLASS DE LUXO -->
-          <div class="w-full bg-slate-900/95 border border-slate-700/80 rounded-2xl sm:rounded-3xl p-3 sm:p-7 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.8),0_0_40px_-10px_rgba(16,185,129,0.12),inset_0_1px_1px_rgba(255,255,255,0.08)] backdrop-blur-2xl relative flex-1 flex flex-col justify-between">
+          <div class="w-full bg-slate-900/95 border border-slate-700/80 rounded-2xl sm:rounded-3xl p-3.5 sm:p-7 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.8),0_0_40px_-10px_rgba(16,185,129,0.12),inset_0_1px_1px_rgba(255,255,255,0.08)] backdrop-blur-2xl relative">
         
         <!-- Progress Bar Header Ultra-Clean -->
-        <div id="quiz-header-bar" class="mb-2 sm:mb-6">
+        <div id="quiz-header-bar" class="mb-2.5 sm:mb-6">
           <div class="flex items-center justify-between text-xs font-bold mb-1.5 sm:mb-2.5">
             <div class="flex items-center gap-1.5 sm:gap-2">
               <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
@@ -374,12 +374,12 @@
         </div>
 
         <!-- FORMULÁRIO DO QUIZ (3 ETAPAS) -->
-        <form id="quiz-form" onsubmit="return false;" class="flex-1 flex flex-col justify-between">
+        <form id="quiz-form" onsubmit="return false;">
           
-          <!-- ETAPA 1: SEXO (LADO A LADO NO MOBILE & DESKTOP) -->
-          <div id="quiz-step-1" class="quiz-step flex-1 flex flex-col justify-between">
-            <div class="flex items-center justify-between mb-1 sm:mb-1.5">
-              <h3 class="text-sm sm:text-xl font-black text-white tracking-tight">1. Qual é o seu sexo?</h3>
+          <!-- ETAPA 1: SEXO (LADO A LADO NO MOBILE & DESKTOP - AMPLIADO) -->
+          <div id="quiz-step-1" class="quiz-step">
+            <div class="flex items-center justify-between mb-2">
+              <h3 class="text-base sm:text-xl font-black text-white tracking-tight">1. Qual é o seu sexo?</h3>
               <span class="hidden sm:inline-flex items-center gap-1 text-[11px] font-semibold text-slate-400 bg-slate-800/80 px-2.5 py-0.5 rounded-full border border-slate-700/60">
                 <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
                 Selecione abaixo
@@ -388,16 +388,16 @@
             <!-- Subtítulo ocultado no mobile para economizar altura vertical -->
             <p class="hidden sm:block text-xs sm:text-sm text-slate-400 mb-4 sm:mb-5 leading-relaxed">A intensidade, cadência e volume são adaptados à fisiologia e biomecânica do seu corpo.</p>
 
-            <!-- GÊNEROS UM DO LADO DO OUTRO (GRID-COLS-2 NO MOBILE) -->
-            <div class="grid grid-cols-2 gap-2 sm:gap-4 mt-1 sm:mt-0 flex-1">
+            <!-- GÊNEROS UM DO LADO DO OUTRO (GRID-COLS-2 NO MOBILE - CARDS AMPLIADOS) -->
+            <div class="grid grid-cols-2 gap-2.5 sm:gap-4 mt-1.5 sm:mt-0">
               
               <!-- Opção Feminino -->
-              <label class="quiz-option cursor-pointer p-2.5 sm:p-5 rounded-xl sm:rounded-2xl bg-gradient-to-b from-slate-800/70 to-slate-900/90 border border-slate-700/80 flex flex-col items-center text-center justify-between min-h-[130px] sm:min-h-[190px] group select-none relative transition-all duration-300 hover:shadow-[0_10px_30px_-5px_rgba(0,0,0,0.5),0_0_20px_rgba(16,185,129,0.15)] hover:-translate-y-0.5">
+              <label class="quiz-option cursor-pointer p-3 sm:p-5 rounded-2xl bg-gradient-to-b from-slate-800/70 to-slate-900/90 border border-slate-700/80 flex flex-col items-center text-center justify-between min-h-[160px] sm:min-h-[190px] group select-none relative transition-all duration-300 hover:shadow-[0_10px_30px_-5px_rgba(0,0,0,0.5),0_0_20px_rgba(16,185,129,0.15)] hover:-translate-y-0.5">
                 <input type="radio" name="user_sex" value="Mulher" class="hidden" onchange="handleOptionSelect(1, 'Mulher')">
                 
                 <!-- Header do Card: Tag + Radio Indicator -->
                 <div class="flex items-center justify-between w-full mb-1 sm:mb-2.5">
-                  <span class="inline-block px-1.5 sm:px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 text-[9px] sm:text-[10px] font-extrabold uppercase tracking-wider border border-emerald-500/20">
+                  <span class="inline-block px-2 sm:px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 text-[10px] font-extrabold uppercase tracking-wider border border-emerald-500/20">
                     Feminino
                   </span>
                   <div class="radio-ring w-4 h-4 sm:w-5 sm:h-5 rounded-full border border-slate-600 flex items-center justify-center transition-all group-hover:border-emerald-400">
@@ -405,9 +405,9 @@
                   </div>
                 </div>
 
-                <!-- Ícone Vetorial Minimalista de Luxo -->
-                <div class="w-9 h-9 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-slate-800/90 border border-slate-700/80 flex items-center justify-center text-emerald-400 group-hover:bg-emerald-500/20 group-hover:border-emerald-500/50 group-hover:scale-105 transition-all shadow-inner my-0.5 sm:my-auto shrink-0">
-                  <svg class="w-5 h-5 sm:w-7 sm:h-7 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <!-- Ícone Vetorial Minimalista de Luxo (Maior) -->
+                <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-slate-800/90 border border-slate-700/80 flex items-center justify-center text-emerald-400 group-hover:bg-emerald-500/20 group-hover:border-emerald-500/50 group-hover:scale-105 transition-all shadow-inner my-1 sm:my-auto shrink-0">
+                  <svg class="w-6 h-6 sm:w-7 sm:h-7 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                     <circle cx="12" cy="8" r="5"></circle>
                     <line x1="12" y1="13" x2="12" y2="21"></line>
                     <line x1="8.5" y1="17.5" x2="15.5" y2="17.5"></line>
@@ -416,10 +416,10 @@
 
                 <!-- Título e Subtítulo -->
                 <div>
-                  <div class="text-xs sm:text-lg font-extrabold text-white group-hover:text-emerald-400 transition-colors">
+                  <div class="text-sm sm:text-lg font-extrabold text-white group-hover:text-emerald-400 transition-colors">
                     Feminino
                   </div>
-                  <div class="text-[9px] sm:text-xs text-slate-300 font-medium leading-tight mt-0.5">
+                  <div class="text-[10px] sm:text-xs text-slate-300 font-medium leading-tight mt-0.5">
                     Tônus & definição
                   </div>
                 </div>
@@ -431,12 +431,12 @@
               </label>
 
               <!-- Opção Masculino -->
-              <label class="quiz-option cursor-pointer p-2.5 sm:p-5 rounded-xl sm:rounded-2xl bg-gradient-to-b from-slate-800/70 to-slate-900/90 border border-slate-700/80 flex flex-col items-center text-center justify-between min-h-[130px] sm:min-h-[190px] group select-none relative transition-all duration-300 hover:shadow-[0_10px_30px_-5px_rgba(0,0,0,0.5),0_0_20px_rgba(16,185,129,0.15)] hover:-translate-y-0.5">
+              <label class="quiz-option cursor-pointer p-3 sm:p-5 rounded-2xl bg-gradient-to-b from-slate-800/70 to-slate-900/90 border border-slate-700/80 flex flex-col items-center text-center justify-between min-h-[160px] sm:min-h-[190px] group select-none relative transition-all duration-300 hover:shadow-[0_10px_30px_-5px_rgba(0,0,0,0.5),0_0_20px_rgba(16,185,129,0.15)] hover:-translate-y-0.5">
                 <input type="radio" name="user_sex" value="Homem" class="hidden" onchange="handleOptionSelect(1, 'Homem')">
                 
                 <!-- Header do Card: Tag + Radio Indicator -->
                 <div class="flex items-center justify-between w-full mb-1 sm:mb-2.5">
-                  <span class="inline-block px-1.5 sm:px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 text-[9px] sm:text-[10px] font-extrabold uppercase tracking-wider border border-emerald-500/20">
+                  <span class="inline-block px-2 sm:px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 text-[10px] font-extrabold uppercase tracking-wider border border-emerald-500/20">
                     Masculino
                   </span>
                   <div class="radio-ring w-4 h-4 sm:w-5 sm:h-5 rounded-full border border-slate-600 flex items-center justify-center transition-all group-hover:border-emerald-400">
@@ -444,9 +444,9 @@
                   </div>
                 </div>
 
-                <!-- Ícone Vetorial Minimalista de Luxo -->
-                <div class="w-9 h-9 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-slate-800/90 border border-slate-700/80 flex items-center justify-center text-emerald-400 group-hover:bg-emerald-500/20 group-hover:border-emerald-500/50 group-hover:scale-105 transition-all shadow-inner my-0.5 sm:my-auto shrink-0">
-                  <svg class="w-5 h-5 sm:w-7 sm:h-7 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <!-- Ícone Vetorial Minimalista de Luxo (Maior) -->
+                <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-slate-800/90 border border-slate-700/80 flex items-center justify-center text-emerald-400 group-hover:bg-emerald-500/20 group-hover:border-emerald-500/50 group-hover:scale-105 transition-all shadow-inner my-1 sm:my-auto shrink-0">
+                  <svg class="w-6 h-6 sm:w-7 sm:h-7 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                     <circle cx="9.5" cy="14.5" r="5"></circle>
                     <line x1="13.5" y1="10.5" x2="20" y2="4"></line>
                     <polyline points="15 4 20 4 20 9"></polyline>
@@ -455,10 +455,10 @@
 
                 <!-- Título e Subtítulo -->
                 <div>
-                  <div class="text-xs sm:text-lg font-extrabold text-white group-hover:text-emerald-400 transition-colors">
+                  <div class="text-sm sm:text-lg font-extrabold text-white group-hover:text-emerald-400 transition-colors">
                     Masculino
                   </div>
-                  <div class="text-[9px] sm:text-xs text-slate-300 font-medium leading-tight mt-0.5">
+                  <div class="text-[10px] sm:text-xs text-slate-300 font-medium leading-tight mt-0.5">
                     Força & hipertrofia
                   </div>
                 </div>
