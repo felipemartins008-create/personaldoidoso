@@ -233,18 +233,53 @@
 
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full my-auto">
       
-      <!-- Mobile: Chip de Autoridade no Topo do Celular (Não empurra o quiz para baixo) -->
-      <div class="flex lg:hidden items-center justify-center mb-3">
-        <div class="inline-flex items-center gap-2.5 p-1.5 pr-3.5 rounded-full bg-slate-900/95 border border-slate-700/80 shadow-md backdrop-blur-md">
-          <div class="w-8 h-8 rounded-full overflow-hidden border border-emerald-500/50 shrink-0">
-            <img src="assets/img/felipe-prescricao-escritorio.jpg" alt="Felipe Martins" class="w-full h-full object-cover object-top">
-          </div>
-          <div class="text-left">
-            <div class="text-xs font-bold text-white flex items-center gap-1">
-              <span>Felipe Martins</span>
-              <span class="text-emerald-400 font-semibold">• CREF Ativo</span>
+
+
+      <!-- MOBILE (OPÇÃO A): CARD EXECUTIVO SPLIT DE ALTA AUTORIDADE -->
+      <div class="block lg:hidden mb-4 sm:mb-5">
+        <div class="p-3 sm:p-3.5 rounded-2xl bg-gradient-to-r from-slate-900/95 via-slate-900/90 to-slate-950/95 border border-slate-700/80 shadow-[0_10px_30px_-5px_rgba(0,0,0,0.6),0_0_25px_-5px_rgba(16,185,129,0.12)] backdrop-blur-xl">
+          <div class="flex items-center gap-3.5">
+            
+            <!-- Foto Nítida Vertical (Formato 3:4, com foco calibrado no especialista) -->
+            <div class="relative w-24 sm:w-28 aspect-[3/4] rounded-xl overflow-hidden border border-emerald-500/40 shadow-lg shrink-0 group">
+              <img src="assets/img/felipe-prescricao-escritorio.jpg" alt="Personal Trainer Felipe Martins prescrevendo treino no escritório" class="w-full h-full object-cover object-[center_32%]">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+              <div class="absolute bottom-1.5 left-1.5 right-1.5 text-center">
+                <span class="inline-block px-1.5 py-0.5 rounded bg-emerald-500 text-[9px] font-black text-slate-950 uppercase tracking-wider shadow-sm">
+                  CREF ATIVO
+                </span>
+              </div>
             </div>
-            <div class="text-[10px] text-slate-400 leading-none">Prescrição e treino presencial em Jundiaí</div>
+
+            <!-- Informações de Autoridade & Método -->
+            <div class="min-w-0 flex-1">
+              <!-- Status / Região -->
+              <div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-[10px] font-extrabold text-emerald-400 mb-1">
+                <span class="relative flex h-1.5 w-1.5">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-400"></span>
+                </span>
+                <span>Personal Presencial • Jundiaí</span>
+              </div>
+
+              <!-- Nome e Titulação -->
+              <div class="text-base sm:text-lg font-black text-white tracking-tight leading-tight flex items-center gap-1">
+                <span>Felipe Martins</span>
+                <span class="text-emerald-400 text-xs font-bold">✓</span>
+              </div>
+
+              <!-- Diferencial Técnico -->
+              <p class="text-[11px] sm:text-xs text-slate-300 font-medium leading-snug mt-1">
+                Prescrição científica desenhada no escritório para atender no seu condomínio, casa ou academia.
+              </p>
+
+              <!-- Micro-Diferencial -->
+              <div class="mt-2 flex items-center gap-2 text-[10px] text-slate-400">
+                <span class="text-emerald-400 font-bold">📋</span>
+                <span class="truncate">Planejamento individual prévio</span>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
