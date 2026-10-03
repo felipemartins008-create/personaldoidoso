@@ -296,49 +296,77 @@
             <h3 class="text-base sm:text-xl font-bold text-white mb-1">2. Qual é a sua meta prioritária hoje?</h3>
             <p class="text-xs sm:text-sm text-slate-400 mb-4 sm:mb-5">Selecione o que você mais deseja transformar nas próximas semanas:</p>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-3.5">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3">
               
-              <label class="quiz-option cursor-pointer p-4 sm:p-4.5 rounded-2xl bg-slate-800/70 border border-slate-700/80 flex items-center gap-3.5 sm:gap-4 group select-none min-h-[70px] sm:min-h-[76px]">
+              <!-- 1. Emagrecimento -->
+              <label class="quiz-option cursor-pointer p-3.5 sm:p-4 rounded-2xl bg-slate-800/70 border border-slate-700/80 flex items-center gap-3 sm:gap-3.5 group select-none min-h-[64px] sm:min-h-[70px]">
                 <input type="radio" name="user_goal" value="Emagrecimento" class="hidden" onchange="handleOptionSelect(2, 'Emagrecimento')">
-                <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-2xl shrink-0 group-hover:scale-105 transition-transform">
+                <div class="w-11 h-11 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl sm:text-2xl shrink-0 group-hover:scale-105 transition-transform">
                   🔥
                 </div>
                 <div class="min-w-0">
-                  <div class="text-sm sm:text-base font-bold text-white group-hover:text-emerald-400 transition-colors">Emagrecimento & Definição</div>
-                  <div class="text-xs text-slate-400 leading-tight mt-0.5">Secar gordura sem perder tônus muscular</div>
+                  <div class="text-sm sm:text-base font-bold text-white group-hover:text-emerald-400 transition-colors">Emagrecimento</div>
+                  <div class="text-xs text-slate-400 leading-tight mt-0.5">Queima de gordura e definição corporal</div>
                 </div>
               </label>
 
-              <label class="quiz-option cursor-pointer p-4 sm:p-4.5 rounded-2xl bg-slate-800/70 border border-slate-700/80 flex items-center gap-3.5 sm:gap-4 group select-none min-h-[70px] sm:min-h-[76px]">
+              <!-- 2. Hipertrofia -->
+              <label class="quiz-option cursor-pointer p-3.5 sm:p-4 rounded-2xl bg-slate-800/70 border border-slate-700/80 flex items-center gap-3 sm:gap-3.5 group select-none min-h-[64px] sm:min-h-[70px]">
                 <input type="radio" name="user_goal" value="Hipertrofia" class="hidden" onchange="handleOptionSelect(2, 'Hipertrofia')">
-                <div class="w-12 h-12 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center text-2xl shrink-0 group-hover:scale-105 transition-transform">
+                <div class="w-11 h-11 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center text-xl sm:text-2xl shrink-0 group-hover:scale-105 transition-transform">
                   ⚡
                 </div>
                 <div class="min-w-0">
-                  <div class="text-sm sm:text-base font-bold text-white group-hover:text-emerald-400 transition-colors">Ganho de Massa (Hipertrofia)</div>
-                  <div class="text-xs text-slate-400 leading-tight mt-0.5">Aumentar volume, força e densidade</div>
+                  <div class="text-sm sm:text-base font-bold text-white group-hover:text-emerald-400 transition-colors">Hipertrofia</div>
+                  <div class="text-xs text-slate-400 leading-tight mt-0.5">Ganho de massa magra, volume e força</div>
                 </div>
               </label>
 
-              <label class="quiz-option cursor-pointer p-4 sm:p-4.5 rounded-2xl bg-slate-800/70 border border-slate-700/80 flex items-center gap-3.5 sm:gap-4 group select-none min-h-[70px] sm:min-h-[76px]">
+              <!-- 3. Emagrecimento e Hipertrofia -->
+              <label class="quiz-option cursor-pointer p-3.5 sm:p-4 rounded-2xl bg-slate-800/70 border border-slate-700/80 flex items-center gap-3 sm:gap-3.5 group select-none min-h-[64px] sm:min-h-[70px]">
+                <input type="radio" name="user_goal" value="EmagrecimentoHipertrofia" class="hidden" onchange="handleOptionSelect(2, 'EmagrecimentoHipertrofia')">
+                <div class="w-11 h-11 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl sm:text-2xl shrink-0 group-hover:scale-105 transition-transform">
+                  🚀
+                </div>
+                <div class="min-w-0">
+                  <div class="text-sm sm:text-base font-bold text-white group-hover:text-emerald-400 transition-colors">Emagrecimento e hipertrofia</div>
+                  <div class="text-xs text-slate-400 leading-tight mt-0.5">Recomposição: secar e ganhar massa</div>
+                </div>
+              </label>
+
+              <!-- 4. Saúde e Bem Estar -->
+              <label class="quiz-option cursor-pointer p-3.5 sm:p-4 rounded-2xl bg-slate-800/70 border border-slate-700/80 flex items-center gap-3 sm:gap-3.5 group select-none min-h-[64px] sm:min-h-[70px]">
+                <input type="radio" name="user_goal" value="SaudeBemEstar" class="hidden" onchange="handleOptionSelect(2, 'SaudeBemEstar')">
+                <div class="w-11 h-11 rounded-xl bg-teal-500/10 text-teal-400 flex items-center justify-center text-xl sm:text-2xl shrink-0 group-hover:scale-105 transition-transform">
+                  🌿
+                </div>
+                <div class="min-w-0">
+                  <div class="text-sm sm:text-base font-bold text-white group-hover:text-emerald-400 transition-colors">Saúde e bem estar</div>
+                  <div class="text-xs text-slate-400 leading-tight mt-0.5">Mais disposição, vitalidade e qualidade</div>
+                </div>
+              </label>
+
+              <!-- 5. Condicionamento Físico para Esportes -->
+              <label class="quiz-option cursor-pointer p-3.5 sm:p-4 rounded-2xl bg-slate-800/70 border border-slate-700/80 flex items-center gap-3 sm:gap-3.5 group select-none min-h-[64px] sm:min-h-[70px]">
+                <input type="radio" name="user_goal" value="CondicionamentoEsportes" class="hidden" onchange="handleOptionSelect(2, 'CondicionamentoEsportes')">
+                <div class="w-11 h-11 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center text-xl sm:text-2xl shrink-0 group-hover:scale-105 transition-transform">
+                  🏃
+                </div>
+                <div class="min-w-0">
+                  <div class="text-sm sm:text-base font-bold text-white group-hover:text-emerald-400 transition-colors">Condicionamento físico para esportes</div>
+                  <div class="text-xs text-slate-400 leading-tight mt-0.5">Performance, fôlego e agilidade atlética</div>
+                </div>
+              </label>
+
+              <!-- 6. Terceira Idade (Saúde) -->
+              <label class="quiz-option cursor-pointer p-3.5 sm:p-4 rounded-2xl bg-slate-800/70 border border-slate-700/80 flex items-center gap-3 sm:gap-3.5 group select-none min-h-[64px] sm:min-h-[70px]">
                 <input type="radio" name="user_goal" value="Idoso" class="hidden" onchange="handleOptionSelect(2, 'Idoso')">
-                <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-2xl shrink-0 group-hover:scale-105 transition-transform">
+                <div class="w-11 h-11 rounded-xl bg-sky-500/10 text-sky-400 flex items-center justify-center text-xl sm:text-2xl shrink-0 group-hover:scale-105 transition-transform">
                   🛡️
                 </div>
                 <div class="min-w-0">
-                  <div class="text-sm sm:text-base font-bold text-white group-hover:text-emerald-400 transition-colors">Saúde & 3ª Idade (60+)</div>
+                  <div class="text-sm sm:text-base font-bold text-white group-hover:text-emerald-400 transition-colors">Terceira idade (saúde)</div>
                   <div class="text-xs text-slate-400 leading-tight mt-0.5">Equilíbrio, autonomia e prevenção de quedas</div>
-                </div>
-              </label>
-
-              <label class="quiz-option cursor-pointer p-4 sm:p-4.5 rounded-2xl bg-slate-800/70 border border-slate-700/80 flex items-center gap-3.5 sm:gap-4 group select-none min-h-[70px] sm:min-h-[76px]">
-                <input type="radio" name="user_goal" value="PosturaDores" class="hidden" onchange="handleOptionSelect(2, 'PosturaDores')">
-                <div class="w-12 h-12 rounded-xl bg-teal-500/10 text-teal-400 flex items-center justify-center text-2xl shrink-0 group-hover:scale-105 transition-transform">
-                  🧘
-                </div>
-                <div class="min-w-0">
-                  <div class="text-sm sm:text-base font-bold text-white group-hover:text-emerald-400 transition-colors">Postura & Alívio de Dores</div>
-                  <div class="text-xs text-slate-400 leading-tight mt-0.5">Eliminar dores na coluna, joelhos e ombros</div>
                 </div>
               </label>
 
@@ -1192,6 +1220,138 @@
           pillar3: { h: 'Prevenção de Cirurgias', p: 'Fortalecimento conservador recomendado por médicos e ortopedistas.' },
           ctaText: 'Quero Meu Plano de Alívio de Dores'
         }
+      },
+      EmagrecimentoHipertrofia: {
+        Mulher: {
+          badge: 'Foco: Emagrecimento e Hipertrofia Feminina',
+          title: 'Recomposição Corporal: Reduzir Medidas e Ganhar Tônus',
+          desc: 'A fórmula exata para queimar gordura localizada enquanto tonifica pernas, glúteos e abdômen, sem dietas extremas.',
+          card1: {
+            title: 'Recomposição Muscular Ativa',
+            desc: 'Ajuste metabólico fino para substituir gordura por massa magra e densa com supervisão presencial.',
+            img: 'assets/img/emagrecimento-mulher-2.jpg',
+            tag: 'Corpo Firme e Torneado'
+          },
+          card2: {
+            title: 'Construção de Curvas Sem Flacidez',
+            desc: 'Estímulos combinados de hipertrofia e gasto calórico elevado treinando direto no seu condomínio.',
+            img: 'assets/img/hipertrofia-mulher-1.jpg',
+            tag: 'Recomposição Corporal'
+          },
+          pillar1: { h: 'Déficit Metabólico com Preservação Muscular', p: 'Treinos inteligentes que queimam gordura enquanto mantêm a musculatura firme.' },
+          pillar2: { h: 'Sobrecarga Progressiva com Gasto Calórico', p: 'Musculação adaptada aos seus objetivos com gasto energético contínuo.' },
+          pillar3: { h: 'Definição e Firmeza Total', p: 'Adeus à flacidez: pele firme e músculos esculpidos de forma sustentável.' },
+          ctaText: 'Quero Meu Treino de Emagrecimento e Hipertrofia'
+        },
+        Homem: {
+          badge: 'Foco: Emagrecimento e Hipertrofia Masculina',
+          title: 'Recomposição Corporal: Secar Abdômen e Construir Músculos',
+          desc: 'Protocolo de alta eficiência para homens que desejam eliminar a gordura da barriga ao mesmo tempo em que desenvolvem peitoral, ombros e braços.',
+          card1: {
+            title: 'Secagem Abdominal e Densidade',
+            desc: 'Redução drástica do percentual de gordura com preservação e aumento visível de massa magra.',
+            img: 'assets/img/emagrecimento-homem-2.jpg',
+            tag: 'Secagem & Volume'
+          },
+          card2: {
+            title: 'Desenvolvimento Muscular Superior',
+            desc: 'Hipertrofia de tronco e braços com gasto calórico acelerado durante e após a sessão.',
+            img: 'assets/img/hipertrofia-homem-1.png',
+            tag: 'Recomposição Atlética'
+          },
+          pillar1: { h: 'Tensão Mecânica & Queima Calórica', p: 'Exercícios multiarticulares que constroem músculos e queimam gordura simultaneamente.' },
+          pillar2: { h: 'Otimização Hormonal e Metabólica', p: 'Elevação da taxa metabólica basal para queimar calorias até mesmo em repouso.' },
+          pillar3: { h: 'Simetria e Vigor Físico', p: 'Corpo no formato atlético em V, mais forte, seco e resistente.' },
+          ctaText: 'Quero Meu Treino de Emagrecimento e Hipertrofia'
+        }
+      },
+      SaudeBemEstar: {
+        Mulher: {
+          badge: 'Foco: Saúde e Bem-Estar Feminino',
+          title: 'Mais Energia Diária, Qualidade de Vida e Corpo Sem Dores',
+          desc: 'Exercícios funcionais integrados e prazerosos para aliviar o estresse, melhorar o sono e ter disposição física constante.',
+          card1: {
+            title: 'Vitalidade e Energia Constante',
+            desc: 'Exercícios personalizados que renovam a disposição física e reduzem o estresse da rotina.',
+            img: 'assets/img/felipe-aluna-academia.png',
+            tag: 'Mais Energia'
+          },
+          card2: {
+            title: 'Mobilidade e Conforto Corporal',
+            desc: 'Movimentos funcionais e alongamentos para viver sem dores e com o corpo leve e ativo.',
+            img: 'assets/img/felipe-treino-jardim.png',
+            tag: 'Qualidade de Vida'
+          },
+          pillar1: { h: 'Treino Agradável e no Seu Ritmo', p: 'Sessões dinâmicas que respeitam seus limites, sem esgotamento ou estresse desnecessário.' },
+          pillar2: { h: 'Saúde Mental & Controle do Estresse', p: 'Liberação natural de endorfinas para regular humor, melhorar o sono e diminuir a ansiedade.' },
+          pillar3: { h: 'Prevenção e Longevidade', p: 'Fortalecimento preventivo para manter coluna, quadris e articulações sempre saudáveis.' },
+          ctaText: 'Quero Meu Treino de Saúde e Bem-Estar'
+        },
+        Homem: {
+          badge: 'Foco: Saúde e Bem-Estar Masculino',
+          title: 'Disposição Física Renovada, Saúde Preventiva e Vigor',
+          desc: 'Treinos focados em saúde cardiovascular, controle do estresse corporativo e ganho de vitalidade para aproveitar a vida com plenitude.',
+          card1: {
+            title: 'Vigor Físico e Disposição',
+            desc: 'Melhora da capacidade respiratória, disposição diária e eliminação do cansaço crônico.',
+            img: 'assets/img/felipe-treino-jardim.png',
+            tag: 'Saúde Integral'
+          },
+          card2: {
+            title: 'Fortalecimento Geral e Mobilidade',
+            desc: 'Estrutura corporal fortalecida para enfrentar a rotina de trabalho com máxima vitalidade.',
+            img: 'assets/img/felipe-aluna-academia.png',
+            tag: 'Bem-Estar Ativo'
+          },
+          pillar1: { h: 'Recuperação do Fôlego e Vigor', p: 'Treinos funcionais adaptados para aumentar a resistência e proteger o coração.' },
+          pillar2: { h: 'Alívio de Tensões e Dores', p: 'Descompressão da lombar e trapézios causados por longas horas sentado ou dirigindo.' },
+          pillar3: { h: 'Constância e Eficiência no Condomínio', p: 'Treino eficiente no condomínio que se encaixa na sua rotina sem tomar seu tempo.' },
+          ctaText: 'Quero Meu Treino de Saúde e Bem-Estar'
+        }
+      },
+      CondicionamentoEsportes: {
+        Mulher: {
+          badge: 'Foco: Condicionamento Físico para Esportes',
+          title: 'Performance Atlética, Resistência e Agilidade',
+          desc: 'Preparação física específica para praticantes de corrida, beach tennis, tênis ou funcional que desejam evoluir com segurança e sem lesões.',
+          card1: {
+            title: 'Potência e Fôlego no Esporte',
+            desc: 'Treinos com foco em capacidade cardiorrespiratória e agilidade de deslocamento.',
+            img: 'assets/img/felipe-aluna-academia.png',
+            tag: 'Alta Performance'
+          },
+          card2: {
+            title: 'Blindagem Articular Contra Lesões',
+            desc: 'Estabilização de joelhos, tornozelos e ombros para você render o máximo nas quadras e pistas.',
+            img: 'assets/img/felipe-treino-jardim.png',
+            tag: 'Zero Lesões'
+          },
+          pillar1: { h: 'Capacidade Cardiorrespiratória', p: 'Melhora comprovada de VO2 e fôlego para não cansar durante jogos ou provas longas.' },
+          pillar2: { h: 'Velocidade de Reação e Agilidade', p: 'Exercícios pliométricos e funcionais que aprimoram a coordenação motora fina.' },
+          pillar3: { h: 'Fortalecimento Específico da Modalidade', p: 'Ajuste das cadeias musculares mais exigidas pelo seu esporte preferido.' },
+          ctaText: 'Quero Meu Plano de Condicionamento para Esportes'
+        },
+        Homem: {
+          badge: 'Foco: Condicionamento Físico para Esportes',
+          title: 'Explosão, Resistência e Alta Performance Esportiva',
+          desc: 'Preparação física atlética para praticantes de futebol, corrida, beach tennis, ciclismo ou lutas que buscam alto rendimento em Jundiaí.',
+          card1: {
+            title: 'Potência Muscular e Agilidade',
+            desc: 'Aumento de velocidade, impulsão e resistência anaeróbica para sobressair no jogo.',
+            img: 'assets/img/felipe-treino-jardim.png',
+            tag: 'Performance Atlética'
+          },
+          card2: {
+            title: 'Prevenção de Lesões e Estabilidade',
+            desc: 'Blindagem de ligamentos, adutores e manguito rotador para jogar sempre no auge.',
+            img: 'assets/img/felipe-aluna-academia.png',
+            tag: 'Condicionamento de Elite'
+          },
+          pillar1: { h: 'Explosão e Resistência Cardiovascular', p: 'Treinos intervalados de alta intensidade (HIIT) específicos para dinâmicas rápidas.' },
+          pillar2: { h: 'Prevenção Ativa de Entorses e Distensões', p: 'Estabilização profunda de core e membros inferiores para freadas e arrancadas bruscas.' },
+          pillar3: { h: 'Periodização Concomitante com os Jogos', p: 'Carga calculada para você chegar nos jogos do fim de semana no auge da forma.' },
+          ctaText: 'Quero Meu Plano de Condicionamento para Esportes'
+        }
       }
     };
 
@@ -1310,9 +1470,12 @@
       if (resultDiv) resultDiv.classList.remove('hidden');
 
       const goalNames = {
-        Emagrecimento: 'Emagrecimento & Definição',
-        Hipertrofia: 'Ganho de Massa Muscular (Hipertrofia)',
-        Idoso: 'Saúde & Longevidade (Terceira Idade)',
+        Emagrecimento: 'Emagrecimento',
+        Hipertrofia: 'Hipertrofia',
+        EmagrecimentoHipertrofia: 'Emagrecimento e hipertrofia',
+        SaudeBemEstar: 'Saúde e bem estar',
+        CondicionamentoEsportes: 'Condicionamento físico para esportes',
+        Idoso: 'Terceira idade (saúde)',
         PosturaDores: 'Alívio de Dores & Reabilitação Postural'
       };
 
@@ -1408,10 +1571,31 @@
         },
         Idoso: {
           bioHeadline: 'Mais do que passar exercícios: eu entrego um plano seguro para sua longevidade e autonomia.',
-          bioText: 'Sou <strong class="text-white">Felipe Martins</strong>, profissional de Educação Física <strong class="text-emerald-400">credenciado no CREF</strong>, especialista em <strong class="text-emerald-400">saúde para terceira idade (60+), equilíbrio postural, prevenção de quedas e mobilidade</strong>.',
+          bioText: 'Sou <strong class="text-white">Felipe Martins</strong>, profissional de Educação Física <strong class="text-emerald-400">credenciado no CREF</strong>, especialista em <strong class="text-emerald-400">terceira idade (saúde), equilíbrio postural, prevenção de quedas e mobilidade</strong>.',
           specialtyBadge: 'Metodologia acolhedora e segura para fortalecer músculos e articulações, garantindo vitalidade e independência.',
           prescricaoText: 'Elaboro um planejamento adaptado ao seu ritmo, com foco em equilíbrio, fortalecimento suave e bem-estar.',
           finalCtaHeadline: 'Pronto para viver com mais energia, firmeza nos passos e autonomia diária?'
+        },
+        EmagrecimentoHipertrofia: {
+          bioHeadline: 'Mais do que passar exercícios: eu entrego a estratégia exata para sua recomposição corporal.',
+          bioText: 'Sou <strong class="text-white">Felipe Martins</strong>, profissional de Educação Física <strong class="text-emerald-400">credenciado no CREF</strong>, especialista em <strong class="text-emerald-400">emagrecimento aliado à hipertrofia (recomposição corporal)</strong> sem flacidez.',
+          specialtyBadge: 'Metodologia precisa que combina queima acelerada de gordura com estímulos de sobrecarga para definição muscular.',
+          prescricaoText: 'Elaboro um planejamento de recomposição corporal sob medida para você, equilibrando queima calórica e estímulo hipertrófico.',
+          finalCtaHeadline: 'Pronto para emagrecer e ganhar massa magra com um treino presencial desenhado para você?'
+        },
+        SaudeBemEstar: {
+          bioHeadline: 'Mais do que passar exercícios: eu entrego um programa de saúde, disposição e bem-estar integral.',
+          bioText: 'Sou <strong class="text-white">Felipe Martins</strong>, profissional de Educação Física <strong class="text-emerald-400">credenciado no CREF</strong>, especialista em <strong class="text-emerald-400">saúde preventiva, qualidade de vida, alívio do estresse e bem-estar</strong>.',
+          specialtyBadge: 'Exercícios prazerosos e funcionais que aumentam sua energia diária e protegem sua saúde no longo prazo.',
+          prescricaoText: 'Elaboro um planejamento funcional equilibrado no seu ritmo, com foco em disposição, vitalidade e saúde integral.',
+          finalCtaHeadline: 'Pronto para ter mais disposição, vitalidade e qualidade de vida na sua rotina?'
+        },
+        CondicionamentoEsportes: {
+          bioHeadline: 'Mais do que passar exercícios: eu preparo seu corpo para render o máximo no seu esporte.',
+          bioText: 'Sou <strong class="text-white">Felipe Martins</strong>, profissional de Educação Física <strong class="text-emerald-400">credenciado no CREF</strong>, especialista em <strong class="text-emerald-400">condicionamento físico para esportes, agilidade, resistência aeróbica e prevenção de lesões</strong>.',
+          specialtyBadge: 'Treinamento funcional e atlético específico para melhorar sua agilidade, força e fôlego no esporte.',
+          prescricaoText: 'Elaboro uma preparação física personalizada com foco na sua modalidade (corrida, tênis, futebol, lutas e mais).',
+          finalCtaHeadline: 'Pronto para elevar seu nível atlético e praticar seu esporte favorito com máxima performance?'
         },
         PosturaDores: {
           bioHeadline: 'Mais do que passar exercícios: eu entrego um plano biomecânico para eliminar suas dores.',
