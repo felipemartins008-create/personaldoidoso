@@ -611,12 +611,12 @@
               Acompanhamento Direto Comigo
             </div>
             
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight">
+            <h2 id="dyn-bio-headline" class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight">
               Mais do que passar exercícios: eu entrego um plano seguro para sua evolução.
             </h2>
 
-            <p class="mt-4 text-slate-300 text-base leading-relaxed">
-              Sou <strong class="text-white">Felipe Martins</strong>, profissional de Educação Física <strong class="text-emerald-400">credenciado no CREF</strong>, especialista em treinamento personalizado, emagrecimento eficiente, hipertrofia e fortalecimento para longevidade.
+            <p id="dyn-bio-text" class="mt-4 text-slate-300 text-base leading-relaxed">
+              Sou <strong class="text-white">Felipe Martins</strong>, profissional de Educação Física <strong class="text-emerald-400">credenciado no CREF</strong>, especialista em treinamento personalizado focado no seu resultado.
             </p>
 
             <p class="mt-3 text-slate-300 text-base leading-relaxed">
@@ -638,7 +638,7 @@
                 <div class="text-emerald-400 text-xl mt-0.5">✓</div>
                 <div>
                   <div class="text-sm font-bold text-white">Especialista no seu Objetivo</div>
-                  <div class="text-xs text-slate-400">Treinos com base científica para emagrecimento, hipertrofia ou postura.</div>
+                  <div id="dyn-specialty-badge" class="text-xs text-slate-400">Treinos com base científica desenhados exclusivamente para a sua meta.</div>
                 </div>
               </div>
 
@@ -818,8 +818,8 @@
                 03
               </div>
               <h3 class="text-base font-bold text-white mb-2">Prescrição do Treino</h3>
-              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
-                Elaboro um planejamento de treinos sob medida para você, equilibrando intensidade, queima e fortalecimento.
+              <p id="dyn-step-prescricao" class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                Elaboro um planejamento de treinos sob medida para você, focado 100% no seu objetivo e na sua rotina.
               </p>
             </div>
           </div>
@@ -911,7 +911,7 @@
           ⚡
         </div>
 
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
+        <h2 id="dyn-final-cta-headline" class="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
           Pronto para transformar seu corpo com quem entende do assunto?
         </h2>
 
@@ -945,8 +945,7 @@
         </div>
         <p>Profissional de Educação Física Credenciado no CREF • Atendimento em Condomínios e Domiciliar em Jundiaí - SP</p>
         <div class="flex items-center justify-center gap-6 text-slate-400">
-          <a href="/idoso" class="hover:text-emerald-400 transition-colors">Página Especial Terceira Idade</a>
-          <span>•</span>
+          <span id="footer-idoso-item"><a href="/idoso" class="hover:text-emerald-400 transition-colors">Página Especial Terceira Idade</a> <span>•</span></span>
           <button type="button" onclick="resetQuiz()" class="hover:text-emerald-400 transition-colors">Refazer Teste</button>
         </div>
         <p class="text-[11px] text-slate-600">© 2026 Personal Felipe Martins. Todos os direitos reservados.</p>
@@ -1288,12 +1287,12 @@
       }, 400);
     }
 
-    // ATUALIZA CONTEÚDO VISUAL DA SEÇÃO DINÂMICA
+    // ATUALIZA CONTEÚDO VISUAL DA SEÇÃO DINÂMICA E DE TODA A PÁGINA
     function updateDynamicSection(goalKey, sexKey) {
       const data = profileData[goalKey]?.[sexKey];
       if (!data) return;
 
-      // Textos principais
+      // Textos principais da seção dinâmica
       document.getElementById('dyn-badge').innerText = data.badge;
       document.getElementById('dyn-title').innerText = data.title;
       document.getElementById('dyn-description').innerText = data.desc;
@@ -1318,6 +1317,57 @@
       document.getElementById('pillar-p-2').innerText = data.pillar2.p;
       document.getElementById('pillar-h-3').innerText = data.pillar3.h;
       document.getElementById('pillar-p-3').innerText = data.pillar3.p;
+
+      // PERSONALIZAÇÃO EXCLUSIVA DO RESTANTE DA PÁGINA (FOCO 100% NO OBJETIVO ESCOLHIDO)
+      const goalExclusives = {
+        Emagrecimento: {
+          bioHeadline: 'Mais do que passar exercícios: eu entrego um protocolo seguro para acelerar seu emagrecimento.',
+          bioText: 'Sou <strong class="text-white">Felipe Martins</strong>, profissional de Educação Física <strong class="text-emerald-400">credenciado no CREF</strong>, especialista em <strong class="text-emerald-400">emagrecimento acelerado, queima de gordura e definição corporal</strong> sem perda de tônus muscular.',
+          specialtyBadge: 'Treinos com base científica focados exclusivamente em queimar gordura e acelerar o metabolismo.',
+          prescricaoText: 'Elaboro um planejamento metabólico sob medida para você, focado em queima de gordura e definição muscular.',
+          finalCtaHeadline: 'Pronto para secar gordura e conquistar um corpo definido com quem entende do assunto?'
+        },
+        Hipertrofia: {
+          bioHeadline: 'Mais do que passar exercícios: eu entrego um plano focado no seu ganho de massa muscular.',
+          bioText: 'Sou <strong class="text-white">Felipe Martins</strong>, profissional de Educação Física <strong class="text-emerald-400">credenciado no CREF</strong>, especialista em <strong class="text-emerald-400">hipertrofia muscular, ganho de volume limpo e aumento expressivo de força</strong>.',
+          specialtyBadge: 'Periodização avançada e sobrecarga progressiva para ganho constante de massa muscular sem estagnar.',
+          prescricaoText: 'Elaboro um planejamento de hipertrofia sob medida para você, calculando cargas e repetições para máximo crescimento.',
+          finalCtaHeadline: 'Pronto para romper platôs e ganhar massa muscular de verdade com acompanhamento de elite?'
+        },
+        Idoso: {
+          bioHeadline: 'Mais do que passar exercícios: eu entrego um plano seguro para sua longevidade e autonomia.',
+          bioText: 'Sou <strong class="text-white">Felipe Martins</strong>, profissional de Educação Física <strong class="text-emerald-400">credenciado no CREF</strong>, especialista em <strong class="text-emerald-400">saúde para terceira idade (60+), equilíbrio postural, prevenção de quedas e mobilidade</strong>.',
+          specialtyBadge: 'Metodologia acolhedora e segura para fortalecer músculos e articulações, garantindo vitalidade e independência.',
+          prescricaoText: 'Elaboro um planejamento adaptado ao seu ritmo, com foco em equilíbrio, fortalecimento suave e bem-estar.',
+          finalCtaHeadline: 'Pronto para viver com mais energia, firmeza nos passos e autonomia diária?'
+        },
+        PosturaDores: {
+          bioHeadline: 'Mais do que passar exercícios: eu entrego um plano biomecânico para eliminar suas dores.',
+          bioText: 'Sou <strong class="text-white">Felipe Martins</strong>, profissional de Educação Física <strong class="text-emerald-400">credenciado no CREF</strong>, especialista em <strong class="text-emerald-400">reabilitação postural, descompressão da coluna e alívio definitivo de dores articulares</strong>.',
+          specialtyBadge: 'Biomecânica corretiva e fortalecimento de estabilizadores para eliminar a dor na raiz sem riscos.',
+          prescricaoText: 'Elaboro um planejamento postural sob medida para você, com foco em descompressão vertebral e fortalecimento do core.',
+          finalCtaHeadline: 'Pronto para se livrar das dores e voltar a se mover com total liberdade?'
+        }
+      };
+
+      const exclusive = goalExclusives[goalKey];
+      if (exclusive) {
+        if (document.getElementById('dyn-bio-headline')) document.getElementById('dyn-bio-headline').innerText = exclusive.bioHeadline;
+        if (document.getElementById('dyn-bio-text')) document.getElementById('dyn-bio-text').innerHTML = exclusive.bioText;
+        if (document.getElementById('dyn-specialty-badge')) document.getElementById('dyn-specialty-badge').innerText = exclusive.specialtyBadge;
+        if (document.getElementById('dyn-step-prescricao')) document.getElementById('dyn-step-prescricao').innerText = exclusive.prescricaoText;
+        if (document.getElementById('dyn-final-cta-headline')) document.getElementById('dyn-final-cta-headline').innerText = exclusive.finalCtaHeadline;
+      }
+
+      // Link da Terceira Idade no Rodapé: só exibe se o objetivo for Idoso
+      const footerIdoso = document.getElementById('footer-idoso-item');
+      if (footerIdoso) {
+        if (goalKey === 'Idoso') {
+          footerIdoso.style.display = 'inline';
+        } else {
+          footerIdoso.style.display = 'none';
+        }
+      }
     }
 
     // REINICIAR O QUIZ (E OCULTAR A PÁGINA NOVAMENTE)
