@@ -231,7 +231,7 @@
     <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[700px] h-[500px] bg-emerald-500/10 blur-[130px] rounded-full pointer-events-none"></div>
     <div class="absolute top-1/2 right-0 w-[400px] h-[400px] bg-amber-500/5 blur-[120px] rounded-full pointer-events-none"></div>
 
-    <div class="max-w-6xl mx-auto px-3.5 sm:px-6 lg:px-8 relative z-10 w-full flex flex-col justify-center gap-3 sm:gap-6 my-auto">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full flex flex-col justify-center gap-3 sm:gap-6 my-auto">
       
       <!-- MOBILE (OPÇÃO A AMPLIADA): CARD EXECUTIVO SPLIT DE ALTA AUTORIDADE -->
       <div class="block lg:hidden">
@@ -250,7 +250,7 @@
             </div>
 
             <!-- Informações de Autoridade & Método -->
-            <div class="min-w-0 flex-1">
+            <div class="min-w-0 flex-1 flex flex-col justify-center">
               <!-- Status / Região -->
               <div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-[9px] sm:text-[10px] font-extrabold text-emerald-400 mb-1">
                 <span class="relative flex h-1.5 w-1.5">
@@ -609,7 +609,7 @@
 
               <label class="quiz-option cursor-pointer p-4 sm:p-4.5 rounded-2xl bg-slate-800/70 border border-slate-700/80 flex items-center gap-3.5 sm:gap-4 group select-none min-h-[70px] sm:min-h-[76px]">
                 <input type="radio" name="user_location" value="Na Academia" class="hidden" onchange="handleOptionSelect(3, 'Na Academia')">
-                <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center text-2xl shrink-0 group-hover:scale-105 transition-transform">
+                <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-2xl shrink-0 group-hover:scale-105 transition-transform">
                   🏋️
                 </div>
                 <div class="min-w-0">
@@ -745,24 +745,24 @@
   <main id="full-personalized-page" class="hidden opacity-0 transition-opacity duration-700">
 
     <!-- 4. SEÇÃO DINÂMICA ADAPTÁVEL (MUDA CONFORME O QUIZ) -->
-    <section id="dynamic-section" class="py-16 sm:py-20 bg-slate-900/60 border-b border-slate-800 relative">
+    <section id="dynamic-section" class="py-16 sm:py-24 bg-slate-900/60 border-b border-slate-800 relative">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <!-- Headline Dinâmica -->
-        <div class="text-center max-w-3xl mx-auto mb-12">
-          <span id="dyn-badge" class="inline-block px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-bold tracking-wide uppercase border border-emerald-500/30 mb-3">
+        <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+          <span id="dyn-badge" class="inline-block px-3.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-bold tracking-wider uppercase border border-emerald-500/30 mb-3">
             Metodologia Exclusiva
           </span>
           <h2 id="dyn-title" class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight">
             Resultados Reais Com Treinamento Individualizado
           </h2>
-          <p id="dyn-description" class="mt-3 text-base text-slate-300">
+          <p id="dyn-description" class="mt-3 sm:mt-4 text-sm sm:text-base text-slate-300 max-w-2xl mx-auto leading-relaxed">
             Veja a evolução de alunos que alcançaram seus objetivos com acompanhamento rigoroso e seguro.
           </p>
         </div>
 
         <!-- GALERIA DE PROVAS SOCIAIS / EVOLUÇÃO (DINÂMICA) -->
-        <div id="dyn-gallery" class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-14">
+        <div id="dyn-gallery" class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-5xl mx-auto mb-12 sm:mb-14">
           
           <!-- Card 1: Preenchido dinamicamente via JS -->
           <div id="dyn-card-1" class="bg-slate-950 border border-slate-800 rounded-3xl overflow-hidden shadow-card-glass flex flex-col group">
@@ -803,35 +803,35 @@
         </div>
 
         <!-- 3 PILARES DO MÉTODO PARA ESSE OBJETIVO -->
-        <div class="max-w-5xl mx-auto bg-slate-950/70 border border-slate-800/80 rounded-3xl p-6 sm:p-10 mb-10">
-          <h3 id="dyn-pillars-title" class="text-lg sm:text-xl font-bold text-white mb-6 text-center">
+        <div class="max-w-5xl mx-auto bg-slate-950/70 border border-slate-800/80 rounded-3xl p-6 sm:p-10 mb-8 sm:mb-10">
+          <h3 id="dyn-pillars-title" class="text-lg sm:text-xl font-bold text-white mb-6 sm:mb-8 text-center">
             Os 3 Pilares do Meu Acompanhamento
           </h3>
-          <div id="dyn-pillars-container" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div id="dyn-pillars-container" class="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
             
-            <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800">
+            <div class="p-5 sm:p-6 rounded-2xl bg-slate-900/60 border border-slate-800 flex flex-col justify-between">
               <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center font-bold text-lg mb-3">1</div>
-              <h4 id="pillar-h-1" class="text-base font-bold text-white mb-1">Biomecânica & Postura</h4>
-              <p id="pillar-p-1" class="text-xs text-slate-300 leading-relaxed">Execução correta em cada repetição para proteger sua coluna e joelhos contra qualquer risco de lesão.</p>
+              <h4 id="pillar-h-1" class="text-base font-bold text-white mb-1.5">Biomecânica & Postura</h4>
+              <p id="pillar-p-1" class="text-xs sm:text-sm text-slate-300 leading-relaxed">Execução correta em cada repetição para proteger sua coluna e joelhos contra qualquer risco de lesão.</p>
             </div>
 
-            <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800">
+            <div class="p-5 sm:p-6 rounded-2xl bg-slate-900/60 border border-slate-800 flex flex-col justify-between">
               <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center font-bold text-lg mb-3">2</div>
-              <h4 id="pillar-h-2" class="text-base font-bold text-white mb-1">Periodização Sob Medida</h4>
-              <p id="pillar-p-2" class="text-xs text-slate-300 leading-relaxed">Volume e intensidade calibrados rigorosamente de acordo com seu tempo disponível e nível físico atual.</p>
+              <h4 id="pillar-h-2" class="text-base font-bold text-white mb-1.5">Periodização Sob Medida</h4>
+              <p id="pillar-p-2" class="text-xs sm:text-sm text-slate-300 leading-relaxed">Volume e intensidade calibrados rigorosamente de acordo com seu tempo disponível e nível físico atual.</p>
             </div>
 
-            <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800">
+            <div class="p-5 sm:p-6 rounded-2xl bg-slate-900/60 border border-slate-800 flex flex-col justify-between">
               <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center font-bold text-lg mb-3">3</div>
-              <h4 id="pillar-h-3" class="text-base font-bold text-white mb-1">Supervisão Presencial</h4>
-              <p id="pillar-p-3" class="text-xs text-slate-300 leading-relaxed">Você nunca mais treina em dúvida. Correção em tempo real e motivação constante em cada sessão.</p>
+              <h4 id="pillar-h-3" class="text-base font-bold text-white mb-1.5">Supervisão Presencial</h4>
+              <p id="pillar-p-3" class="text-xs sm:text-sm text-slate-300 leading-relaxed">Você nunca mais treina em dúvida. Correção em tempo real e motivação constante em cada sessão.</p>
             </div>
 
           </div>
         </div>
 
         <!-- Gatilho: Custo da Inação / Reflexão Estratégica -->
-        <div class="max-w-2xl mx-auto mb-8 p-4 sm:p-5 rounded-2xl bg-slate-950/90 border border-slate-800 text-center shadow-lg">
+        <div class="max-w-3xl mx-auto mb-10 p-5 sm:p-6 rounded-2xl bg-slate-950/90 border border-slate-800 text-center shadow-lg">
           <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
             <span class="text-emerald-400 font-bold block sm:inline mb-1 sm:mb-0">⏳ Mais 6 meses com treino genérico ou o resultado definitivo do seu ano?</span> 
             Treinar sem planejamento individual custa o seu tempo, desmotivação e risco de dores articulares. O momento de alinhar sua rotina com suporte presencial de elite é agora.
@@ -864,10 +864,10 @@
     <section class="py-16 sm:py-24 border-b border-slate-800 relative">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
           
           <!-- Fotos do Felipe (Composição Visual de Alto Padrão) -->
-          <div class="lg:col-span-5 relative">
+          <div class="lg:col-span-5 relative mb-4 lg:mb-0">
             <div class="relative z-10 rounded-3xl overflow-hidden border border-slate-700/80 shadow-card-glass aspect-[4/5] bg-slate-900">
               <img src="assets/img/felipe-prescricao-escritorio.jpg" alt="Personal Trainer Felipe Martins no escritório de planejamento técnico" class="w-full h-full object-cover object-top">
               <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80"></div>
@@ -882,9 +882,9 @@
             </div>
 
             <!-- Card Flutuante de Credibilidade -->
-            <div class="absolute -bottom-6 -right-4 sm:-right-6 z-20 bg-slate-900/95 border border-emerald-500/40 rounded-2xl p-4 shadow-xl backdrop-blur-md max-w-[240px]">
+            <div class="absolute -bottom-5 -right-3 sm:-right-5 z-20 bg-slate-900/95 border border-emerald-500/40 rounded-2xl p-3.5 sm:p-4 shadow-xl backdrop-blur-md max-w-[230px] sm:max-w-[240px]">
               <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-lg">
+                <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-lg shrink-0">
                   ⭐
                 </div>
                 <div>
@@ -897,54 +897,54 @@
 
           <!-- Conteúdo Textual de Autoridade -->
           <div class="lg:col-span-7">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-emerald-500/30 text-emerald-400 text-xs font-semibold mb-4">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold mb-4">
               Acompanhamento Direto Comigo
             </div>
             
-            <h2 id="dyn-bio-headline" class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight">
+            <h2 id="dyn-bio-headline" class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight leading-tight">
               Mais do que passar exercícios: eu entrego um plano seguro para sua evolução.
             </h2>
 
-            <p id="dyn-bio-text" class="mt-4 text-slate-300 text-base leading-relaxed">
+            <p id="dyn-bio-text" class="mt-4 text-slate-300 text-sm sm:text-base leading-relaxed">
               Sou <strong class="text-white">Felipe Martins</strong>, profissional de Educação Física <strong class="text-emerald-400">credenciado no CREF</strong>, especialista em treinamento personalizado focado no seu resultado.
             </p>
 
-            <p class="mt-3 text-slate-300 text-base leading-relaxed">
+            <p class="mt-3 text-slate-300 text-sm sm:text-base leading-relaxed">
               Minha missão em Jundiaí é proporcionar aos meus alunos um acompanhamento exclusivo e altamente técnico onde preferirem treinar: na comodidade do seu condomínio, no conforto da sua residência ou indo até a academia para te orientar presencialmente, eliminando rotinas genéricas e garantindo máxima evolução.
             </p>
 
             <!-- Badges de Competência -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4 mt-8">
               
               <div class="flex items-start gap-3 p-4 rounded-2xl bg-slate-900/60 border border-slate-800">
-                <div class="text-emerald-400 text-xl mt-0.5">✓</div>
+                <div class="text-emerald-400 text-lg font-bold shrink-0 mt-0.5">✓</div>
                 <div>
                   <div class="text-sm font-bold text-white">+8 Anos em Jundiaí & CREF Ativo</div>
-                  <div class="text-xs text-slate-400">Centenas de alunos transformados com respaldo técnico, ético e legal.</div>
+                  <div class="text-xs text-slate-400 mt-0.5 leading-relaxed">Centenas de alunos transformados com respaldo técnico, ético e legal.</div>
                 </div>
               </div>
 
               <div class="flex items-start gap-3 p-4 rounded-2xl bg-slate-900/60 border border-slate-800">
-                <div class="text-emerald-400 text-xl mt-0.5">✓</div>
+                <div class="text-emerald-400 text-lg font-bold shrink-0 mt-0.5">✓</div>
                 <div>
                   <div class="text-sm font-bold text-white">Especialista no seu Objetivo</div>
-                  <div id="dyn-specialty-badge" class="text-xs text-slate-400">Treinos com base científica desenhados exclusivamente para a sua meta.</div>
+                  <div id="dyn-specialty-badge" class="text-xs text-slate-400 mt-0.5 leading-relaxed">Treinos com base científica desenhados exclusivamente para a sua meta.</div>
                 </div>
               </div>
 
               <div class="flex items-start gap-3 p-4 rounded-2xl bg-slate-900/60 border border-slate-800">
-                <div class="text-emerald-400 text-xl mt-0.5">✓</div>
+                <div class="text-emerald-400 text-lg font-bold shrink-0 mt-0.5">✓</div>
                 <div>
                   <div class="text-sm font-bold text-white">100% dos 60 Minutos com Você</div>
-                  <div class="text-xs text-slate-400">Sem celular e sem dividir atenção: correção em tempo real de cada repetição.</div>
+                  <div class="text-xs text-slate-400 mt-0.5 leading-relaxed">Sem celular e sem dividir atenção: correção em tempo real de cada repetição.</div>
                 </div>
               </div>
 
               <div class="flex items-start gap-3 p-4 rounded-2xl bg-slate-900/60 border border-slate-800">
-                <div class="text-emerald-400 text-xl mt-0.5">✓</div>
+                <div class="text-emerald-400 text-lg font-bold shrink-0 mt-0.5">✓</div>
                 <div>
                   <div class="text-sm font-bold text-white">Zero Lesões</div>
-                  <div class="text-xs text-slate-400">Ajuste de cargas progressivo e respeito absoluto aos seus limites.</div>
+                  <div class="text-xs text-slate-400 mt-0.5 leading-relaxed">Ajuste de cargas progressivo e respeito absoluto aos seus limites.</div>
                 </div>
               </div>
 
@@ -956,7 +956,7 @@
                 <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
                 Bastidores do Método: Planejamento Científico & Execução Presencial
               </div>
-              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5 sm:gap-4">
                 
                 <div class="rounded-2xl overflow-hidden border border-slate-800 bg-slate-900 group relative">
                   <div class="aspect-[4/3] overflow-hidden">
@@ -1005,89 +1005,91 @@
     </section>
 
     <!-- 6. ONDE ATENDO EM JUNDIAÍ (BAIRROS DE ALTO PADRÃO & CONDOMÍNIOS) -->
-    <section class="py-16 sm:py-20 bg-slate-900/40 border-b border-slate-800">
+    <section class="py-16 sm:py-24 bg-slate-900/40 border-b border-slate-800">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         
-        <span class="inline-block px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-bold uppercase tracking-wider mb-3 border border-emerald-500/30">
-          Regiões Atendidas
-        </span>
-        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight">
-          Atendimento Presencial Onde Você Preferir em Jundiaí
-        </h2>
-        <p class="mt-3 text-slate-300 max-w-2xl mx-auto text-sm sm:text-base">
-          Total comodidade para treinar na academia do seu condomínio, no conforto da sua residência ou na academia onde você treina, com pontualidade e discrição.
-        </p>
+        <div class="max-w-3xl mx-auto text-center mb-10 sm:mb-12">
+          <span class="inline-block px-3.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-bold uppercase tracking-wider mb-3 border border-emerald-500/30">
+            Regiões Atendidas
+          </span>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight">
+            Atendimento Presencial Onde Você Preferir em Jundiaí
+          </h2>
+          <p class="mt-3 sm:mt-4 text-slate-300 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
+            Total comodidade para treinar na academia do seu condomínio, no conforto da sua residência ou na academia onde você treina, com pontualidade e discrição.
+          </p>
+        </div>
 
         <!-- Grid de Bairros Nobres -->
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3.5 max-w-5xl mx-auto mt-10">
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3.5 sm:gap-4 max-w-5xl mx-auto">
           
-          <div class="p-4 rounded-2xl bg-slate-950 border border-slate-800/80 hover:border-emerald-500/50 transition-colors flex items-center gap-2.5 text-left">
-            <span class="text-emerald-400 text-base">📍</span>
-            <div>
-              <div class="text-sm font-bold text-white">Malota</div>
-              <div class="text-[11px] text-slate-400">Residencial & Condomínios</div>
+          <div class="p-3.5 sm:p-4 rounded-2xl bg-slate-950/80 border border-slate-800/80 hover:border-emerald-500/50 transition-colors flex items-center gap-3 text-left">
+            <span class="w-8 h-8 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0 text-sm">📍</span>
+            <div class="min-w-0">
+              <div class="text-xs sm:text-sm font-bold text-white truncate">Malota</div>
+              <div class="text-[11px] text-slate-400 truncate">Residencial & Condomínios</div>
             </div>
           </div>
 
-          <div class="p-4 rounded-2xl bg-slate-950 border border-slate-800/80 hover:border-emerald-500/50 transition-colors flex items-center gap-2.5 text-left">
-            <span class="text-emerald-400 text-base">📍</span>
-            <div>
-              <div class="text-sm font-bold text-white">Reserva da Serra</div>
-              <div class="text-[11px] text-slate-400">Condomínio Fechado</div>
+          <div class="p-3.5 sm:p-4 rounded-2xl bg-slate-950/80 border border-slate-800/80 hover:border-emerald-500/50 transition-colors flex items-center gap-3 text-left">
+            <span class="w-8 h-8 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0 text-sm">📍</span>
+            <div class="min-w-0">
+              <div class="text-xs sm:text-sm font-bold text-white truncate">Reserva da Serra</div>
+              <div class="text-[11px] text-slate-400 truncate">Condomínio Fechado</div>
             </div>
           </div>
 
-          <div class="p-4 rounded-2xl bg-slate-950 border border-slate-800/80 hover:border-emerald-500/50 transition-colors flex items-center gap-2.5 text-left">
-            <span class="text-emerald-400 text-base">📍</span>
-            <div>
-              <div class="text-sm font-bold text-white">Quinta das Macaúbas</div>
-              <div class="text-[11px] text-slate-400">Alto Padrão</div>
+          <div class="p-3.5 sm:p-4 rounded-2xl bg-slate-950/80 border border-slate-800/80 hover:border-emerald-500/50 transition-colors flex items-center gap-3 text-left">
+            <span class="w-8 h-8 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0 text-sm">📍</span>
+            <div class="min-w-0">
+              <div class="text-xs sm:text-sm font-bold text-white truncate">Quinta das Macaúbas</div>
+              <div class="text-[11px] text-slate-400 truncate">Alto Padrão</div>
             </div>
           </div>
 
-          <div class="p-4 rounded-2xl bg-slate-950 border border-slate-800/80 hover:border-emerald-500/50 transition-colors flex items-center gap-2.5 text-left">
-            <span class="text-emerald-400 text-base">📍</span>
-            <div>
-              <div class="text-sm font-bold text-white">Alphaville Jundiaí</div>
-              <div class="text-[11px] text-slate-400">Residencial Exclusivo</div>
+          <div class="p-3.5 sm:p-4 rounded-2xl bg-slate-950/80 border border-slate-800/80 hover:border-emerald-500/50 transition-colors flex items-center gap-3 text-left">
+            <span class="w-8 h-8 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0 text-sm">📍</span>
+            <div class="min-w-0">
+              <div class="text-xs sm:text-sm font-bold text-white truncate">Alphaville Jundiaí</div>
+              <div class="text-[11px] text-slate-400 truncate">Residencial Exclusivo</div>
             </div>
           </div>
 
-          <div class="p-4 rounded-2xl bg-slate-950 border border-slate-800/80 hover:border-emerald-500/50 transition-colors flex items-center gap-2.5 text-left">
-            <span class="text-emerald-400 text-base">📍</span>
-            <div>
-              <div class="text-sm font-bold text-white">Jardim Samambaia</div>
-              <div class="text-[11px] text-slate-400">Região Nobre</div>
+          <div class="p-3.5 sm:p-4 rounded-2xl bg-slate-950/80 border border-slate-800/80 hover:border-emerald-500/50 transition-colors flex items-center gap-3 text-left">
+            <span class="w-8 h-8 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0 text-sm">📍</span>
+            <div class="min-w-0">
+              <div class="text-xs sm:text-sm font-bold text-white truncate">Jardim Samambaia</div>
+              <div class="text-[11px] text-slate-400 truncate">Região Nobre</div>
             </div>
           </div>
 
-          <div class="p-4 rounded-2xl bg-slate-950 border border-slate-800/80 hover:border-emerald-500/50 transition-colors flex items-center gap-2.5 text-left">
-            <span class="text-emerald-400 text-base">📍</span>
-            <div>
-              <div class="text-sm font-bold text-white">Eloy Chaves</div>
-              <div class="text-[11px] text-slate-400">Reserva do Japy e outros</div>
+          <div class="p-3.5 sm:p-4 rounded-2xl bg-slate-950/80 border border-slate-800/80 hover:border-emerald-500/50 transition-colors flex items-center gap-3 text-left">
+            <span class="w-8 h-8 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0 text-sm">📍</span>
+            <div class="min-w-0">
+              <div class="text-xs sm:text-sm font-bold text-white truncate">Eloy Chaves</div>
+              <div class="text-[11px] text-slate-400 truncate">Reserva do Japy e outros</div>
             </div>
           </div>
 
-          <div class="p-4 rounded-2xl bg-slate-950 border border-slate-800/80 hover:border-emerald-500/50 transition-colors flex items-center gap-2.5 text-left">
-            <span class="text-emerald-400 text-base">📍</span>
-            <div>
-              <div class="text-sm font-bold text-white">Anhangabaú</div>
-              <div class="text-[11px] text-slate-400">Condomínios e Casas</div>
+          <div class="p-3.5 sm:p-4 rounded-2xl bg-slate-950/80 border border-slate-800/80 hover:border-emerald-500/50 transition-colors flex items-center gap-3 text-left">
+            <span class="w-8 h-8 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0 text-sm">📍</span>
+            <div class="min-w-0">
+              <div class="text-xs sm:text-sm font-bold text-white truncate">Anhangabaú</div>
+              <div class="text-[11px] text-slate-400 truncate">Condomínios e Casas</div>
             </div>
           </div>
 
-          <div class="p-4 rounded-2xl bg-slate-950 border border-slate-800/80 hover:border-emerald-500/50 transition-colors flex items-center gap-2.5 text-left">
-            <span class="text-emerald-400 text-base">📍</span>
-            <div>
-              <div class="text-sm font-bold text-white">Vila Arens & Medeiros</div>
-              <div class="text-[11px] text-slate-400">E demais regiões de Jundiaí</div>
+          <div class="p-3.5 sm:p-4 rounded-2xl bg-slate-950/80 border border-slate-800/80 hover:border-emerald-500/50 transition-colors flex items-center gap-3 text-left">
+            <span class="w-8 h-8 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0 text-sm">📍</span>
+            <div class="min-w-0">
+              <div class="text-xs sm:text-sm font-bold text-white truncate">Vila Arens & Medeiros</div>
+              <div class="text-[11px] text-slate-400 truncate">E demais regiões de Jundiaí</div>
             </div>
           </div>
 
         </div>
 
-        <div class="mt-8">
+        <div class="mt-8 sm:mt-10">
           <a href="https://wa.me/5511961343759?text=Ol%C3%A1%20Felipe!%20Moro%20em%20Jundia%C3%AD%20e%20gostaria%20de%20consultar%20se%20voc%C3%AA%20atende%20no%20meu%20condom%C3%ADnio."
              onclick="return gtag_report_conversion(this.href);"
              target="_blank"
@@ -1103,21 +1105,23 @@
     <section class="py-16 sm:py-24 border-b border-slate-800">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         
-        <span class="inline-block px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-bold uppercase tracking-wider mb-3 border border-emerald-500/30">
-          Passo a Passo
-        </span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-          Como Começar a Treinar Comigo
-        </h2>
-        <p class="mt-3 text-slate-300 max-w-xl mx-auto text-sm sm:text-base">
-          Um processo simples, rápido e transparente para você dar o primeiro passo hoje mesmo.
-        </p>
+        <div class="max-w-3xl mx-auto text-center mb-10 sm:mb-14">
+          <span class="inline-block px-3.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-bold uppercase tracking-wider mb-3 border border-emerald-500/30">
+            Passo a Passo
+          </span>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight">
+            Como Começar a Treinar Comigo
+          </h2>
+          <p class="mt-3 sm:mt-4 text-slate-300 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
+            Um processo simples, rápido e transparente para você dar o primeiro passo hoje mesmo.
+          </p>
+        </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mt-12 text-left">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 max-w-6xl mx-auto text-left">
           
-          <div class="p-6 rounded-3xl bg-slate-900 border border-slate-800 relative flex flex-col justify-between">
+          <div class="p-6 rounded-3xl bg-slate-950/80 border border-slate-800/80 relative flex flex-col justify-between hover:border-slate-700 transition-colors">
             <div>
-              <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-400 font-black text-xl flex items-center justify-center mb-4">
+              <div class="w-11 h-11 rounded-2xl bg-emerald-500/10 text-emerald-400 font-extrabold text-base flex items-center justify-center mb-4 border border-emerald-500/20">
                 01
               </div>
               <h3 class="text-base font-bold text-white mb-2">Conversa no WhatsApp</h3>
@@ -1127,9 +1131,9 @@
             </div>
           </div>
 
-          <div class="p-6 rounded-3xl bg-slate-900 border border-slate-800 relative flex flex-col justify-between">
+          <div class="p-6 rounded-3xl bg-slate-950/80 border border-slate-800/80 relative flex flex-col justify-between hover:border-slate-700 transition-colors">
             <div>
-              <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-400 font-black text-xl flex items-center justify-center mb-4">
+              <div class="w-11 h-11 rounded-2xl bg-emerald-500/10 text-emerald-400 font-extrabold text-base flex items-center justify-center mb-4 border border-emerald-500/20">
                 02
               </div>
               <h3 class="text-base font-bold text-white mb-2">Avaliação Sem Compromisso</h3>
@@ -1139,9 +1143,9 @@
             </div>
           </div>
 
-          <div class="p-6 rounded-3xl bg-slate-900 border border-slate-800 relative flex flex-col justify-between">
+          <div class="p-6 rounded-3xl bg-slate-950/80 border border-slate-800/80 relative flex flex-col justify-between hover:border-slate-700 transition-colors">
             <div>
-              <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-400 font-black text-xl flex items-center justify-center mb-4">
+              <div class="w-11 h-11 rounded-2xl bg-emerald-500/10 text-emerald-400 font-extrabold text-base flex items-center justify-center mb-4 border border-emerald-500/20">
                 03
               </div>
               <h3 class="text-base font-bold text-white mb-2">Prescrição do Treino</h3>
@@ -1151,9 +1155,9 @@
             </div>
           </div>
 
-          <div class="p-6 rounded-3xl bg-slate-900 border border-slate-800 relative flex flex-col justify-between">
+          <div class="p-6 rounded-3xl bg-slate-950/80 border border-slate-800/80 relative flex flex-col justify-between hover:border-slate-700 transition-colors">
             <div>
-              <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-400 font-black text-xl flex items-center justify-center mb-4">
+              <div class="w-11 h-11 rounded-2xl bg-emerald-500/10 text-emerald-400 font-extrabold text-base flex items-center justify-center mb-4 border border-emerald-500/20">
                 04
               </div>
               <h3 class="text-base font-bold text-white mb-2">Treinos & Resultados</h3>
@@ -1169,56 +1173,59 @@
     </section>
 
     <!-- 8. FAQ - PERGUNTAS FREQUENTES -->
-    <section class="py-16 sm:py-20 bg-slate-900/30 border-b border-slate-800">
+    <section class="py-16 sm:py-24 bg-slate-900/30 border-b border-slate-800">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="text-center mb-12">
-          <span class="inline-block px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-bold uppercase tracking-wider mb-2 border border-emerald-500/30">
+        <div class="max-w-3xl mx-auto text-center mb-10 sm:mb-12">
+          <span class="inline-block px-3.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-bold uppercase tracking-wider mb-3 border border-emerald-500/30">
             Tire Suas Dúvidas
           </span>
-          <h2 class="text-3xl font-extrabold text-white tracking-tight">
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight">
             Perguntas Frequentes
           </h2>
+          <p class="mt-3 sm:mt-4 text-slate-300 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
+            Respostas diretas e transparentes sobre rotina, locais de atendimento e metodologia.
+          </p>
         </div>
 
-        <div class="space-y-4">
+        <div class="max-w-3xl mx-auto space-y-3.5 sm:space-y-4">
           
-          <details class="group bg-slate-950 border border-slate-800 rounded-2xl p-5 [&_summary::-webkit-details-marker]:hidden cursor-pointer">
+          <details class="group bg-slate-950/80 border border-slate-800/80 rounded-2xl p-5 [&_summary::-webkit-details-marker]:hidden cursor-pointer hover:border-slate-700 transition-colors">
             <summary class="flex items-center justify-between font-bold text-white text-base sm:text-lg">
               <span>Como funcionam os valores e planos?</span>
               <span class="text-emerald-400 group-open:rotate-180 transition-transform">▼</span>
             </summary>
-            <p class="mt-3 text-slate-300 text-sm leading-relaxed border-t border-slate-800/80 pt-3">
+            <p class="mt-3 text-slate-300 text-xs sm:text-sm leading-relaxed border-t border-slate-800/80 pt-3">
               Os valores são personalizados conforme a frequência semanal desejada (ex: 2x, 3x ou 5x na semana) e o local de atendimento em Jundiaí. Pelo WhatsApp eu apresento todas as opções de planos mensais e trimestrais sem nenhum compromisso.
             </p>
           </details>
 
-          <details class="group bg-slate-950 border border-slate-800 rounded-2xl p-5 [&_summary::-webkit-details-marker]:hidden cursor-pointer">
+          <details class="group bg-slate-950/80 border border-slate-800/80 rounded-2xl p-5 [&_summary::-webkit-details-marker]:hidden cursor-pointer hover:border-slate-700 transition-colors">
             <summary class="flex items-center justify-between font-bold text-white text-base sm:text-lg">
               <span>Sou totalmente iniciante ou sedentário há anos. Vou conseguir acompanhar?</span>
               <span class="text-emerald-400 group-open:rotate-180 transition-transform">▼</span>
             </summary>
-            <p class="mt-3 text-slate-300 text-sm leading-relaxed border-t border-slate-800/80 pt-3">
+            <p class="mt-3 text-slate-300 text-xs sm:text-sm leading-relaxed border-t border-slate-800/80 pt-3">
               Com certeza! É exatamente para isso que serve o acompanhamento individual. Nós começamos com cargas e movimentos perfeitamente adaptados ao seu ritmo, sem exageros e sem dor incapacitante no dia seguinte.
             </p>
           </details>
 
-          <details class="group bg-slate-950 border border-slate-800 rounded-2xl p-5 [&_summary::-webkit-details-marker]:hidden cursor-pointer">
+          <details class="group bg-slate-950/80 border border-slate-800/80 rounded-2xl p-5 [&_summary::-webkit-details-marker]:hidden cursor-pointer hover:border-slate-700 transition-colors">
             <summary class="flex items-center justify-between font-bold text-white text-base sm:text-lg">
               <span>Onde os treinos são realizados? Você vai até a academia?</span>
               <span class="text-emerald-400 group-open:rotate-180 transition-transform">▼</span>
             </summary>
-            <p class="mt-3 text-slate-300 text-sm leading-relaxed border-t border-slate-800/80 pt-3">
+            <p class="mt-3 text-slate-300 text-xs sm:text-sm leading-relaxed border-t border-slate-800/80 pt-3">
               Sim! Atendo na academia do seu condomínio, no conforto da sua residência e também vou até a sua academia em Jundiaí para te orientar presencialmente se você preferir. O atendimento é adaptado 100% à sua comodidade e aos seus objetivos.
             </p>
           </details>
 
-          <details class="group bg-slate-950 border border-slate-800 rounded-2xl p-5 [&_summary::-webkit-details-marker]:hidden cursor-pointer">
+          <details class="group bg-slate-950/80 border border-slate-800/80 rounded-2xl p-5 [&_summary::-webkit-details-marker]:hidden cursor-pointer hover:border-slate-700 transition-colors">
             <summary class="flex items-center justify-between font-bold text-white text-base sm:text-lg">
               <span>Tenho dor nas costas, joelho ou hérnia de disco. Posso treinar?</span>
               <span class="text-emerald-400 group-open:rotate-180 transition-transform">▼</span>
             </summary>
-            <p class="mt-3 text-slate-300 text-sm leading-relaxed border-t border-slate-800/80 pt-3">
+            <p class="mt-3 text-slate-300 text-xs sm:text-sm leading-relaxed border-t border-slate-800/80 pt-3">
               Sim, e deve! O fortalecimento muscular guiado com biomecânica correta é o tratamento não-medicamentoso mais eficaz para descomprimir a coluna e estabilizar as articulações. Todos os exercícios respeitam suas limitações.
             </p>
           </details>
@@ -1232,22 +1239,22 @@
     <section class="py-16 sm:py-24 relative overflow-hidden">
       <div class="absolute inset-0 bg-gradient-to-b from-transparent via-emerald-950/20 to-slate-950 pointer-events-none"></div>
 
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         
-        <div class="w-16 h-16 mx-auto mb-6 rounded-3xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-3xl border border-emerald-500/40">
+        <div class="w-14 h-14 mx-auto mb-5 rounded-2xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-2xl border border-emerald-500/40">
           ⚡
         </div>
 
-        <h2 id="dyn-final-cta-headline" class="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
+        <h2 id="dyn-final-cta-headline" class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight leading-tight">
           Pronto para transformar seu corpo com quem entende do assunto?
         </h2>
 
-        <p class="mt-4 text-base sm:text-lg text-slate-300 max-w-xl mx-auto mb-6">
+        <p class="mt-3 sm:mt-4 text-sm sm:text-base text-slate-300 max-w-xl mx-auto mb-6 leading-relaxed">
           Agende uma conversa rápida no WhatsApp para alinharmos seus horários e tirar qualquer dúvida sobre o acompanhamento em Jundiaí.
         </p>
 
         <!-- Gatilho: Escassez Real de Agenda -->
-        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs sm:text-sm font-semibold mb-6">
+        <div class="inline-flex items-center gap-2 px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs sm:text-sm font-semibold mb-6 sm:mb-8">
           <span>🔒</span>
           <span>Atendimento Exclusivo • Vagas limitadas por período (manhã, tarde e noite)</span>
         </div>
@@ -1258,7 +1265,7 @@
              onclick="return gtag_report_conversion(this.href);"
              target="_blank"
              class="btn-shimmer w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-base sm:text-lg shadow-glow-emerald transition-all transform hover:-translate-y-1">
-            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+            <svg class="w-6 h-6 fill-current shrink-0" viewBox="0 0 24 24">
               <path d="M17.472 14.382c-.301-.15-1.78-.878-2.056-.979-.275-.1-.475-.15-.675.15-.2.301-.775.979-.95 1.179-.175.2-.351.226-.651.076-.301-.15-1.27-.468-2.42-1.492-.894-.797-1.498-1.782-1.674-2.083-.175-.301-.019-.464.132-.614.136-.135.301-.351.451-.527.151-.175.2-.301.301-.501.101-.2.051-.376-.025-.526-.076-.151-.676-1.63-.926-2.233-.243-.587-.49-.508-.675-.517-.175-.01-.375-.01-.576-.01s-.526.076-.802.376c-.276.301-1.053 1.028-1.053 2.507s1.079 2.908 1.229 3.109c.151.2 2.124 3.243 5.145 4.549.719.311 1.281.497 1.719.636.723.23 1.38.197 1.9.12.58-.087 1.78-.727 2.03-1.429.251-.702.251-1.303.176-1.429-.076-.126-.276-.201-.577-.352z"/>
               <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.982-1.408A9.957 9.957 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18.2c-1.644 0-3.17-.487-4.455-1.328l-.32-.208-2.964.837.838-2.888-.228-.344A8.17 8.17 0 013.8 12c0-4.522 3.678-8.2 8.2-8.2s8.2 3.678 8.2 8.2-3.678 8.2-8.2 8.2z"/>
             </svg>
@@ -1281,13 +1288,13 @@
     </section>
 
     <!-- 10. RODAPÉ -->
-    <footer class="bg-slate-950 border-t border-slate-900 py-10 text-center text-xs text-slate-500">
+    <footer class="bg-slate-950 border-t border-slate-900 py-10 sm:py-12 text-center text-xs text-slate-500">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
-        <div class="flex items-center justify-center gap-2">
+        <div class="flex items-center justify-center gap-2.5">
           <img src="assets/img/logo.png" alt="Logo" class="h-8 w-auto">
           <span class="font-bold text-white text-sm">Personal Felipe Martins</span>
         </div>
-        <p>Profissional de Educação Física Credenciado no CREF • Atendimento em Condomínios, Residências e Academias em Jundiaí - SP</p>
+        <p class="max-w-xl mx-auto text-slate-400 leading-relaxed text-xs">Profissional de Educação Física Credenciado no CREF • Atendimento em Condomínios, Residências e Academias em Jundiaí - SP</p>
         <div class="flex items-center justify-center gap-6 text-slate-400">
           <span id="footer-idoso-item"><a href="/idoso" class="hover:text-emerald-400 transition-colors">Página Especial Terceira Idade</a> <span>•</span></span>
           <button type="button" onclick="resetQuiz()" class="hover:text-emerald-400 transition-colors">Refazer Teste</button>
