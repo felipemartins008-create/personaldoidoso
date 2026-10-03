@@ -496,15 +496,28 @@
               Com base no seu perfil, estruturamos um protocolo de treino sob medida com foco na sua meta e rotina em Jundiaí.
             </p>
 
-            <!-- BOTÃO PARA ACESSAR A PÁGINA DESBLOQUEADA -->
-            <a href="#dynamic-section"
-               class="btn-shimmer w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 sm:py-4.5 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-base sm:text-lg shadow-glow-emerald transition-all transform hover:-translate-y-0.5 active:scale-95">
-              <span>Ver Minha Apresentação Exclusiva</span>
-              <span class="text-xl">↓</span>
-            </a>
+            <!-- Gatilho: Escassez de Agenda -->
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-semibold mb-5">
+              <span>🔒</span>
+              <span>Agenda Restrita: Atendimento exclusivo com vagas limitadas por período em Jundiaí</span>
+            </div>
 
-            <div class="mt-4 flex items-center justify-center gap-3 text-xs sm:text-sm text-slate-400">
-              <span class="flex items-center gap-1">🔒 Perfil gerado</span>
+            <!-- BOTÃO PARA ACESSAR A PÁGINA DESBLOQUEADA -->
+            <div>
+              <a href="#dynamic-section"
+                 class="btn-shimmer w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 sm:py-4.5 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-base sm:text-lg shadow-glow-emerald transition-all transform hover:-translate-y-0.5 active:scale-95">
+                <span>Ver Minha Apresentação Exclusiva</span>
+                <span class="text-xl">↓</span>
+              </a>
+            </div>
+
+            <!-- Gatilho: Risco Zero -->
+            <p class="mt-3 text-xs text-slate-400 flex items-center justify-center gap-1.5">
+              <span class="text-emerald-400 font-bold">✓</span> Primeira conversa e sessão diagnóstica sem compromisso de permanência
+            </p>
+
+            <div class="mt-4 flex items-center justify-center gap-3 text-xs text-slate-500">
+              <span class="flex items-center gap-1">🔒 Perfil individualizado</span>
               <span>•</span>
               <button type="button" onclick="resetQuiz()" class="text-emerald-400 hover:underline">
                 Alterar respostas
@@ -611,6 +624,14 @@
           </div>
         </div>
 
+        <!-- Gatilho: Custo da Inação / Reflexão Estratégica -->
+        <div class="max-w-2xl mx-auto mb-8 p-4 sm:p-5 rounded-2xl bg-slate-950/90 border border-slate-800 text-center shadow-lg">
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            <span class="text-emerald-400 font-bold block sm:inline mb-1 sm:mb-0">⏳ Mais 6 meses com treino genérico ou o resultado definitivo do seu ano?</span> 
+            Treinar sem planejamento individual custa o seu tempo, desmotivação e risco de dores articulares. O momento de alinhar sua rotina com suporte presencial de elite é agora.
+          </p>
+        </div>
+
         <!-- CTA Dinâmico Intermediário -->
         <div class="text-center">
           <a id="dyn-whatsapp-cta"
@@ -624,6 +645,10 @@
             </svg>
             <span id="dyn-cta-text">Falar com o Felipe Martins no WhatsApp</span>
           </a>
+          <!-- Gatilho: Risco Zero -->
+          <p class="mt-3 text-xs text-slate-400 flex items-center justify-center gap-1.5">
+            <span class="text-emerald-400 font-bold">✓</span> Primeira conversa e avaliação diagnóstica sem compromisso de permanência
+          </p>
         </div>
 
       </div>
@@ -688,8 +713,8 @@
               <div class="flex items-start gap-3 p-4 rounded-2xl bg-slate-900/60 border border-slate-800">
                 <div class="text-emerald-400 text-xl mt-0.5">✓</div>
                 <div>
-                  <div class="text-sm font-bold text-white">Credenciado no CREF</div>
-                  <div class="text-xs text-slate-400">Atuação legal, ética e com respaldo técnico constante.</div>
+                  <div class="text-sm font-bold text-white">+8 Anos em Jundiaí & CREF Ativo</div>
+                  <div class="text-xs text-slate-400">Centenas de alunos transformados com respaldo técnico, ético e legal.</div>
                 </div>
               </div>
 
@@ -704,8 +729,8 @@
               <div class="flex items-start gap-3 p-4 rounded-2xl bg-slate-900/60 border border-slate-800">
                 <div class="text-emerald-400 text-xl mt-0.5">✓</div>
                 <div>
-                  <div class="text-sm font-bold text-white">Atendimento Individual</div>
-                  <div class="text-xs text-slate-400">Minha atenção é 100% voltada à sua postura e respiração.</div>
+                  <div class="text-sm font-bold text-white">100% dos 60 Minutos com Você</div>
+                  <div class="text-xs text-slate-400">Sem celular e sem dividir atenção: correção em tempo real de cada repetição.</div>
                 </div>
               </div>
 
@@ -864,9 +889,9 @@
               <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-400 font-black text-xl flex items-center justify-center mb-4">
                 02
               </div>
-              <h3 class="text-base font-bold text-white mb-2">Avaliação Inicial</h3>
+              <h3 class="text-base font-bold text-white mb-2">Avaliação Sem Compromisso</h3>
               <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
-                Realizamos um diagnóstico do seu condicionamento físico, postura, histórico de saúde e eventuais dores prévias.
+                Realizamos um diagnóstico prático de mobilidade, postura e histórico. Você experimenta a dinâmica do método antes de fechar qualquer pacote.
               </p>
             </div>
           </div>
@@ -974,11 +999,17 @@
           Pronto para transformar seu corpo com quem entende do assunto?
         </h2>
 
-        <p class="mt-4 text-base sm:text-lg text-slate-300 max-w-xl mx-auto">
+        <p class="mt-4 text-base sm:text-lg text-slate-300 max-w-xl mx-auto mb-6">
           Agende uma conversa rápida no WhatsApp para alinharmos seus horários e tirar qualquer dúvida sobre o acompanhamento em Jundiaí.
         </p>
 
-        <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <!-- Gatilho: Escassez Real de Agenda -->
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs sm:text-sm font-semibold mb-6">
+          <span>🔒</span>
+          <span>Atendimento Exclusivo • Vagas limitadas por período (manhã, tarde e noite)</span>
+        </div>
+
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a id="final-whatsapp-btn"
              href="https://wa.me/5511961343758?text=Ol%C3%A1%20Felipe!%20Gostaria%20de%20agendar%20uma%20conversa%20sobre%20personal%20trainer%20em%20Jundia%C3%AD."
              onclick="return gtag_report_conversion(this.href);"
@@ -990,6 +1021,17 @@
             </svg>
             <span>Falar Agora no WhatsApp</span>
           </a>
+        </div>
+
+        <!-- Gatilho: Risco Zero & Agilidade -->
+        <div class="mt-4 flex flex-wrap items-center justify-center gap-4 text-xs sm:text-sm text-slate-400">
+          <span class="flex items-center gap-1.5 text-emerald-400 font-medium">
+            <span>✓</span> Primeira sessão diagnóstica sem compromisso
+          </span>
+          <span class="text-slate-600">•</span>
+          <span class="flex items-center gap-1.5 text-slate-300">
+            <span>✓</span> Resposta rápida direto com o Felipe
+          </span>
         </div>
 
       </div>
