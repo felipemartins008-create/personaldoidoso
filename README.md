@@ -68,4 +68,4 @@ O **Personal do Idoso** é uma plataforma desenvolvida com foco em acessibilidad
 ## 📞 Contato & Atendimento
 
 - **Local:** Residências e condomínios em Jundiaí - SP (Malota, Chácara Urbana, Samambaia, Eloy Chaves, etc.)
-- **WhatsApp:** [(11) 96134-3758](https://wa.me/5511961343758)
+- **WhatsApp:** [(11) 96134-3759](https://wa.me/5511961343759)
