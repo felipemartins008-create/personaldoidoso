@@ -357,17 +357,17 @@
           <!-- QUIZ CARD CONTAINER COM OBSIDIAN GLASS DE LUXO -->
           <div class="w-full bg-slate-900/95 border border-slate-700/80 rounded-2xl sm:rounded-3xl p-4 sm:p-7 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.8),0_0_40px_-10px_rgba(16,185,129,0.12),inset_0_1px_1px_rgba(255,255,255,0.08)] backdrop-blur-2xl relative">
         
-        <!-- Progress Bar Header Ultra-Clean -->
-        <div id="quiz-header-bar" class="mb-3 sm:mb-6">
-          <div class="flex items-center justify-between text-xs font-bold mb-1.5 sm:mb-2.5">
+        <!-- Progress Bar Header Ultra-Clean (Altura e Contraste Otimizados) -->
+        <div id="quiz-header-bar" class="mb-3.5 sm:mb-6">
+          <div class="flex items-center justify-between text-xs font-bold mb-2">
             <div class="flex items-center gap-1.5 sm:gap-2">
-              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
               <span id="quiz-step-label" class="text-slate-300 uppercase tracking-wider text-[10px] sm:text-[11px] font-extrabold">ETAPA 01 DE 03 • TRIAGEM BIOMÉTRICA</span>
             </div>
-            <span id="quiz-step-percent" class="text-emerald-400 font-black tracking-wide bg-emerald-500/10 px-2 sm:px-2.5 py-0.5 rounded-full border border-emerald-500/20 text-[10px] sm:text-[11px]">33% Concluído</span>
+            <span id="quiz-step-percent" class="text-emerald-400 font-black tracking-wide bg-emerald-500/10 px-2.5 py-0.5 rounded-full border border-emerald-500/20 text-[10px] sm:text-[11px]">33% Concluído</span>
           </div>
-          <div class="w-full h-1.5 sm:h-2 bg-slate-800/90 rounded-full overflow-hidden p-0.5 border border-slate-700/50">
-            <div id="quiz-progress-bar" class="h-full bg-gradient-to-r from-emerald-500 via-teal-400 to-emerald-400 transition-all duration-500 rounded-full shadow-[0_0_12px_rgba(52,211,153,0.5)]" style="width: 33%;"></div>
+          <div class="w-full h-2.5 sm:h-3 bg-slate-800 rounded-full overflow-hidden border border-slate-700/60 shadow-inner">
+            <div id="quiz-progress-bar" class="h-full bg-gradient-to-r from-emerald-500 via-teal-400 to-emerald-400 transition-all duration-500 rounded-full shadow-[0_0_12px_rgba(52,211,153,0.6)]" style="width: 33%;"></div>
           </div>
         </div>
 
@@ -390,8 +390,8 @@
             <div class="grid grid-cols-2 gap-3 sm:gap-4 mt-1 sm:mt-0">
               
               <!-- Opção Feminino -->
-              <label class="quiz-option cursor-pointer p-4 sm:p-6 rounded-2xl bg-gradient-to-b from-slate-800/70 to-slate-900/90 border border-slate-700/80 flex flex-col items-center text-center justify-between min-h-[185px] sm:min-h-[210px] group select-none relative transition-all duration-300 hover:shadow-[0_10px_30px_-5px_rgba(0,0,0,0.5),0_0_20px_rgba(16,185,129,0.15)] hover:-translate-y-0.5">
-                <input type="radio" name="user_sex" value="Mulher" class="hidden" onchange="handleOptionSelect(1, 'Mulher')">
+              <label class="quiz-option cursor-pointer p-4 sm:p-6 rounded-2xl bg-gradient-to-b from-slate-800/70 to-slate-900/90 border border-slate-700/80 flex flex-col items-center text-center justify-between min-h-[185px] sm:min-h-[210px] group select-none relative transition-all duration-300 hover:shadow-[0_10px_30px_-5px_rgba(0,0,0,0.5),0_0_20px_rgba(16,185,129,0.15)] hover:-translate-y-0.5" onclick="handleOptionSelect(1, 'Mulher', this)">
+                <input type="radio" name="user_sex" value="Mulher" class="sr-only" onchange="handleOptionSelect(1, 'Mulher', this.closest('.quiz-option'))">
                 
                 <!-- Header do Card: Tag + Radio Indicator -->
                 <div class="flex items-center justify-between w-full mb-2 sm:mb-2.5">
@@ -429,8 +429,8 @@
               </label>
 
               <!-- Opção Masculino -->
-              <label class="quiz-option cursor-pointer p-4 sm:p-6 rounded-2xl bg-gradient-to-b from-slate-800/70 to-slate-900/90 border border-slate-700/80 flex flex-col items-center text-center justify-between min-h-[185px] sm:min-h-[210px] group select-none relative transition-all duration-300 hover:shadow-[0_10px_30px_-5px_rgba(0,0,0,0.5),0_0_20px_rgba(16,185,129,0.15)] hover:-translate-y-0.5">
-                <input type="radio" name="user_sex" value="Homem" class="hidden" onchange="handleOptionSelect(1, 'Homem')">
+              <label class="quiz-option cursor-pointer p-4 sm:p-6 rounded-2xl bg-gradient-to-b from-slate-800/70 to-slate-900/90 border border-slate-700/80 flex flex-col items-center text-center justify-between min-h-[185px] sm:min-h-[210px] group select-none relative transition-all duration-300 hover:shadow-[0_10px_30px_-5px_rgba(0,0,0,0.5),0_0_20px_rgba(16,185,129,0.15)] hover:-translate-y-0.5" onclick="handleOptionSelect(1, 'Homem', this)">
+                <input type="radio" name="user_sex" value="Homem" class="sr-only" onchange="handleOptionSelect(1, 'Homem', this.closest('.quiz-option'))">
                 
                 <!-- Header do Card: Tag + Radio Indicator -->
                 <div class="flex items-center justify-between w-full mb-2 sm:mb-2.5">
@@ -478,8 +478,8 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3">
               
               <!-- 1. Emagrecimento -->
-              <label class="quiz-option cursor-pointer p-3.5 sm:p-4 rounded-2xl bg-slate-800/70 border border-slate-700/80 flex items-center gap-3 sm:gap-3.5 group select-none min-h-[64px] sm:min-h-[70px]">
-                <input type="radio" name="user_goal" value="Emagrecimento" class="hidden" onchange="handleOptionSelect(2, 'Emagrecimento')">
+              <label class="quiz-option cursor-pointer p-3.5 sm:p-4 rounded-2xl bg-slate-800/70 border border-slate-700/80 flex items-center gap-3 sm:gap-3.5 group select-none min-h-[64px] sm:min-h-[70px]" onclick="handleOptionSelect(2, 'Emagrecimento', this)">
+                <input type="radio" name="user_goal" value="Emagrecimento" class="sr-only" onchange="handleOptionSelect(2, 'Emagrecimento', this.closest('.quiz-option'))">
                 <div class="w-11 h-11 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl sm:text-2xl shrink-0 group-hover:scale-105 transition-transform">
                   🔥
                 </div>
@@ -490,8 +490,8 @@
               </label>
 
               <!-- 2. Hipertrofia -->
-              <label class="quiz-option cursor-pointer p-3.5 sm:p-4 rounded-2xl bg-slate-800/70 border border-slate-700/80 flex items-center gap-3 sm:gap-3.5 group select-none min-h-[64px] sm:min-h-[70px]">
-                <input type="radio" name="user_goal" value="Hipertrofia" class="hidden" onchange="handleOptionSelect(2, 'Hipertrofia')">
+              <label class="quiz-option cursor-pointer p-3.5 sm:p-4 rounded-2xl bg-slate-800/70 border border-slate-700/80 flex items-center gap-3 sm:gap-3.5 group select-none min-h-[64px] sm:min-h-[70px]" onclick="handleOptionSelect(2, 'Hipertrofia', this)">
+                <input type="radio" name="user_goal" value="Hipertrofia" class="sr-only" onchange="handleOptionSelect(2, 'Hipertrofia', this.closest('.quiz-option'))">
                 <div class="w-11 h-11 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center text-xl sm:text-2xl shrink-0 group-hover:scale-105 transition-transform">
                   ⚡
                 </div>
@@ -502,8 +502,8 @@
               </label>
 
               <!-- 3. Emagrecimento e Hipertrofia -->
-              <label class="quiz-option cursor-pointer p-3.5 sm:p-4 rounded-2xl bg-slate-800/70 border border-slate-700/80 flex items-center gap-3 sm:gap-3.5 group select-none min-h-[64px] sm:min-h-[70px]">
-                <input type="radio" name="user_goal" value="EmagrecimentoHipertrofia" class="hidden" onchange="handleOptionSelect(2, 'EmagrecimentoHipertrofia')">
+              <label class="quiz-option cursor-pointer p-3.5 sm:p-4 rounded-2xl bg-slate-800/70 border border-slate-700/80 flex items-center gap-3 sm:gap-3.5 group select-none min-h-[64px] sm:min-h-[70px]" onclick="handleOptionSelect(2, 'EmagrecimentoHipertrofia', this)">
+                <input type="radio" name="user_goal" value="EmagrecimentoHipertrofia" class="sr-only" onchange="handleOptionSelect(2, 'EmagrecimentoHipertrofia', this.closest('.quiz-option'))">
                 <div class="w-11 h-11 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl sm:text-2xl shrink-0 group-hover:scale-105 transition-transform">
                   🚀
                 </div>
@@ -514,8 +514,8 @@
               </label>
 
               <!-- 4. Saúde e Bem Estar -->
-              <label class="quiz-option cursor-pointer p-3.5 sm:p-4 rounded-2xl bg-slate-800/70 border border-slate-700/80 flex items-center gap-3 sm:gap-3.5 group select-none min-h-[64px] sm:min-h-[70px]">
-                <input type="radio" name="user_goal" value="SaudeBemEstar" class="hidden" onchange="handleOptionSelect(2, 'SaudeBemEstar')">
+              <label class="quiz-option cursor-pointer p-3.5 sm:p-4 rounded-2xl bg-slate-800/70 border border-slate-700/80 flex items-center gap-3 sm:gap-3.5 group select-none min-h-[64px] sm:min-h-[70px]" onclick="handleOptionSelect(2, 'SaudeBemEstar', this)">
+                <input type="radio" name="user_goal" value="SaudeBemEstar" class="sr-only" onchange="handleOptionSelect(2, 'SaudeBemEstar', this.closest('.quiz-option'))">
                 <div class="w-11 h-11 rounded-xl bg-teal-500/10 text-teal-400 flex items-center justify-center text-xl sm:text-2xl shrink-0 group-hover:scale-105 transition-transform">
                   🌿
                 </div>
@@ -526,8 +526,8 @@
               </label>
 
               <!-- 5. Condicionamento Físico para Esportes -->
-              <label class="quiz-option cursor-pointer p-3.5 sm:p-4 rounded-2xl bg-slate-800/70 border border-slate-700/80 flex items-center gap-3 sm:gap-3.5 group select-none min-h-[64px] sm:min-h-[70px]">
-                <input type="radio" name="user_goal" value="CondicionamentoEsportes" class="hidden" onchange="handleOptionSelect(2, 'CondicionamentoEsportes')">
+              <label class="quiz-option cursor-pointer p-3.5 sm:p-4 rounded-2xl bg-slate-800/70 border border-slate-700/80 flex items-center gap-3 sm:gap-3.5 group select-none min-h-[64px] sm:min-h-[70px]" onclick="handleOptionSelect(2, 'CondicionamentoEsportes', this)">
+                <input type="radio" name="user_goal" value="CondicionamentoEsportes" class="sr-only" onchange="handleOptionSelect(2, 'CondicionamentoEsportes', this.closest('.quiz-option'))">
                 <div class="w-11 h-11 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center text-xl sm:text-2xl shrink-0 group-hover:scale-105 transition-transform">
                   🏃
                 </div>
@@ -538,8 +538,8 @@
               </label>
 
               <!-- 6. Terceira Idade (Saúde) -->
-              <label class="quiz-option cursor-pointer p-3.5 sm:p-4 rounded-2xl bg-slate-800/70 border border-slate-700/80 flex items-center gap-3 sm:gap-3.5 group select-none min-h-[64px] sm:min-h-[70px]">
-                <input type="radio" name="user_goal" value="Idoso" class="hidden" onchange="handleOptionSelect(2, 'Idoso')">
+              <label class="quiz-option cursor-pointer p-3.5 sm:p-4 rounded-2xl bg-slate-800/70 border border-slate-700/80 flex items-center gap-3 sm:gap-3.5 group select-none min-h-[64px] sm:min-h-[70px]" onclick="handleOptionSelect(2, 'Idoso', this)">
+                <input type="radio" name="user_goal" value="Idoso" class="sr-only" onchange="handleOptionSelect(2, 'Idoso', this.closest('.quiz-option'))">
                 <div class="w-11 h-11 rounded-xl bg-sky-500/10 text-sky-400 flex items-center justify-center text-xl sm:text-2xl shrink-0 group-hover:scale-105 transition-transform">
                   🛡️
                 </div>
@@ -565,8 +565,8 @@
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-3.5">
               
-              <label class="quiz-option cursor-pointer p-4 sm:p-4.5 rounded-2xl bg-slate-800/70 border border-slate-700/80 flex items-center gap-3.5 sm:gap-4 group select-none min-h-[70px] sm:min-h-[76px]">
-                <input type="radio" name="user_location" value="Condomínio" class="hidden" onchange="handleOptionSelect(3, 'Academia do Condomínio')">
+              <label class="quiz-option cursor-pointer p-4 sm:p-4.5 rounded-2xl bg-slate-800/70 border border-slate-700/80 flex items-center gap-3.5 sm:gap-4 group select-none min-h-[70px] sm:min-h-[76px]" onclick="handleOptionSelect(3, 'Academia do Condomínio', this)">
+                <input type="radio" name="user_location" value="Condomínio" class="sr-only" onchange="handleOptionSelect(3, 'Academia do Condomínio', this.closest('.quiz-option'))">
                 <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-2xl shrink-0 group-hover:scale-105 transition-transform">
                   🏢
                 </div>
@@ -576,8 +576,8 @@
                 </div>
               </label>
 
-              <label class="quiz-option cursor-pointer p-4 sm:p-4.5 rounded-2xl bg-slate-800/70 border border-slate-700/80 flex items-center gap-3.5 sm:gap-4 group select-none min-h-[70px] sm:min-h-[76px]">
-                <input type="radio" name="user_location" value="Em Casa" class="hidden" onchange="handleOptionSelect(3, 'Na Minha Residência')">
+              <label class="quiz-option cursor-pointer p-4 sm:p-4.5 rounded-2xl bg-slate-800/70 border border-slate-700/80 flex items-center gap-3.5 sm:gap-4 group select-none min-h-[70px] sm:min-h-[76px]" onclick="handleOptionSelect(3, 'Na Minha Residência', this)">
+                <input type="radio" name="user_location" value="Em Casa" class="sr-only" onchange="handleOptionSelect(3, 'Na Minha Residência', this.closest('.quiz-option'))">
                 <div class="w-12 h-12 rounded-xl bg-teal-500/10 text-teal-400 flex items-center justify-center text-2xl shrink-0 group-hover:scale-105 transition-transform">
                   🏡
                 </div>
@@ -587,8 +587,8 @@
                 </div>
               </label>
 
-              <label class="quiz-option cursor-pointer p-4 sm:p-4.5 rounded-2xl bg-slate-800/70 border border-slate-700/80 flex items-center gap-3.5 sm:gap-4 group select-none min-h-[70px] sm:min-h-[76px]">
-                <input type="radio" name="user_location" value="Ao Ar Livre" class="hidden" onchange="handleOptionSelect(3, 'Ao Ar Livre / Parque')">
+              <label class="quiz-option cursor-pointer p-4 sm:p-4.5 rounded-2xl bg-slate-800/70 border border-slate-700/80 flex items-center gap-3.5 sm:gap-4 group select-none min-h-[70px] sm:min-h-[76px]" onclick="handleOptionSelect(3, 'Ao Ar Livre / Parque', this)">
+                <input type="radio" name="user_location" value="Ao Ar Livre" class="sr-only" onchange="handleOptionSelect(3, 'Ao Ar Livre / Parque', this.closest('.quiz-option'))">
                 <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-2xl shrink-0 group-hover:scale-105 transition-transform">
                   🌳
                 </div>
@@ -598,8 +598,8 @@
                 </div>
               </label>
 
-              <label class="quiz-option cursor-pointer p-4 sm:p-4.5 rounded-2xl bg-slate-800/70 border border-slate-700/80 flex items-center gap-3.5 sm:gap-4 group select-none min-h-[70px] sm:min-h-[76px]">
-                <input type="radio" name="user_location" value="Na Academia" class="hidden" onchange="handleOptionSelect(3, 'Na Academia')">
+              <label class="quiz-option cursor-pointer p-4 sm:p-4.5 rounded-2xl bg-slate-800/70 border border-slate-700/80 flex items-center gap-3.5 sm:gap-4 group select-none min-h-[70px] sm:min-h-[76px]" onclick="handleOptionSelect(3, 'Na Academia', this)">
+                <input type="radio" name="user_location" value="Na Academia" class="sr-only" onchange="handleOptionSelect(3, 'Na Academia', this.closest('.quiz-option'))">
                 <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-2xl shrink-0 group-hover:scale-105 transition-transform">
                   🏋️
                 </div>
@@ -1651,36 +1651,46 @@
       const stepLabel = document.getElementById('quiz-step-label');
       const stepPercent = document.getElementById('quiz-step-percent');
 
-      if (stepNumber === 1) {
-        progressBar.style.width = '33%';
-        stepLabel.innerText = 'ETAPA 01 DE 03 • TRIAGEM BIOMÉTRICA';
-        stepPercent.innerText = '33% Concluído';
-      } else if (stepNumber === 2) {
-        progressBar.style.width = '66%';
-        stepLabel.innerText = 'ETAPA 02 DE 03 • OBJETIVO PRIORITÁRIO';
-        stepPercent.innerText = '66% Concluído';
-      } else if (stepNumber === 3) {
-        progressBar.style.width = '100%';
-        stepLabel.innerText = 'ETAPA 03 DE 03 • LOCAL DE ATENDIMENTO';
-        stepPercent.innerText = '100% Quase Pronto';
+      if (progressBar) {
+        if (stepNumber === 1) {
+          progressBar.style.width = '33%';
+          if (stepLabel) stepLabel.innerText = 'ETAPA 01 DE 03 • TRIAGEM BIOMÉTRICA';
+          if (stepPercent) stepPercent.innerText = '33% Concluído';
+        } else if (stepNumber === 2) {
+          progressBar.style.width = '66%';
+          if (stepLabel) stepLabel.innerText = 'ETAPA 02 DE 03 • OBJETIVO PRIORITÁRIO';
+          if (stepPercent) stepPercent.innerText = '66% Concluído';
+        } else if (stepNumber === 3) {
+          progressBar.style.width = '100%';
+          if (stepLabel) stepLabel.innerText = 'ETAPA 03 DE 03 • LOCAL DE ATENDIMENTO';
+          if (stepPercent) stepPercent.innerText = '100% Quase Pronto';
+        }
       }
+
+      highlightActiveOption(stepNumber);
     }
 
-    // SELEÇÃO DE OPÇÃO E AVANÇO AUTOMÁTICO
-    function handleOptionSelect(step, value) {
+    // SELEÇÃO DE OPÇÃO E AVANÇO AUTOMÁTICO (OTIMIZADO PARA TOUCH & MOBILE)
+    function handleOptionSelect(step, value, el) {
+      if (step === 1) quizState.sex = value;
+      if (step === 2) quizState.goal = value;
+      if (step === 3) quizState.location = value;
+
+      if (el) {
+        const radio = el.querySelector('input[type="radio"]');
+        if (radio) radio.checked = true;
+      }
+      const radioByVal = document.querySelector(`input[value="${value}"]`);
+      if (radioByVal) radioByVal.checked = true;
+
+      highlightActiveOption(step);
+
       if (step === 1) {
-        quizState.sex = value;
-        highlightActiveOption(1);
-        setTimeout(() => goToStep(2), 220);
+        setTimeout(() => goToStep(2), 180);
       } else if (step === 2) {
-        quizState.goal = value;
-        highlightActiveOption(2);
-        setTimeout(() => goToStep(3), 220);
+        setTimeout(() => goToStep(3), 180);
       } else if (step === 3) {
-        quizState.location = value;
-        highlightActiveOption(3);
-        // Exibe o carregamento/personalização e depois revela a página
-        setTimeout(() => showLoadingAndReveal(), 220);
+        setTimeout(() => showLoadingAndReveal(), 180);
       }
     }
 
