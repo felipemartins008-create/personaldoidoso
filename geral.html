@@ -182,7 +182,7 @@
       <a href="https://wa.me/5511961343759?text=Ol%C3%A1%20Felipe!%20Gostaria%20de%20consultar%20hor%C3%A1rios%20para%20personal%20no%20meu%20condom%C3%ADnio%20em%20Jundia%C3%AD."
          target="_blank"
          rel="noopener noreferrer"
-         onclick="return gtag_report_conversion(this.href);"
+         onclick="gtag_report_conversion(this.href);"
          data-tracking="whatsapp-cta"
          data-cta-location="header-geral"
          class="btn-shimmer inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white text-xs sm:text-sm font-black py-2.5 px-4 sm:px-6 rounded-xl shadow-md transition-all active:scale-95">
@@ -220,7 +220,7 @@
             <a href="https://wa.me/5511961343759?text=Ol%C3%A1%20Felipe!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20para%20personal%20em%20Jundia%C3%AD."
                target="_blank"
                rel="noopener noreferrer"
-               onclick="return gtag_report_conversion(this.href);"
+               onclick="gtag_report_conversion(this.href);"
                data-tracking="whatsapp-cta"
                data-cta-location="hero-geral"
                class="btn-shimmer w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-emerald-600 hover:bg-emerald-500 text-white text-lg sm:text-xl font-black py-4 px-8 rounded-2xl shadow-xl hover:shadow-glow-emerald transition-all transform active:scale-95">
@@ -391,7 +391,7 @@
         <a href="https://wa.me/5511961343759?text=Ol%C3%A1%20Felipe!%20Gostaria%20de%20consultar%20valores%20e%20hor%C3%A1rios%20para%20personal%20em%20Jundia%C3%AD."
            target="_blank"
            rel="noopener noreferrer"
-           onclick="return gtag_report_conversion(this.href);"
+           onclick="gtag_report_conversion(this.href);"
            data-tracking="whatsapp-cta"
            data-cta-location="mid-geral"
            class="btn-shimmer inline-flex items-center gap-3 bg-emerald-600 hover:bg-emerald-500 text-white font-black text-base sm:text-xl py-4 px-8 rounded-2xl shadow-xl hover:shadow-glow-emerald transition-all">
@@ -492,7 +492,7 @@
       <a href="https://wa.me/5511961343759?text=Ol%C3%A1%20Felipe!%20Gostaria%20de%20consultar%20hor%C3%A1rios%20dispon%C3%ADveis%20para%20personal%20em%20Jundia%C3%AD."
          target="_blank"
          rel="noopener noreferrer"
-         onclick="return gtag_report_conversion(this.href);"
+         onclick="gtag_report_conversion(this.href);"
          data-tracking="whatsapp-cta"
          data-cta-location="final-geral"
          class="btn-shimmer inline-flex items-center justify-center gap-3.5 bg-emerald-600 hover:bg-emerald-500 text-white text-lg sm:text-xl font-black py-4 px-9 rounded-2xl shadow-2xl hover:shadow-glow-emerald transition-all transform active:scale-95">
@@ -518,18 +518,16 @@
 
   <!-- SCRIPT DE ACCORDION E TRACKING -->
   <script>
+    // GOOGLE ADS CONVERSION TRACKING (100% COMPATÍVEL COM MOBILE & DESKTOP SEM BLOQUEIO DE POPUP)
     function gtag_report_conversion(url) {
-      var callback = function () {
-        if (typeof(url) !== 'undefined' && url) {
-          window.open(url, '_blank', 'noopener,noreferrer');
+      try {
+        if (typeof window.gtag === 'function') {
+          window.gtag('event', 'conversion', {
+            'send_to': 'AW-11083049414/YpG1CNKX-4sdEMbT56Qp'
+          });
         }
-      };
-      if (typeof window.gtag === 'function') {
-        window.gtag('event', 'conversion', {
-          'send_to': 'AW-11083049414/YpG1CNKX-4sdEMbT56Qp',
-          'event_callback': callback
-        });
-        return false;
+      } catch (err) {
+        console.warn('Gtag conversion error:', err);
       }
       return true;
     }

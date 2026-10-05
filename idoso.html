@@ -295,7 +295,7 @@
       <a href="https://wa.me/5511961343759?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20visita%20de%20avalia%C3%A7%C3%A3o."
          target="_blank"
          rel="noopener noreferrer"
-         onclick="return gtag_report_conversion(this.href);"
+         onclick="gtag_report_conversion(this.href);"
          data-tracking="whatsapp-cta"
          data-cta-location="header"
          class="btn-shimmer inline-flex items-center gap-2 sm:gap-2.5 bg-emerald-600 hover:bg-emerald-700 text-white text-sm xs:text-base sm:text-lg font-black py-3 px-4 sm:py-3.5 sm:px-7 rounded-xl shadow-md hover:shadow-glow-emerald transition-all duration-200 active:scale-95 focus-ring flex-shrink-0">
@@ -376,7 +376,7 @@
             <a href="https://wa.me/5511961343759?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20visita%20de%20avalia%C3%A7%C3%A3o."
                target="_blank"
                rel="noopener noreferrer"
-               onclick="return gtag_report_conversion(this.href);"
+               onclick="gtag_report_conversion(this.href);"
                data-tracking="whatsapp-cta"
                data-cta-location="hero-primary"
                class="btn-shimmer w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-emerald-600 hover:bg-emerald-700 text-white text-lg sm:text-2xl font-black py-4 px-6 sm:px-9 rounded-2xl shadow-xl hover:shadow-glow-emerald transition-all duration-200 transform active:scale-95 sm:hover:-translate-y-0.5 sm:active:translate-y-0 focus-ring">
@@ -566,7 +566,7 @@
         <a href="https://wa.me/5511961343759?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20visita%20de%20avalia%C3%A7%C3%A3o."
            target="_blank"
            rel="noopener noreferrer"
-           onclick="return gtag_report_conversion(this.href);"
+           onclick="gtag_report_conversion(this.href);"
            data-tracking="whatsapp-cta"
            data-cta-location="methodology"
            class="btn-shimmer w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-emerald-600 hover:bg-emerald-700 text-white font-black text-lg sm:text-2xl py-4 px-8 sm:px-10 rounded-2xl shadow-lg hover:shadow-glow-emerald transition-all duration-200 active:scale-95 focus-ring">
@@ -699,7 +699,7 @@
             <a href="https://wa.me/5511961343759?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20visita%20de%20avalia%C3%A7%C3%A3o."
                target="_blank"
                rel="noopener noreferrer"
-               onclick="return gtag_report_conversion(this.href);"
+               onclick="gtag_report_conversion(this.href);"
                data-tracking="whatsapp-cta"
                data-cta-location="steps-process"
                class="btn-shimmer w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-slate-900 hover:bg-slate-800 text-white font-black text-lg sm:text-2xl py-4 px-8 sm:px-10 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-200 focus-ring">
@@ -996,7 +996,7 @@
         <a href="https://wa.me/5511961343759?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20visita%20de%20avalia%C3%A7%C3%A3o."
            target="_blank"
            rel="noopener noreferrer"
-           onclick="return gtag_report_conversion(this.href);"
+           onclick="gtag_report_conversion(this.href);"
            data-tracking="whatsapp-cta"
            data-cta-location="final-section"
            class="btn-shimmer w-full sm:w-auto inline-flex items-center justify-center gap-3.5 bg-emerald-600 hover:bg-emerald-500 text-white text-lg sm:text-2xl font-black py-4 px-8 sm:px-10 rounded-2xl shadow-2xl hover:shadow-glow-emerald transition-all duration-200 transform active:scale-95 sm:hover:-translate-y-0.5 sm:active:translate-y-0 focus-ring">
@@ -1091,7 +1091,7 @@
       <a href="https://wa.me/5511961343759?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20visita%20de%20avalia%C3%A7%C3%A3o."
          target="_blank"
          rel="noopener noreferrer"
-         onclick="return gtag_report_conversion(this.href);"
+         onclick="gtag_report_conversion(this.href);"
          data-tracking="whatsapp-cta"
          data-cta-location="floating-button"
          class="relative group flex items-center gap-2.5 sm:gap-3 bg-emerald-600 hover:bg-emerald-500 text-white p-4 sm:p-4.5 rounded-full shadow-2xl hover:shadow-glow-emerald transition-all duration-300 transform active:scale-95 sm:hover:scale-110 focus-ring"
@@ -1112,23 +1112,17 @@
 
   <!-- SCRIPTS: RASTREAMENTO GOOGLE ADS + MODAL LGPD + FAQ ACCORDION + SCROLL REVEAL -->
   <script>
-    // 1. RASTREAMENTO DE CONVERSÃO GOOGLE ADS (CLIQUE WHATSAPP)
-    // Para ativar a medição de conversão em tempo real no Google Ads:
-    // Descomente e insira sua tag no topo do <head>, ou substitua AW-CONVERSION_ID/CONVERSION_LABEL aqui.
+    // 1. RASTREAMENTO DE CONVERSÃO GOOGLE ADS (100% COMPATÍVEL COM MOBILE & DESKTOP SEM BLOQUEIO DE POPUP)
     function gtag_report_conversion(url) {
-      var callback = function () {
-        if (typeof(url) !== 'undefined' && url) {
-          window.open(url, '_blank', 'noopener,noreferrer');
+      try {
+        if (typeof window.gtag === 'function') {
+          window.gtag('event', 'conversion', {
+            'send_to': 'AW-11083049414/YpG1CNKX-4sdEMbT56Qp'
+          });
         }
-      };
-      if (typeof window.gtag === 'function') {
-        window.gtag('event', 'conversion', {
-          'send_to': 'AW-11083049414/YpG1CNKX-4sdEMbT56Qp',
-          'event_callback': callback
-        });
-        return false;
+      } catch (err) {
+        console.warn('Gtag conversion error:', err);
       }
-      // Se a tag ainda não estiver conectada ao Ads, prossegue diretamente
       return true;
     }
 

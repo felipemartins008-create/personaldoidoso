@@ -833,8 +833,9 @@
         <div class="text-center">
           <a id="dyn-whatsapp-cta"
              href="https://wa.me/5511961343759?text=Ol%C3%A1%20Felipe!%20Gostaria%20de%20conversar%20sobre%20meus%20objetivos%20de%20treino%20em%20Jundia%C3%AD."
-             onclick="return gtag_report_conversion(this.href);"
+             onclick="gtag_report_conversion(this.href);"
              target="_blank"
+             rel="noopener noreferrer"
              class="btn-shimmer inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-base shadow-glow-emerald transition-all transform hover:-translate-y-1">
             <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
               <path d="M17.472 14.382c-.301-.15-1.78-.878-2.056-.979-.275-.1-.475-.15-.675.15-.2.301-.775.979-.95 1.179-.175.2-.351.226-.651.076-.301-.15-1.27-.468-2.42-1.492-.894-.797-1.498-1.782-1.674-2.083-.175-.301-.019-.464.132-.614.136-.135.301-.351.451-.527.151-.175.2-.301.301-.501.101-.2.051-.376-.025-.526-.076-.151-.676-1.63-.926-2.233-.243-.587-.49-.508-.675-.517-.175-.01-.375-.01-.576-.01s-.526.076-.802.376c-.276.301-1.053 1.028-1.053 2.507s1.079 2.908 1.229 3.109c.151.2 2.124 3.243 5.145 4.549.719.311 1.281.497 1.719.636.723.23 1.38.197 1.9.12.58-.087 1.78-.727 2.03-1.429.251-.702.251-1.303.176-1.429-.076-.126-.276-.201-.577-.352z"/>
@@ -1082,8 +1083,9 @@
 
         <div class="mt-8 sm:mt-10">
           <a href="https://wa.me/5511961343759?text=Ol%C3%A1%20Felipe!%20Moro%20em%20Jundia%C3%AD%20e%20gostaria%20de%20consultar%20se%20voc%C3%AA%20atende%20no%20meu%20condom%C3%ADnio."
-             onclick="return gtag_report_conversion(this.href);"
+             onclick="gtag_report_conversion(this.href);"
              target="_blank"
+             rel="noopener noreferrer"
              class="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-emerald-400 hover:text-emerald-300 underline underline-offset-4">
             <span>Consulte a disponibilidade de horários para a sua região via WhatsApp</span> →
           </a>
@@ -1253,8 +1255,9 @@
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a id="final-whatsapp-btn"
              href="https://wa.me/5511961343759?text=Ol%C3%A1%20Felipe!%20Gostaria%20de%20agendar%20uma%20conversa%20sobre%20personal%20trainer%20em%20Jundia%C3%AD."
-             onclick="return gtag_report_conversion(this.href);"
+             onclick="gtag_report_conversion(this.href);"
              target="_blank"
+             rel="noopener noreferrer"
              class="btn-shimmer w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-base sm:text-lg shadow-glow-emerald transition-all transform hover:-translate-y-1">
             <svg class="w-6 h-6 fill-current shrink-0" viewBox="0 0 24 24">
               <path d="M17.472 14.382c-.301-.15-1.78-.878-2.056-.979-.275-.1-.475-.15-.675.15-.2.301-.775.979-.95 1.179-.175.2-.351.226-.651.076-.301-.15-1.27-.468-2.42-1.492-.894-.797-1.498-1.782-1.674-2.083-.175-.301-.019-.464.132-.614.136-.135.301-.351.451-.527.151-.175.2-.301.301-.501.101-.2.051-.376-.025-.526-.076-.151-.676-1.63-.926-2.233-.243-.587-.49-.508-.675-.517-.175-.01-.375-.01-.576-.01s-.526.076-.802.376c-.276.301-1.053 1.028-1.053 2.507s1.079 2.908 1.229 3.109c.151.2 2.124 3.243 5.145 4.549.719.311 1.281.497 1.719.636.723.23 1.38.197 1.9.12.58-.087 1.78-.727 2.03-1.429.251-.702.251-1.303.176-1.429-.076-.126-.276-.201-.577-.352z"/>
@@ -1300,8 +1303,9 @@
   <div id="floating-whatsapp-container" class="fixed bottom-5 right-5 z-50 hidden transition-all duration-500">
     <a id="floating-whatsapp-btn"
        href="https://wa.me/5511961343759?text=Ol%C3%A1%20Felipe!%20Vi%20seu%20site%20e%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20personal%20trainer%20em%20Jundia%C3%AD."
-       onclick="return gtag_report_conversion(this.href);"
+       onclick="gtag_report_conversion(this.href);"
        target="_blank"
+       rel="noopener noreferrer"
        aria-label="Falar no WhatsApp com Felipe Martins"
        class="flex items-center gap-2.5 px-4 py-3 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold shadow-2xl shadow-emerald-950 transition-all transform hover:scale-105 group border border-emerald-400/40">
       <div class="relative">
@@ -1937,19 +1941,16 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    // GOOGLE ADS CONVERSION TRACKING
+    // GOOGLE ADS CONVERSION TRACKING (100% COMPATÍVEL COM MOBILE & DESKTOP SEM BLOQUEIO DE POPUP)
     function gtag_report_conversion(url) {
-      var callback = function () {
-        if (typeof(url) !== 'undefined' && url) {
-          window.open(url, '_blank', 'noopener,noreferrer');
+      try {
+        if (typeof window.gtag === 'function') {
+          window.gtag('event', 'conversion', {
+            'send_to': 'AW-11083049414/YpG1CNKX-4sdEMbT56Qp'
+          });
         }
-      };
-      if (typeof window.gtag === 'function') {
-        window.gtag('event', 'conversion', {
-          'send_to': 'AW-11083049414/YpG1CNKX-4sdEMbT56Qp',
-          'event_callback': callback
-        });
-        return false;
+      } catch (err) {
+        console.warn('Gtag conversion error:', err);
       }
       return true;
     }
