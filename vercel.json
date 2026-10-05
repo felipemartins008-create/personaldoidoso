@@ -5,6 +5,8 @@
     { "source": "/idosos", "destination": "/idoso.html" },
     { "source": "/geral", "destination": "/geral.html" },
     { "source": "/adulto", "destination": "/geral.html" },
-    { "source": "/adultos", "destination": "/geral.html" }
+    { "source": "/adultos", "destination": "/geral.html" },
+    { "source": "/whatsapp", "destination": "/whatsapp.html" },
+    { "source": "/contato", "destination": "/whatsapp.html" }
   ]
 }
