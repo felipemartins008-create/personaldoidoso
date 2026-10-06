@@ -213,6 +213,15 @@
     gtag('js', new Date());
     gtag('config', 'AW-11083049414');
   </script>
+
+  <!-- Microsoft Clarity (Gravação de Sessões & Heatmaps) -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "ytljdtgqhu");
+  </script>
 </head>
 <body class="selection:bg-emerald-500 selection:text-white overflow-x-hidden">
 
@@ -1698,7 +1707,7 @@
       highlightActiveOption(stepNumber);
     }
 
-    // SELEÇÃO DE OPÇÃO E AVANÇO AUTOMÁTICO (OTIMIZADO PARA TOUCH & MOBILE)
+    // SELEÇÃO DE OPÇÃO E AVANÇO AUTOMÁTICO (OTIMIZADO PARA TOUCH & MOBILE COM TRACKING)
     function handleOptionSelect(step, value, el) {
       if (step === 1) quizState.sex = value;
       if (step === 2) quizState.goal = value;
@@ -1713,11 +1722,23 @@
 
       highlightActiveOption(step);
 
+      // Eventos de rastreamento para Clarity e Google Ads
+      try {
+        if (window.clarity) window.clarity('event', `quiz_step_${step}_${value}`);
+        if (typeof window.gtag === 'function') {
+          window.gtag('event', `quiz_etapa_${step}`, { 'event_category': 'quiz', 'event_label': value });
+        }
+      } catch(e) {}
+
       if (step === 1) {
         setTimeout(() => goToStep(2), 180);
       } else if (step === 2) {
         setTimeout(() => goToStep(3), 180);
       } else if (step === 3) {
+        try {
+          if (window.clarity) window.clarity('event', 'quiz_concluido_total');
+          if (typeof window.gtag === 'function') window.gtag('event', 'quiz_concluido');
+        } catch(e) {}
         setTimeout(() => showLoadingAndReveal(), 180);
       }
     }
@@ -1968,6 +1989,7 @@
     // GOOGLE ADS CONVERSION TRACKING (100% COMPATÍVEL COM MOBILE & DESKTOP SEM BLOQUEIO DE POPUP)
     function gtag_report_conversion(url) {
       try {
+        if (window.clarity) window.clarity('event', 'whatsapp_click');
         if (typeof window.gtag === 'function') {
           window.gtag('event', 'conversion', {
             'send_to': 'AW-11083049414/YpG1CNKX-4sdEMbT56Qp'
