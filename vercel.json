@@ -1,6 +1,9 @@
 {
   "cleanUrls": true,
   "rewrites": [
+    { "source": "/c", "destination": "/api/c" },
+    { "source": "/divulgacao", "destination": "/divulgacao.html" },
+    { "source": "/painel", "destination": "/divulgacao.html" },
     { "source": "/idoso", "destination": "/idoso.html" },
     { "source": "/idosos", "destination": "/idoso.html" },
     { "source": "/geral", "destination": "/geral.html" },

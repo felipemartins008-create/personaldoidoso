@@ -266,6 +266,24 @@
 
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full flex flex-col justify-center gap-3 sm:gap-6 my-auto">
       
+      <!-- BADGE EXCLUSIVO DO CONDOMÍNIO (Aparece SOMENTE se acessado com ?condo=) -->
+      <div id="condo-banner-alert" class="hidden mb-1">
+        <div class="p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-gradient-to-r from-emerald-950/80 via-slate-900/90 to-emerald-950/80 border border-emerald-500/40 shadow-[0_4px_20px_rgba(16,185,129,0.2)] backdrop-blur-xl flex items-center justify-between gap-3">
+          <div class="flex items-center gap-2.5 sm:gap-3">
+            <span class="flex h-3 w-3 relative shrink-0">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-400 shadow-[0_0_10px_#34d399]"></span>
+            </span>
+            <div class="text-xs sm:text-sm font-semibold text-slate-200">
+              Atendimento exclusivo para moradores do <strong id="condo-name-target" class="text-emerald-400 font-extrabold">Condomínio</strong>
+            </div>
+          </div>
+          <span class="hidden sm:inline-flex px-2.5 py-0.5 rounded-full text-[11px] font-black bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+            Academia do Condomínio
+          </span>
+        </div>
+      </div>
+
       <!-- MOBILE: CARD EXECUTIVO REFINADO DE ALTO PADRÃO (MINIMALISTA & PREMIUM) -->
       <div class="block lg:hidden">
         <div class="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 shadow-[0_12px_35px_-5px_rgba(0,0,0,0.7)] backdrop-blur-xl">
@@ -1825,11 +1843,17 @@
       const goalText = goalNames[quizState.goal] || quizState.goal;
       const locText = quizState.location;
 
+      const urlParams = new URLSearchParams(window.location.search);
+      const condoParam = urlParams.get('condo') || urlParams.get('c');
+
+      const locSummary = condoParam ? `na academia do ${condoParam}` : `em ${locText} em Jundiaí`;
       document.getElementById('result-headline').innerText = `Plano Sob Medida: ${goalText}`;
-      document.getElementById('result-summary').innerHTML = `Perfil identificado: <strong class="text-white">${sexText}</strong>, com foco prioritário em <strong class="text-emerald-400">${goalText}</strong> para treinar em <strong class="text-white">${locText}</strong> em Jundiaí.`;
+      document.getElementById('result-summary').innerHTML = `Perfil identificado: <strong class="text-white">${sexText}</strong>, com foco prioritário em <strong class="text-emerald-400">${goalText}</strong> para treinar <strong class="text-white">${locSummary}</strong>.`;
 
       // Atualiza Links do WhatsApp com mensagem pré-preenchida ultra específica
-      const customMessage = `Olá Felipe! Fiz o teste no seu site. Sou do perfil ${sexText}, meu objetivo prioritário é ${goalText} e gostaria de treinar em ${locText} em Jundiaí. Gostaria de saber como funciona o acompanhamento e consultar horários!`;
+      const customMessage = condoParam
+        ? `Olá Felipe! Sou morador do ${condoParam} e fiz o teste no seu site. Sou do perfil ${sexText}, meu objetivo prioritário é ${goalText} e gostaria de treinar na academia do condomínio. Gostaria de saber como funciona o acompanhamento e consultar horários disponíveis!`
+        : `Olá Felipe! Fiz o teste no seu site. Sou do perfil ${sexText}, meu objetivo prioritário é ${goalText} e gostaria de treinar em ${locText} em Jundiaí. Gostaria de saber como funciona o acompanhamento e consultar horários!`;
       const encodedMsg = encodeURIComponent(customMessage);
       const waUrl = `https://wa.me/5511961343759?text=${encodedMsg}`;
 
@@ -2000,6 +2024,22 @@
       }
       return true;
     }
+
+    // Ativação do selo exclusivo quando o morador vem do link do condomínio (?condo=...)
+    (function checkCondoParam() {
+      try {
+        const urlParams = new URLSearchParams(window.location.search);
+        const condoParam = urlParams.get('condo') || urlParams.get('c');
+        if (condoParam) {
+          const alertEl = document.getElementById('condo-banner-alert');
+          const targetEl = document.getElementById('condo-name-target');
+          if (alertEl && targetEl) {
+            targetEl.textContent = condoParam;
+            alertEl.classList.remove('hidden');
+          }
+        }
+      } catch (e) {}
+    })();
   </script>
 
 </body>
