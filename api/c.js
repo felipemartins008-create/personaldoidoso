@@ -1,10 +1,16 @@
 module.exports = (req, res) => {
-  const { n, nome, i, img, c, cidade } = req.query;
-  const condoNome = n || nome || 'Condomínio';
+  const { n, nome, i, img } = req.query;
+  const rawNome = n || nome || 'Condomínio';
+  const condoNome = rawNome.replace(/\+/g, ' ').trim();
   
   let bannerUrl = i || img || 'https://personalfelipemartins.vercel.app/foto-personal.jpg';
   if (bannerUrl && !bannerUrl.startsWith('http')) {
-    bannerUrl = `https://personalfelipemartins.vercel.app/${bannerUrl.replace(/^\//, '')}`;
+    const cleanId = bannerUrl.replace(/^\//, '').replace(/\.(jpeg|jpg|png|webp)$/i, '');
+    if (!cleanId || cleanId === 'foto-personal') {
+      bannerUrl = 'https://personalfelipemartins.vercel.app/foto-personal.jpg';
+    } else {
+      bannerUrl = `https://i.imgur.com/${cleanId}.jpeg`;
+    }
   }
 
   const pageTitle = `💪 Personal Trainer no ${condoNome} | Felipe Martins`;

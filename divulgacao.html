@@ -433,9 +433,23 @@ Ainda dá tempo de conquistar o corpo, a definição e a disposição que você 
         localStorage.setItem('personal_condos_custom', JSON.stringify(localCondos));
       }
 
+      function criarLinkCurto(nome, bannerUrl) {
+        const nomeFormatado = encodeURIComponent((nome || '').trim()).replace(/%20/g, '+');
+        let paramImg = '';
+        if (bannerUrl && !bannerUrl.includes('foto-personal')) {
+          const imgurMatch = bannerUrl.match(/imgur\.com\/([a-zA-Z0-9]+)/);
+          if (imgurMatch) {
+            paramImg = `&i=${imgurMatch[1]}`;
+          } else if (bannerUrl.startsWith('http')) {
+            paramImg = `&i=${encodeURIComponent(bannerUrl)}`;
+          }
+        }
+        return `${currentDomain}/c?n=${nomeFormatado}${paramImg}`;
+      }
+
       condosList.innerHTML = localCondos.map(c => {
-        const fullLink = c.generatedLink || `${currentDomain}/c?n=${encodeURIComponent(c.nome)}&v=1`;
         const bannerPreview = c.bannerUrl || '/foto-personal.jpg';
+        const fullLink = criarLinkCurto(c.nome, bannerPreview);
         const textoSemLink = `☀️ *O VERÃO ESTÁ LOGO ALI!* 🏖️\n\nAinda dá tempo de conquistar o corpo, a definição e a disposição que você quer antes das férias de fim de ano — sem perder tempo no trânsito e direto na academia do condomínio!\n\n• Treinos 100% individualizados (Emagrecimento, Definição ou Saúde)\n• Atendimento presencial e exclusivo na academia do nosso condomínio\n• Avaliação postural e física completa\n• Professor credenciado (CREF) e especializado\n\n⚠️ *Vagas limitadas na grade de horários do condomínio!*\n\n👇 *Toque no link abaixo (ou na foto acima) para fazer o teste rápido de 30s e consultar os horários disponíveis:*`;
         const linkETexTo = `${textoSemLink}\n${fullLink}`;
 
@@ -573,8 +587,17 @@ Ainda dá tempo de conquistar o corpo, a definição e a disposição que você 
           }
         }
 
-        const cacheBuster = Date.now().toString().slice(-4);
-        const generatedLink = `${currentDomain}/c?n=${encodeURIComponent(nome)}&i=${encodeURIComponent(finalBannerUrl)}${cidade ? '&c=' + encodeURIComponent(cidade) : ''}&v=${cacheBuster}`;
+        let paramImg = '';
+        if (finalBannerUrl && !finalBannerUrl.includes('foto-personal')) {
+          const imgurMatch = finalBannerUrl.match(/imgur\.com\/([a-zA-Z0-9]+)/);
+          if (imgurMatch) {
+            paramImg = `&i=${imgurMatch[1]}`;
+          } else if (finalBannerUrl.startsWith('http')) {
+            paramImg = `&i=${encodeURIComponent(finalBannerUrl)}`;
+          }
+        }
+        const nomeFormatado = encodeURIComponent(nome.trim()).replace(/%20/g, '+');
+        const generatedLink = `${currentDomain}/c?n=${nomeFormatado}${paramImg}`;
 
         let localCondos = JSON.parse(localStorage.getItem('personal_condos_custom') || '[]');
 
