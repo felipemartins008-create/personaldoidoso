@@ -35,8 +35,7 @@ module.exports = (req, res) => {
   <meta name="twitter:description" content="&#x200B;" />
   <meta name="twitter:image" content="${bannerUrl}" />
 
-  <!-- Redirecionamento instantâneo para o Quiz/LP -->
-  <meta http-equiv="refresh" content="0; url=${redirectUrl}" />
+  <!-- Redirecionamento instantâneo para o Quiz/LP via JavaScript para visitantes reais -->
   <script>
     window.location.replace('${redirectUrl}');
   </script>

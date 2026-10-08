@@ -412,6 +412,20 @@ Uma ótima oportunidade para quem quer treinar com acompanhamento profissional i
 
       const currentDomain = window.location.origin;
 
+      // Auto-recupera links antigos que apontavam para servidores instáveis
+      let healed = false;
+      localCondos.forEach(c => {
+        if (c.bannerUrl && c.bannerUrl.includes('uguu.se')) {
+          c.bannerUrl = `${currentDomain}/foto-personal.jpg`;
+          const cacheBuster = Date.now().toString().slice(-4);
+          c.generatedLink = `${currentDomain}/c?n=${encodeURIComponent(c.nome)}&i=${encodeURIComponent(c.bannerUrl)}${c.cidade ? '&c=' + encodeURIComponent(c.cidade) : ''}&v=${cacheBuster}`;
+          healed = true;
+        }
+      });
+      if (healed) {
+        localStorage.setItem('personal_condos_custom', JSON.stringify(localCondos));
+      }
+
       condosList.innerHTML = localCondos.map(c => {
         const fullLink = c.generatedLink || `${currentDomain}/c?n=${encodeURIComponent(c.nome)}&v=1`;
         const bannerPreview = c.bannerUrl || '/foto-personal.jpg';
