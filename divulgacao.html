@@ -481,11 +481,14 @@ Ainda dá tempo de conquistar o corpo, a definição e a disposição que você 
             </div>
 
             <div class="actions-row">
-              <button class="btn btn-primary btn-sm" style="flex: 1;" onclick="copiarMensagem(${JSON.stringify(textoSemLink).replace(/"/g, '&quot;')})">
+              <button class="btn btn-primary btn-sm" onclick="copiarMensagem(${JSON.stringify(linkETexTo).replace(/"/g, '&quot;')})">
+                ⚡ Copiar Tudo Junto (Link + Mensagem)
+              </button>
+              <button class="btn btn-outline btn-sm" style="border-color: #10b981; color: #34d399;" onclick="copiarMensagem(${JSON.stringify(textoSemLink).replace(/"/g, '&quot;')})">
                 💬 Copiar Mensagem Limpa (Sem Link)
               </button>
-              <button class="btn btn-outline btn-sm" style="border-color: #38bdf8; color: #38bdf8;" onclick="copiarTexto('${fullLink}', 'Link copiado! Cole no WhatsApp, espere a foto carregar e apague o link para colar a mensagem limpa.')">
-                📋 Copiar Link (Gera Foto)
+              <button class="btn btn-outline btn-sm" style="border-color: #38bdf8; color: #38bdf8;" onclick="copiarTexto('${fullLink}', 'Link copiado! Cole no WhatsApp e aguarde a foto aparecer.')">
+                📋 Copiar Link
               </button>
               <a href="${fullLink}" target="_blank" class="btn btn-outline btn-sm">
                 👁️ Testar
