@@ -172,6 +172,49 @@
       background-color: rgba(16, 185, 129, 0.25);
     }
 
+    /* Card de Perfil com Transição de Foto (Etapa 1) */
+    .quiz-option.quiz-option-profile {
+      aspect-ratio: 3 / 4;
+      background-color: #020617;
+      overflow: hidden;
+      padding: 0 !important;
+    }
+    .quiz-option-profile .card-hover-img {
+      opacity: 0;
+      transition: opacity 0.35s ease-in-out, transform 0.4s ease-out;
+    }
+    .quiz-option-profile .card-base-img {
+      transition: transform 0.4s ease-out, opacity 0.35s ease-in-out;
+    }
+    .quiz-option-profile:hover .card-hover-img,
+    .quiz-option-profile.active .card-hover-img {
+      opacity: 1 !important;
+    }
+    .quiz-option-profile:hover .card-base-img,
+    .quiz-option-profile:hover .card-hover-img,
+    .quiz-option-profile.active .card-hover-img {
+      transform: scale(1.03);
+    }
+    .quiz-option-profile .check-svg {
+      opacity: 0;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      transform: scale(0.6);
+    }
+    .quiz-option-profile:hover .check-svg,
+    .quiz-option-profile.active .check-svg {
+      opacity: 1 !important;
+      transform: scale(1) !important;
+    }
+    .quiz-option-profile.active {
+      border-color: #34d399 !important;
+      box-shadow: 0 0 30px rgba(16, 185, 129, 0.4), 0 0 0 1px #34d399 !important;
+    }
+    .quiz-option-profile.active .radio-indicator {
+      border-color: #34d399 !important;
+      background-color: rgba(16, 185, 129, 0.25) !important;
+      box-shadow: 0 0 14px rgba(16, 185, 129, 0.5) !important;
+    }
+
     /* Pulse for live dot */
     @keyframes pulse-ring {
       0% { transform: scale(0.95); opacity: 0.8; }
@@ -425,190 +468,71 @@
         <!-- FORMULÁRIO DO QUIZ (3 ETAPAS) -->
         <form id="quiz-form" onsubmit="return false;">
           
-          <!-- ETAPA 1: SEXO (LADO A LADO NO MOBILE & DESKTOP - AMPLIADO) -->
+          <!-- ETAPA 1: PERFIL (FOTOS INTERATIVAS COM TRANSIÇÃO AO HOVER / CLIQUE) -->
           <div id="quiz-step-1" class="quiz-step">
             <div class="flex items-center justify-between mb-2 sm:mb-2.5">
-              <h3 class="text-base sm:text-xl font-black text-white tracking-tight">1. Qual é o seu sexo?</h3>
+              <h3 class="text-base sm:text-xl font-black text-white tracking-tight">1. Qual é o seu perfil?</h3>
               <span class="hidden sm:inline-flex items-center gap-1 text-[11px] font-semibold text-slate-400 bg-slate-800/80 px-2.5 py-0.5 rounded-full border border-slate-700/60">
                 <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
                 Selecione abaixo
               </span>
             </div>
-            <!-- Subtítulo no mobile -->
+            <!-- Subtítulo -->
             <p class="text-xs sm:text-sm text-slate-400 mb-3 sm:mb-5 leading-relaxed">A intensidade e o volume são adaptados à biomecânica do seu corpo.</p>
 
-            <!-- GÊNEROS UM DO LADO DO OUTRO (GRID-COLS-2 NO MOBILE - CARDS AMPLIADOS) -->
+            <!-- GÊNEROS UM DO LADO DO OUTRO (GRID-COLS-2 NO MOBILE E DESKTOP) -->
             <div class="grid grid-cols-2 gap-3 sm:gap-4 mt-1 sm:mt-0">
               
               <!-- Opção Feminino -->
-              <label class="quiz-option cursor-pointer p-4 sm:p-5 rounded-2xl bg-gradient-to-b from-slate-800/70 to-slate-900/90 border border-slate-700/80 flex flex-col items-center justify-between min-h-[195px] sm:min-h-[235px] group select-none relative transition-all duration-300 hover:shadow-[0_10px_30px_-5px_rgba(0,0,0,0.5),0_0_25px_rgba(16,185,129,0.25)] hover:-translate-y-0.5" onclick="handleOptionSelect(1, 'Mulher', this)">
+              <label class="quiz-option quiz-option-profile cursor-pointer relative overflow-hidden rounded-2xl sm:rounded-3xl border border-slate-700/80 bg-slate-950 flex flex-col justify-between aspect-[3/4] group select-none transition-all duration-300 hover:border-emerald-500 hover:shadow-[0_0_25px_rgba(16,185,129,0.3)] hover:-translate-y-1" onclick="handleOptionSelect(1, 'Mulher', this)">
                 <input type="radio" name="user_sex" value="Mulher" class="sr-only" onchange="handleOptionSelect(1, 'Mulher', this.closest('.quiz-option'))">
                 
-                <!-- Header do Card: Tag + Radio Indicator -->
-                <div class="flex items-center justify-between w-full mb-1">
-                  <span class="inline-block px-2.5 sm:px-3 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 text-[10px] sm:text-[11px] font-black uppercase tracking-wider border border-emerald-500/20">
+                <!-- Fotos com Transição / Crossfade -->
+                <div class="absolute inset-0 w-full h-full overflow-hidden">
+                  <img src="assets/img/quiz-mulher-1.png" alt="Perfil Feminino" class="absolute inset-0 w-full h-full object-cover object-top card-base-img" />
+                  <img src="assets/img/quiz-mulher-2.png" alt="Perfil Feminino Braços Cruzados" class="absolute inset-0 w-full h-full object-cover object-top card-hover-img" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-slate-950/20 pointer-events-none"></div>
+                </div>
+
+                <!-- Header do Card: Tag + Radio Checkmark Indicator -->
+                <div class="relative z-10 flex items-center justify-between w-full p-2.5 sm:p-3.5 pointer-events-none">
+                  <span class="inline-block px-2 sm:px-3 py-0.5 sm:py-1 rounded-full bg-slate-950/70 backdrop-blur-md text-emerald-400 text-[10px] sm:text-[11px] font-black uppercase tracking-wider border border-emerald-500/30 shadow-md">
                     Feminino
                   </span>
-                  <div class="radio-ring w-5 h-5 rounded-full border border-slate-600 flex items-center justify-center transition-all group-hover:border-emerald-400">
-                    <div class="radio-dot w-2.5 h-2.5 rounded-full bg-emerald-400 shadow-[0_0_6px_#34d399]"></div>
+                  <div class="radio-indicator w-6 h-6 sm:w-7 sm:h-7 rounded-full border border-slate-500/80 bg-slate-950/70 backdrop-blur-md flex items-center justify-center transition-all duration-300 group-hover:border-emerald-400 group-hover:bg-emerald-500/20">
+                    <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-400 check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
                   </div>
                 </div>
 
-                <!-- Silhueta Feminina Fitness em Destaque -->
-                <div class="flex-1 w-full flex items-center justify-center py-2 sm:py-3">
-                  <svg class="h-32 sm:h-44 w-auto text-emerald-400 group-hover:scale-105 group-hover:text-emerald-300 transition-all drop-shadow-[0_4px_16px_rgba(16,185,129,0.3)]" viewBox="0 0 100 220" fill="currentColor">
-                    <!-- Cabeça com rabo de cavalo esporte -->
-                    <circle cx="50" cy="18" r="8"/>
-                    <path d="M 43 14 C 35 11 28 17 26 26 C 32 24 38 21 42 17 Z"/>
-                    
-                    <!-- Pescoço fino -->
-                    <path d="M 47 25 L 47 31 L 53 31 L 53 25 Z"/>
-
-                    <!-- Tronco e Pernas Femininas (Cintura Super Fina + Quadril + Pernas torneadas) -->
-                    <path d="
-                      M 50 31
-                      C 42 31 37 35 34 40
-                      L 34 50
-                      C 37 57 41 64 42 72
-                      C 42 76 40 80 37 85
-                      C 34 91 33 97 33 103
-                      C 33 108 35 114 37 120
-                      L 37 165
-                      C 37 178 38.5 192 40.5 204
-                      C 41.5 208 43.5 210 45.5 210
-                      C 47.5 210 49 208 49.5 204
-                      L 48 160
-                      L 47.5 115
-                      L 50 105
-                      L 52.5 115
-                      L 52 160
-                      L 50.5 204
-                      C 51 208 52.5 210 54.5 210
-                      C 56.5 210 58.5 208 59.5 204
-                      C 61.5 192 63 178 63 165
-                      L 63 120
-                      C 65 114 67 108 67 103
-                      C 67 97 66 91 63 85
-                      C 60 80 58 76 58 72
-                      C 59 64 63 57 66 50
-                      L 66 40
-                      C 63 35 58 31 50 31 Z
-                    "/>
-
-                    <!-- Braço Esquerdo (Mão na cintura atlética com espaço negativo vazado) -->
-                    <path d="
-                      M 34 40
-                      C 28 44 21 51 18 61
-                      C 17 64 18 66 21 66
-                      C 22.5 66 24 65 25 63
-                      L 36 71
-                      C 37.5 72 39 71 39 69
-                      C 39 67 38 66 36.5 65
-                      L 27 58
-                      C 29 52 33 47 38 43
-                      Z
-                    "/>
-
-                    <!-- Braço Direito (Mão na cintura atlética com espaço negativo vazado) -->
-                    <path d="
-                      M 66 40
-                      C 72 44 79 51 82 61
-                      C 83 64 82 66 79 66
-                      C 77.5 66 76 65 75 63
-                      L 64 71
-                      C 62.5 72 61 71 61 69
-                      C 61 67 62 66 63.5 65
-                      L 73 58
-                      C 71 52 67 47 62 43
-                      Z
-                    "/>
-                  </svg>
-                </div>
+                <div class="relative z-10"></div>
               </label>
 
               <!-- Opção Masculino -->
-              <label class="quiz-option cursor-pointer p-4 sm:p-5 rounded-2xl bg-gradient-to-b from-slate-800/70 to-slate-900/90 border border-slate-700/80 flex flex-col items-center justify-between min-h-[195px] sm:min-h-[235px] group select-none relative transition-all duration-300 hover:shadow-[0_10px_30px_-5px_rgba(0,0,0,0.5),0_0_25px_rgba(16,185,129,0.25)] hover:-translate-y-0.5" onclick="handleOptionSelect(1, 'Homem', this)">
+              <label class="quiz-option quiz-option-profile cursor-pointer relative overflow-hidden rounded-2xl sm:rounded-3xl border border-slate-700/80 bg-slate-950 flex flex-col justify-between aspect-[3/4] group select-none transition-all duration-300 hover:border-emerald-500 hover:shadow-[0_0_25px_rgba(16,185,129,0.3)] hover:-translate-y-1" onclick="handleOptionSelect(1, 'Homem', this)">
                 <input type="radio" name="user_sex" value="Homem" class="sr-only" onchange="handleOptionSelect(1, 'Homem', this.closest('.quiz-option'))">
                 
-                <!-- Header do Card: Tag + Radio Indicator -->
-                <div class="flex items-center justify-between w-full mb-1">
-                  <span class="inline-block px-2.5 sm:px-3 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 text-[10px] sm:text-[11px] font-black uppercase tracking-wider border border-emerald-500/20">
+                <!-- Fotos com Transição / Crossfade -->
+                <div class="absolute inset-0 w-full h-full overflow-hidden">
+                  <img src="assets/img/quiz-homem-1.png" alt="Perfil Masculino" class="absolute inset-0 w-full h-full object-cover object-top card-base-img" />
+                  <img src="assets/img/quiz-homem-2.png" alt="Perfil Masculino Braços Cruzados" class="absolute inset-0 w-full h-full object-cover object-top card-hover-img" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-slate-950/20 pointer-events-none"></div>
+                </div>
+
+                <!-- Header do Card: Tag + Radio Checkmark Indicator -->
+                <div class="relative z-10 flex items-center justify-between w-full p-2.5 sm:p-3.5 pointer-events-none">
+                  <span class="inline-block px-2 sm:px-3 py-0.5 sm:py-1 rounded-full bg-slate-950/70 backdrop-blur-md text-emerald-400 text-[10px] sm:text-[11px] font-black uppercase tracking-wider border border-emerald-500/30 shadow-md">
                     Masculino
                   </span>
-                  <div class="radio-ring w-5 h-5 rounded-full border border-slate-600 flex items-center justify-center transition-all group-hover:border-emerald-400">
-                    <div class="radio-dot w-2.5 h-2.5 rounded-full bg-emerald-400 shadow-[0_0_6px_#34d399]"></div>
+                  <div class="radio-indicator w-6 h-6 sm:w-7 sm:h-7 rounded-full border border-slate-500/80 bg-slate-950/70 backdrop-blur-md flex items-center justify-center transition-all duration-300 group-hover:border-emerald-400 group-hover:bg-emerald-500/20">
+                    <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-400 check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
                   </div>
                 </div>
 
-                <!-- Silhueta Masculina Fitness (Men's Physique V-Shape) -->
-                <div class="flex-1 w-full flex items-center justify-center py-2 sm:py-3">
-                  <svg class="h-32 sm:h-44 w-auto text-emerald-400 group-hover:scale-105 group-hover:text-emerald-300 transition-all drop-shadow-[0_4px_16px_rgba(16,185,129,0.3)]" viewBox="0 0 100 220" fill="currentColor">
-                    <!-- Cabeça Masculina -->
-                    <circle cx="50" cy="18" r="8"/>
-
-                    <!-- Trapézio & Pescoço Forte -->
-                    <path d="M 44 24 L 41 31 L 59 31 L 56 24 Z"/>
-
-                    <!-- Tronco V-Shape Extremo & Pernas Fortes -->
-                    <path d="
-                      M 50 31
-                      C 39 31 30 35 25 41
-                      L 25 48
-                      C 31 57 37 68 40 78
-                      C 40 82 38 86 35 91
-                      C 33 96 32 102 32 108
-                      C 32 114 34 120 36 126
-                      L 36 166
-                      C 36 180 37.5 193 39.5 204
-                      C 40.5 208 42.5 210 44.5 210
-                      C 46.5 210 48 208 48.5 204
-                      L 47.5 160
-                      L 47 118
-                      L 50 108
-                      L 53 118
-                      L 52.5 160
-                      L 51.5 204
-                      C 52 208 53.5 210 55.5 210
-                      C 57.5 210 59.5 208 60.5 204
-                      C 62.5 193 64 180 64 166
-                      L 64 126
-                      C 66 120 68 114 68 108
-                      C 68 102 67 96 65 91
-                      C 62 86 60 82 60 78
-                      C 63 68 69 57 75 48
-                      L 75 41
-                      C 70 35 61 31 50 31 Z
-                    "/>
-
-                    <!-- Braço Esquerdo Atlético Forte Aberto / Mão no quadril (Espaço negativo) -->
-                    <path d="
-                      M 25 41
-                      C 17 46 9 53 6 64
-                      C 5 67 6.5 69 9.5 69
-                      C 11.5 69 13 67.5 14 65
-                      L 27 76
-                      C 28.5 77 30.5 76 30.5 74
-                      C 30.5 72 29.5 70.5 28 69.5
-                      L 17 60
-                      C 20 52 25 47 31 42
-                      Z
-                    "/>
-
-                    <!-- Braço Direito Atlético Forte Aberto / Mão no quadril (Espaço negativo) -->
-                    <path d="
-                      M 75 41
-                      C 83 46 91 53 94 64
-                      C 95 67 93.5 69 90.5 69
-                      C 88.5 69 87 67.5 86 65
-                      L 73 76
-                      C 71.5 77 69.5 76 69.5 74
-                      C 69.5 72 70.5 70.5 72 69.5
-                      L 83 60
-                      C 80 52 75 47 69 42
-                      Z
-                    "/>
-                  </svg>
-                </div>
+                <div class="relative z-10"></div>
               </label>
 
             </div>
@@ -1845,7 +1769,7 @@
       } catch(e) {}
 
       if (step === 1) {
-        setTimeout(() => goToStep(2), 180);
+        setTimeout(() => goToStep(2), 320);
       } else if (step === 2) {
         setTimeout(() => goToStep(3), 180);
       } else if (step === 3) {
