@@ -14,8 +14,6 @@ module.exports = (req, res) => {
   // Cache CDN global da Vercel para carregar o card do WhatsApp instantaneamente na 1ª tentativa
   res.setHeader('Cache-Control', 'public, max-age=86400, s-maxage=86400, stale-while-revalidate=604800');
 
-  const pageDesc = `Atendimento personalizado na academia do ${condoNome} em Jundiaí. O verão está logo ali: treinos sob medida para emagrecimento, definição e saúde. Faça o teste de 30s!`;
-
   const html = `<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -26,8 +24,6 @@ module.exports = (req, res) => {
   <!-- Open Graph / WhatsApp Preview Tags -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="${pageTitle}" />
-  <meta property="og:description" content="${pageDesc}" />
-  <meta name="description" content="${pageDesc}" />
   <meta property="og:image" content="${bannerUrl}" />
   <meta property="og:image:secure_url" content="${bannerUrl}" />
   <meta property="og:image:type" content="image/jpeg" />
@@ -39,7 +35,6 @@ module.exports = (req, res) => {
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="${pageTitle}" />
-  <meta name="twitter:description" content="${pageDesc}" />
   <meta name="twitter:image" content="${bannerUrl}" />
 
   <!-- Redirecionamento instantâneo para o Quiz/LP via JavaScript para visitantes reais -->

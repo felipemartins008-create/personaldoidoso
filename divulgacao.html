@@ -417,13 +417,15 @@ Ainda dá tempo de conquistar o corpo, a definição e a disposição que você 
 
       const currentDomain = window.location.origin;
 
-      // Auto-recupera links antigos que apontavam para servidores instáveis
+      // Atualiza links salvos para forçar o WhatsApp a limpar a descrição antiga
       let healed = false;
       localCondos.forEach(c => {
-        if (c.bannerUrl && c.bannerUrl.includes('uguu.se')) {
-          c.bannerUrl = `${currentDomain}/foto-personal.jpg`;
-          const cacheBuster = Date.now().toString().slice(-4);
-          c.generatedLink = `${currentDomain}/c?n=${encodeURIComponent(c.nome)}&i=${encodeURIComponent(c.bannerUrl)}${c.cidade ? '&c=' + encodeURIComponent(c.cidade) : ''}&v=${cacheBuster}`;
+        if (!c.v2) {
+          const cacheBuster = Date.now().toString().slice(-5);
+          const banner = (c.bannerUrl && !c.bannerUrl.includes('uguu.se')) ? c.bannerUrl : `${currentDomain}/foto-personal.jpg`;
+          c.bannerUrl = banner;
+          c.generatedLink = `${currentDomain}/c?n=${encodeURIComponent(c.nome)}&i=${encodeURIComponent(banner)}${c.cidade ? '&c=' + encodeURIComponent(c.cidade) : ''}&v=${cacheBuster}`;
+          c.v2 = true;
           healed = true;
         }
       });
