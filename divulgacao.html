@@ -281,8 +281,11 @@
           <span>📱</span> Como vai aparecer no WhatsApp
         </div>
 
-        <div style="background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.25); border-radius: 12px; padding: 12px 14px; margin-bottom: 14px; font-size: 12.5px; color: #a7f3d0; line-height: 1.45;">
-          ⚡ <strong>Dica importante no WhatsApp:</strong> Ao colar o link na conversa, <strong>aguarde 1 a 2 segundos</strong> até que o card com a foto apareça na tela antes de apertar "Enviar". Se você clicar em enviar imediatamente, o WhatsApp envia apenas o link em texto sem dar tempo do app carregar a foto!
+        <div style="background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.25); border-radius: 12px; padding: 13px 15px; margin-bottom: 14px; font-size: 12.5px; color: #a7f3d0; line-height: 1.5;">
+          ✨ <strong>Como enviar 100% limpo no WhatsApp (sem link feio de texto):</strong><br>
+          1️⃣ Cole o link no campo de mensagem do WhatsApp e aguarde 1 a 2 segundos até a foto/card carregar.<br>
+          2️⃣ Quando a foto aparecer, apague o link de texto e cole a <strong>Mensagem Limpa</strong>.<br>
+          👉 O WhatsApp mantém a <strong>foto clicável no topo</strong> e seu texto fica 100% limpo, sem nenhum link solto!
         </div>
 
         <div class="whatsapp-preview-box">
@@ -310,7 +313,7 @@ Ainda dá tempo de conquistar o corpo, a definição e a disposição que você 
 
 ⚠️ *Vagas limitadas na grade de horários do condomínio.*
 
-👇 *Toque no link acima para fazer o teste rápido de 30s e consultar horários!*
+👆 *Toque na foto acima para fazer o teste rápido de 30s e consultar os horários disponíveis!*
             </div>
           </div>
         </div>
@@ -450,8 +453,8 @@ Ainda dá tempo de conquistar o corpo, a definição e a disposição que você 
       condosList.innerHTML = localCondos.map(c => {
         const bannerPreview = c.bannerUrl || '/foto-personal.jpg';
         const fullLink = criarLinkCurto(c.nome, bannerPreview);
-        const textoSemLink = `☀️ *O VERÃO ESTÁ LOGO ALI!* 🏖️\n\nAinda dá tempo de conquistar o corpo, a definição e a disposição que você quer antes das férias de fim de ano — sem perder tempo no trânsito e direto na academia do condomínio!\n\n• Treinos 100% individualizados (Emagrecimento, Definição ou Saúde)\n• Atendimento presencial e exclusivo na academia do nosso condomínio\n• Avaliação postural e física completa\n• Professor credenciado (CREF) e especializado\n\n⚠️ *Vagas limitadas na grade de horários do condomínio!*\n\n👇 *Toque no link abaixo (ou na foto acima) para fazer o teste rápido de 30s e consultar os horários disponíveis:*`;
-        const linkETexTo = `${textoSemLink}\n${fullLink}`;
+        const textoSemLink = `☀️ *O VERÃO ESTÁ LOGO ALI!* 🏖️\n\nAinda dá tempo de conquistar o corpo, a definição e a disposição que você quer antes das férias de fim de ano — sem perder tempo no trânsito e direto na academia do condomínio!\n\n• Treinos 100% individualizados (Emagrecimento, Definição ou Saúde)\n• Atendimento presencial e exclusivo na academia do nosso condomínio\n• Avaliação postural e física completa\n• Professor credenciado (CREF) e especializado\n\n⚠️ *Vagas limitadas na grade de horários do condomínio!*\n\n👆 *Toque na foto acima para fazer o teste rápido de 30s e consultar os horários disponíveis!*`;
+        const linkETexTo = `${textoSemLink}\n\n${fullLink}`;
 
         return `
           <div class="condo-card-item">
@@ -478,17 +481,14 @@ Ainda dá tempo de conquistar o corpo, a definição e a disposição que você 
             </div>
 
             <div class="actions-row">
-              <button class="btn btn-outline btn-sm" onclick="copiarTexto('${fullLink}', 'Link copiado! Cole no WhatsApp e aguarde a foto aparecer.')">
-                📋 Copiar Link
+              <button class="btn btn-primary btn-sm" style="flex: 1;" onclick="copiarMensagem(${JSON.stringify(textoSemLink).replace(/"/g, '&quot;')})">
+                💬 Copiar Mensagem Limpa (Sem Link)
               </button>
-              <button class="btn btn-outline btn-sm" style="border-color: #10b981; color: #34d399;" onclick="copiarMensagem(${JSON.stringify(textoSemLink).replace(/"/g, '&quot;')})">
-                💬 Copiar Legenda (Sem Link)
-              </button>
-              <button class="btn btn-outline btn-sm" onclick="copiarMensagem(${JSON.stringify(linkETexTo).replace(/"/g, '&quot;')})">
-                ⚡ Copiar Tudo Junto (Link + Legenda)
+              <button class="btn btn-outline btn-sm" style="border-color: #38bdf8; color: #38bdf8;" onclick="copiarTexto('${fullLink}', 'Link copiado! Cole no WhatsApp, espere a foto carregar e apague o link para colar a mensagem limpa.')">
+                📋 Copiar Link (Gera Foto)
               </button>
               <a href="${fullLink}" target="_blank" class="btn btn-outline btn-sm">
-                👁️ Testar Fluxo
+                👁️ Testar
               </a>
             </div>
           </div>
