@@ -14,7 +14,7 @@ module.exports = (req, res) => {
   // Cache CDN global da Vercel para carregar o card do WhatsApp instantaneamente na 1ª tentativa
   res.setHeader('Cache-Control', 'public, max-age=86400, s-maxage=86400, stale-while-revalidate=604800');
 
-  const pageDesc = `Atendimento personalizado na academia do ${condoNome} em Jundiaí. Treinos sob medida com Personal Trainer credenciado. Faça o teste de 30s!`;
+  const pageDesc = `Atendimento personalizado na academia do ${condoNome} em Jundiaí. O verão está logo ali: treinos sob medida para emagrecimento, definição e saúde. Faça o teste de 30s!`;
 
   const html = `<!DOCTYPE html>
 <html lang="pt-BR">
