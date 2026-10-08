@@ -45,8 +45,9 @@
   }
   </script>
 
-  <!-- Preload da Imagem Principal -->
-  <link rel="preload" as="image" href="assets/img/felipe-portrait.jpg" fetchpriority="high">
+  <!-- Preload das Imagens do Quiz (Etapa 1 - LCP Otimizado) -->
+  <link rel="preload" as="image" href="assets/img/quiz-mulher-1.webp" type="image/webp" fetchpriority="high">
+  <link rel="preload" as="image" href="assets/img/quiz-homem-1.webp" type="image/webp" fetchpriority="high">
 
   <!-- Favicon Oficial com a Logo -->
   <link rel="icon" type="image/svg+xml" href="logo.svg">
@@ -333,7 +334,7 @@
             
             <!-- Foto Nítida Vertical (Acabamento Limpo sem adesivos) -->
             <div class="relative w-28 sm:w-32 aspect-[3/4] rounded-xl overflow-hidden border border-slate-700/70 shadow-lg shrink-0">
-              <img src="assets/img/felipe-prescricao-escritorio.jpg" alt="Personal Trainer Felipe Martins" class="w-full h-full object-cover object-[center_32%]">
+              <img src="assets/img/felipe-prescricao-escritorio.webp" alt="Personal Trainer Felipe Martins" class="w-full h-full object-cover object-[center_32%]" loading="lazy" decoding="async">
             </div>
 
             <!-- Informações com Tipografia Editorial Limpa -->
@@ -374,7 +375,7 @@
         <div class="hidden lg:flex lg:col-span-5 flex-col gap-4">
           
           <div class="relative rounded-3xl overflow-hidden border border-slate-700/80 shadow-[0_20px_50px_rgba(0,0,0,0.8),0_0_35px_rgba(16,185,129,0.12)] bg-slate-900 aspect-[4/5] group">
-            <img src="assets/img/felipe-prescricao-escritorio.jpg" alt="Personal Trainer Felipe Martins prescrevendo treino no escritório" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700">
+            <img src="assets/img/felipe-prescricao-escritorio.webp" alt="Personal Trainer Felipe Martins prescrevendo treino no escritório" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700" loading="lazy" decoding="async">
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/25 to-transparent opacity-90"></div>
             
             <!-- Badge Superior Flutuante: Disponibilidade em Tempo Real -->
@@ -488,8 +489,8 @@
                 
                 <!-- Fotos com Transição / Crossfade -->
                 <div class="absolute inset-0 w-full h-full overflow-hidden">
-                  <img src="assets/img/quiz-mulher-1.png" alt="Perfil Feminino" class="absolute inset-0 w-full h-full object-cover object-top card-base-img" />
-                  <img src="assets/img/quiz-mulher-2.png" alt="Perfil Feminino Braços Cruzados" class="absolute inset-0 w-full h-full object-cover object-top card-hover-img" />
+                  <img src="assets/img/quiz-mulher-1.webp" alt="Perfil Feminino" class="absolute inset-0 w-full h-full object-cover object-top card-base-img" decoding="async" />
+                  <img src="assets/img/quiz-mulher-2.webp" alt="Perfil Feminino Braços Cruzados" class="absolute inset-0 w-full h-full object-cover object-top card-hover-img" decoding="async" />
                   <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-slate-950/20 pointer-events-none"></div>
                 </div>
 
@@ -514,8 +515,8 @@
                 
                 <!-- Fotos com Transição / Crossfade -->
                 <div class="absolute inset-0 w-full h-full overflow-hidden">
-                  <img src="assets/img/quiz-homem-1.png" alt="Perfil Masculino" class="absolute inset-0 w-full h-full object-cover object-top card-base-img" />
-                  <img src="assets/img/quiz-homem-2.png" alt="Perfil Masculino Braços Cruzados" class="absolute inset-0 w-full h-full object-cover object-top card-hover-img" />
+                  <img src="assets/img/quiz-homem-1.webp" alt="Perfil Masculino" class="absolute inset-0 w-full h-full object-cover object-top card-base-img" decoding="async" />
+                  <img src="assets/img/quiz-homem-2.webp" alt="Perfil Masculino Braços Cruzados" class="absolute inset-0 w-full h-full object-cover object-top card-hover-img" decoding="async" />
                   <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-slate-950/20 pointer-events-none"></div>
                 </div>
 
@@ -828,7 +829,7 @@
           <!-- Card 1: Preenchido dinamicamente via JS -->
           <div id="dyn-card-1" class="bg-slate-950 border border-slate-800 rounded-3xl overflow-hidden shadow-card-glass flex flex-col group">
             <div class="relative overflow-hidden aspect-[4/3] bg-slate-900">
-              <img id="dyn-img-1" src="assets/img/emagrecimento-mulher-1.jpg" alt="Evolução de aluna" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+              <img id="dyn-img-1" src="assets/img/emagrecimento-mulher-1.webp" alt="Evolução de aluna" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
               <div id="dyn-tag-1" class="absolute top-4 left-4 px-3 py-1 rounded-lg bg-black/75 backdrop-blur-md text-emerald-400 text-xs font-bold border border-emerald-500/30">
                 Evolução Real
               </div>
@@ -846,7 +847,7 @@
           <!-- Card 2: Preenchido dinamicamente via JS -->
           <div id="dyn-card-2" class="bg-slate-950 border border-slate-800 rounded-3xl overflow-hidden shadow-card-glass flex flex-col group">
             <div class="relative overflow-hidden aspect-[4/3] bg-slate-900">
-              <img id="dyn-img-2" src="assets/img/emagrecimento-homem-1.png" alt="Evolução de aluno" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+              <img id="dyn-img-2" src="assets/img/emagrecimento-homem-1.webp" alt="Evolução de aluno" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
               <div id="dyn-tag-2" class="absolute top-4 left-4 px-3 py-1 rounded-lg bg-black/75 backdrop-blur-md text-emerald-400 text-xs font-bold border border-emerald-500/30">
                 Superação & Força
               </div>
@@ -931,7 +932,7 @@
           <!-- Fotos do Felipe (Composição Visual de Alto Padrão) -->
           <div class="lg:col-span-5 relative mb-4 lg:mb-0">
             <div class="relative z-10 rounded-3xl overflow-hidden border border-slate-700/80 shadow-card-glass aspect-[4/5] bg-slate-900">
-              <img src="assets/img/felipe-prescricao-escritorio.jpg" alt="Personal Trainer Felipe Martins no escritório de planejamento técnico" class="w-full h-full object-cover object-top">
+              <img src="assets/img/felipe-prescricao-escritorio.webp" alt="Personal Trainer Felipe Martins no escritório de planejamento técnico" class="w-full h-full object-cover object-top" loading="lazy" decoding="async">
               <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80"></div>
               
               <div class="absolute bottom-6 left-6 right-6">
@@ -1022,7 +1023,7 @@
                 
                 <div class="rounded-2xl overflow-hidden border border-slate-800 bg-slate-900 group relative">
                   <div class="aspect-[4/3] overflow-hidden">
-                    <img src="assets/img/felipe-portrait.jpg" alt="Personal Trainer Felipe Martins em atendimento individual" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+                    <img src="assets/img/felipe-portrait.webp" alt="Personal Trainer Felipe Martins em atendimento individual" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
                   </div>
                   <div class="p-3 bg-slate-950/90 border-t border-slate-800/80">
                     <div class="text-xs font-bold text-white flex items-center gap-1.5">
@@ -1034,7 +1035,7 @@
 
                 <div class="rounded-2xl overflow-hidden border border-slate-800 bg-slate-900 group relative">
                   <div class="aspect-[4/3] overflow-hidden">
-                    <img src="assets/img/felipe-treino-jardim.png" alt="Treino presencial em condomínio e residência" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <img src="assets/img/felipe-treino-jardim.webp" alt="Treino presencial em condomínio e residência" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
                   </div>
                   <div class="p-3 bg-slate-950/90 border-t border-slate-800/80">
                     <div class="text-xs font-bold text-white flex items-center gap-1.5">
@@ -1046,7 +1047,7 @@
 
                 <div class="rounded-2xl overflow-hidden border border-slate-800 bg-slate-900 group relative">
                   <div class="aspect-[4/3] overflow-hidden">
-                    <img src="assets/img/felipe-aluna-academia.png" alt="Acompanhamento presencial em academia" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <img src="assets/img/felipe-aluna-academia.webp" alt="Acompanhamento presencial em academia" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
                   </div>
                   <div class="p-3 bg-slate-950/90 border-t border-slate-800/80">
                     <div class="text-xs font-bold text-white flex items-center gap-1.5">
@@ -1410,13 +1411,13 @@
           card1: {
             title: 'Queima Acelerada de Gordura',
             desc: 'Redução nítida de medidas corporais através de estímulos metabólicos precisos e sem perda de tônus.',
-            img: 'assets/img/emagrecimento-mulher-1.jpg',
+            img: 'assets/img/emagrecimento-mulher-1.webp',
             tag: 'Caso Real: -14kg'
           },
           card2: {
             title: 'Definição Corporal Feminina',
             desc: 'Conquista de um corpo harmônico, sequinho e com postura alinhada, treinando direto no condomínio.',
-            img: 'assets/img/emagrecimento-mulher-2.jpg',
+            img: 'assets/img/emagrecimento-mulher-2.webp',
             tag: 'Corpo Definido'
           },
           pillar1: { h: 'Ativação Metabólica Inteligente', p: 'Treinos dinâmicos que continuam queimando calorias por até 36h após a sessão.' },
@@ -1431,13 +1432,13 @@
           card1: {
             title: 'Transformação Corporal Extrema',
             desc: 'De 164kg para 108kg: perda de gordura profunda aliada à preservação de massa magra e vigor físico.',
-            img: 'assets/img/emagrecimento-homem-1.png',
+            img: 'assets/img/emagrecimento-homem-1.webp',
             tag: 'Resultado Real: -56kg'
           },
           card2: {
             title: 'Definição Muscular & Saúde Cardiovascular',
             desc: 'Redução radical da gordura visceral, normalização de exames e corpo visivelmente mais atlético.',
-            img: 'assets/img/emagrecimento-homem-2.jpg',
+            img: 'assets/img/emagrecimento-homem-2.webp',
             tag: 'Secagem & Força'
           },
           pillar1: { h: 'Queima de Gordura Visceral', p: 'Estímulos que aceleram a perda de barriga sem sobrecarregar joelhos ou lombar.' },
@@ -1454,13 +1455,13 @@
           card1: {
             title: 'Densidade Muscular Feminina',
             desc: 'Evolução consistente com treinos que priorizam a biomecânica e o recrutamento máximo das fibras.',
-            img: 'assets/img/hipertrofia-mulher-1.jpg',
+            img: 'assets/img/hipertrofia-mulher-1.webp',
             tag: 'Glúteos & Pernas'
           },
           card2: {
             title: 'Simetria e Coxas Fortes',
             desc: 'Desenvolvimento proporcional com cargas calculadas e periodização contínua semana a semana.',
-            img: 'assets/img/hipertrofia-mulher-2.jpg',
+            img: 'assets/img/hipertrofia-mulher-2.webp',
             tag: 'Hipertrofia Limpa'
           },
           pillar1: { h: 'Sobrecarga Progressiva', p: 'Ajuste milimétrico de cargas e ângulos para crescimento constante sem estagnar.' },
@@ -1475,13 +1476,13 @@
           card1: {
             title: 'Densidade e Volume Muscular',
             desc: 'Aumento expressivo de massa muscular com técnicas de intensidade aplicadas com precisão.',
-            img: 'assets/img/hipertrofia-homem-1.png',
+            img: 'assets/img/hipertrofia-homem-1.webp',
             tag: 'Volume & Densidade'
           },
           card2: {
             title: 'Estrutura Atlética e Forte',
             desc: 'Peitoral expandido, ombros largos e braços fortes com supervisão de execução a cada série.',
-            img: 'assets/img/hipertrofia-homem-2.jpg',
+            img: 'assets/img/hipertrofia-homem-2.webp',
             tag: 'Hipertrofia Máxima'
           },
           pillar1: { h: 'Quebra de Platôs', p: 'Variação de estímulos neuromusculares para quem parou de crescer na academia.' },
@@ -1498,13 +1499,13 @@
           card1: {
             title: 'Equilíbrio e Postura Firme',
             desc: 'Fortalecimento de membros inferiores e estabilizadores para caminhar e subir escadas com segurança.',
-            img: 'assets/img/idoso-treino-1.jpg',
+            img: 'assets/img/idoso-treino-1.webp',
             tag: 'Saúde na 3ª Idade'
           },
           card2: {
             title: 'Mobilidade no Conforto do Lar',
             desc: 'Treinos funcionais que trazem disposição imediata para brincar com os netos e viver com qualidade.',
-            img: 'assets/img/idoso-treino-2.jpg',
+            img: 'assets/img/idoso-treino-2.webp',
             tag: 'Vitalidade Diária'
           },
           pillar1: { h: 'Prevenção Ativa de Quedas', p: 'Treinos de equilíbrio postural e propriocepção para estabilidade ao andar.' },
@@ -1519,13 +1520,13 @@
           card1: {
             title: 'Força e Resistência Muscular',
             desc: 'Fortalecimento da musculatura paravertebral e pernas para eliminar travamentos e fraqueza.',
-            img: 'assets/img/idoso-treino-3.png',
+            img: 'assets/img/idoso-treino-3.webp',
             tag: 'Autonomia & Força'
           },
           card2: {
             title: 'Treinamento Individualizado no Seu Espaço',
             desc: 'No condomínio, em casa ou na academia: treino técnico com supervisão atenta a cada detalhe.',
-            img: 'assets/img/idoso-treino-2.jpg',
+            img: 'assets/img/idoso-treino-2.webp',
             tag: 'Longevidade Ativa'
           },
           pillar1: { h: 'Proteção Articular Total', p: 'Fortalecimento dos tendões e articulações para aliviar artrose e desgastes.' },
@@ -1542,13 +1543,13 @@
           card1: {
             title: 'Mobilidade Articular e Descompressão',
             desc: 'Exercícios específicos no jardim ou na sala para soltar as articulações travadas e respirar melhor.',
-            img: 'assets/img/felipe-treino-jardim.png',
+            img: 'assets/img/felipe-treino-jardim.webp',
             tag: 'Zero Dor na Coluna'
           },
           card2: {
             title: 'Fortalecimento do Core e Estabilidade',
             desc: 'Eliminação da sobrecarga lombar com reativação muscular correta e postura impecável.',
-            img: 'assets/img/felipe-aluna-academia.png',
+            img: 'assets/img/felipe-aluna-academia.webp',
             tag: 'Postura Alinhada'
           },
           pillar1: { h: 'Descompressão da Coluna', p: 'Movimentos de tração e mobilidade que aliviam dores de hérnia e ciático.' },
@@ -1563,13 +1564,13 @@
           card1: {
             title: 'Descompressão Articular e Flexibilidade',
             desc: 'Protocolos de mobilidade funcional com bastões e elásticos para destravar costas e quadris.',
-            img: 'assets/img/felipe-treino-jardim.png',
+            img: 'assets/img/felipe-treino-jardim.webp',
             tag: 'Coluna Saudável'
           },
           card2: {
             title: 'Estabilização de Tronco e Ombros',
             desc: 'Alinhamento postural que melhora a respiração, diminui o cansaço e devolve a disposição.',
-            img: 'assets/img/felipe-aluna-academia.png',
+            img: 'assets/img/felipe-aluna-academia.webp',
             tag: 'Mobilidade Total'
           },
           pillar1: { h: 'Alívio Imediato da Tensão', p: 'Alongamentos biomecânicos e mobilidade ativa já na primeira semana.' },
@@ -1586,13 +1587,13 @@
           card1: {
             title: 'Recomposição Muscular Ativa',
             desc: 'Ajuste metabólico fino para substituir gordura por massa magra e densa com supervisão presencial.',
-            img: 'assets/img/emagrecimento-mulher-2.jpg',
+            img: 'assets/img/emagrecimento-mulher-2.webp',
             tag: 'Corpo Firme e Torneado'
           },
           card2: {
             title: 'Construção de Curvas Sem Flacidez',
             desc: 'Estímulos combinados de hipertrofia e gasto calórico elevado treinando direto no seu condomínio.',
-            img: 'assets/img/hipertrofia-mulher-1.jpg',
+            img: 'assets/img/hipertrofia-mulher-1.webp',
             tag: 'Recomposição Corporal'
           },
           pillar1: { h: 'Déficit Metabólico com Preservação Muscular', p: 'Treinos inteligentes que queimam gordura enquanto mantêm a musculatura firme.' },
@@ -1607,13 +1608,13 @@
           card1: {
             title: 'Secagem Abdominal e Densidade',
             desc: 'Redução drástica do percentual de gordura com preservação e aumento visível de massa magra.',
-            img: 'assets/img/emagrecimento-homem-2.jpg',
+            img: 'assets/img/emagrecimento-homem-2.webp',
             tag: 'Secagem & Volume'
           },
           card2: {
             title: 'Desenvolvimento Muscular Superior',
             desc: 'Hipertrofia de tronco e braços com gasto calórico acelerado durante e após a sessão.',
-            img: 'assets/img/hipertrofia-homem-1.png',
+            img: 'assets/img/hipertrofia-homem-1.webp',
             tag: 'Recomposição Atlética'
           },
           pillar1: { h: 'Tensão Mecânica & Queima Calórica', p: 'Exercícios multiarticulares que constroem músculos e queimam gordura simultaneamente.' },
@@ -1630,13 +1631,13 @@
           card1: {
             title: 'Vitalidade e Energia Constante',
             desc: 'Exercícios personalizados que renovam a disposição física e reduzem o estresse da rotina.',
-            img: 'assets/img/felipe-aluna-academia.png',
+            img: 'assets/img/felipe-aluna-academia.webp',
             tag: 'Mais Energia'
           },
           card2: {
             title: 'Mobilidade e Conforto Corporal',
             desc: 'Movimentos funcionais e alongamentos para viver sem dores e com o corpo leve e ativo.',
-            img: 'assets/img/felipe-treino-jardim.png',
+            img: 'assets/img/felipe-treino-jardim.webp',
             tag: 'Qualidade de Vida'
           },
           pillar1: { h: 'Treino Agradável e no Seu Ritmo', p: 'Sessões dinâmicas que respeitam seus limites, sem esgotamento ou estresse desnecessário.' },
@@ -1651,13 +1652,13 @@
           card1: {
             title: 'Vigor Físico e Disposição',
             desc: 'Melhora da capacidade respiratória, disposição diária e eliminação do cansaço crônico.',
-            img: 'assets/img/felipe-treino-jardim.png',
+            img: 'assets/img/felipe-treino-jardim.webp',
             tag: 'Saúde Integral'
           },
           card2: {
             title: 'Fortalecimento Geral e Mobilidade',
             desc: 'Estrutura corporal fortalecida para enfrentar a rotina de trabalho com máxima vitalidade.',
-            img: 'assets/img/felipe-aluna-academia.png',
+            img: 'assets/img/felipe-aluna-academia.webp',
             tag: 'Bem-Estar Ativo'
           },
           pillar1: { h: 'Recuperação do Fôlego e Vigor', p: 'Treinos funcionais adaptados para aumentar a resistência e proteger o coração.' },
@@ -1674,13 +1675,13 @@
           card1: {
             title: 'Potência e Fôlego no Esporte',
             desc: 'Treinos com foco em capacidade cardiorrespiratória e agilidade de deslocamento.',
-            img: 'assets/img/felipe-aluna-academia.png',
+            img: 'assets/img/felipe-aluna-academia.webp',
             tag: 'Alta Performance'
           },
           card2: {
             title: 'Blindagem Articular Contra Lesões',
             desc: 'Estabilização de joelhos, tornozelos e ombros para você render o máximo nas quadras e pistas.',
-            img: 'assets/img/felipe-treino-jardim.png',
+            img: 'assets/img/felipe-treino-jardim.webp',
             tag: 'Zero Lesões'
           },
           pillar1: { h: 'Capacidade Cardiorrespiratória', p: 'Melhora comprovada de VO2 e fôlego para não cansar durante jogos ou provas longas.' },
@@ -1695,13 +1696,13 @@
           card1: {
             title: 'Potência Muscular e Agilidade',
             desc: 'Aumento de velocidade, impulsão e resistência anaeróbica para sobressair no jogo.',
-            img: 'assets/img/felipe-treino-jardim.png',
+            img: 'assets/img/felipe-treino-jardim.webp',
             tag: 'Performance Atlética'
           },
           card2: {
             title: 'Prevenção de Lesões e Estabilidade',
             desc: 'Blindagem de ligamentos, adutores e manguito rotador para jogar sempre no auge.',
-            img: 'assets/img/felipe-aluna-academia.png',
+            img: 'assets/img/felipe-aluna-academia.webp',
             tag: 'Condicionamento de Elite'
           },
           pillar1: { h: 'Explosão e Resistência Cardiovascular', p: 'Treinos intervalados de alta intensidade (HIIT) específicos para dinâmicas rápidas.' },
