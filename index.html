@@ -794,6 +794,16 @@
           </div>
         </div>
 
+        <!-- Link sutil para rolar até a apresentação completa -->
+        <div class="mt-4 sm:mt-5 text-center">
+          <a href="#dynamic-section" class="inline-flex items-center gap-2 text-xs sm:text-sm text-slate-400 hover:text-emerald-400 transition-colors font-medium">
+            <span>Ou veja a metodologia e resultados completos abaixo</span>
+            <svg class="w-4 h-4 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+          </a>
+        </div>
+
           </div>
 
         </div>
@@ -802,9 +812,9 @@
   </section>
 
   <!-- ========================================================
-       PÁGINA COMPLETA PERSONALIZADA (INICIALMENTE OCULTA ATÉ O QUIZ)
+       PÁGINA COMPLETA (VISÍVEL POR PADRÃO / PERSONALIZADA APÓS O QUIZ)
        ======================================================== -->
-  <main id="full-personalized-page" class="hidden opacity-0 transition-opacity duration-700">
+  <main id="full-personalized-page" class="transition-opacity duration-700">
 
     <!-- 4. SEÇÃO DINÂMICA ADAPTÁVEL (MUDA CONFORME O QUIZ) -->
     <section id="dynamic-section" class="py-16 sm:py-24 bg-slate-900/60 border-b border-slate-800 relative">
@@ -813,13 +823,13 @@
         <!-- Headline Dinâmica -->
         <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
           <span id="dyn-badge" class="inline-block px-3.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-bold tracking-wider uppercase border border-emerald-500/30 mb-3">
-            Metodologia Exclusiva
+            Metodologia Exclusiva • Jundiaí
           </span>
           <h2 id="dyn-title" class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight">
-            Resultados Reais Com Treinamento Individualizado
+            Resultados Reais Para Homens e Mulheres em Jundiaí
           </h2>
           <p id="dyn-description" class="mt-3 sm:mt-4 text-sm sm:text-base text-slate-300 max-w-2xl mx-auto leading-relaxed">
-            Veja a evolução de alunos que alcançaram seus objetivos com acompanhamento rigoroso e seguro.
+            Treinamento presencial individualizado para emagrecimento, definição, hipertrofia e saúde na academia do seu condomínio ou residência.
           </p>
         </div>
 
@@ -1370,8 +1380,8 @@
 
   </main>
 
-  <!-- 11. BOTÃO FLUTUANTE DO WHATSAPP (OCULTO ATÉ O QUIZ SER RESPONDIDO) -->
-  <div id="floating-whatsapp-container" class="fixed bottom-5 right-5 z-50 hidden transition-all duration-500">
+  <!-- 11. BOTÃO FLUTUANTE DO WHATSAPP (SEMPRE ACESSÍVEL) -->
+  <div id="floating-whatsapp-container" class="fixed bottom-5 right-5 z-50 transition-all duration-500">
     <a id="floating-whatsapp-btn"
        href="https://wa.me/5511961343759?text=Ol%C3%A1%20Felipe!%20Vi%20seu%20site%20e%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20personal%20trainer%20em%20Jundia%C3%AD."
        onclick="gtag_report_conversion(this.href);"
@@ -1890,18 +1900,15 @@
       // Atualiza a Seção Dinâmica com fotos e textos do perfil
       updateDynamicSection(quizState.goal, quizState.sex);
 
-      // DESBLOQUEIA A PÁGINA INTEIRA BONITONA AGORA!
+      // Garante que a página e o botão flutuante estão visíveis
       const fullPage = document.getElementById('full-personalized-page');
       if (fullPage) {
-        fullPage.classList.remove('hidden');
-        setTimeout(() => {
-          fullPage.classList.remove('opacity-0');
-        }, 30);
+        fullPage.classList.remove('hidden', 'opacity-0');
       }
       const floatingContainer = document.getElementById('floating-whatsapp-container');
       if (floatingContainer) floatingContainer.classList.remove('hidden');
 
-      // Scroll suave para a seção dinâmica revelada
+      // Scroll suave para a seção dinâmica com os resultados personalizados
       setTimeout(() => {
         const dynSec = document.getElementById('dynamic-section');
         if (dynSec) dynSec.scrollIntoView({ behavior: 'smooth' });
@@ -2012,18 +2019,48 @@
       }
     }
 
-    // REINICIAR O QUIZ (E OCULTAR A PÁGINA NOVAMENTE)
-    function resetQuiz() {
-      // Oculta a página personalizada
-      const fullPage = document.getElementById('full-personalized-page');
-      if (fullPage) {
-        fullPage.classList.add('opacity-0');
-        setTimeout(() => fullPage.classList.add('hidden'), 300);
-      }
-      const floatingContainer = document.getElementById('floating-whatsapp-container');
-      if (floatingContainer) floatingContainer.classList.add('hidden');
+    // RESTAURA A PÁGINA PARA O MODO GENERALISTA (HOMEM & MULHER)
+    function setGeneralistLandingPage() {
+      if (document.getElementById('dyn-badge')) document.getElementById('dyn-badge').innerText = 'Metodologia Exclusiva • Jundiaí';
+      if (document.getElementById('dyn-title')) document.getElementById('dyn-title').innerText = 'Resultados Reais Para Homens e Mulheres em Jundiaí';
+      if (document.getElementById('dyn-description')) document.getElementById('dyn-description').innerText = 'Treinamento presencial individualizado para emagrecimento, definição, hipertrofia e saúde na academia do seu condomínio ou residência.';
+      if (document.getElementById('dyn-cta-text')) document.getElementById('dyn-cta-text').innerText = 'Falar com o Felipe Martins no WhatsApp';
 
+      if (document.getElementById('dyn-img-1')) document.getElementById('dyn-img-1').src = 'assets/img/emagrecimento-mulher-1.webp';
+      if (document.getElementById('dyn-card-title-1')) document.getElementById('dyn-card-title-1').innerText = 'Eliminação de Gordura com Preservação Muscular';
+      if (document.getElementById('dyn-card-desc-1')) document.getElementById('dyn-card-desc-1').innerText = 'Redução expressiva de medidas corporais através de treinos inteligentes, garantindo tônus muscular sem passar fome ou fazer cardio exaustivo.';
+      if (document.getElementById('dyn-tag-1')) document.getElementById('dyn-tag-1').innerText = 'Evolução Real';
+
+      if (document.getElementById('dyn-img-2')) document.getElementById('dyn-img-2').src = 'assets/img/emagrecimento-homem-1.webp';
+      if (document.getElementById('dyn-card-title-2')) document.getElementById('dyn-card-title-2').innerText = 'Transformação Corporal Extrema';
+      if (document.getElementById('dyn-card-desc-2')) document.getElementById('dyn-card-desc-2').innerText = 'De 164kg para 108kg com fortalecimento integral das articulações, ganho de mobilidade e aumento radical de disposição no dia a dia.';
+      if (document.getElementById('dyn-tag-2')) document.getElementById('dyn-tag-2').innerText = 'Superação & Força';
+
+      if (document.getElementById('pillar-h-1')) document.getElementById('pillar-h-1').innerText = 'Biomecânica & Postura';
+      if (document.getElementById('pillar-p-1')) document.getElementById('pillar-p-1').innerText = 'Execução correta em cada repetição para proteger sua coluna e joelhos contra qualquer risco de lesão.';
+      if (document.getElementById('pillar-h-2')) document.getElementById('pillar-h-2').innerText = 'Periodização Sob Medida';
+      if (document.getElementById('pillar-p-2')) document.getElementById('pillar-p-2').innerText = 'Volume e intensidade calibrados rigorosamente de acordo com seu tempo disponível e nível físico atual.';
+      if (document.getElementById('pillar-h-3')) document.getElementById('pillar-h-3').innerText = 'Supervisão Presencial';
+      if (document.getElementById('pillar-p-3')) document.getElementById('pillar-p-3').innerText = 'Você nunca mais treina em dúvida. Correção em tempo real e motivação constante em cada sessão.';
+
+      if (document.getElementById('dyn-bio-headline')) document.getElementById('dyn-bio-headline').innerText = 'Mais do que passar exercícios: eu entrego um plano seguro para sua evolução.';
+      if (document.getElementById('dyn-bio-text')) document.getElementById('dyn-bio-text').innerHTML = 'Sou <strong class="text-white">Felipe Martins</strong>, profissional de Educação Física <strong class="text-emerald-400">credenciado no CREF</strong>, especialista em treinamento personalizado focado no seu resultado.';
+      if (document.getElementById('dyn-specialty-badge')) document.getElementById('dyn-specialty-badge').innerText = 'Treinos com base científica desenhados exclusivamente para a sua meta.';
+      if (document.getElementById('dyn-step-prescricao')) document.getElementById('dyn-step-prescricao').innerText = 'Elaboro um planejamento sob medida para você, considerando seus objetivos, histórico e rotina.';
+      if (document.getElementById('dyn-final-cta-headline')) document.getElementById('dyn-final-cta-headline').innerText = 'Pronto para treinar com segurança e resultados de verdade em Jundiaí?';
+
+      const defaultWaUrl = 'https://wa.me/5511961343759?text=' + encodeURIComponent('Olá Felipe! Vi seu site e gostaria de conversar sobre personal trainer presencial em Jundiaí.');
+      if (document.getElementById('dyn-whatsapp-cta')) document.getElementById('dyn-whatsapp-cta').href = defaultWaUrl;
+      if (document.getElementById('floating-whatsapp-btn')) document.getElementById('floating-whatsapp-btn').href = defaultWaUrl;
+      if (document.getElementById('nav-whatsapp-btn')) document.getElementById('nav-whatsapp-btn').href = defaultWaUrl;
+      if (document.getElementById('final-whatsapp-btn')) document.getElementById('final-whatsapp-btn').href = defaultWaUrl;
+      if (document.getElementById('footer-idoso-item')) document.getElementById('footer-idoso-item').style.display = 'inline';
+    }
+
+    // REINICIAR O QUIZ (MANTÉM A PÁGINA VISÍVEL NO MODO GENERALISTA)
+    function resetQuiz() {
       goToStep(1);
+      setGeneralistLandingPage();
       const form = document.getElementById('quiz-form');
       if (form) form.reset();
       document.querySelectorAll('.quiz-option').forEach(c => c.classList.remove('active'));
