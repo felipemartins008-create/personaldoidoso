@@ -20,10 +20,51 @@
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="assets/img/logo.png">
 
-  <!-- Fonte Poppins Oficial (Idêntica à referência utidocelularjundiai.com) -->
+  <!-- Preconnect & DNS-Prefetch para Aceleração Crítica (Google Ads Quality Score) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+  <link rel="dns-prefetch" href="https://www.clarity.ms">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,600&display=swap" rel="stylesheet">
+
+  <!-- Schema.org Dados Estruturados para o Google Ads & Busca Local (Jundiaí) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SportsActivityLocation",
+    "name": "Personal Trainer Felipe Martins",
+    "description": "Personal trainer presencial credenciado no CREF com atendimento sob medida em Jundiaí: na sua academia, condomínio, casa ou parques.",
+    "image": "https://personalfelipemartins.vercel.app/assets/img/felipe-prescricao-escritorio.webp",
+    "telephone": "+5511961343759",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Jundiaí",
+      "addressRegion": "SP",
+      "addressCountry": "BR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -23.1857,
+      "longitude": -46.8978
+    },
+    "url": "https://personalfelipemartins.vercel.app/direto",
+    "priceRange": "$$",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "06:00",
+        "closes": "21:00"
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "47"
+    }
+  }
+  </script>
   
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -137,7 +178,7 @@
     
     <!-- VÍDEO BACKGROUND EM LOOP NÍTIDO E VIBRANTE (SEM FILTRO ESCURO PESADO) -->
     <div class="absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
-      <video autoplay muted loop playsinline class="w-full h-full object-cover object-center">
+      <video autoplay muted loop playsinline preload="metadata" poster="assets/img/felipe-prescricao-escritorio.webp" class="w-full h-full object-cover object-center">
         <source src="assets/video/hero-video.mp4?v=2" type="video/mp4">
       </video>
       
@@ -863,13 +904,25 @@
       setTimeout(typeEffect, 800);
     });
 
-    // GOOGLE ADS CONVERSION TRACKING
+    // Rastreamento de Conversão Oficial Google Ads + Salvamento de Parâmetros
+    (function initTracking() {
+      try {
+        const urlParams = new URLSearchParams(window.location.search);
+        const gclid = urlParams.get('gclid') || urlParams.get('gbraid') || urlParams.get('wbraid');
+        if (gclid) {
+          sessionStorage.setItem('ads_gclid', gclid);
+        }
+      } catch (e) {}
+    })();
+
     function gtag_report_conversion(url) {
       try {
         if (window.clarity) window.clarity('event', 'whatsapp_click');
         if (typeof window.gtag === 'function') {
           window.gtag('event', 'conversion', {
-            'send_to': 'AW-11083049414/YpG1CNKX-4sdEMbT56Qp'
+            'send_to': 'AW-11083049414/YpG1CNKX-4sdEMbT56Qp',
+            'value': 1.0,
+            'currency': 'BRL'
           });
         }
       } catch (e) {
