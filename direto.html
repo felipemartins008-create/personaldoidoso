@@ -2,7 +2,7 @@
 <html lang="pt-BR" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
   <title>Personal Trainer em Jundiaí | Felipe Martins • Treino Presencial Onde Você Preferir</title>
   
   <meta name="description" content="Personal trainer presencial em Jundiaí credenciado no CREF. Treinos sob medida na sua academia, condomínio, residência ou ao ar livre. Agende sua aula experimental!">
@@ -12,7 +12,7 @@
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://personalfelipemartins.vercel.app/direto">
+  <meta property="og:url" content="https://personalfelipemartins.vercel.app/">
   <meta property="og:title" content="Personal Trainer Presencial em Jundiaí | Felipe Martins">
   <meta property="og:description" content="Treino presencial onde você preferir em Jundiaí. Atendimento na sua academia, condomínio, casa ou parques. Agende sua aula experimental!">
   <meta property="og:image" content="https://personalfelipemartins.vercel.app/assets/img/felipe-prescricao-escritorio.webp">
@@ -48,7 +48,7 @@
       "latitude": -23.1857,
       "longitude": -46.8978
     },
-    "url": "https://personalfelipemartins.vercel.app/direto",
+    "url": "https://personalfelipemartins.vercel.app/",
     "priceRange": "$$",
     "openingHoursSpecification": [
       {
@@ -98,11 +98,21 @@
   </script>
 
   <style>
+    /* Otimizações Mobile Touch & Resolução */
+    * {
+      -webkit-tap-highlight-color: transparent;
+    }
+    
+    html {
+      scroll-padding-top: 1rem;
+    }
+
     body {
       background-color: #080a0f;
       color: #f8fafc;
       font-family: 'Poppins', system-ui, -apple-system, sans-serif;
       -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
     }
     
     /* Efeito de Cursor Piscante para o Texto Dinâmico */
@@ -174,7 +184,7 @@
        HERO SECTION COM VÍDEO NÍTIDO & CLARO
        (EXATAMENTE A MESMA ESTRUTURA E TIPOGRAFIA DA UTI DO CELULAR)
        ========================================== -->
-  <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+  <section class="relative min-h-[100dvh] sm:min-h-screen flex items-center justify-center overflow-hidden">
     
     <!-- VÍDEO BACKGROUND EM LOOP NÍTIDO E VIBRANTE (SEM FILTRO ESCURO PESADO) -->
     <div class="absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
@@ -186,38 +196,38 @@
       <div class="absolute inset-0 bg-black/40"></div>
       
       <!-- Suave transição degradê na base para encaixar na próxima seção -->
-      <div class="absolute bottom-0 inset-x-0 h-28 bg-gradient-to-t from-[#080a0f] to-transparent"></div>
+      <div class="absolute bottom-0 inset-x-0 h-24 sm:h-28 bg-gradient-to-t from-[#080a0f] to-transparent"></div>
     </div>
 
     <!-- CONTEÚDO CENTRAL HERO: LIMPO, MINIMALISTA, SEM POLUIÇÃO DE TEXTO -->
-    <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 text-center flex flex-col items-center">
+    <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-28 text-center flex flex-col items-center justify-center w-full">
       
       <!-- 1. Pill Superior (Exatamente 14px Poppins / border #FFFFFF47 / border-radius 26px) -->
-      <div class="inline-flex items-center gap-2 px-5 py-1.5 rounded-[26px] border border-white/30 bg-black/20 backdrop-blur-sm text-white text-[13px] sm:text-[14px] font-medium tracking-wide mb-6 sm:mb-8 shadow-sm">
+      <div class="inline-flex items-center gap-2 px-4 sm:px-5 py-1 sm:py-1.5 rounded-[26px] border border-white/30 bg-black/30 backdrop-blur-sm text-white text-[12px] sm:text-[14px] font-medium tracking-wide mb-5 sm:mb-8 shadow-sm">
         <span>+ de 8 anos de experiência em Jundiaí</span>
       </div>
 
-      <!-- 2. Headline Principal (Poppins 58px Desktop / 46px Mobile / Font-Weight 300 Light + 600 Bold) -->
-      <h1 class="text-[38px] sm:text-[58px] font-light text-white tracking-tight leading-[1.1] sm:leading-[63px] mb-8 sm:mb-10 drop-shadow-[0_2px_12px_rgba(0,0,0,0.8)]">
+      <!-- 2. Headline Principal (Poppins 58px Desktop / 34-40px Mobile / Font-Weight 300 Light + 600 Bold) -->
+      <h1 class="text-[32px] xs:text-[38px] sm:text-[58px] font-light text-white tracking-tight leading-[1.12] sm:leading-[63px] mb-6 sm:mb-10 drop-shadow-[0_2px_12px_rgba(0,0,0,0.85)] max-w-xs xs:max-w-md sm:max-w-none">
         Seu treino presencial<br>
         <span id="typewriter-text" class="font-semibold text-white typing-cursor">onde você preferir!</span>
       </h1>
 
       <!-- 3. Botão Principal Hero (Poppins 17px / Uppercase / White Gradient / Rounded 45px / Padding 18px 36px) -->
-      <div class="flex flex-col items-center justify-center">
+      <div class="flex flex-col items-center justify-center w-full px-2 sm:px-0">
         <a href="https://wa.me/5511961343759?text=Ol%C3%A1%20Felipe!%20Vi%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20aula%20experimental%20de%20treino%20presencial%20em%20Jundia%C3%AD."
            onclick="gtag_report_conversion(this.href);"
            target="_blank"
            rel="noopener noreferrer"
-           class="uti-hero-btn inline-flex items-center justify-center px-8 sm:px-10 py-4 sm:py-[18px] rounded-[45px] text-[14px] sm:text-[17px] font-medium uppercase tracking-wider shadow-2xl">
+           class="uti-hero-btn w-full max-w-xs sm:w-auto inline-flex items-center justify-center px-7 sm:px-10 py-4 sm:py-[18px] rounded-[45px] text-[15px] sm:text-[17px] font-medium uppercase tracking-wider shadow-2xl active:scale-95">
           <span>Agende Aula Experimental</span>
         </a>
       </div>
 
       <!-- 4. Scroll Down Indicator -->
-      <div class="mt-12 sm:mt-16">
-        <a href="#apresentacao" aria-label="Rolar para baixo" class="text-white/70 hover:text-white transition-colors flex flex-col items-center">
-          <svg class="w-6 h-6 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <div class="mt-8 sm:mt-16">
+        <a href="#apresentacao" aria-label="Rolar para baixo" class="text-white/70 hover:text-white transition-colors flex flex-col items-center p-2">
+          <svg class="w-5 h-5 sm:w-6 sm:h-6 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
           </svg>
         </a>
@@ -244,18 +254,18 @@
        4. SEÇÃO 2: TRANSIÇÃO DE CONTRASTE (MODELADA NA UTI DO CELULAR)
        Headline 42px + Texto 19px Poppins Light
        ========================================== -->
-  <section id="apresentacao" class="py-16 sm:py-24 border-b border-white/10 bg-[#080a0f]">
+  <section id="apresentacao" class="py-12 sm:py-24 border-b border-white/10 bg-[#080a0f]">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       
-      <span class="inline-block px-4 py-1.5 rounded-full bg-emerald-500/10 text-emerald-400 text-xs sm:text-sm font-medium tracking-wide uppercase border border-emerald-500/20 mb-4">
+      <span class="inline-block px-3.5 sm:px-4 py-1 sm:py-1.5 rounded-full bg-emerald-500/10 text-emerald-400 text-xs sm:text-sm font-medium tracking-wide uppercase border border-emerald-500/20 mb-3 sm:mb-4">
         Treinamento Presencial Especializado
       </span>
 
-      <h2 class="text-[28px] sm:text-[42px] font-semibold text-white tracking-tight leading-[1.2] sm:leading-[48px] mb-6">
+      <h2 class="text-[24px] sm:text-[42px] font-semibold text-white tracking-tight leading-[1.22] sm:leading-[48px] mb-4 sm:mb-6">
         Treino presencial onde você preferir e 100% no seu ritmo em Jundiaí!
       </h2>
 
-      <p class="text-[16px] sm:text-[19px] font-light text-slate-300 leading-[1.6] sm:leading-[28px] max-w-3xl mx-auto mb-8">
+      <p class="text-[15px] sm:text-[19px] font-light text-slate-300 leading-[1.65] sm:leading-[28px] max-w-3xl mx-auto mb-6 sm:mb-8">
         Chega de fichas genéricas ou de ficar perdido em academias lotadas. Você tem acompanhamento individualizado com metodologia científica, correção biomecânica em cada movimento e foco total na sua saúde e nos seus resultados.
       </p>
 
@@ -264,7 +274,7 @@
            onclick="gtag_report_conversion(this.href);"
            target="_blank"
            rel="noopener noreferrer"
-           class="inline-flex items-center gap-2 px-8 py-3.5 rounded-full border border-white/20 hover:border-emerald-400 text-white hover:text-emerald-400 font-medium text-sm sm:text-base transition-colors">
+           class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 rounded-full border border-white/20 hover:border-emerald-400 text-white hover:text-emerald-400 font-medium text-sm sm:text-base transition-colors active:scale-95">
           <span>Tirar dúvidas pelo WhatsApp</span>
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
@@ -279,35 +289,35 @@
        5. ONDE ATENDO EM JUNDIAÍ (LIBERDADE TOTAL DE LOCAL)
        (SEM LIMITAR A CONDOMÍNIO: ACADEMIA, CASA, CONDOMÍNIO OU PARQUES)
        ========================================== -->
-  <section id="locais-atendimento" class="py-16 sm:py-24 border-b border-white/10 bg-[#0c1017]">
+  <section id="locais-atendimento" class="py-12 sm:py-24 border-b border-white/10 bg-[#0c1017]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-        <span class="inline-block px-4 py-1.5 rounded-full bg-emerald-500/10 text-emerald-400 text-xs sm:text-sm font-medium tracking-wide uppercase border border-emerald-500/20 mb-3">
+      <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
+        <span class="inline-block px-3.5 sm:px-4 py-1 sm:py-1.5 rounded-full bg-emerald-500/10 text-emerald-400 text-xs sm:text-sm font-medium tracking-wide uppercase border border-emerald-500/20 mb-3">
           Comodidade Total em Jundiaí
         </span>
-        <h2 class="text-[26px] sm:text-[40px] font-semibold text-white tracking-tight leading-tight">
+        <h2 class="text-[24px] sm:text-[40px] font-semibold text-white tracking-tight leading-[1.2] sm:leading-tight">
           Treine Onde Você Quiser — <span class="text-emerald-400">Eu Vou Até Você!</span>
         </h2>
-        <p class="mt-4 text-[15px] sm:text-[17px] font-light text-slate-300 leading-relaxed">
+        <p class="mt-3 sm:mt-4 text-[14px] sm:text-[17px] font-light text-slate-300 leading-relaxed">
           Você escolhe o formato mais conveniente para o seu dia a dia. Sem trânsito e sem complicação:
         </p>
       </div>
 
       <!-- 4 Cards com as Fotos Reais do Felipe -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
         
         <!-- Local 1: Na Academia -->
         <div class="bg-[#121722] border border-white/10 rounded-2xl overflow-hidden hover:border-emerald-500/40 transition-all duration-300 flex flex-col group">
-          <div class="relative aspect-[4/3] bg-slate-900 overflow-hidden">
-            <img src="assets/img/felipe-aluna-academia.webp" alt="Treino presencial em academia em Jundiaí" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+          <div class="relative aspect-[16/10] sm:aspect-[4/3] bg-slate-900 overflow-hidden">
+            <img src="assets/img/felipe-aluna-academia.webp" alt="Treino presencial em academia em Jundiaí" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
             <div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-black/70 backdrop-blur-md text-emerald-400 text-xs font-semibold border border-white/10">
               🏋️ Na Academia
             </div>
           </div>
-          <div class="p-6 flex-1 flex flex-col justify-between">
+          <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between">
             <div>
-              <h3 class="text-lg font-semibold text-white mb-2">Na Sua Academia</h3>
+              <h3 class="text-base sm:text-lg font-semibold text-white mb-1.5 sm:mb-2">Na Sua Academia</h3>
               <p class="text-xs sm:text-sm font-light text-slate-300 leading-relaxed">
                 Vou até a academia onde você já é matriculado em Jundiaí. Ajusto cargas, biomecânica e cadência para você evoluir sem risco de lesões.
               </p>
@@ -317,15 +327,15 @@
 
         <!-- Local 2: No Condomínio -->
         <div class="bg-[#121722] border border-white/10 rounded-2xl overflow-hidden hover:border-emerald-500/40 transition-all duration-300 flex flex-col group">
-          <div class="relative aspect-[4/3] bg-slate-900 overflow-hidden">
-            <img src="assets/img/felipe-portrait.webp" alt="Treino na academia do condomínio em Jundiaí" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+          <div class="relative aspect-[16/10] sm:aspect-[4/3] bg-slate-900 overflow-hidden">
+            <img src="assets/img/felipe-portrait.webp" alt="Treino na academia do condomínio em Jundiaí" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
             <div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-black/70 backdrop-blur-md text-emerald-400 text-xs font-semibold border border-white/10">
               🏢 No Condomínio
             </div>
           </div>
-          <div class="p-6 flex-1 flex flex-col justify-between">
+          <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between">
             <div>
-              <h3 class="text-lg font-semibold text-white mb-2">No Seu Condomínio</h3>
+              <h3 class="text-base sm:text-lg font-semibold text-white mb-1.5 sm:mb-2">No Seu Condomínio</h3>
               <p class="text-xs sm:text-sm font-light text-slate-300 leading-relaxed">
                 Praticidade total descendo apenas o elevador. Aproveitamos ao máximo a academia do seu prédio ou condomínio fechado com total exclusividade.
               </p>
@@ -335,15 +345,15 @@
 
         <!-- Local 3: Em Casa / Residência -->
         <div class="bg-[#121722] border border-white/10 rounded-2xl overflow-hidden hover:border-emerald-500/40 transition-all duration-300 flex flex-col group">
-          <div class="relative aspect-[4/3] bg-slate-900 overflow-hidden">
-            <img src="assets/img/felipe-prescricao-escritorio.webp" alt="Treino em casa em Jundiaí" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+          <div class="relative aspect-[16/10] sm:aspect-[4/3] bg-slate-900 overflow-hidden">
+            <img src="assets/img/felipe-prescricao-escritorio.webp" alt="Treino em casa em Jundiaí" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
             <div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-black/70 backdrop-blur-md text-emerald-400 text-xs font-semibold border border-white/10">
               🏡 Na Sua Casa
             </div>
           </div>
-          <div class="p-6 flex-1 flex flex-col justify-between">
+          <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between">
             <div>
-              <h3 class="text-lg font-semibold text-white mb-2">Na Sua Residência</h3>
+              <h3 class="text-base sm:text-lg font-semibold text-white mb-1.5 sm:mb-2">Na Sua Residência</h3>
               <p class="text-xs sm:text-sm font-light text-slate-300 leading-relaxed">
                 Treine na sala, varanda ou quintal. Você não precisa ter equipamentos: levo elásticos, esteiras e acessórios funcionais adaptados ao seu nível.
               </p>
@@ -353,15 +363,15 @@
 
         <!-- Local 4: Ao Ar Livre / Parques -->
         <div class="bg-[#121722] border border-white/10 rounded-2xl overflow-hidden hover:border-emerald-500/40 transition-all duration-300 flex flex-col group">
-          <div class="relative aspect-[4/3] bg-slate-900 overflow-hidden">
-            <img src="assets/img/felipe-treino-jardim.webp" alt="Treino funcional ao ar livre em Jundiaí" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+          <div class="relative aspect-[16/10] sm:aspect-[4/3] bg-slate-900 overflow-hidden">
+            <img src="assets/img/felipe-treino-jardim.webp" alt="Treino funcional ao ar livre em Jundiaí" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
             <div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-black/70 backdrop-blur-md text-emerald-400 text-xs font-semibold border border-white/10">
               🌳 Parques & Ar Livre
             </div>
           </div>
-          <div class="p-6 flex-1 flex flex-col justify-between">
+          <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between">
             <div>
-              <h3 class="text-lg font-semibold text-white mb-2">Parques & Praças</h3>
+              <h3 class="text-base sm:text-lg font-semibold text-white mb-1.5 sm:mb-2">Parques & Praças</h3>
               <p class="text-xs sm:text-sm font-light text-slate-300 leading-relaxed">
                 Corrida, mobilidade articular, fôlego e condicionamento funcional respirando ar puro no Parque da Cidade ou na praça do seu bairro.
               </p>
@@ -388,90 +398,90 @@
   <!-- ==========================================
        6. OBJETIVOS E METODOLOGIAS (SEU OBJETIVO REAL)
        ========================================== -->
-  <section class="py-16 sm:py-24 border-b border-white/10 bg-[#080a0f]">
+  <section class="py-12 sm:py-24 border-b border-white/10 bg-[#080a0f]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-        <span class="inline-block px-4 py-1.5 rounded-full bg-emerald-500/10 text-emerald-400 text-xs sm:text-sm font-medium tracking-wide uppercase border border-emerald-500/20 mb-3">
+      <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
+        <span class="inline-block px-3.5 sm:px-4 py-1 sm:py-1.5 rounded-full bg-emerald-500/10 text-emerald-400 text-xs sm:text-sm font-medium tracking-wide uppercase border border-emerald-500/20 mb-3">
           Prescrição Individual
         </span>
-        <h2 class="text-[26px] sm:text-[40px] font-semibold text-white tracking-tight leading-tight">
+        <h2 class="text-[24px] sm:text-[40px] font-semibold text-white tracking-tight leading-[1.2] sm:leading-tight">
           Qual é o Seu Objetivo Principal Hoje?
         </h2>
-        <p class="mt-4 text-[15px] sm:text-[17px] font-light text-slate-300 leading-relaxed">
+        <p class="mt-3 sm:mt-4 text-[14px] sm:text-[17px] font-light text-slate-300 leading-relaxed">
           Cada organismo reage de uma forma. O treino é planejado cientificamente para a sua meta:
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
         
         <!-- Objetivo 1: Emagrecimento -->
-        <div class="p-6 sm:p-8 rounded-2xl bg-[#0f131a] border border-white/10 hover:border-white/20 transition-colors">
-          <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl font-bold mb-5 border border-emerald-500/20">
+        <div class="p-5 sm:p-8 rounded-2xl bg-[#0f131a] border border-white/10 hover:border-white/20 transition-colors">
+          <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-lg sm:text-xl font-bold mb-4 sm:mb-5 border border-emerald-500/20">
             🔥
           </div>
-          <h3 class="text-xl font-semibold text-white mb-2.5">Emagrecimento & Definição</h3>
-          <p class="text-xs sm:text-sm font-light text-slate-300 leading-relaxed mb-4">
+          <h3 class="text-lg sm:text-xl font-semibold text-white mb-2">Emagrecimento & Definição</h3>
+          <p class="text-xs sm:text-sm font-light text-slate-300 leading-relaxed mb-3 sm:mb-4">
             Aceleração metabólica para queima contínua de gordura com preservação de massa magra. Treinos dinâmicos para secar sem monotonia.
           </p>
           <span class="text-xs text-emerald-400 font-medium">✓ Queima de gordura preservando tônus</span>
         </div>
 
         <!-- Objetivo 2: Hipertrofia -->
-        <div class="p-6 sm:p-8 rounded-2xl bg-[#0f131a] border border-white/10 hover:border-white/20 transition-colors">
-          <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl font-bold mb-5 border border-emerald-500/20">
+        <div class="p-5 sm:p-8 rounded-2xl bg-[#0f131a] border border-white/10 hover:border-white/20 transition-colors">
+          <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-lg sm:text-xl font-bold mb-4 sm:mb-5 border border-emerald-500/20">
             💪
           </div>
-          <h3 class="text-xl font-semibold text-white mb-2.5">Hipertrofia & Força Muscular</h3>
-          <p class="text-xs sm:text-sm font-light text-slate-300 leading-relaxed mb-4">
+          <h3 class="text-lg sm:text-xl font-semibold text-white mb-2">Hipertrofia & Força Muscular</h3>
+          <p class="text-xs sm:text-sm font-light text-slate-300 leading-relaxed mb-3 sm:mb-4">
             Sobrecarga progressiva, correção biomecânica a cada repetição e quebra de platôs para ganho real de massa muscular densa.
           </p>
           <span class="text-xs text-emerald-400 font-medium">✓ Evolução contínua sem estagnação</span>
         </div>
 
         <!-- Objetivo 3: Terceira Idade (60+) -->
-        <div class="p-6 sm:p-8 rounded-2xl bg-[#0f131a] border border-white/10 hover:border-white/20 transition-colors">
-          <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl font-bold mb-5 border border-emerald-500/20">
+        <div class="p-5 sm:p-8 rounded-2xl bg-[#0f131a] border border-white/10 hover:border-white/20 transition-colors">
+          <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-lg sm:text-xl font-bold mb-4 sm:mb-5 border border-emerald-500/20">
             🌱
           </div>
-          <h3 class="text-xl font-semibold text-white mb-2.5">Terceira Idade & Autonomia (60+)</h3>
-          <p class="text-xs sm:text-sm font-light text-slate-300 leading-relaxed mb-4">
+          <h3 class="text-lg sm:text-xl font-semibold text-white mb-2">Terceira Idade & Autonomia (60+)</h3>
+          <p class="text-xs sm:text-sm font-light text-slate-300 leading-relaxed mb-3 sm:mb-4">
             Fortalecimento seguro, equilíbrio, prevenção ativa de quedas e mobilidade. Acompanhamento paciente no ritmo exato do aluno.
           </p>
           <span class="text-xs text-emerald-400 font-medium">✓ Firmeza nos passos e autonomia diária</span>
         </div>
 
         <!-- Objetivo 4: Alívio de Dores & Coluna -->
-        <div class="p-6 sm:p-8 rounded-2xl bg-[#0f131a] border border-white/10 hover:border-white/20 transition-colors">
-          <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl font-bold mb-5 border border-emerald-500/20">
+        <div class="p-5 sm:p-8 rounded-2xl bg-[#0f131a] border border-white/10 hover:border-white/20 transition-colors">
+          <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-lg sm:text-xl font-bold mb-4 sm:mb-5 border border-emerald-500/20">
             🛡️
           </div>
-          <h3 class="text-xl font-semibold text-white mb-2.5">Alívio de Dores & Coluna</h3>
-          <p class="text-xs sm:text-sm font-light text-slate-300 leading-relaxed mb-4">
+          <h3 class="text-lg sm:text-xl font-semibold text-white mb-2">Alívio de Dores & Coluna</h3>
+          <p class="text-xs sm:text-sm font-light text-slate-300 leading-relaxed mb-3 sm:mb-4">
             Exercícios posturais e fortalecimento de core para descomprimir a coluna, proteger joelhos e eliminar dores provocadas pelo sedentarismo.
           </p>
           <span class="text-xs text-emerald-400 font-medium">✓ Treino com zero impacto lesivo</span>
         </div>
 
         <!-- Objetivo 5: Condicionamento para Esportes -->
-        <div class="p-6 sm:p-8 rounded-2xl bg-[#0f131a] border border-white/10 hover:border-white/20 transition-colors">
-          <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl font-bold mb-5 border border-emerald-500/20">
+        <div class="p-5 sm:p-8 rounded-2xl bg-[#0f131a] border border-white/10 hover:border-white/20 transition-colors">
+          <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-lg sm:text-xl font-bold mb-4 sm:mb-5 border border-emerald-500/20">
             🎾
           </div>
-          <h3 class="text-xl font-semibold text-white mb-2.5">Condicionamento para Esportes</h3>
-          <p class="text-xs sm:text-sm font-light text-slate-300 leading-relaxed mb-4">
+          <h3 class="text-lg sm:text-xl font-semibold text-white mb-2">Condicionamento para Esportes</h3>
+          <p class="text-xs sm:text-sm font-light text-slate-300 leading-relaxed mb-3 sm:mb-4">
             Preparação física funcional para praticantes de beach tennis, corrida, futebol e tênis aumentarem o fôlego e prevenirem lesões.
           </p>
           <span class="text-xs text-emerald-400 font-medium">✓ Explosão, fôlego e agilidade</span>
         </div>
 
         <!-- Objetivo 6: Saúde & Longevidade -->
-        <div class="p-6 sm:p-8 rounded-2xl bg-[#0f131a] border border-white/10 hover:border-white/20 transition-colors">
-          <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl font-bold mb-5 border border-emerald-500/20">
+        <div class="p-5 sm:p-8 rounded-2xl bg-[#0f131a] border border-white/10 hover:border-white/20 transition-colors">
+          <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-lg sm:text-xl font-bold mb-4 sm:mb-5 border border-emerald-500/20">
             ⚡
           </div>
-          <h3 class="text-xl font-semibold text-white mb-2.5">Saúde & Disposição Geral</h3>
-          <p class="text-xs sm:text-sm font-light text-slate-300 leading-relaxed mb-4">
+          <h3 class="text-lg sm:text-xl font-semibold text-white mb-2">Saúde & Disposição Geral</h3>
+          <p class="text-xs sm:text-sm font-light text-slate-300 leading-relaxed mb-3 sm:mb-4">
             Mais energia para o trabalho e família, regulação do sono e controle da ansiedade através de rotinas consistentes e sustentáveis.
           </p>
           <span class="text-xs text-emerald-400 font-medium">✓ Disposição física e longevidade</span>
@@ -480,13 +490,13 @@
       </div>
 
       <!-- CTA da Seção -->
-      <div class="mt-12 text-center">
+      <div class="mt-10 sm:mt-12 text-center px-4">
         <a href="https://wa.me/5511961343759?text=Ol%C3%A1%20Felipe!%20Vi%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20aula%20experimental%20de%20treino%20presencial%20em%20Jundia%C3%AD."
            onclick="gtag_report_conversion(this.href);"
            target="_blank"
            rel="noopener noreferrer"
-           class="uti-hero-btn inline-flex items-center justify-center px-8 sm:px-10 py-4 rounded-[45px] text-sm sm:text-base font-medium uppercase tracking-wider shadow-xl">
-          <span>Agende Aula Experimental no WhatsApp</span>
+           class="uti-hero-btn w-full max-w-sm sm:w-auto inline-flex items-center justify-center px-8 sm:px-10 py-4 rounded-[45px] text-sm sm:text-base font-medium uppercase tracking-wider shadow-xl active:scale-95">
+          <span>Agende Aula Experimental</span>
         </a>
       </div>
 
@@ -496,34 +506,34 @@
   <!-- ==========================================
        7. RESULTADOS REAIS DE ALUNOS
        ========================================== -->
-  <section class="py-16 sm:py-24 border-b border-white/10 bg-[#0c1017]">
+  <section class="py-12 sm:py-24 border-b border-white/10 bg-[#0c1017]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-        <span class="inline-block px-4 py-1.5 rounded-full bg-emerald-500/10 text-emerald-400 text-xs sm:text-sm font-medium tracking-wide uppercase border border-emerald-500/20 mb-3">
+      <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
+        <span class="inline-block px-3.5 sm:px-4 py-1 sm:py-1.5 rounded-full bg-emerald-500/10 text-emerald-400 text-xs sm:text-sm font-medium tracking-wide uppercase border border-emerald-500/20 mb-3">
           Resultados Reais
         </span>
-        <h2 class="text-[26px] sm:text-[40px] font-semibold text-white tracking-tight leading-tight">
+        <h2 class="text-[24px] sm:text-[40px] font-semibold text-white tracking-tight leading-[1.2] sm:leading-tight">
           Transformações de Alunos em Jundiaí
         </h2>
-        <p class="mt-4 text-[15px] sm:text-[17px] font-light text-slate-300 leading-relaxed">
+        <p class="mt-3 sm:mt-4 text-[14px] sm:text-[17px] font-light text-slate-300 leading-relaxed">
           Sem promessas irreais: evolução consistente com supervisão presencial em cada repetição:
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-8 max-w-7xl mx-auto">
         
         <!-- Caso 1: Feminino - Emagrecimento -->
         <div class="bg-[#121722] border border-white/10 rounded-2xl overflow-hidden flex flex-col group hover:border-emerald-500/40 transition-all duration-300">
-          <div class="relative aspect-[4/3] bg-slate-900 overflow-hidden">
-            <img src="assets/img/emagrecimento-mulher-1.webp" alt="Evolução de aluna emagrecimento em Jundiaí" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-            <div class="absolute top-4 left-4 px-3 py-1 rounded-full bg-black/70 backdrop-blur-md text-emerald-400 text-xs font-semibold border border-white/10">
+          <div class="relative aspect-[16/10] sm:aspect-[4/3] bg-slate-900 overflow-hidden">
+            <img src="assets/img/emagrecimento-mulher-1.webp" alt="Evolução de aluna emagrecimento em Jundiaí" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+            <div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-black/70 backdrop-blur-md text-emerald-400 text-xs font-semibold border border-white/10">
               Evolução Real: -14kg
             </div>
           </div>
-          <div class="p-6 flex-1 flex flex-col justify-between">
+          <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between">
             <div>
-              <h3 class="text-lg font-semibold text-white mb-2">Eliminação de Gordura com Definição</h3>
+              <h3 class="text-base sm:text-lg font-semibold text-white mb-1.5 sm:mb-2">Eliminação de Gordura com Definição</h3>
               <p class="text-xs sm:text-sm font-light text-slate-300 leading-relaxed">
                 Redução expressiva de medidas com treinos metabólicos direcionados, modelando o corpo sem dietas extremas.
               </p>
@@ -533,15 +543,15 @@
 
         <!-- Caso 2: Masculino - Transformação Extrema -->
         <div class="bg-[#121722] border border-white/10 rounded-2xl overflow-hidden flex flex-col group hover:border-emerald-500/40 transition-all duration-300">
-          <div class="relative aspect-[4/3] bg-slate-900 overflow-hidden">
-            <img src="assets/img/emagrecimento-homem-1.webp" alt="Evolução de aluno homem emagrecimento em Jundiaí" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-            <div class="absolute top-4 left-4 px-3 py-1 rounded-full bg-black/70 backdrop-blur-md text-emerald-400 text-xs font-semibold border border-white/10">
+          <div class="relative aspect-[16/10] sm:aspect-[4/3] bg-slate-900 overflow-hidden">
+            <img src="assets/img/emagrecimento-homem-1.webp" alt="Evolução de aluno homem emagrecimento em Jundiaí" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+            <div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-black/70 backdrop-blur-md text-emerald-400 text-xs font-semibold border border-white/10">
               Transformação: -56kg
             </div>
           </div>
-          <div class="p-6 flex-1 flex flex-col justify-between">
+          <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between">
             <div>
-              <h3 class="text-lg font-semibold text-white mb-2">De 164kg para 108kg</h3>
+              <h3 class="text-base sm:text-lg font-semibold text-white mb-1.5 sm:mb-2">De 164kg para 108kg</h3>
               <p class="text-xs sm:text-sm font-light text-slate-300 leading-relaxed">
                 Fortalecimento articular profundo, ganho de mobilidade e aumento radical de disposição no dia a dia.
               </p>
@@ -551,15 +561,15 @@
 
         <!-- Caso 3: Feminino - Definição & Tônus -->
         <div class="bg-[#121722] border border-white/10 rounded-2xl overflow-hidden flex flex-col group hover:border-emerald-500/40 transition-all duration-300">
-          <div class="relative aspect-[4/3] bg-slate-900 overflow-hidden">
-            <img src="assets/img/emagrecimento-mulher-2.webp" alt="Evolução corporal feminina com tônus em Jundiaí" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-            <div class="absolute top-4 left-4 px-3 py-1 rounded-full bg-black/70 backdrop-blur-md text-emerald-400 text-xs font-semibold border border-white/10">
+          <div class="relative aspect-[16/10] sm:aspect-[4/3] bg-slate-900 overflow-hidden">
+            <img src="assets/img/emagrecimento-mulher-2.webp" alt="Evolução corporal feminina com tônus em Jundiaí" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+            <div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-black/70 backdrop-blur-md text-emerald-400 text-xs font-semibold border border-white/10">
               Corpo Definido & Tônus
             </div>
           </div>
-          <div class="p-6 flex-1 flex flex-col justify-between">
+          <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between">
             <div>
-              <h3 class="text-lg font-semibold text-white mb-2">Definição Corporal & Cintura Fina</h3>
+              <h3 class="text-base sm:text-lg font-semibold text-white mb-1.5 sm:mb-2">Definição Corporal & Cintura Fina</h3>
               <p class="text-xs sm:text-sm font-light text-slate-300 leading-relaxed">
                 Conquista de um corpo harmônico, sequinho e postura alinhada com supervisão presencial em cada treino.
               </p>
@@ -569,15 +579,15 @@
 
         <!-- Caso 4: Masculino - Secagem & Força -->
         <div class="bg-[#121722] border border-white/10 rounded-2xl overflow-hidden flex flex-col group hover:border-emerald-500/40 transition-all duration-300">
-          <div class="relative aspect-[4/3] bg-slate-900 overflow-hidden">
-            <img src="assets/img/emagrecimento-homem-2.webp" alt="Definição muscular masculina e secagem em Jundiaí" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-            <div class="absolute top-4 left-4 px-3 py-1 rounded-full bg-black/70 backdrop-blur-md text-emerald-400 text-xs font-semibold border border-white/10">
+          <div class="relative aspect-[16/10] sm:aspect-[4/3] bg-slate-900 overflow-hidden">
+            <img src="assets/img/emagrecimento-homem-2.webp" alt="Definição muscular masculina e secagem em Jundiaí" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+            <div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-black/70 backdrop-blur-md text-emerald-400 text-xs font-semibold border border-white/10">
               Secagem & Força
             </div>
           </div>
-          <div class="p-6 flex-1 flex flex-col justify-between">
+          <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between">
             <div>
-              <h3 class="text-lg font-semibold text-white mb-2">Definição Muscular & Saúde</h3>
+              <h3 class="text-base sm:text-lg font-semibold text-white mb-1.5 sm:mb-2">Definição Muscular & Saúde</h3>
               <p class="text-xs sm:text-sm font-light text-slate-300 leading-relaxed">
                 Redução radical da gordura visceral, melhora do condicionamento e físico visivelmente mais atlético e funcional.
               </p>
@@ -587,15 +597,15 @@
 
         <!-- Caso 5: Feminino - Hipertrofia Glúteos & Pernas -->
         <div class="bg-[#121722] border border-white/10 rounded-2xl overflow-hidden flex flex-col group hover:border-emerald-500/40 transition-all duration-300">
-          <div class="relative aspect-[4/3] bg-slate-900 overflow-hidden">
-            <img src="assets/img/hipertrofia-mulher-1.webp" alt="Hipertrofia feminina glúteos e pernas em Jundiaí" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-            <div class="absolute top-4 left-4 px-3 py-1 rounded-full bg-black/70 backdrop-blur-md text-emerald-400 text-xs font-semibold border border-white/10">
+          <div class="relative aspect-[16/10] sm:aspect-[4/3] bg-slate-900 overflow-hidden">
+            <img src="assets/img/hipertrofia-mulher-1.webp" alt="Hipertrofia feminina glúteos e pernas em Jundiaí" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+            <div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-black/70 backdrop-blur-md text-emerald-400 text-xs font-semibold border border-white/10">
               Glúteos & Pernas
             </div>
           </div>
-          <div class="p-6 flex-1 flex flex-col justify-between">
+          <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between">
             <div>
-              <h3 class="text-lg font-semibold text-white mb-2">Densidade Muscular Feminina</h3>
+              <h3 class="text-base sm:text-lg font-semibold text-white mb-1.5 sm:mb-2">Densidade Muscular Feminina</h3>
               <p class="text-xs sm:text-sm font-light text-slate-300 leading-relaxed">
                 Evolução consistente com treinos que priorizam biomecânica correta, cargas calculadas e ativação máxima.
               </p>
@@ -605,15 +615,15 @@
 
         <!-- Caso 6: Feminino - Simetria & Volume Limpo -->
         <div class="bg-[#121722] border border-white/10 rounded-2xl overflow-hidden flex flex-col group hover:border-emerald-500/40 transition-all duration-300">
-          <div class="relative aspect-[4/3] bg-slate-900 overflow-hidden">
-            <img src="assets/img/hipertrofia-mulher-2.webp" alt="Hipertrofia limpa e coxas torneadas em Jundiaí" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-            <div class="absolute top-4 left-4 px-3 py-1 rounded-full bg-black/70 backdrop-blur-md text-emerald-400 text-xs font-semibold border border-white/10">
+          <div class="relative aspect-[16/10] sm:aspect-[4/3] bg-slate-900 overflow-hidden">
+            <img src="assets/img/hipertrofia-mulher-2.webp" alt="Hipertrofia limpa e coxas torneadas em Jundiaí" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+            <div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-black/70 backdrop-blur-md text-emerald-400 text-xs font-semibold border border-white/10">
               Hipertrofia Limpa
             </div>
           </div>
-          <div class="p-6 flex-1 flex flex-col justify-between">
+          <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between">
             <div>
-              <h3 class="text-lg font-semibold text-white mb-2">Simetria e Coxas Torneadas</h3>
+              <h3 class="text-base sm:text-lg font-semibold text-white mb-1.5 sm:mb-2">Simetria e Coxas Torneadas</h3>
               <p class="text-xs sm:text-sm font-light text-slate-300 leading-relaxed">
                 Desenvolvimento proporcional com sobrecarga progressiva, sem retenção e sem sobrecarregar as articulações.
               </p>
@@ -629,28 +639,28 @@
   <!-- ==========================================
        8. AVALIAÇÕES GOOGLE (ESTILO REVIEWS DA UTI)
        ========================================== -->
-  <section class="py-16 sm:py-24 border-b border-white/10 bg-[#080a0f]">
+  <section class="py-12 sm:py-24 border-b border-white/10 bg-[#080a0f]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-        <div class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-300 text-xs sm:text-sm font-medium mb-3">
+      <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
+        <div class="inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-1 sm:py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-300 text-xs sm:text-sm font-medium mb-3">
           <span>⭐ ⭐ ⭐ ⭐ ⭐</span>
           <span>5.0 de Avaliação no Google</span>
         </div>
-        <h2 class="text-[26px] sm:text-[40px] font-semibold text-white tracking-tight leading-tight">
+        <h2 class="text-[24px] sm:text-[40px] font-semibold text-white tracking-tight leading-[1.2] sm:leading-tight">
           O Que os Alunos Dizem Sobre o Acompanhamento
         </h2>
-        <p class="mt-4 text-[15px] sm:text-[17px] font-light text-slate-300 leading-relaxed">
+        <p class="mt-3 sm:mt-4 text-[14px] sm:text-[17px] font-light text-slate-300 leading-relaxed">
           Depoimentos de quem já transformou a saúde e a rotina em Jundiaí:
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 max-w-6xl mx-auto">
         
         <!-- Avaliação 1 -->
-        <div class="p-6 sm:p-7 rounded-2xl bg-[#0f131a] border border-white/10 flex flex-col justify-between">
+        <div class="p-5 sm:p-7 rounded-2xl bg-[#0f131a] border border-white/10 flex flex-col justify-between">
           <div>
-            <div class="flex items-center gap-1 text-amber-400 text-sm mb-3">
+            <div class="flex items-center gap-1 text-amber-400 text-sm mb-2.5 sm:mb-3">
               ★★★★★
             </div>
             <p class="text-xs sm:text-sm font-light text-slate-200 leading-relaxed italic mb-4">
@@ -658,7 +668,7 @@
             </p>
           </div>
           <div class="flex items-center gap-3 pt-3 border-t border-white/10">
-            <div class="w-10 h-10 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-sm">
+            <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-xs sm:text-sm">
               CC
             </div>
             <div>
@@ -669,9 +679,9 @@
         </div>
 
         <!-- Avaliação 2 -->
-        <div class="p-6 sm:p-7 rounded-2xl bg-[#0f131a] border border-white/10 flex flex-col justify-between">
+        <div class="p-5 sm:p-7 rounded-2xl bg-[#0f131a] border border-white/10 flex flex-col justify-between">
           <div>
-            <div class="flex items-center gap-1 text-amber-400 text-sm mb-3">
+            <div class="flex items-center gap-1 text-amber-400 text-sm mb-2.5 sm:mb-3">
               ★★★★★
             </div>
             <p class="text-xs sm:text-sm font-light text-slate-200 leading-relaxed italic mb-4">
@@ -679,7 +689,7 @@
             </p>
           </div>
           <div class="flex items-center gap-3 pt-3 border-t border-white/10">
-            <div class="w-10 h-10 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-sm">
+            <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-xs sm:text-sm">
               RM
             </div>
             <div>
@@ -690,9 +700,9 @@
         </div>
 
         <!-- Avaliação 3 -->
-        <div class="p-6 sm:p-7 rounded-2xl bg-[#0f131a] border border-white/10 flex flex-col justify-between">
+        <div class="p-5 sm:p-7 rounded-2xl bg-[#0f131a] border border-white/10 flex flex-col justify-between">
           <div>
-            <div class="flex items-center gap-1 text-amber-400 text-sm mb-3">
+            <div class="flex items-center gap-1 text-amber-400 text-sm mb-2.5 sm:mb-3">
               ★★★★★
             </div>
             <p class="text-xs sm:text-sm font-light text-slate-200 leading-relaxed italic mb-4">
@@ -700,7 +710,7 @@
             </p>
           </div>
           <div class="flex items-center gap-3 pt-3 border-t border-white/10">
-            <div class="w-10 h-10 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-sm">
+            <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-xs sm:text-sm">
               EP
             </div>
             <div>
@@ -718,69 +728,69 @@
   <!-- ==========================================
        9. FAQ - PERGUNTAS FREQUENTES
        ========================================== -->
-  <section class="py-16 sm:py-24 border-b border-white/10 bg-[#0c1017]">
+  <section class="py-12 sm:py-24 border-b border-white/10 bg-[#0c1017]">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
-        <span class="inline-block px-4 py-1.5 rounded-full bg-emerald-500/10 text-emerald-400 text-xs sm:text-sm font-medium tracking-wide uppercase border border-emerald-500/20 mb-3">
+      <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
+        <span class="inline-block px-3.5 sm:px-4 py-1 sm:py-1.5 rounded-full bg-emerald-500/10 text-emerald-400 text-xs sm:text-sm font-medium tracking-wide uppercase border border-emerald-500/20 mb-3">
           Tire Suas Dúvidas
         </span>
-        <h2 class="text-[26px] sm:text-[40px] font-semibold text-white tracking-tight leading-tight">
+        <h2 class="text-[24px] sm:text-[40px] font-semibold text-white tracking-tight leading-[1.2] sm:leading-tight">
           Perguntas Frequentes
         </h2>
-        <p class="mt-3 text-[15px] sm:text-[17px] font-light text-slate-300 leading-relaxed">
+        <p class="mt-3 text-[14px] sm:text-[17px] font-light text-slate-300 leading-relaxed">
           Respostas rápidas e transparentes sobre locais, metodologia e horários:
         </p>
       </div>
 
-      <div class="space-y-4">
+      <div class="space-y-3 sm:space-y-4">
         
-        <details class="group bg-[#121722] border border-white/10 rounded-2xl p-5 cursor-pointer hover:border-white/20 transition-colors">
-          <summary class="flex items-center justify-between font-medium text-white text-base sm:text-lg">
+        <details class="group bg-[#121722] border border-white/10 rounded-xl sm:rounded-2xl p-4 sm:p-5 cursor-pointer hover:border-white/20 transition-colors">
+          <summary class="flex items-center justify-between font-medium text-white text-sm sm:text-lg">
             <span>Você atende em qualquer lugar em Jundiaí?</span>
-            <span class="text-emerald-400 group-open:rotate-180 transition-transform text-sm">▼</span>
+            <span class="text-emerald-400 group-open:rotate-180 transition-transform text-xs sm:text-sm">▼</span>
           </summary>
-          <p class="mt-3 text-xs sm:text-sm font-light text-slate-300 leading-relaxed border-t border-white/10 pt-3">
+          <p class="mt-2.5 sm:mt-3 text-xs sm:text-sm font-light text-slate-300 leading-relaxed border-t border-white/10 pt-2.5 sm:pt-3">
             Sim! Atendo em qualquer lugar de Jundiaí onde você preferir: vou até a sua academia comercial, no condomínio, na sua residência ou parques da cidade. Você escolhe o que for mais cômodo.
           </p>
         </details>
 
-        <details class="group bg-[#121722] border border-white/10 rounded-2xl p-5 cursor-pointer hover:border-white/20 transition-colors">
-          <summary class="flex items-center justify-between font-medium text-white text-base sm:text-lg">
+        <details class="group bg-[#121722] border border-white/10 rounded-xl sm:rounded-2xl p-4 sm:p-5 cursor-pointer hover:border-white/20 transition-colors">
+          <summary class="flex items-center justify-between font-medium text-white text-sm sm:text-lg">
             <span>Como funciona a aula experimental?</span>
-            <span class="text-emerald-400 group-open:rotate-180 transition-transform text-sm">▼</span>
+            <span class="text-emerald-400 group-open:rotate-180 transition-transform text-xs sm:text-sm">▼</span>
           </summary>
-          <p class="mt-3 text-xs sm:text-sm font-light text-slate-300 leading-relaxed border-t border-white/10 pt-3">
+          <p class="mt-2.5 sm:mt-3 text-xs sm:text-sm font-light text-slate-300 leading-relaxed border-t border-white/10 pt-2.5 sm:pt-3">
             É uma sessão diagnóstica sem compromisso de permanência. Avaliamos sua mobilidade, histórico e objetivos, e realizamos uma prática leve para você experimentar como funciona o acompanhamento antes de definir seu plano.
           </p>
         </details>
 
-        <details class="group bg-[#121722] border border-white/10 rounded-2xl p-5 cursor-pointer hover:border-white/20 transition-colors">
-          <summary class="flex items-center justify-between font-medium text-white text-base sm:text-lg">
+        <details class="group bg-[#121722] border border-white/10 rounded-xl sm:rounded-2xl p-4 sm:p-5 cursor-pointer hover:border-white/20 transition-colors">
+          <summary class="flex items-center justify-between font-medium text-white text-sm sm:text-lg">
             <span>Eu preciso ter aparelhos para treinar em casa?</span>
-            <span class="text-emerald-400 group-open:rotate-180 transition-transform text-sm">▼</span>
+            <span class="text-emerald-400 group-open:rotate-180 transition-transform text-xs sm:text-sm">▼</span>
           </summary>
-          <p class="mt-3 text-xs sm:text-sm font-light text-slate-300 leading-relaxed border-t border-white/10 pt-3">
+          <p class="mt-2.5 sm:mt-3 text-xs sm:text-sm font-light text-slate-300 leading-relaxed border-t border-white/10 pt-2.5 sm:pt-3">
             Não! Se você não tiver equipamentos, eu levo acessórios funcionais modernos (elásticos de resistência, esteiras de solo, pesos portáteis) perfeitamente adequados ao seu treino.
           </p>
         </details>
 
-        <details class="group bg-[#121722] border border-white/10 rounded-2xl p-5 cursor-pointer hover:border-white/20 transition-colors">
-          <summary class="flex items-center justify-between font-medium text-white text-base sm:text-lg">
+        <details class="group bg-[#121722] border border-white/10 rounded-xl sm:rounded-2xl p-4 sm:p-5 cursor-pointer hover:border-white/20 transition-colors">
+          <summary class="flex items-center justify-between font-medium text-white text-sm sm:text-lg">
             <span>Tenho dor nas costas, joelho ou hérnia de disco. Posso treinar?</span>
-            <span class="text-emerald-400 group-open:rotate-180 transition-transform text-sm">▼</span>
+            <span class="text-emerald-400 group-open:rotate-180 transition-transform text-xs sm:text-sm">▼</span>
           </summary>
-          <p class="mt-3 text-xs sm:text-sm font-light text-slate-300 leading-relaxed border-t border-white/10 pt-3">
+          <p class="mt-2.5 sm:mt-3 text-xs sm:text-sm font-light text-slate-300 leading-relaxed border-t border-white/10 pt-2.5 sm:pt-3">
             Sim, e deve! O fortalecimento muscular supervisionado com biomecânica correta é o método mais eficaz para descomprimir a coluna e estabilizar articulações sem causar lesões.
           </p>
         </details>
 
-        <details class="group bg-[#121722] border border-white/10 rounded-2xl p-5 cursor-pointer hover:border-white/20 transition-colors">
-          <summary class="flex items-center justify-between font-medium text-white text-base sm:text-lg">
+        <details class="group bg-[#121722] border border-white/10 rounded-xl sm:rounded-2xl p-4 sm:p-5 cursor-pointer hover:border-white/20 transition-colors">
+          <summary class="flex items-center justify-between font-medium text-white text-sm sm:text-lg">
             <span>Como funcionam os valores e horários?</span>
-            <span class="text-emerald-400 group-open:rotate-180 transition-transform text-sm">▼</span>
+            <span class="text-emerald-400 group-open:rotate-180 transition-transform text-xs sm:text-sm">▼</span>
           </summary>
-          <p class="mt-3 text-xs sm:text-sm font-light text-slate-300 leading-relaxed border-t border-white/10 pt-3">
+          <p class="mt-2.5 sm:mt-3 text-xs sm:text-sm font-light text-slate-300 leading-relaxed border-t border-white/10 pt-2.5 sm:pt-3">
             Os pacotes variam de acordo com a frequência semanal (2x, 3x ou mais) e o local de atendimento em Jundiaí. Pelo WhatsApp eu passo todos os detalhes e opções de horários sem nenhum compromisso.
           </p>
         </details>
@@ -793,31 +803,31 @@
   <!-- ==========================================
        10. CTA FINAL DE ALTO IMPACTO
        ========================================== -->
-  <section class="py-16 sm:py-24 relative overflow-hidden bg-[#080a0f] text-center">
+  <section class="py-12 sm:py-24 relative overflow-hidden bg-[#080a0f] text-center">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       
-      <div class="w-14 h-14 mx-auto mb-5 rounded-full bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-2xl border border-emerald-500/20">
+      <div class="w-12 h-12 sm:w-14 sm:h-14 mx-auto mb-4 sm:mb-5 rounded-full bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl sm:text-2xl border border-emerald-500/20">
         ⚡
       </div>
 
-      <h2 class="text-[28px] sm:text-[42px] font-semibold text-white tracking-tight leading-tight mb-4">
+      <h2 class="text-[24px] sm:text-[42px] font-semibold text-white tracking-tight leading-tight mb-3 sm:mb-4">
         Pronto Para Treinar Onde Quiser em Jundiaí?
       </h2>
 
-      <p class="text-[15px] sm:text-[17px] font-light text-slate-300 max-w-xl mx-auto mb-6 leading-relaxed">
+      <p class="text-[14px] sm:text-[17px] font-light text-slate-300 max-w-xl mx-auto mb-5 sm:mb-6 leading-relaxed">
         Agende uma conversa rápida no WhatsApp para alinharmos seus horários e tirar qualquer dúvida sobre a aula experimental.
       </p>
 
-      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-300 text-xs sm:text-sm font-medium mb-8">
+      <div class="inline-flex items-center gap-2 px-3.5 sm:px-4 py-1 sm:py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-300 text-xs sm:text-sm font-medium mb-6 sm:mb-8">
         <span>🔒 Vagas limitadas por período (manhã, tarde e noite)</span>
       </div>
 
-      <div>
+      <div class="flex justify-center px-4">
         <a href="https://wa.me/5511961343759?text=Ol%C3%A1%20Felipe!%20Vi%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20aula%20experimental%20de%20treino%20presencial%20em%20Jundia%C3%AD."
            onclick="gtag_report_conversion(this.href);"
            target="_blank"
            rel="noopener noreferrer"
-           class="uti-hero-btn inline-flex items-center justify-center px-9 sm:px-12 py-4 sm:py-[18px] rounded-[45px] text-[15px] sm:text-[17px] font-medium uppercase tracking-wider shadow-2xl">
+           class="uti-hero-btn w-full max-w-xs sm:w-auto inline-flex items-center justify-center px-8 sm:px-12 py-4 sm:py-[18px] rounded-[45px] text-[15px] sm:text-[17px] font-medium uppercase tracking-wider shadow-2xl active:scale-95">
           <span>Agende Aula Experimental</span>
         </a>
       </div>
@@ -828,10 +838,10 @@
   <!-- ==========================================
        11. RODAPÉ
        ========================================== -->
-  <footer class="bg-[#05070a] border-t border-white/10 py-10 text-center text-xs text-slate-500">
+  <footer class="bg-[#05070a] border-t border-white/10 py-8 sm:py-10 text-center text-xs text-slate-500 pb-20 sm:pb-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-3">
       <div class="flex items-center justify-center gap-2">
-        <img src="assets/img/logo.png" alt="Logo" class="h-7 w-auto">
+        <img src="assets/img/logo.png" alt="Logo" class="h-6 sm:h-7 w-auto">
         <span class="font-medium text-white text-sm">Personal Felipe Martins</span>
       </div>
       <p class="max-w-xl mx-auto text-slate-400 text-xs font-light">
@@ -842,22 +852,22 @@
   </footer>
 
   <!-- ==========================================
-       12. BOTÃO FLUTUANTE DO WHATSAPP (FIXO)
+       12. BOTÃO FLUTUANTE DO WHATSAPP (FIXO & SEGURO PARA MOBILE)
        ========================================== -->
-  <div class="fixed bottom-4 right-4 sm:bottom-5 sm:right-5 z-50">
+  <div class="fixed bottom-[max(1rem,env(safe-area-inset-bottom))] right-3 sm:right-5 z-50">
     <a href="https://wa.me/5511961343759?text=Ol%C3%A1%20Felipe!%20Vi%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20aula%20experimental%20de%20treino%20presencial%20em%20Jundia%C3%AD."
        onclick="gtag_report_conversion(this.href);"
        target="_blank"
        rel="noopener noreferrer"
        aria-label="Agendar aula experimental no WhatsApp"
-       class="flex items-center gap-2.5 px-4 py-3 rounded-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-semibold shadow-2xl transition-all transform hover:scale-105 active:scale-95 group">
+       class="flex items-center gap-2 px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-semibold shadow-2xl transition-all transform hover:scale-105 active:scale-95 group border border-emerald-400/40">
       <div class="relative shrink-0">
         <svg class="w-5 h-5 sm:w-6 sm:h-6 fill-current" viewBox="0 0 24 24">
           <path d="M17.472 14.382c-.301-.15-1.78-.878-2.056-.979-.275-.1-.475-.15-.675.15-.2.301-.775.979-.95 1.179-.175.2-.351.226-.651.076-.301-.15-1.27-.468-2.42-1.492-.894-.797-1.498-1.782-1.674-2.083-.175-.301-.019-.464.132-.614.136-.135.301-.351.451-.527.151-.175.2-.301.301-.501.101-.2.051-.376-.025-.526-.076-.151-.676-1.63-.926-2.233-.243-.587-.49-.508-.675-.517-.175-.01-.375-.01-.576-.01s-.526.076-.802.376c-.276.301-1.053 1.028-1.053 2.507s1.079 2.908 1.229 3.109c.151.2 2.124 3.243 5.145 4.549.719.311 1.281.497 1.719.636.723.23 1.38.197 1.9.12.58-.087 1.78-.727 2.03-1.429.251-.702.251-1.303.176-1.429-.076-.126-.276-.201-.577-.352z"/>
           <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.982-1.408A9.957 9.957 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18.2c-1.644 0-3.17-.487-4.455-1.328l-.32-.208-2.964.837.838-2.888-.228-.344A8.17 8.17 0 013.8 12c0-4.522 3.678-8.2 8.2-8.2s8.2 3.678 8.2 8.2-3.678 8.2-8.2 8.2z"/>
         </svg>
       </div>
-      <span class="text-xs sm:text-sm font-semibold tracking-tight whitespace-nowrap">Agende Aula Experimental</span>
+      <span class="text-xs sm:text-sm font-semibold tracking-tight whitespace-nowrap">Agende Aula</span>
     </a>
   </div>
 
