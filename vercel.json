@@ -11,7 +11,8 @@
     { "source": "/adultos", "destination": "/geral.html" },
     { "source": "/whatsapp", "destination": "/whatsapp.html" },
     { "source": "/contato", "destination": "/whatsapp.html" },
-    { "source": "/direto", "destination": "/direto.html" },
-    { "source": "/personal", "destination": "/direto.html" }
+    { "source": "/quiz", "destination": "/quiz.html" },
+    { "source": "/direto", "destination": "/index.html" },
+    { "source": "/personal", "destination": "/index.html" }
   ]
 }
